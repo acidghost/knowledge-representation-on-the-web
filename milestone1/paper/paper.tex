@@ -64,9 +64,33 @@ contain at least 70 and at most 150 words. It should be written using the
 
 \section{Scenario / Use Case}
 % you could describe the use-case you have in mind that makes use of your chosen data about some matter concerning Amsterdam. Describe the overall idea, but also some concrete usage scenarios (e.g. as part of an actual system). Maybe interaction flow-diagrams etc could be useful, or what is called "personas" https://en.wikipedia.org/wiki/Persona_%28user_experience%29.
+The integration of those datasets could be an advantage where the need of
+cross-searching them is necessary. Let's take the example of John, whom is in a
+wheelchair and needs to go to a theater of Friday night. John would be really
+happy to know in advance where the parking slots closest to the theater are. By
+using our integrated dataset, John, could make such a search in a
+straightforward way.
+
+Another use-case consists in whether we are interested at looking if the
+distribution of parking slots near theaters or main events is uniform. In this
+case the dataset would be useful for an interactive visualization.
 
 \section{Data sources}
 % which datasets have you used and converted? Provide the core properties of those datasets. Also describe other datasets that you might want to integrate, and even data that still needs to be found, or even created.
+We decided to integrate the Gemeente's open data about theater events, museums
+and galleries and handicap's parking slots. Those datasets are available in CSV
+or JSON formats. We chose to convert from the JSON format because it is a more
+powerful representation than CSV and because JSON and RDF formats can be easily
+mapped one to another.
+
+\subsection{Theaters Dataset}
+% TODO describe theaters dataset (fields, contained data, semantics)
+
+\subsection{Museums and Galleries Dataset}
+% TODO describe museums and galleries dataset
+
+\subsection{Handicap's Parking Slots Dataset}
+% TODO describe this dataset
 
 \section{Building Knowledge Graphs}
 % Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
