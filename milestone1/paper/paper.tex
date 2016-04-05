@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%% file moduleX_template.tex %%%%%%%%%%%%%%%%%
+%
+%
+% This is a template for creating your papers for the course KRW
+% It is based on the standard Latex template for Springer publications
+% but contains a suggestion for the structure and some content of the
+% paper.
+%
+% Please adapt this document wherever needed.
+%
+% For more information about the required Latex Style check the document
+% typeinst.pdf in the StyleFiles directory.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{StyleFiles/llncs}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Data- and Systems Paper: your title here}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Data- and Systems Paper}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Names}
+%
+\authorrunning{Put your names here}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{\url{first@email.nl} \and \url{second@email.nl}}
+
+\maketitle
+
+
+\begin{abstract}
+The abstract should summarize the contents of the paper and should
+contain at least 70 and at most 150 words. It should be written using the
+\emph{abstract} environment.
+\end{abstract}
+
+
+\section{Introduction}
+% Introduce the sections that follow. What is the core contribution of this paper, and why is that interesting? It is useful to start with a real-life problem, and then explain how your system/dataset (will) solve(s) that problem by means of KR technology. Why is this novel? Has this (or something similar) been done before?
+
+\section{Scenario / Use Case}
+% you could describe the use-case you have in mind that makes use of your chosen data about some matter concerning Amsterdam. Describe the overall idea, but also some concrete usage scenarios (e.g. as part of an actual system). Maybe interaction flow-diagrams etc could be useful, or what is called "personas" https://en.wikipedia.org/wiki/Persona_%28user_experience%29.
+
+\section{Data sources}
+% which datasets have you used and converted? Provide the core properties of those datasets. Also describe other datasets that you might want to integrate, and even data that still needs to be found, or even created.
+
+\section{Building Knowledge Graphs}
+% Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
+
+\section{Semantic considerations}
+% In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
+
+\subsection{RDF and RDFS entailment}
+% Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
+
+% Extend G with a few RDFS triples T={t1,...,tn} and provide a small graph G'' so that G u T |= G'' but not G u T |= G'.
+
+\subsection{SPARQL}
+% Give a SPARQL query that provides different answers on the basis of interpreting the knowledge graph with an RDF entailment regime as opposed to an RDFS regime, and explain why you get different answers.
+
+% What is the relation between this fact in terms of model checking and reasoning?
+
+% Investigate and discuss whether there are interesting cases of entailment in your own data.
+
+\section{Discussion}
+% Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
+% Present a screenshot of a mock-up or working (preferred!) version of your system an describe what it does.
+% Argue why the preceding sections show that your solution (partially) solves the problem you introduced in the introduction.
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
