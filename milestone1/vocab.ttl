@@ -3,6 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 
 <http://data.krw.d2s.labs.vu.nl/group6/vocab>
@@ -75,6 +76,7 @@
   rdfs:label "short_description"^^xsd:string ;
   rdfs:range xsd:string ;
 .
+
 :location
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Event ;
@@ -99,15 +101,25 @@
   rdfs:label "zipcode"^^xsd:string ;
   rdfs:range xsd:string ;
 .
-:latitude
-  rdf:type owl:DatatypeProperty ;
+geo:lat
   rdfs:domain :location ;
   rdfs:label "latitude"^^xsd:string ;
-  rdfs:range xsd:string ;
 .
-:longitude
-  rdf:type owl:DatatypeProperty ;
+geo:long
   rdfs:domain :location ;
   rdfs:label "longitude"^^xsd:string ;
-  rdfs:range xsd:string ;
 .
+
+# Use w3c geo ontology
+# :latitude
+#   rdf:type owl:DatatypeProperty ;
+#   rdfs:domain :location ;
+#   rdfs:label "latitude"^^xsd:string ;
+#   rdfs:range xsd:string ;
+# .
+# :longitude
+#   rdf:type owl:DatatypeProperty ;
+#   rdfs:domain :location ;
+#   rdfs:label "longitude"^^xsd:string ;
+#   rdfs:range xsd:string ;
+# .

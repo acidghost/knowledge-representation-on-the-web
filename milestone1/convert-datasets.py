@@ -12,9 +12,10 @@ def convert_dataset(path):
 
     resource = 'http://data.krw.d2s.labs.vu.nl/group6/resource/'
     RESOURCE = Namespace(resource)
-
     vocab = 'http://data.krw.d2s.labs.vu.nl/group6/vocab/'
     VOCAB = Namespace(vocab)
+    geo = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
+    GEO = Namespace(geo)
 
     graph_uri = URIRef(resource + 'milestone1')
 
@@ -39,26 +40,30 @@ def convert_dataset(path):
                 if dates.has_key('enddate') and dates['enddate'] != '' else None
 
         location_dict = event_data['location']
-        location = URIRef(to_iri(resource + location_dict['name']))
-        location_name = Literal(location_dict['name'], datatype=XSD['string'])
-        location_address = Literal(location_dict['adress'])
-        location_city = Literal(location_dict['city'])
-        location_zip = Literal(location_dict['zipcode'])
-        location_lat = Literal(location_dict['latitude'])
-        location_lon = Literal(location_dict['longitude'])
+        if location_dict['name'] != '':
+            location = URIRef(to_iri(resource + location_dict['name']))
+            location_name = Literal(location_dict['name'], datatype=XSD['string'])
+            location_address = Literal(location_dict['adress'])
+            location_city = Literal(location_dict['city'])
+            location_zip = Literal(location_dict['zipcode'])
+            location_lat = Literal(location_dict['latitude'])
+            location_lon = Literal(location_dict['longitude'])
 
         if event_data['media']:
-            medias = [(Literal(m['url']), m['main'] == 'true') for m in event_data['media']]
+            medias = [(Literal(m['url'], datatype=XSD['anyURI']), m['main'] == 'true') for m in event_data['media']]
 
-        urls = [Literal(url) for url in event_data['urls']]
+        urls = [Literal(url, datatype=XSD['anyURI']) for url in event_data['urls']]
 
         details_dict = event_data['details']
         details = []
         for lang in details_dict.iterkeys():
             detail = {}
-            detail['calendar_summary'] = Literal(details_dict[lang]['calendarsummary'], lang=lang)
-            detail['long_description'] = Literal(details_dict[lang]['longdescription'], lang=lang)
-            detail['short_description'] = Literal(details_dict[lang]['shortdescription'], lang=lang)
+            if details_dict[lang]['calendarsummary'] != '':
+                detail['calendar_summary'] = Literal(details_dict[lang]['calendarsummary'], lang=lang)
+            if details_dict[lang]['longdescription'] != '':
+                detail['long_description'] = Literal(details_dict[lang]['longdescription'], lang=lang)
+            if details_dict[lang]['shortdescription'] != '':
+                detail['short_description'] = Literal(details_dict[lang]['shortdescription'], lang=lang)
             details.append(detail)
 
         
@@ -72,13 +77,14 @@ def convert_dataset(path):
             if end_date:
                 graph.add((event, VOCAB['end_date'], end_date))
         
-        graph.add((event, VOCAB['location'], location))
-        dataset.add((location, RDFS.label, location_name))
-        dataset.add((location, VOCAB['address'], location_address))
-        dataset.add((location, VOCAB['city'], location_city))
-        dataset.add((location, VOCAB['zipcode'], location_zip))
-        dataset.add((location, VOCAB['latitude'], location_lat))
-        dataset.add((location, VOCAB['longitude'], location_lon))
+        if location_dict['name'] != '':
+            graph.add((event, VOCAB['location'], location))
+            dataset.add((location, RDFS.label, location_name))
+            dataset.add((location, VOCAB['address'], location_address))
+            dataset.add((location, VOCAB['city'], location_city))
+            dataset.add((location, VOCAB['zipcode'], location_zip))
+            dataset.add((location, GEO['lat'], location_lat))
+            dataset.add((location, GEO['long'], location_lon))
 
         if medias:
             for m in medias:
@@ -88,9 +94,12 @@ def convert_dataset(path):
             graph.add((event, VOCAB['url'], url))
 
         for detail in details:
-            graph.add((event, VOCAB['calendar_summary'], detail['calendar_summary']))
-            graph.add((event, VOCAB['long_description'], detail['long_description']))
-            graph.add((event, VOCAB['short_description'], detail['short_description']))
+            if detail.has_key('calendar_summary'):
+                graph.add((event, VOCAB['calendar_summary'], detail['calendar_summary']))
+            if detail.has_key('long_description'):
+                graph.add((event, VOCAB['long_description'], detail['long_description']))
+            if detail.has_key('short_description'):
+                graph.add((event, VOCAB['short_description'], detail['short_description']))
 
     return dataset
 
