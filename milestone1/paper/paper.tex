@@ -29,7 +29,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Data- and Systems Paper: your title here}
+\title{Data- and Systems Paper: Identifying Handicap Parking Spots for Event's Venues}
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Data- and Systems Paper}
@@ -40,14 +40,14 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Names}
+\author{Alivanistos, Dimitris. \\ Baez, Selene. \\ Jemmett, Andrea. }
 %
-\authorrunning{Put your names here}
+\authorrunning{Alivanistos, Dimitris. \\ Baez, Selene. \\ Jemmett, Andrea.}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{\url{first@email.nl} \and \url{second@email.nl}}
+\institute{\url{first@vu.nl} \and \url{second@vu.nl}}
 
 \maketitle
 
@@ -90,14 +90,21 @@ Hereby we provide three concrete use-cases where our application's benefits are 
 
 \section{Data sources}
 % which datasets have you used and converted? Provide the core properties of those datasets. Also describe other datasets that you might want to integrate, and even data that still needs to be found, or even created.
-We decided to integrate the Gemeente's open data about theater events, museums
-and galleries and handicap's parking slots. Those datasets are available in CSV
-or JSON formats. We chose to convert from the JSON format because it is a more
-powerful representation than CSV and because JSON and RDF formats can be easily
-mapped one to another.
+We decided to integrate the Gemeente's open data about theater events, museums and galleries and handicap's parking slots. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
 
 \subsection{Theaters Dataset}
 % TODO describe theaters dataset (fields, contained data, semantics)
+The theaters dataset contains the following fields: 
+
+\begin{center}
+	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+		\hline
+		\textbf{Trcid} & \textbf{Title} & \textbf{Shortdescription} & \textbf{Longdescription} & \textbf{Calendarsummary} & \textbf{TitleEN} & \textbf{ShortdescriptionEN} & \textbf{LongdescriptionEN} & \textbf{CalendarsummaryEN } & \textbf{Types} & \textbf{Ids} & \textbf{Locatienaam} & \textbf{City} & \textbf{Adres} & \textbf{Zipcode} & \textbf{Latitude } & \textbf{Latitude} & \textbf{Urls} & \textbf{Media} & \textbf{Thumbnail} & \textbf{Datepattern\_startdate} & \textbf{Datepattern\_enddate} & \textbf{Singledates} & \textbf{Type1} & \textbf{Lastupdated} \\ \hline
+ 
+		\hline
+	\end{tabular}
+\end{center}
+
 
 \subsection{Museums and Galleries Dataset}
 % TODO describe museums and galleries dataset
