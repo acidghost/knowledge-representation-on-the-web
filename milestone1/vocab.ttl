@@ -1,0 +1,113 @@
+@prefix : <http://data.krw.d2s.labs.vu.nl/group6/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://data.krw.d2s.labs.vu.nl/group6/vocab>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "First version"^^xsd:string ;
+.
+
+:Event
+  rdf:type owl:Class ;
+  rdfs:label "Event"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Location
+  rdf:type owl:Class ;
+  rdfs:label "Location"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+
+:single_date
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "date"^^xsd:string ;
+  rdfs:range xsd:date ;
+.
+:start_date
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "start_date"^^xsd:string ;
+  rdfs:range xsd:date ;
+.
+:end_date
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "end_date"^^xsd:string ;
+  rdfs:range xsd:date ;
+.
+:main_media
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "main_media"^^xsd:string ;
+  rdfs:range xsd:anyURI ;
+.
+:media
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "media"^^xsd:string ;
+  rdfs:range xsd:anyURI ;
+.
+:url
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "url"^^xsd:string ;
+  rdfs:range xsd:anyURI ;
+.
+:calendar_summary
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "calendar_summary"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:long_description
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "long_description"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:short_description
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "short_description"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:location
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "location"^^xsd:string ;
+  rdfs:range :Location ;
+.
+:address
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "address"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:city
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "city"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:zipcode
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "zipcode"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:latitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "latitude"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:longitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "longitude"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
