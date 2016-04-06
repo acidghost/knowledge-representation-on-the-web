@@ -40,34 +40,34 @@
 
 :address
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
+  rdfs:domain :Location ;
   rdfs:label "address"^^xsd:string ;
   rdfs:range xsd:string ;
 .
 :city
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
+  rdfs:domain :Location ;
   rdfs:label "city"^^xsd:string ;
   rdfs:range xsd:string ;
 .
 :zipcode
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
+  rdfs:domain :Location ;
   rdfs:label "zipcode"^^xsd:string ;
   rdfs:range xsd:string ;
 .
 :borough
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
+  rdfs:domain :Location ;
   rdfs:label "borough"^^xsd:string ;
   rdfs:range xsd:string ;
 .
 geo:lat
-  rdfs:domain :location ;
+  rdfs:domain :Location ;
   rdfs:label "latitude"^^xsd:string ;
 .
 geo:long
-  rdfs:domain :location ;
+  rdfs:domain :Location ;
   rdfs:label "longitude"^^xsd:string ;
 .
 # Use w3c geo ontology instead
