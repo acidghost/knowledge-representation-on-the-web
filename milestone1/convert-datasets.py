@@ -24,8 +24,8 @@ def convert_dataset(path, dataset, graph):
     json_data = json.load(f)
 
     for event_data in json_data:
-        event = URIRef(to_iri(resource + event_data['title']))
-        title = Literal(event_data['title'], datatype=XSD['string'])
+        event = URIRef(to_iri(resource + event_data['title'].strip()))
+        title = Literal(event_data['title'].strip(), datatype=XSD['string'])
         
         dates = event_data['dates']
         if dates != []:
@@ -37,30 +37,32 @@ def convert_dataset(path, dataset, graph):
                 if dates.has_key('enddate') and dates['enddate'] != '' else None
 
         location_dict = event_data['location']
-        if location_dict['name'] != '':
-            location = URIRef(to_iri(resource + location_dict['name']))
-            location_name = Literal(location_dict['name'], datatype=XSD['string'])
-            location_address = Literal(location_dict['adress'])
-            location_city = Literal(location_dict['city'])
-            location_zip = Literal(location_dict['zipcode'])
-            location_lat = Literal(location_dict['latitude'])
-            location_lon = Literal(location_dict['longitude'])
+        location_d_name = location_dict['name'].strip()
+        if location_d_name != '':
+            place = URIRef(to_iri(resource + location_d_name))
+            place_name = Literal(location_d_name, datatype=XSD['string'])
+            location = URIRef(to_iri(resource + location_dict['adress'].strip()))
+            location_address = Literal(location_dict['adress'].strip())
+            location_city = Literal(location_dict['city'].strip())
+            location_zip = Literal(location_dict['zipcode'].strip())
+            location_lat = Literal(location_dict['latitude'].strip())
+            location_lon = Literal(location_dict['longitude'].strip())
 
         if event_data['media']:
-            medias = [(Literal(m['url'], datatype=XSD['anyURI']), m['main'] == 'true') for m in event_data['media']]
+            medias = [(Literal(m['url'].strip(), datatype=XSD['anyURI']), m['main'].strip() == 'true') for m in event_data['media']]
 
-        urls = [Literal(url, datatype=XSD['anyURI']) for url in event_data['urls']]
+        urls = [Literal(url.strip(), datatype=XSD['anyURI']) for url in event_data['urls']]
 
         details_dict = event_data['details']
         details = []
         for lang in details_dict.iterkeys():
             detail = {}
-            if details_dict[lang]['calendarsummary'] != '':
-                detail['calendar_summary'] = Literal(details_dict[lang]['calendarsummary'], lang=lang)
-            if details_dict[lang]['longdescription'] != '':
-                detail['long_description'] = Literal(details_dict[lang]['longdescription'], lang=lang)
-            if details_dict[lang]['shortdescription'] != '':
-                detail['short_description'] = Literal(details_dict[lang]['shortdescription'], lang=lang)
+            if details_dict[lang]['calendarsummary'].strip() != '':
+                detail['calendar_summary'] = Literal(details_dict[lang]['calendarsummary'].strip(), lang=lang)
+            if details_dict[lang]['longdescription'].strip() != '':
+                detail['long_description'] = Literal(details_dict[lang]['longdescription'].strip(), lang=lang)
+            if details_dict[lang]['shortdescription'].strip() != '':
+                detail['short_description'] = Literal(details_dict[lang]['shortdescription'].strip(), lang=lang)
             details.append(detail)
 
         
@@ -68,20 +70,22 @@ def convert_dataset(path, dataset, graph):
         
         if dates != []:
             for single_date in single_dates:
-                    graph.add((event, VOCAB['single_date'],  single_date))
+                graph.add((event, VOCAB['single_date'],  single_date))
             if start_date:
                 graph.add((event, VOCAB['start_date'], start_date))
             if end_date:
                 graph.add((event, VOCAB['end_date'], end_date))
         
         if location_dict['name'] != '':
-            graph.add((event, VOCAB['location'], location))
-            dataset.add((location, RDFS.label, location_name))
-            dataset.add((location, VOCAB['address'], location_address))
-            dataset.add((location, VOCAB['city'], location_city))
-            dataset.add((location, VOCAB['zipcode'], location_zip))
-            dataset.add((location, GEO['lat'], location_lat))
-            dataset.add((location, GEO['long'], location_lon))
+            graph.add((event, VOCAB['place'], place))
+            graph.add((place, RDFS.label, place_name))
+            graph.add((place, VOCAB['location'], location))
+            graph.add((location, RDFS.label, location_address))
+            graph.add((location, VOCAB['address'], location_address))
+            graph.add((location, VOCAB['city'], location_city))
+            graph.add((location, VOCAB['zipcode'], location_zip))
+            graph.add((location, GEO['lat'], location_lat))
+            graph.add((location, GEO['long'], location_lon))
 
         if medias:
             for m in medias:
@@ -97,6 +101,47 @@ def convert_dataset(path, dataset, graph):
                 graph.add((event, VOCAB['long_description'], detail['long_description']))
             if detail.has_key('short_description'):
                 graph.add((event, VOCAB['short_description'], detail['short_description']))
+
+    return dataset, graph
+
+
+def convert_parking_dataset(path, dataset, graph):
+    f = open(path, 'r')
+    json_data = json.load(f)
+
+    for data in json_data['gehandicaptenparkeerplaatsen']:
+        slot_data = data['node']
+        
+        data_address = slot_data['Adres'].strip()
+        slot = URIRef(to_iri(resource + data_address))
+        
+        slot_loc = URIRef(to_iri(resource + data_address))
+        slot_loc_address = Literal(data_address)
+        
+        data_quantity = slot_data['Aantal'].strip()
+        slot_quantity = Literal(int(data_quantity)) if data_quantity != '' else None
+        
+        data_info = slot_data['Locatie-info']
+        slot_info = Literal(data_info) if data_info != '' else None
+        slot_loc_borough = Literal(slot_data['Stadsdeel'].strip())
+        
+        slot_coordinates = json.loads(slot_data['locatie'].strip())
+        slot_loc_lat = Literal(slot_coordinates['coordinates'][0])
+        slot_loc_long = Literal(slot_coordinates['coordinates'][1])
+
+        
+        graph.add((slot, RDFS.label, slot_loc_address))
+        if slot_quantity:
+            graph.add((slot, VOCAB['quantity'], slot_quantity))
+        if slot_info:
+            graph.add((slot, VOCAB['info'], slot_info))
+        graph.add((slot, VOCAB['location'], slot_loc))
+        
+        graph.add((slot_loc, RDFS.label, slot_loc_address))
+        graph.add((slot_loc, VOCAB['address'], slot_loc_address))
+        graph.add((slot_loc, VOCAB['borough'], slot_loc_borough))
+        graph.add((slot_loc, GEO['lat'], slot_loc_lat))
+        graph.add((slot_loc, GEO['long'], slot_loc_long))
 
     return dataset, graph
 
@@ -156,4 +201,7 @@ serialize_upload('data/theaters.trig', t_dataset)
 
 mg_dataset, mg_graph = convert_dataset('data/MuseaGalleries.json', dataset, graph)
 serialize_upload('data/museums.trig', mg_dataset)
+
+park_dataset, park_graph = convert_parking_dataset('data/gehandicaptenparkeerplaatsen.json', dataset, graph)
+serialize_upload('data/parking_slots.trig', park_dataset)
 

@@ -5,23 +5,104 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
-
+### Ontology
 <http://data.krw.d2s.labs.vu.nl/group6/vocab>
   rdf:type owl:Ontology ;
   owl:versionInfo "First version"^^xsd:string ;
 .
 
-:Event
-  rdf:type owl:Class ;
-  rdfs:label "Event"^^xsd:string ;
-  rdfs:subClassOf owl:Thing ;
-.
+
+### Classes
+
 :Location
   rdf:type owl:Class ;
   rdfs:label "Location"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
 .
+:Place
+  rdf:type owl:Class ;
+  rdfs:label "Place"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Event
+  rdf:type owl:Class ;
+  rdfs:label "Event"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:ParkingSlot
+  rdf:type owl:Class ;
+  rdfs:label "Parking Slot"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
 
+
+### Location Properties
+
+:address
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "address"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:city
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "city"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:zipcode
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "zipcode"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+:borough
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :location ;
+  rdfs:label "borough"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+geo:lat
+  rdfs:domain :location ;
+  rdfs:label "latitude"^^xsd:string ;
+.
+geo:long
+  rdfs:domain :location ;
+  rdfs:label "longitude"^^xsd:string ;
+.
+# Use w3c geo ontology instead
+# :latitude
+#   rdf:type owl:DatatypeProperty ;
+#   rdfs:domain :location ;
+#   rdfs:label "latitude"^^xsd:string ;
+#   rdfs:range xsd:string ;
+# .
+# :longitude
+#   rdf:type owl:DatatypeProperty ;
+#   rdfs:domain :location ;
+#   rdfs:label "longitude"^^xsd:string ;
+#   rdfs:range xsd:string ;
+# .
+
+
+### Place Properties
+
+:location
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Place ;
+  rdfs:label "location"^^xsd:string ;
+  rdfs:range :Location ;
+.
+
+
+### Event Properties
+
+:place
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Event ;
+  rdfs:label "place"^^xsd:string ;
+  rdfs:range :Place ;
+.
 :single_date
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Event ;
@@ -77,49 +158,24 @@
   rdfs:range xsd:string ;
 .
 
+
+### ParkingSlot Properties
+
 :location
   rdf:type owl:ObjectProperty ;
-  rdfs:domain :Event ;
+  rdfs:domain :ParkingSlot ;
   rdfs:label "location"^^xsd:string ;
   rdfs:range :Location ;
 .
-:address
+:quantity
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
-  rdfs:label "address"^^xsd:string ;
-  rdfs:range xsd:string ;
+  rdfs:domain :ParkingSlot ;
+  rdfs:label "quantity"^^xsd:string ;
+  rdfs:range xsd:unsignedInt ;
 .
-:city
+:info
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
-  rdfs:label "city"^^xsd:string ;
+  rdfs:domain :ParkingSlot ;
+  rdfs:label "info"^^xsd:string ;
   rdfs:range xsd:string ;
-.
-:zipcode
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain :location ;
-  rdfs:label "zipcode"^^xsd:string ;
-  rdfs:range xsd:string ;
-.
-geo:lat
-  rdfs:domain :location ;
-  rdfs:label "latitude"^^xsd:string ;
-.
-geo:long
-  rdfs:domain :location ;
-  rdfs:label "longitude"^^xsd:string ;
-.
-
-# Use w3c geo ontology
-# :latitude
-#   rdf:type owl:DatatypeProperty ;
-#   rdfs:domain :location ;
-#   rdfs:label "latitude"^^xsd:string ;
-#   rdfs:range xsd:string ;
-# .
-# :longitude
-#   rdf:type owl:DatatypeProperty ;
-#   rdfs:domain :location ;
-#   rdfs:label "longitude"^^xsd:string ;
-#   rdfs:range xsd:string ;
-# .
+. 
