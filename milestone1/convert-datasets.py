@@ -202,10 +202,12 @@ dataset.bind('g6vocab', VOCAB)
 dataset, t_graph = convert_dataset(
     'data/Theater.json', dataset, URIRef(graph_uri_base + 'theaters'))
 serialize_upload('data/theaters.trig', dataset)
+dataset.remove_graph(t_graph)
 
 dataset, mg_graph = convert_dataset(
     'data/MuseaGalleries.json', dataset, URIRef(graph_uri_base + 'museums'))
 serialize_upload('data/museums.trig', dataset)
+dataset.remove_graph(mg_graph)
 
 dataset, park_graph = convert_parking_dataset(
     'data/gehandicaptenparkeerplaatsen.json', dataset, URIRef(graph_uri_base + 'parking-slots'))
