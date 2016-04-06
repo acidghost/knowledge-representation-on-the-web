@@ -5,29 +5,25 @@ from datetime import datetime
 from rdflib import Dataset, URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD
 from iribaker import to_iri
 import requests
+from SPARQLWrapper import SPARQLWrapper, JSON
+from pprint import pprint
 
 
-def convert_dataset(path):
+resource = 'http://data.krw.d2s.labs.vu.nl/group6/resource/'
+RESOURCE = Namespace(resource)
+vocab = 'http://data.krw.d2s.labs.vu.nl/group6/vocab/'
+VOCAB = Namespace(vocab)
+geo = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
+GEO = Namespace(geo)
+
+repo_url = "http://stardog.krw.d2s.labs.vu.nl/group6"
+
+
+def convert_dataset(path, dataset, graph):
     f = open(path, 'r')
-    theaters = json.load(f)
+    json_data = json.load(f)
 
-    resource = 'http://data.krw.d2s.labs.vu.nl/group6/resource/'
-    RESOURCE = Namespace(resource)
-    vocab = 'http://data.krw.d2s.labs.vu.nl/group6/vocab/'
-    VOCAB = Namespace(vocab)
-    geo = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
-    GEO = Namespace(geo)
-
-    graph_uri = URIRef(resource + 'milestone1')
-
-    dataset = Dataset()
-    dataset.bind('g6data', RESOURCE)
-    dataset.bind('g6vocab', VOCAB)
-    dataset.default_context.parse('vocab.ttl', format='turtle')
-
-    graph = dataset.graph(graph_uri)
-
-    for event_data in theaters:
+    for event_data in json_data:
         event = URIRef(to_iri(resource + event_data['title']))
         title = Literal(event_data['title'], datatype=XSD['string'])
         
@@ -102,12 +98,25 @@ def convert_dataset(path):
             if detail.has_key('short_description'):
                 graph.add((event, VOCAB['short_description'], detail['short_description']))
 
-    return dataset
+    return dataset, graph
+
+
+def drop_stardog():
+    query = "DELETE { ?s ?p ?o . } WHERE { ?s ?p ?o  . }"
+
+    endpoint = repo_url + '/query'
+    sparql = SPARQLWrapper(endpoint)
+    sparql.setQuery(query)
+
+    sparql.setReturnFormat(JSON)
+    sparql.addParameter('Accept','application/sparql-results+json')
+
+    sparql.addParameter('reasoning','false')
+    sparql.query().convert()
 
 
 def upload_to_stardog(data):
-    TUTORIAL_REPOSITORY = "http://stardog.krw.d2s.labs.vu.nl/group6"
-    transaction_begin_url = TUTORIAL_REPOSITORY + "/transaction/begin"
+    transaction_begin_url = repo_url + "/transaction/begin"
     
     # Start the transaction, and get a transaction_id
     response = requests.post(transaction_begin_url, headers={'Accept': 'text/plain'})
@@ -115,23 +124,36 @@ def upload_to_stardog(data):
     print 'Transaction ID', transaction_id
 
     # POST the data to the transaction
-    post_url = TUTORIAL_REPOSITORY + "/" + transaction_id + "/add"
+    post_url = repo_url + "/" + transaction_id + "/add"
     response = requests.post(post_url, data=data, headers={'Accept': 'text/plain', 'Content-type': 'application/trig'})
 
     # Close the transaction
-    transaction_close_url = TUTORIAL_REPOSITORY + "/transaction/commit/" + transaction_id
+    transaction_close_url = repo_url + "/transaction/commit/" + transaction_id
     response = requests.post(transaction_close_url)
 
     return str(response.status_code)
 
 
-t_dataset = convert_dataset('data/Theater.json')
-with open('data/Theater.trig', 'w') as f:
-    t_dataset.serialize(f, format='trig')
-upload_to_stardog(t_dataset.serialize(format='trig'))
+def serialize_upload(filename, dataset, upload=True):
+    with open(filename, 'w') as f:
+        dataset.serialize(f, format='trig')
+    upload_to_stardog(dataset.serialize(format='trig'))
 
-mg_dataset = convert_dataset('data/MuseaGalleries.json')
-with open('data/MuseaGalleries.trig', 'w') as f:
-    mg_dataset.serialize(f, format='trig')
-upload_to_stardog(mg_dataset.serialize(format='trig'))
+
+graph_uri = URIRef(resource + 'milestone1')
+
+dataset = Dataset()
+dataset.bind('g6data', RESOURCE)
+dataset.bind('g6vocab', VOCAB)
+dataset.default_context.parse('vocab.ttl', format='turtle')
+
+graph = dataset.graph(graph_uri)
+
+drop_stardog()
+
+t_dataset, t_graph = convert_dataset('data/Theater.json', dataset, graph)
+serialize_upload('data/theaters.trig', t_dataset)
+
+mg_dataset, mg_graph = convert_dataset('data/MuseaGalleries.json', dataset, graph)
+serialize_upload('data/museums.trig', mg_dataset)
 
