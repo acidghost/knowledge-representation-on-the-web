@@ -19,9 +19,11 @@ GEO = Namespace(geo)
 repo_url = "http://stardog.krw.d2s.labs.vu.nl/group6"
 
 
-def convert_dataset(path, dataset, graph):
+def convert_dataset(path, dataset, graph_uri):
     f = open(path, 'r')
     json_data = json.load(f)
+
+    graph = dataset.graph(graph_uri)
 
     for event_data in json_data:
         event = URIRef(to_iri(resource + event_data['title'].strip()))
@@ -66,6 +68,7 @@ def convert_dataset(path, dataset, graph):
             details.append(detail)
 
         
+        graph.add((event, RDF.type, VOCAB['Event']))
         graph.add((event, RDFS.label, title))
         
         if dates != []:
@@ -78,14 +81,14 @@ def convert_dataset(path, dataset, graph):
         
         if location_dict['name'] != '':
             graph.add((event, VOCAB['place'], place))
-            graph.add((place, RDFS.label, place_name))
-            graph.add((place, VOCAB['location'], location))
-            graph.add((location, RDFS.label, location_address))
-            graph.add((location, VOCAB['address'], location_address))
-            graph.add((location, VOCAB['city'], location_city))
-            graph.add((location, VOCAB['zipcode'], location_zip))
-            graph.add((location, GEO['lat'], location_lat))
-            graph.add((location, GEO['long'], location_lon))
+            dataset.add((place, RDFS.label, place_name))
+            dataset.add((place, VOCAB['location'], location))
+            dataset.add((location, RDFS.label, location_address))
+            dataset.add((location, VOCAB['address'], location_address))
+            dataset.add((location, VOCAB['city'], location_city))
+            dataset.add((location, VOCAB['zipcode'], location_zip))
+            dataset.add((location, GEO['lat'], location_lat))
+            dataset.add((location, GEO['long'], location_lon))
 
         if medias:
             for m in medias:
@@ -105,9 +108,11 @@ def convert_dataset(path, dataset, graph):
     return dataset, graph
 
 
-def convert_parking_dataset(path, dataset, graph):
+def convert_parking_dataset(path, dataset, graph_uri):
     f = open(path, 'r')
     json_data = json.load(f)
+
+    graph = dataset.graph(graph_uri)
 
     for data in json_data['gehandicaptenparkeerplaatsen']:
         slot_data = data['node']
@@ -130,6 +135,7 @@ def convert_parking_dataset(path, dataset, graph):
         slot_loc_long = Literal(slot_coordinates['coordinates'][1])
 
         
+        graph.add((slot, RDF.type, VOCAB['ParkingSlot']))
         graph.add((slot, RDFS.label, slot_loc_address))
         if slot_quantity:
             graph.add((slot, VOCAB['quantity'], slot_quantity))
@@ -137,17 +143,17 @@ def convert_parking_dataset(path, dataset, graph):
             graph.add((slot, VOCAB['info'], slot_info))
         graph.add((slot, VOCAB['location'], slot_loc))
         
-        graph.add((slot_loc, RDFS.label, slot_loc_address))
-        graph.add((slot_loc, VOCAB['address'], slot_loc_address))
-        graph.add((slot_loc, VOCAB['borough'], slot_loc_borough))
-        graph.add((slot_loc, GEO['lat'], slot_loc_lat))
-        graph.add((slot_loc, GEO['long'], slot_loc_long))
+        dataset.add((slot_loc, RDFS.label, slot_loc_address))
+        dataset.add((slot_loc, VOCAB['address'], slot_loc_address))
+        dataset.add((slot_loc, VOCAB['borough'], slot_loc_borough))
+        dataset.add((slot_loc, GEO['lat'], slot_loc_lat))
+        dataset.add((slot_loc, GEO['long'], slot_loc_long))
 
     return dataset, graph
 
 
 def drop_stardog():
-    query = "DELETE { ?s ?p ?o . } WHERE { ?s ?p ?o  . }"
+    query = "DELETE { GRAPH ?g { ?s ?p ?o }. } WHERE { GRAPH ?g { ?s ?p ?o }. }"
 
     endpoint = repo_url + '/query'
     sparql = SPARQLWrapper(endpoint)
@@ -185,23 +191,23 @@ def serialize_upload(filename, dataset, upload=True):
     upload_to_stardog(dataset.serialize(format='trig'))
 
 
-graph_uri = URIRef(resource + 'milestone1')
+graph_uri_base = resource + 'milestone1/'
+
+drop_stardog()
 
 dataset = Dataset()
 dataset.bind('g6data', RESOURCE)
 dataset.bind('g6vocab', VOCAB)
-dataset.default_context.parse('vocab.ttl', format='turtle')
 
-graph = dataset.graph(graph_uri)
+dataset, t_graph = convert_dataset(
+    'data/Theater.json', dataset, URIRef(graph_uri_base + 'theaters'))
+serialize_upload('data/theaters.trig', dataset)
 
-drop_stardog()
+dataset, mg_graph = convert_dataset(
+    'data/MuseaGalleries.json', dataset, URIRef(graph_uri_base + 'museums'))
+serialize_upload('data/museums.trig', dataset)
 
-t_dataset, t_graph = convert_dataset('data/Theater.json', dataset, graph)
-serialize_upload('data/theaters.trig', t_dataset)
-
-mg_dataset, mg_graph = convert_dataset('data/MuseaGalleries.json', dataset, graph)
-serialize_upload('data/museums.trig', mg_dataset)
-
-park_dataset, park_graph = convert_parking_dataset('data/gehandicaptenparkeerplaatsen.json', dataset, graph)
-serialize_upload('data/parking_slots.trig', park_dataset)
+dataset, park_graph = convert_parking_dataset(
+    'data/gehandicaptenparkeerplaatsen.json', dataset, URIRef(graph_uri_base + 'parking-slots'))
+serialize_upload('data/parking_slots.trig', dataset)
 
