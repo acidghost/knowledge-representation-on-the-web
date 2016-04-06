@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from rdflib import Dataset, URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD
 from iribaker import to_iri
+import requests
 
 
 def convert_dataset(path):
@@ -104,11 +105,33 @@ def convert_dataset(path):
     return dataset
 
 
+def upload_to_stardog(data):
+    TUTORIAL_REPOSITORY = "http://stardog.krw.d2s.labs.vu.nl/group6"
+    transaction_begin_url = TUTORIAL_REPOSITORY + "/transaction/begin"
+    
+    # Start the transaction, and get a transaction_id
+    response = requests.post(transaction_begin_url, headers={'Accept': 'text/plain'})
+    transaction_id = response.content
+    print 'Transaction ID', transaction_id
+
+    # POST the data to the transaction
+    post_url = TUTORIAL_REPOSITORY + "/" + transaction_id + "/add"
+    response = requests.post(post_url, data=data, headers={'Accept': 'text/plain', 'Content-type': 'application/trig'})
+
+    # Close the transaction
+    transaction_close_url = TUTORIAL_REPOSITORY + "/transaction/commit/" + transaction_id
+    response = requests.post(transaction_close_url)
+
+    return str(response.status_code)
+
+
 t_dataset = convert_dataset('data/Theater.json')
 with open('data/Theater.trig', 'w') as f:
     t_dataset.serialize(f, format='trig')
+upload_to_stardog(t_dataset.serialize(format='trig'))
 
 mg_dataset = convert_dataset('data/MuseaGalleries.json')
 with open('data/MuseaGalleries.trig', 'w') as f:
     mg_dataset.serialize(f, format='trig')
+upload_to_stardog(mg_dataset.serialize(format='trig'))
 
