@@ -21,6 +21,7 @@
 \usepackage{amssymb}	
 \usepackage{listings}
 \usepackage{multicol}
+\usepackage{hyperref}
 \lstset{language=SQL,morekeywords={PREFIX,java,rdf,rdfs,url}}
 
 
@@ -50,15 +51,16 @@
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{\url{first@vu.nl} \and \url{second@vu.nl}}
+\institute{\url{d.alivanistos@student.vu.nl} \and \url{s.baezsantamaria@student.vu.nl} \and \url{a.jemmett@student.vu.nl}}
 
 \maketitle
 
 
 \begin{abstract}
-The abstract should summarize the contents of the paper and should
-contain at least 70 and at most 150 words. It should be written using the
-\emph{abstract} environment.
+	%TODO update before submitting
+	This project realizes the integration of three different datasets related to the city of Amsterdam. It aims to provide support for handicap people who attend events in crowded or unknown neighborhoods.
+	We create an RDF database, using the OWL ontology, from public JSON files in order to model the data integration. We query such database in order to meet the needs of the proposed potential users. Finally, a simple web application was created to serve as front end for the functionality of the project. 
+% should contain at least 70 and at most 150 words. It should be written using the \emph{abstract} environment.
 \end{abstract}
 
 
@@ -76,9 +78,9 @@ In the following section we delve deeper into cases where our proposed solution 
 \section{Scenario / Use Case}
 % you could describe the use-case you have in mind that makes use of your chosen data about some matter concerning Amsterdam. Describe the overall idea, but also some concrete usage scenarios (e.g. as part of an actual system). Maybe interaction flow-diagrams etc could be useful, or what is called "personas" https://en.wikipedia.org/wiki/Persona_%28user_experience%29.
 
-As stated in the introduction, the integration of venues and parking spot locations may bring benefits to attendees. Our application will provide a convenient and time-saving option for attendees to find parking spots. Furthermore, by using our application it is guaranteed that the best parking spot will be suggested %TODO not sure about this though ...
+As stated in the introduction, the integration of venues and parking spot locations may bring benefits to attendees. Our application provides with a convenient and time-saving option for attendees to find parking spots. Furthermore, by using our application it is guaranteed that the best parking spot will be suggested, and enough options will be provided in case best matches are not available for parking at the moment of consultation.
 
-Hereby we provide three concrete use-cases where our application's benefits are to be maximized.
+Hereby we provide three concrete use-cases, by describing three different personas, where our application's benefits are to be maximized. A general use case diagram is shown in Figure \ref{fig:use-case}. 
 
 \begin{enumerate}
 	% Planning in advance
@@ -87,16 +89,22 @@ Hereby we provide three concrete use-cases where our application's benefits are 
 	% Quick search once in the theater (on the fly)
 	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show. He is quite late and is rushing to find the closest parking spots. He quickly browses our application and finds an area with several parking spots. He drives in that direction hoping to find an available spot. 
 	% Event manager
-	\item Mary is an event organizer who wants to host an exhibition in a Museum next month. She is looking for an accessible venue so she would like to see the distribution of parking spots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
+	\item Mary is an event organizer who wants to host an exhibition in a museum next month. She is looking for an accessible venue so she would like to see the distribution of parking spots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
 \end{enumerate}
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{img/use-case-diagram.png}
+	\caption{Use case diagram showing how potential users can use the application created in this project.}
+	\label{fig:use-case}
+\end{figure}
 
 \section{Data sources}
 % which datasets have you used and converted? Provide the core properties of those datasets. Also describe other datasets that you might want to integrate, and even data that still needs to be found, or even created.
-We decided to integrate the Gemeente's open data about theater events, museums and galleries and handicap's parking slots. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
+In order to meet the needs in the above use cases we decided to integrate the Gemeente's open data about theaters, museums and galleries events along with the handicap's parking slots data. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
 
 \subsection{Theaters, Museums and Galleries Dataset}
-The theaters and museums dataset contains the main features according to the JSON we used:  
+The Theaters and the Museums and Galleries datasets contain information about events happening in these types of venues. The datasets integrate easily since the both share the following main features:
 
 \begin{center}
 	\textbf{\emph{Features}}
@@ -116,7 +124,8 @@ The theaters and museums dataset contains the main features according to the JSO
 \end{multicols}
 \end{center} 
 
-The main features (*) in the JSON format that contain sub-features.
+Some of the main features (as shown by *) in the JSON format contain sub-features with more specific information. Those are:
+
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\cdot$}
 \renewcommand{\labelitemiii}{$\diamond$}
@@ -161,6 +170,8 @@ The main features (*) in the JSON format that contain sub-features.
 \end{multicols}
 
 \subsection{Handicap's Parking Slots Dataset}
+The Handicap's Parking Slots dataset, as its name states, contains information about the location of parking slots reserved for handicap people, around the city of Amsterdam. Each parking slot is described by following main features:
+
 \begin{center}
 	\textbf{\emph{Features}}
 	\setlength{\columnsep}{4em}
@@ -178,17 +189,28 @@ The main features (*) in the JSON format that contain sub-features.
 
 \section{Building Knowledge Graphs}
 % Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
+In order to model the data properly we created a vocabulary which describes the classes and properties of the application ontology. We combined self defined ontologies with external ontologies such as dbpedia and geolocation. %TODO add citations to these
+
+A diagram showing for the modeled vocabulary is shown in Figure \ref{fig:vocabulary}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{img/vocab-graph.jpg}
+	\caption{Visualization of the Ontology graph}
+	\label{fig:vocabulary}
+\end{figure}
+
+To populate the database with instances, the JSON files were read and transformed into RDF triples using a python script. The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server
+
+We created three named graphs: \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/theaters}{Theaters}, \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/museums}{Museums} and \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/parking-slots}{Parking slots}.
+
 
 \section{Semantic considerations}
 % In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
-Here is our vocabulary (Figure \ref{fig:ontology})
+Event is linked to a venue. Venue and parking spots are linked to locations
+John knows the venue
+Peter knows the event
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{img/ontology.jpg}
-	\caption{Visualization of the Ontology graph}
-	\label{fig:ontology}
-\end{figure}
 
 \subsection{RDF and RDFS entailment}
 % Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
@@ -228,7 +250,8 @@ bind(xsd:double(?slong) * math:pi() / xsd:double(180) as ?lo1) .
 bind(xsd:double(?elat) * math:pi() / xsd:double(180) as ?la2) .
 bind(xsd:double(?elong) * math:pi() / xsd:double(180) as ?lo2) .
 bind(?lo2 - ?lo1 as ?l) .
-bind(math:acos(math:sin(?la2)*math:sin(?la1) + math:cos(?la1)*math:cos(?la1)*math:cos(?l)) * xsd:double(6371000) as ?dist) .
+bind(math:acos(math:sin(?la2)*math:sin(?la1) 
++ math:cos(?la1)*math:cos(?la1)*math:cos(?l)) * xsd:double(6371000) as ?dist) .
 }
 order by ?dist
 
