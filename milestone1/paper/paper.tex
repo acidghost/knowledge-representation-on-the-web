@@ -18,7 +18,7 @@
 
 \usepackage{url}
 \usepackage{graphicx}
-\usepackage{amssymb}
+\usepackage{amssymb}	
 \usepackage{listings}
 \usepackage{multicol}
 \lstset{language=SQL,morekeywords={PREFIX,java,rdf,rdfs,url}}
@@ -96,41 +96,69 @@ Hereby we provide three concrete use-cases where our application's benefits are 
 We decided to integrate the Gemeente's open data about theater events, museums and galleries and handicap's parking slots. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
 
 \subsection{Theaters, Museums and Galleries Dataset}
-The theaters and museums dataset contains the same features according to the JSON we used:  
+The theaters and museums dataset contains the main features according to the JSON we used:  
 
 \begin{center}
 	\textbf{\emph{Features}}
-	\setlength{\columnsep}{6em}
-\begin{multicols}{3}
+\begin{multicols}{2}
 	\begin{enumerate}
 		\item \textbf{Trcid}
 		\item \textbf{Title}
-		\item \textbf{Shortdescription}
-		\item \textbf{Longdescription}
-		\item \textbf{Calendarsummary}
-		\item \textbf{TitleEN}
-		\item \textbf{ShortdescriptionEN }
-		\item \textbf{LongdescriptionEN  }
-		\item \textbf{CalendarsummaryEN       }
-		\item \textbf{Types} 
-		\item \textbf{Ids}
-		\item \textbf{Locatienaam}
-		\item \textbf{City}
-		\item \textbf{Adres}
-		\item \textbf{Zipcode}
-		\item \textbf{Latitude}
-		\item \textbf{Longitude}
-		\item \textbf{Urls}
-		\item \textbf{Media}
-		\item \textbf{Thumbnail}
-		\item \textbf{Datepattern\_startdate}
-		\item \textbf{Datepattern\_enddate}
-		\item \textbf{Singledates}
-		\item \textbf{Type1}
-		\item \textbf{Lastupdated}			
+		\item \textbf{Details *}
+		\item \textbf{Types *}
+		\item \textbf{Location *}
+		\item \textbf{Urls *}
+		\item \textbf{Media *}
+		\item \textbf{Dates}
+		\item \textbf{Lastupdated}
+		\item \textbf{Eigenschappen *} 
 		\end{enumerate}
 \end{multicols}
 \end{center} 
+
+The main features (*) in the JSON format that contain sub-features.
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\ast$}
+\begin{multicols}{2}
+	\begin{itemize}
+		\item \textit{Details}\itemsep2pt
+		\begin{itemize}\itemsep1pt
+			\item language
+			\item title
+			\item calendarsummary
+			\item shortdescription
+			\item longdescription
+		\end{itemize}
+		\item \textit{Types}
+		\begin{itemize}\itemsep1pt
+			\item type
+			\item catid
+		\end{itemize}
+		\item \textit{Location}
+		\begin{itemize}
+			\item name
+			\item city
+			\item address
+			\item zipcode
+			\item latitude
+			\item longitude
+		\end{itemize}
+		\item \textit{Media}
+		\begin{itemize}
+			\item url
+			\item main
+		\end{itemize}
+		\item \textit{Eigenschappen}
+		\begin{itemize}
+			\item Catid
+			\item Value
+			\item CategoryArea
+			\item Category
+		\end{itemize}
+	\end{itemize}
+\end{multicols}
 
 \subsection{Handicap's Parking Slots Dataset}
 \begin{center}
