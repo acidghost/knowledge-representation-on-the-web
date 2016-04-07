@@ -4,3 +4,6 @@
 *.bbl
 *.blg
 *.synctex.gz
+**/static/.webassets-cache
+**/static/gen
+**/static/components
