@@ -6,7 +6,7 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
 prefix dbo: <http://dbpedia.org/ontology/>
 
-select ?label_event ?label_venue ?address
+select distinct ?label_event ?label_venue ?address
 where { 
   ?id_event a :Event .
   ?id_event rdfs:label ?label_event .
