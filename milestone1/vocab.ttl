@@ -1,12 +1,13 @@
-@prefix : <http://data.krw.d2s.labs.vu.nl/group6/vocab/> .
+@prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaspot/vocab/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 
 ### Ontology
-<http://data.krw.d2s.labs.vu.nl/group6/vocab>
+<http://data.krw.d2s.labs.vu.nl/group6/findaspot/vocab>
   rdf:type owl:Ontology ;
   owl:versionInfo "First version"^^xsd:string ;
 .
@@ -15,12 +16,12 @@
 
 :Location
   rdf:type owl:Class ;
-  rdfs:label "Location"^^xsd:string ;
-  rdfs:subClassOf owl:Thing ;
+  # rdfs:label "Location"^^xsd:string ;
+  rdfs:subClassOf dbo:Location ;
 .
-:Place
+:Venue
   rdf:type owl:Class ;
-  rdfs:label "Place"^^xsd:string ;
+  rdfs:label "Venue"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
 .
 :Event
@@ -37,29 +38,32 @@
 
 ### Location Properties
 
-:address
-  rdf:type owl:DatatypeProperty ;
+dbo:address
+  # rdf:type owl:DatatypeProperty ;
   rdfs:domain :Location ;
-  rdfs:label "address"^^xsd:string ;
-  rdfs:range xsd:string ;
+  # rdfs:label "address"^^xsd:string ;
+  # rdfs:range xsd:string ;
 .
-:city
-  rdf:type owl:DatatypeProperty ;
+dbo:city
+  # rdf:type owl:DatatypeProperty ;
   rdfs:domain :Location ;
-  rdfs:label "city"^^xsd:string ;
-  rdfs:range xsd:string ;
+  # rdfs:label "city"^^xsd:string ;
+  # rdfs:range xsd:string ;
 .
-:zipcode
-  rdf:type owl:DatatypeProperty ;
+dbo:postalCode
+  # rdf:type owl:DatatypeProperty ;
   rdfs:domain :Location ;
-  rdfs:label "zipcode"^^xsd:string ;
-  rdfs:range xsd:string ;
+  # rdfs:label "zipcode"^^xsd:string ;
+  # rdfs:range xsd:string ;
 .
 :borough
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Location ;
   rdfs:label "borough"^^xsd:string ;
   rdfs:range xsd:string ;
+.
+dbo:country
+  rdfs:domain :Location ;
 .
 geo:lat
   rdfs:domain :Location ;
@@ -84,23 +88,24 @@ geo:long
 # .
 
 
-### Place Properties
+### Venue Properties
 
 :location
   rdf:type owl:ObjectProperty ;
-  rdfs:domain :Place ;
-  rdfs:label "location"^^xsd:string ;
+  rdfs:subPropertyOf dbo:location ;
+  rdfs:domain :Venue ;
+  # rdfs:label "location"^^xsd:string ;
   rdfs:range :Location ;
 .
 
 
 ### Event Properties
 
-:place
+:venue
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Event ;
-  rdfs:label "place"^^xsd:string ;
-  rdfs:range :Place ;
+  rdfs:label "venue"^^xsd:string ;
+  rdfs:range :Venue ;
 .
 :single_date
   rdf:type owl:DatatypeProperty ;
@@ -162,8 +167,9 @@ geo:long
 
 :location
   rdf:type owl:ObjectProperty ;
+  rdfs:subPropertyOf dbo:location ;
   rdfs:domain :ParkingSlot ;
-  rdfs:label "location"^^xsd:string ;
+  # rdfs:label "location"^^xsd:string ;
   rdfs:range :Location ;
 .
 :quantity

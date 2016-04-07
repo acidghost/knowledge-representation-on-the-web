@@ -9,12 +9,16 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from pprint import pprint
 
 
-resource = 'http://data.krw.d2s.labs.vu.nl/group6/resource/'
+resource = 'http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/'
 RESOURCE = Namespace(resource)
-vocab = 'http://data.krw.d2s.labs.vu.nl/group6/vocab/'
+vocab = 'http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/'
 VOCAB = Namespace(vocab)
 geo = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
 GEO = Namespace(geo)
+dbo = 'http://dbpedia.org/ontology/'
+DBO = Namespace(dbo)
+dbr = 'http://dbpedia.org/resource/'
+DBR = Namespace(dbr)
 
 repo_url = "http://stardog.krw.d2s.labs.vu.nl/group6"
 
@@ -24,6 +28,7 @@ def convert_dataset(path, dataset, graph_uri):
     json_data = json.load(f)
 
     graph = dataset.graph(graph_uri)
+    country = URIRef(to_iri(dbr + 'Kingdom of the Netherlands'))
 
     for event_data in json_data:
         event = URIRef(to_iri(resource + event_data['title'].strip()))
@@ -43,12 +48,13 @@ def convert_dataset(path, dataset, graph_uri):
         if location_d_name != '':
             place = URIRef(to_iri(resource + location_d_name))
             place_name = Literal(location_d_name, datatype=XSD['string'])
-            location = URIRef(to_iri(resource + location_dict['adress'].strip()))
+            location_city_str = location_dict['city'].strip().capitalize()
+            location = URIRef(to_iri(resource + location_city_str + '/' + location_dict['adress'].strip()))
+            location_city = Literal(location_city_str)
             location_address = Literal(location_dict['adress'].strip())
-            location_city = Literal(location_dict['city'].strip())
             location_zip = Literal(location_dict['zipcode'].strip())
-            location_lat = Literal(location_dict['latitude'].strip())
-            location_lon = Literal(location_dict['longitude'].strip())
+            location_lat = Literal(float(location_dict['latitude'].replace(',', '.')))
+            location_lon = Literal(float(location_dict['longitude'].replace(',', '.')))
 
         if event_data['media']:
             medias = [(Literal(m['url'].strip(), datatype=XSD['anyURI']), m['main'].strip() == 'true') for m in event_data['media']]
@@ -80,13 +86,16 @@ def convert_dataset(path, dataset, graph_uri):
                 graph.add((event, VOCAB['end_date'], end_date))
         
         if location_dict['name'] != '':
-            graph.add((event, VOCAB['place'], place))
+            graph.add((event, VOCAB['venue'], place))
+            dataset.add((place, RDF.type, VOCAB['Venue']))
             dataset.add((place, RDFS.label, place_name))
-            dataset.add((place, VOCAB['location'], location))
+            dataset.add((place, DBO['location'], location))
+            dataset.add((location, RDF.type, VOCAB['Location']))
             dataset.add((location, RDFS.label, location_address))
-            dataset.add((location, VOCAB['address'], location_address))
-            dataset.add((location, VOCAB['city'], location_city))
-            dataset.add((location, VOCAB['zipcode'], location_zip))
+            dataset.add((location, DBO['address'], location_address))
+            dataset.add((location, DBO['city'], location_city))
+            dataset.add((location, DBO['postalCode'], location_zip))
+            dataset.add((location, DBO['country'], country))
             dataset.add((location, GEO['lat'], location_lat))
             dataset.add((location, GEO['long'], location_lon))
 
@@ -113,14 +122,18 @@ def convert_parking_dataset(path, dataset, graph_uri):
     json_data = json.load(f)
 
     graph = dataset.graph(graph_uri)
+    country = URIRef(to_iri(dbr + 'Kingdom of the Netherlands'))
+    city = URIRef(to_iri(dbr + 'Amsterdam'))
 
     for data in json_data['gehandicaptenparkeerplaatsen']:
         slot_data = data['node']
         
         data_address = slot_data['Adres'].strip()
+        if data_address == '':
+            continue
         slot = URIRef(to_iri(resource + data_address))
         
-        slot_loc = URIRef(to_iri(resource + data_address))
+        slot_loc = URIRef(to_iri(resource + 'Amsterdam/' + data_address))
         slot_loc_address = Literal(data_address)
         
         data_quantity = slot_data['Aantal'].strip()
@@ -131,8 +144,8 @@ def convert_parking_dataset(path, dataset, graph_uri):
         slot_loc_borough = Literal(slot_data['Stadsdeel'].strip())
         
         slot_coordinates = json.loads(slot_data['locatie'].strip())
-        slot_loc_lat = Literal(slot_coordinates['coordinates'][0])
-        slot_loc_long = Literal(slot_coordinates['coordinates'][1])
+        slot_loc_lat = Literal(float(slot_coordinates['coordinates'][1]))
+        slot_loc_long = Literal(float(slot_coordinates['coordinates'][0]))
 
         
         graph.add((slot, RDF.type, VOCAB['ParkingSlot']))
@@ -141,10 +154,13 @@ def convert_parking_dataset(path, dataset, graph_uri):
             graph.add((slot, VOCAB['quantity'], slot_quantity))
         if slot_info:
             graph.add((slot, VOCAB['info'], slot_info))
-        graph.add((slot, VOCAB['location'], slot_loc))
-        
+        graph.add((slot, DBO['location'], slot_loc))
+
+        dataset.add((slot_loc, RDF.type, VOCAB['Location']))
         dataset.add((slot_loc, RDFS.label, slot_loc_address))
-        dataset.add((slot_loc, VOCAB['address'], slot_loc_address))
+        dataset.add((slot_loc, DBO['address'], slot_loc_address))
+        dataset.add((slot_loc, DBO['city'], city))
+        dataset.add((slot_loc, DBO['country'], country))
         dataset.add((slot_loc, VOCAB['borough'], slot_loc_borough))
         dataset.add((slot_loc, GEO['lat'], slot_loc_lat))
         dataset.add((slot_loc, GEO['long'], slot_loc_long))
@@ -154,16 +170,21 @@ def convert_parking_dataset(path, dataset, graph_uri):
 
 def drop_stardog():
     query = "DELETE { GRAPH ?g { ?s ?p ?o }. } WHERE { GRAPH ?g { ?s ?p ?o }. }"
+    query2 = "DELETE { ?s ?p ?o } WHERE { ?s ?p ?o }"
 
-    endpoint = repo_url + '/query'
-    sparql = SPARQLWrapper(endpoint)
-    sparql.setQuery(query)
+    def do_query(query):
+        endpoint = repo_url + '/query'
+        sparql = SPARQLWrapper(endpoint)
+        sparql.setQuery(query)
 
-    sparql.setReturnFormat(JSON)
-    sparql.addParameter('Accept','application/sparql-results+json')
+        sparql.setReturnFormat(JSON)
+        sparql.addParameter('Accept','application/sparql-results+json')
 
-    sparql.addParameter('reasoning','false')
-    sparql.query().convert()
+        sparql.addParameter('reasoning','false')
+        sparql.query().convert()
+
+    do_query(query)
+    do_query(query2)
 
 
 def upload_to_stardog(data):
@@ -191,13 +212,16 @@ def serialize_upload(filename, dataset, upload=True):
     upload_to_stardog(dataset.serialize(format='trig'))
 
 
-graph_uri_base = resource + 'milestone1/'
+graph_uri_base = resource + 'findaslot/'
 
 drop_stardog()
 
 dataset = Dataset()
-dataset.bind('g6data', RESOURCE)
-dataset.bind('g6vocab', VOCAB)
+dataset.bind('fasdat', RESOURCE)
+dataset.bind('fasont', VOCAB)
+dataset.bind('geo', GEO)
+dataset.bind('dbo', DBO)
+dataset.bind('dbr', DBR)
 
 dataset, t_graph = convert_dataset(
     'data/Theater.json', dataset, URIRef(graph_uri_base + 'theaters'))
