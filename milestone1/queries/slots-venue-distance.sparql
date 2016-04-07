@@ -1,0 +1,32 @@
+﻿prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
+prefix data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
+prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+prefix geof: <http://www.opengis.net/def/function/geosparql/>
+prefix math: <http://www.w3.org/2005/xpath-functions/math#>
+prefix fn: <http://www.w3.org/2005/xpath-functions#>
+prefix dbo: <http://dbpedia.org/ontology/>
+
+select distinct ?lslot ?slat ?slong ?elat ?elong ?l ?d
+where {
+  ?slot a :ParkingSlot .
+  ?slot rdfs:label ?lslot .
+  ?slot dbo:location ?slocation .
+  ?slocation geo:lat ?slat ; geo:long ?slong .
+  # ?eplace :place data:Pianola_Museum .
+  data:Pianola_Museum dbo:location ?elocation .
+  # ?elocation  geof:nearby (?slocation 2 <http://qudt.org/vocab/unit#Kilometer>) .
+  ?elocation geo:lat ?elat ; geo:long ?elong .
+  bind(xsd:double(?slat) * math:pi() / xsd:double(180) as ?la1) .
+  bind(xsd:double(?slong) * math:pi() / xsd:double(180) as ?lo1) .
+  bind(xsd:double(?elat) * math:pi() / xsd:double(180) as ?la2) .
+  bind(xsd:double(?elong) * math:pi() / xsd:double(180) as ?lo2) .
+  bind(?lo2 - ?lo1 as ?l) .
+  bind(math:acos(math:sin(?la2)*math:sin(?la1) + math:cos(?lo2)*math:cos(?lo1)*math:cos(?l)) * xsd:double(6371000) as ?d) .
+  # filter (?d < 10000000) .
+}
+order by ?d
