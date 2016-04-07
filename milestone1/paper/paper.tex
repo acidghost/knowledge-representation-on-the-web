@@ -20,6 +20,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{listings}
+\usepackage{multicol}
 \lstset{language=SQL,morekeywords={PREFIX,java,rdf,rdfs,url}}
 
 
@@ -49,7 +50,7 @@
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{\url{d.alivanistos@student.vu.nl} \and \url{s.baezsantamaria@student.vu.nl} \and \url{a.jemmett@student.vu.nl}}
+\institute{\url{first@vu.nl} \and \url{second@vu.nl}}
 
 \maketitle
 
@@ -77,7 +78,7 @@ In the following section we delve deeper into cases where our proposed solution 
 
 As stated in the introduction, the integration of venues and parking spot locations may bring benefits to attendees. Our application will provide a convenient and time-saving option for attendees to find parking spots. Furthermore, by using our application it is guaranteed that the best parking spot will be suggested %TODO not sure about this though ...
 
-Hereby we provide three concrete use-cases where our application's benefits are to be maximized. A general use-case diagram is provided in Figure \ref{fig:use-case}.
+Hereby we provide three concrete use-cases where our application's benefits are to be maximized.
 
 \begin{enumerate}
 	% Planning in advance
@@ -89,39 +90,70 @@ Hereby we provide three concrete use-cases where our application's benefits are 
 	\item Mary is an event organizer who wants to host an exhibition in a Museum next month. She is looking for an accessible venue so she would like to see the distribution of parking spots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
 \end{enumerate}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{img/use-case-diagram.png}
-	\caption{Use case diagram for our web application}
-	\label{fig:use-case}
-\end{figure}
 
 \section{Data sources}
 % which datasets have you used and converted? Provide the core properties of those datasets. Also describe other datasets that you might want to integrate, and even data that still needs to be found, or even created.
 We decided to integrate the Gemeente's open data about theater events, museums and galleries and handicap's parking slots. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
 
-\subsection{Theaters Dataset}
-% TODO describe theaters dataset (fields, contained data, semantics)
-The theaters dataset contains the following fields: 
+\subsection{Theaters, Museums and Galleries Dataset}
+The theaters and museums dataset contains the same features according to the JSON we used:  
 
 \begin{center}
-	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
-		\hline
-		\textbf{Trcid} & \textbf{Title} & \textbf{Shortdescription} & \textbf{Longdescription} & \textbf{Calendarsummary} & \textbf{TitleEN} & \textbf{ShortdescriptionEN} & \textbf{LongdescriptionEN} & \textbf{CalendarsummaryEN } & \textbf{Types} & \textbf{Ids} & \textbf{Locatienaam} & \textbf{City} & \textbf{Adres} & \textbf{Zipcode} & \textbf{Latitude } & \textbf{Latitude} & \textbf{Urls} & \textbf{Media} & \textbf{Thumbnail} & \textbf{Datepattern\_startdate} & \textbf{Datepattern\_enddate} & \textbf{Singledates} & \textbf{Type1} & \textbf{Lastupdated} \\ \hline
- 
-		\hline
-	\end{tabular}
-\end{center}
-
-
-\subsection{Museums and Galleries Dataset}
-% TODO describe museums and galleries dataset
+	\textbf{\emph{Features}}
+	\setlength{\columnsep}{6em}
+\begin{multicols}{3}
+	\begin{enumerate}
+		\item \textbf{Trcid}
+		\item \textbf{Title}
+		\item \textbf{Shortdescription}
+		\item \textbf{Longdescription}
+		\item \textbf{Calendarsummary}
+		\item \textbf{TitleEN}
+		\item \textbf{ShortdescriptionEN }
+		\item \textbf{LongdescriptionEN  }
+		\item \textbf{CalendarsummaryEN       }
+		\item \textbf{Types} 
+		\item \textbf{Ids}
+		\item \textbf{Locatienaam}
+		\item \textbf{City}
+		\item \textbf{Adres}
+		\item \textbf{Zipcode}
+		\item \textbf{Latitude}
+		\item \textbf{Longitude}
+		\item \textbf{Urls}
+		\item \textbf{Media}
+		\item \textbf{Thumbnail}
+		\item \textbf{Datepattern\_startdate}
+		\item \textbf{Datepattern\_enddate}
+		\item \textbf{Singledates}
+		\item \textbf{Type1}
+		\item \textbf{Lastupdated}			
+		\end{enumerate}
+\end{multicols}
+\end{center} 
 
 \subsection{Handicap's Parking Slots Dataset}
-% TODO describe this dataset
+\begin{center}
+	\textbf{\emph{Features}}
+	\setlength{\columnsep}{4em}
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item \textbf{Adres}
+			\item \textbf{Location}
+			\item \textbf{Aantal}
+			\item \textbf{Onderbord}
+			\item \textbf{Stadsdeel}	
+			\item \textbf{Locatie-info}				
+		\end{enumerate}
+	\end{multicols}
+\end{center} 
 
 \section{Building Knowledge Graphs}
 % Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
+
+\section{Semantic considerations}
+% In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
+Here is our vocabulary (Figure \ref{fig:ontology})
 
 \begin{figure}[h]
 	\centering
@@ -129,10 +161,6 @@ The theaters dataset contains the following fields:
 	\caption{Visualization of the Ontology graph}
 	\label{fig:ontology}
 \end{figure}
-
-\section{Semantic considerations}
-% In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
-Here is our vocabulary (Figure \ref{fig:ontology})
 
 \subsection{RDF and RDFS entailment}
 % Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
