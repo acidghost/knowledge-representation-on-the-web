@@ -90,9 +90,9 @@ geo:long
 
 ### Venue Properties
 
-:location
-  rdf:type owl:ObjectProperty ;
-  rdfs:subPropertyOf dbo:location ;
+dbo:location
+  # rdf:type owl:ObjectProperty ;
+  # rdfs:subPropertyOf dbo:location ;
   rdfs:domain :Venue ;
   # rdfs:label "location"^^xsd:string ;
   rdfs:range :Location ;
@@ -165,9 +165,9 @@ geo:long
 
 ### ParkingSlot Properties
 
-:location
-  rdf:type owl:ObjectProperty ;
-  rdfs:subPropertyOf dbo:location ;
+dbo:location
+  # rdf:type owl:ObjectProperty ;
+  # rdfs:subPropertyOf dbo:location ;
   rdfs:domain :ParkingSlot ;
   # rdfs:label "location"^^xsd:string ;
   rdfs:range :Location ;
