@@ -1,0 +1,338 @@
+@prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaspot/vocab/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab> .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab> rdf:type owl:Ontology ;
+                                                        
+                                                        owl:versionInfo "First version"^^xsd:string .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://dbpedia.org/ontology/address
+
+dbo:address rdf:type owl:AnnotationProperty ;
+            
+            rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+###  http://dbpedia.org/ontology/city
+
+dbo:city rdf:type owl:AnnotationProperty ;
+         
+         rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+###  http://dbpedia.org/ontology/country
+
+dbo:country rdf:type owl:AnnotationProperty ;
+            
+            rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+###  http://dbpedia.org/ontology/postalCode
+
+dbo:postalCode rdf:type owl:AnnotationProperty ;
+               
+               rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+
+geo:lat rdfs:label "latitude"^^xsd:string ;
+        
+        rdf:type owl:AnnotationProperty ;
+        
+        rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+
+geo:long rdfs:label "longitude"^^xsd:string ;
+         
+         rdf:type owl:AnnotationProperty ;
+         
+         rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+
+
+#################################################################
+#
+#    Datatypes
+#
+#################################################################
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+
+xsd:date rdf:type rdfs:Datatype .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/location
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/location> rdf:type owl:ObjectProperty ;
+                                                                 
+                                                                 rdfs:subPropertyOf dbo:location ;
+                                                                 
+                                                                 rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ,
+                                                                             <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
+                                                                 
+                                                                 rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/venue
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/venue> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                              
+                                                              rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
+                                                              
+                                                              rdfs:label "venue"^^xsd:string .
+
+
+
+###  http://dbpedia.org/ontology/location
+
+dbo:location rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/borough
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/borough> rdf:type owl:DatatypeProperty ;
+                                                                
+                                                                rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> ;
+                                                                
+                                                                rdfs:range xsd:string ;
+                                                                
+                                                                rdfs:label "borough"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/calendar_summary
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/calendar_summary> rdf:type owl:DatatypeProperty ;
+                                                                         
+                                                                         rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                         
+                                                                         rdfs:range xsd:string ;
+                                                                         
+                                                                         rdfs:label "calendar_summary"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                 
+                                                                 rdfs:range xsd:date ;
+                                                                 
+                                                                 rdfs:label "end_date"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+                                                             
+                                                             rdfs:range xsd:string ;
+                                                             
+                                                             rdfs:label "info"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description> rdf:type owl:DatatypeProperty ;
+                                                                         
+                                                                         rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                         
+                                                                         rdfs:range xsd:string ;
+                                                                         
+                                                                         rdfs:label "long_description"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media> rdf:type owl:DatatypeProperty ;
+                                                                   
+                                                                   rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                   
+                                                                   rdfs:range xsd:anyURI ;
+                                                                   
+                                                                   rdfs:label "main_media"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media> rdf:type owl:DatatypeProperty ;
+                                                              
+                                                              rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                              
+                                                              rdfs:range xsd:anyURI ;
+                                                              
+                                                              rdfs:label "media"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+                                                                 
+                                                                 rdfs:range xsd:unsignedInt ;
+                                                                 
+                                                                 rdfs:label "quantity"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description> rdf:type owl:DatatypeProperty ;
+                                                                          
+                                                                          rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                          
+                                                                          rdfs:range xsd:string ;
+                                                                          
+                                                                          rdfs:label "short_description"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                    
+                                                                    rdfs:range xsd:date ;
+                                                                    
+                                                                    rdfs:label "date"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date> rdf:type owl:DatatypeProperty ;
+                                                                   
+                                                                   rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                                   
+                                                                   rdfs:range xsd:date ;
+                                                                   
+                                                                   rdfs:label "start_date"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/url
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/url> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+                                                            
+                                                            rdfs:range xsd:anyURI ;
+                                                            
+                                                            rdfs:label "url"^^xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:subClassOf owl:Thing ;
+                                                              
+                                                              rdfs:label "Event"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> rdf:type owl:Class ;
+                                                                 
+                                                                 rdfs:subClassOf dbo:Location .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:subClassOf owl:Thing ;
+                                                                    
+                                                                    rdfs:label "Parking Slot"^^xsd:string .
+
+
+
+###  http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:subClassOf owl:Thing ;
+                                                              
+                                                              rdfs:label "Venue"^^xsd:string .
+
+
+
+###  http://dbpedia.org/ontology/Location
+
+dbo:Location rdf:type owl:Class .
+
+
+
+
+###  Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi
+

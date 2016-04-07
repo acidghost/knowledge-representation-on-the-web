@@ -3,14 +3,15 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-prefix : <http://data.krw.d2s.labs.vu.nl/group6/vocab/>
+prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
+prefix dbo: <http://dbpedia.org/ontology/>
 
-select ?event ?tlabel ?place ?address
+select ?label_event ?label_venue ?address
 where { 
-  ?event a :Event .
-  ?event rdfs:label ?tlabel .
-  ?event :location ?eplace .
-  ?eplace rdfs:label ?place .
-  ?eplace :location ?elocation .
-  ?elocation :address ?address .
+  ?id_event a :Event .
+  ?id_event rdfs:label ?label_event .
+  ?id_event :venue ?temp_venue .
+  ?temp_venue rdfs:label ?label_venue .
+  ?temp_venue dbo:location ?temp_location .
+  ?temp_location dbo:address ?address .
 }

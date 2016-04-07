@@ -19,6 +19,8 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{listings}
+\lstset{language=SQL,morekeywords={PREFIX,java,rdf,rdfs,url}}
 
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
@@ -82,9 +84,9 @@ Hereby we provide three concrete use-cases where our application's benefits are 
 	\item John is in a wheelchair and wants to go to an exhibition in Van Gogh Museum Friday night. John likes to plan things in advance and would like to know where the parking slots closest to the theater are. \\
 	The day before the show, John uses our application to find such parking spots and heads to the show confidently. 
 	% Quick search once in the theater (on the fly)
-	\item Peter is rushing to get to an exhibition in Van Gogh Museum and is looking for the closest parking spots. He quickly browses our application and finds an area with several parking spots. He drives in that direction hoping to find an available spot. 
+	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show. He is quite late and is rushing to find the closest parking spots. He quickly browses our application and finds an area with several parking spots. He drives in that direction hoping to find an available spot. 
 	% Event manager
-	\item Mary is an event organizer who wants to host an exhibition in a Museum next month. She is looking for an accessible venue so she would like to see the distribution of parking spots around the main galleries in Amsterdam. She uses the interactive visualization in our application to explore and choose the best venue.
+	\item Mary is an event organizer who wants to host an exhibition in a Museum next month. She is looking for an accessible venue so she would like to see the distribution of parking spots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
 \end{enumerate}
 
 
@@ -117,6 +119,14 @@ The theaters dataset contains the following fields:
 
 \section{Semantic considerations}
 % In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
+Here is our vocabulary (Figure \ref{fig:ontology})
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/ontology.jpg}
+	\caption{Visualization of the Ontology graph}
+	\label{fig:ontology}
+\end{figure}
 
 \subsection{RDF and RDFS entailment}
 % Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
@@ -125,6 +135,43 @@ The theaters dataset contains the following fields:
 
 \subsection{SPARQL}
 % Give a SPARQL query that provides different answers on the basis of interpreting the knowledge graph with an RDF entailment regime as opposed to an RDFS regime, and explain why you get different answers.
+
+\begin{lstlisting}[captionpos=b, caption=SPARQL query, label=lst:sparql,
+basicstyle=\ttfamily,frame=bt]
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
+prefix data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
+prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+prefix math: <http://www.w3.org/2005/xpath-functions/math#>
+prefix dbo: <http://dbpedia.org/ontology/>
+
+select distinct ?venue ?slot ?slat ?slong ?elat ?elong ?dist
+where {
+?eslot a :ParkingSlot .
+?eslot rdfs:label ?slot .
+?eslot dbo:location ?slocation .
+?slocation geo:lat ?slat ; geo:long ?slong .
+
+data:Podium_Mozaïek a :Venue .
+data:Podium_Mozaïek rdfs:label ?venue .
+data:Podium_Mozaïek dbo:location ?elocation .
+?elocation geo:lat ?elat ; geo:long ?elong .
+
+bind(xsd:double(?slat) * math:pi() / xsd:double(180) as ?la1) .
+bind(xsd:double(?slong) * math:pi() / xsd:double(180) as ?lo1) .
+bind(xsd:double(?elat) * math:pi() / xsd:double(180) as ?la2) .
+bind(xsd:double(?elong) * math:pi() / xsd:double(180) as ?lo2) .
+bind(?lo2 - ?lo1 as ?l) .
+bind(math:acos(math:sin(?la2)*math:sin(?la1) + math:cos(?la1)*math:cos(?la1)*math:cos(?l)) * xsd:double(6371000) as ?dist) .
+}
+order by ?dist
+
+\end{lstlisting}
+
 
 % What is the relation between this fact in terms of model checking and reasoning?
 
