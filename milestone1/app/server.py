@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import json
 from flask import Flask, render_template, url_for, request, jsonify, abort
 from flask.ext.assets import Environment, Bundle
 from services.sparql import SPARQL
@@ -40,9 +39,13 @@ def home():
 
 @app.route('/venues', methods=['GET'])
 def venues():
-    venues = sparql.venues()
-    if venues:
-        return jsonify({ 'data': venues})
+    name = request.args.get('name')
+    if name:
+        data = sparql.venue(name)
+    else:
+        data = sparql.venues()
+    if data:
+        return jsonify({ 'data': data})
     else:
         abort(500)
 

@@ -1,26 +1,13 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="jumbotron">
-			<h1>Hello, World!</h1>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius, lorem ac porta consequat, risus purus sodales quam, viverra facilisis erat justo a purus. Aliquam rhoncus est ac dui rutrum, quis venenatis urna aliquet. Vestibulum congue sollicitudin posuere. Suspendisse finibus suscipit est non sollicitudin.</p>
+			<h2>Welcome to Find A Slot!</h2>
+			<p class="lead">This Web application will help you find the closest parking slot to your venue. Start by searching for your venue.</p>
+			<div class="row text-center">
+				<div class="col-xs-12">
+					<a ui-sref="venues" class="btn btn-success btn-lg">Show venues</a>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-xs-12">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>URI</th><th>Name</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="venue in home.venues">
-					<td><a href="{{ venue.href }}">{{ venue.href }}</a></td>
-					<td>{{ venue.name }}</td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 </div>

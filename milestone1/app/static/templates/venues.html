@@ -1,0 +1,20 @@
+<div ui-view></div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Name</th><th>Address</th><th>City</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="venue in venues.venues" ui-sref=".details({ name: venue.name })">
+					<td><span class="text-primary">{{ venue.name }}</span></td>
+					<td>{{ venue.address }}</td>
+					<td>{{ venue.city }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
