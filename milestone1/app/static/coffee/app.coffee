@@ -5,11 +5,17 @@ app = angular.module 'find.a.slot', [
 
 app.config ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
 
-  $urlRouterProvider.otherwise '/'
+  $urlRouterProvider.otherwise '/home'
 
   $stateProvider
-    .state 'index',
-      url: ''
+    .state 'home',
+      url: '/home'
       templateUrl: 'static/templates/index.html'
+      controllerAs: 'home'
+      controller: 'HomeCtrl'
+      resolve:
+        venues: ['Datastore', (Datastore) ->
+          Datastore.venues()
+        ]
 
 ]

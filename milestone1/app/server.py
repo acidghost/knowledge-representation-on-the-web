@@ -12,7 +12,7 @@ assets = Environment(app)
 sparql = SPARQL(app)
 
 # setup frontend code compilers
-coffee = Bundle('coffee/**/*', 'coffee/main.coffee',
+coffee = Bundle('coffee/app.coffee', 'coffee/**/*.coffee',
             filters='coffeescript')
 js = Bundle('components/jquery/dist/jquery.js',
             'components/angular/angular.js',
