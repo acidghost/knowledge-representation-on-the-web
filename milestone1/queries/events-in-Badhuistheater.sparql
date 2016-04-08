@@ -1,0 +1,14 @@
+prefix data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
+
+select distinct ?addr ?city ?zip ?evt
+where {
+  data:Badhuistheater a :Venue .
+  data:Badhuistheater dbo:location ?eloc .
+  ?eloc dbo:address ?addr .
+  ?eloc dbo:city ?city .
+  ?eloc dbo:postalCode ?zip .
+  ?eevt :venue data:Badhuistheater .
+  ?eevt rdfs:label ?evt .
+}

@@ -1,0 +1,28 @@
+prefix data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
+prefix dbo: <http://dbpedia.org/ontology/>
+
+select * {
+  {
+    select ?subject ?prop ?value
+    where {
+      data:Badhuistheater ?prop ?value .
+      bind(data:Badhuistheater as ?subject) .
+    }
+  }
+  union
+  {
+    select ?subject ?prop ?value
+    where {
+      data:Badhuistheater dbo:location ?subject .
+      ?subject ?prop ?value
+    }
+  }
+  union
+  {
+    select ?subject ?prop ?value
+    where {
+      ?subject :venue data:Badhuistheater .
+      ?subject ?prop ?value .
+    }
+  }
+}

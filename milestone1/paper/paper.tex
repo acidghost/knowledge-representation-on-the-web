@@ -67,29 +67,29 @@
 \section{Introduction}
 % Introduce the sections that follow. What is the core contribution of this paper, and why is that interesting? It is useful to start with a real-life problem, and then explain how your system/dataset (will) solve(s) that problem by means of KR technology. Why is this novel? Has this (or something similar) been done before?
 %TODO read WHOLE section again and make it pretty
-Amsterdam is a busy city that offers a variety of events and a common problem when attending such events is that Parking Spots are often scarce. Specifically, for handicap people this is an issue that should not be overlooked since they require more time to commute. Hence, having knowledge about close parking spots is specially useful to them. 
+Amsterdam is a busy city that offers a variety of events and a common problem when attending such events is that Parking Spots are often scarce. Specifically, for handicap people this is an issue that should not be overlooked since they require more time to commute. Hence, having knowledge about close parking slots is specially useful to them. 
 
 However, acquiring this information is not straightforward. The location of venues is not associated with Parking Spot locations, and users usually have to find them themselves by means of maps or driving around. Solving this problem would bring benefits to attendees. %TODO is this novel?
 
-In this project we create a web application that serves as a unique point for finding locations of venues and parking spots related to an event. We decided to work with Museum Galleries and Theaters to keep the scope of the project manageable. To do so we convert existing datasets to RDF format and query them to get the desired results.
+In this project we create a web application that serves as a unique point for finding locations of venues and parking slots related to an event. We decided to work with Museum Galleries and Theaters to keep the scope of the project manageable. To do so we convert existing datasets to RDF format and query them to get the desired results.
 
-In the following section we delve deeper into cases where our proposed solution could be applied. Next, we describe the datasets and continue to explain the data management process to abstract the knowledge from those datasets. Then, we explain the semantics in our data set and provide examples of the queries we used to build the application. We finalize with a demo of the application and a discussion of the work done.  
+In the following section we delve deeper into cases where our proposed solution could be applied. Next, we describe the datasets and continue to explain the data management process to abstract the knowledge from those datasets. Then, we explain the semantics in our dataset and provide examples of the queries we used to build the application. We finalize with a demo of the application and a discussion of the work done.  
 
 \section{Scenario / Use Case}
 % you could describe the use-case you have in mind that makes use of your chosen data about some matter concerning Amsterdam. Describe the overall idea, but also some concrete usage scenarios (e.g. as part of an actual system). Maybe interaction flow-diagrams etc could be useful, or what is called "personas" https://en.wikipedia.org/wiki/Persona_%28user_experience%29.
 
-As stated in the introduction, the integration of venues and parking spot locations may bring benefits to attendees. Our application provides with a convenient and time-saving option for attendees to find parking spots. Furthermore, by using our application it is guaranteed that the best parking spot will be suggested, and enough options will be provided in case best matches are not available for parking at the moment of consultation.
+As stated in the introduction, the integration of venues and parking slot locations may bring benefits to attendees. Our application provides with a convenient and time-saving option for attendees to find parking slots. Furthermore, by using our application it is guaranteed that the best parking slot will be suggested, and enough options will be provided in case best matches are not available for parking at the moment of consultation.
 
 Hereby we provide three concrete use-cases, by describing three different personas, where our application's benefits are to be maximized. A general use case diagram is shown in Figure \ref{fig:use-case}. 
 
 \begin{enumerate}
 	% Planning in advance
 	\item John is in a wheelchair and wants to go to an exhibition in Van Gogh Museum Friday night. John likes to plan things in advance and would like to know where the parking slots closest to the theater are. \\
-	The day before the show, John uses our application to find such parking spots and heads to the show confidently. 
+	The day before the show, John uses our application to find such parking slots and heads to the show confidently. 
 	% Quick search once in the theater (on the fly)
-	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show. He is quite late and is rushing to find the closest parking spots. He quickly browses our application and finds an area with several parking spots. He drives in that direction hoping to find an available spot. 
+	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show at the Comedy Cafe. He is quite late and is rushing to find the closest parking slots. He quickly browses our application and finds an area with several parking slots. He drives in that direction hoping to find an available slot. 
 	% Event manager
-	\item Mary is an event organizer who wants to host an exhibition in a museum next month. She is looking for an accessible venue so she would like to see the distribution of parking spots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
+	\item Mary is an event organizer who wants to host an exhibition in a museum next month. She is looking for an accessible venue so she would like to see the distribution of parking slots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
 \end{enumerate}
 
 \begin{figure}[ht]
@@ -189,25 +189,34 @@ The Handicap's Parking Slots dataset, as its name states, contains information a
 
 \section{Building Knowledge Graphs}
 % Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
-In order to model the data properly we created a vocabulary which describes the classes and properties of the application ontology. We combined self defined ontologies with external ontologies such as dbpedia and geolocation. %TODO add citations to these
+In order to model the data properly we created a vocabulary which describes the classes and properties of the application ontology. We combined self defined ontologies with external ontologies such as dbpedia and geolocation. A diagram showing for the modeled vocabulary is shown in Figure \ref{fig:vocabulary}. 
 
-A diagram showing for the modeled vocabulary is shown in Figure \ref{fig:vocabulary}
+We created four classes: Event, Venue, Parking Slot and Location, of which the first three were defined by us and the last one was defined as a subclass of dbepedia's Location class. The Theaters and Museums and Galleries datasets were turned into Events containing Venues and Locations, while the Parking Slots dataset turned into Parking Slots with Locations. As shown, the common factor integrating the data is the Location class. 
 
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{img/vocab-graph.jpg}
 	\caption{Visualization of the Ontology graph}
 	\label{fig:vocabulary}
 \end{figure}
 
-To populate the database with instances, the JSON files were read and transformed into RDF triples using a python script. The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server
+To populate the database with instances, the JSON files were read and transformed into RDF triples using a python script. A sample instance is shown in Figure \ref{fig:instance}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/vocab-graph.jpg}
+	\caption{Visualization of the Ontology graph}
+	\label{fig:instance}
+\end{figure}
+
+The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server
 
 We created three named graphs: \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/theaters}{Theaters}, \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/museums}{Museums} and \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/parking-slots}{Parking slots}.
 
 
 \section{Semantic considerations}
 % In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
-Event is linked to a venue. Venue and parking spots are linked to locations
+Event is linked to a venue. Venue and parking slots are linked to locations
 John knows the venue
 Peter knows the event
 
