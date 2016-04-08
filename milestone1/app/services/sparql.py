@@ -85,11 +85,12 @@ class SPARQL(object):
         prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
         prefix math: <http://www.w3.org/2005/xpath-functions/math#>
 
-        select distinct ?venue ?eslot ?saddr ?scity ?slat ?slong ?eaddr ?ecity ?elat ?elong ?dist
+        select distinct ?venue ?eslot ?saddr ?scity ?slat ?slong ?squan ?eaddr ?ecity ?elat ?elong ?dist
         where {{
           ?eslot a :ParkingSlot ;
             rdfs:label ?slot ;
-            dbo:location ?slocation .
+            dbo:location ?slocation ;
+            :quantity ?squan .
           ?slocation geo:lat ?slat ;
             geo:long ?slong ;
             dbo:city ?scity ;
@@ -112,13 +113,12 @@ class SPARQL(object):
           bind(math:acos(math:sin(?la2)*math:sin(?la1) + math:cos(?la1)*math:cos(?la1)*math:cos(?l)) * xsd:double(6371000) as ?dist) .
         }}
         order by ?dist
-        limit 100
+        limit 20
         """.format(PREFIXES, name)
 
         response = self._query(query, format=format)
-        print response['results']['bindings']
         props = [('venue', 'venue'), ('slat', 'slot_latitude'), ('scity', 'slot_city'),
             ('slong', 'slot_longitude'), ('saddr', 'slot_address'), ('eaddr', 'venue_address'),
             ('elat', 'venue_latitude'), ('elong', 'venue_longitude'),
-            ('ecity', 'venue_city'), ('dist', 'distance')]
+            ('ecity', 'venue_city'), ('squan', 'slot_quantity'), ('dist', 'distance')]
         return self._deserialize_response(response, props=props, format=format)

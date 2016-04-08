@@ -5,13 +5,14 @@
 		<h5>Slot distances</h5>
 		<table class="table table-hover">
 			<thead>
-				<th>Distance</th><th>Address</th><th>City</th>
+				<th>Distance</th><th>Address</th><th>Slots</th><!-- <th>City</th> -->
 			</thead>
 			<tbody>
 				<tr ng-repeat="detail in venue.details">
 					<td><span class="text-primary"><b>{{ detail.distance | number:2 }}</b> meters</span></td>
 					<td>{{ detail.slot_address }}</td>
-					<td>{{ detail.slot_city }}</td>
+					<td>{{ detail.slot_quantity }}</td>
+					<!-- <td>{{ detail.slot_city }}</td> -->
 				</tr>
 			</tbody>
 		</table>
