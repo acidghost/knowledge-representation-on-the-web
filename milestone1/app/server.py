@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
-from flask import Flask, render_template, url_for, request, jsonify
+import json
+from flask import Flask, render_template, url_for, request, jsonify, abort
 from flask.ext.assets import Environment, Bundle
-from SPARQLWrapper import SPARQLWrapper, RDF, JSON
-import requests
+from services.sparql import SPARQL
 
 
 # setup app
 app = Flask(__name__)
 assets = Environment(app)
+sparql = SPARQL(app)
 
 # setup frontend code compilers
 coffee = Bundle('coffee/**/*', 'coffee/main.coffee',
@@ -31,13 +32,19 @@ css_all = Bundle(less, filters='cssmin' if app.debug else None, output='gen/styl
 assets.register('styles', css_all)
 
 
-REPOSITORY = 'http://stardog.krw.d2s.labs.vu.nl/group6'
-
-
 @app.route('/')
 def home():
     app.logger.debug('You arrived at ' + url_for('home'))
     return render_template('index.html')
+
+
+@app.route('/venues', methods=['GET'])
+def venues():
+    venues = sparql.venues()
+    if venues:
+        return jsonify({ 'data': venues})
+    else:
+        abort(500)
 
 
 if __name__ == '__main__':

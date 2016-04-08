@@ -7,3 +7,4 @@
 **/static/.webassets-cache
 **/static/gen
 **/static/components
+*.pyc
