@@ -17,8 +17,8 @@
 \documentclass[runningheads,a4paper]{../../StyleFiles/llncs}
 
 \usepackage{url}
-\usepackage{graphicx}
-\usepackage{amssymb}	
+\usepackage{graphicx, colortbl}
+\usepackage{amsmath,amssymb}	
 \usepackage{listings}
 \usepackage{multicol}
 \usepackage{hyperref}
@@ -94,7 +94,7 @@ Hereby we provide three concrete use-cases, by describing three different person
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1\textwidth]{img/use-case-diagram.png}
+	\includegraphics[width=.7\textwidth]{img/use-case-diagram.png}
 	\caption{Use case diagram showing how potential users can use the application created in this project.}
 	\label{fig:use-case}
 \end{figure}
@@ -104,7 +104,7 @@ Hereby we provide three concrete use-cases, by describing three different person
 In order to meet the needs in the above use cases we decided to integrate the Gemeente's open data about theaters, museums and galleries events along with the handicap's parking slots data. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
 
 \subsection{Theaters, Museums and Galleries Dataset}
-The Theaters and the Museums and Galleries datasets contain information about events happening in these types of venues. The datasets integrate easily since the both share the following main features:
+The Theaters and the Museums and Galleries datasets contain information about events happening in these types of venues, as well as the details of the location of the venues. The datasets are comparable since the both share the following main features:
 
 \begin{center}
 	\textbf{\emph{Features}}
@@ -191,56 +191,99 @@ The Handicap's Parking Slots dataset, as its name states, contains information a
 % Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
 In order to model the data properly we created a vocabulary which describes the classes and properties of the application ontology. We combined self defined ontologies with external ontologies such as dbpedia and geolocation. A diagram showing for the modeled vocabulary is shown in Figure \ref{fig:vocabulary}. 
 
-We created four classes: Event, Venue, Parking Slot and Location, of which the first three were defined by us and the last one was defined as a subclass of dbepedia's Location class. The Theaters and Museums and Galleries datasets were turned into Events containing Venues and Locations, while the Parking Slots dataset turned into Parking Slots with Locations. As shown, the common factor integrating the data is the Location class. 
+We created four classes: Event, Venue, Parking Slot and Location, of which the first three were defined by us and the last one was defined as a subclass of dbepedia's Location class. The Theaters and Museums and Galleries datasets were turned into Events linked to Venues, and Venues linked Locations, while the Parking Slots dataset turned into Parking Slots linked to Locations. As shown, the common factor integrating the data is the Location class. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/vocab-graph.jpg}
+	\includegraphics[width=.7\textwidth]{img/vocab-graph.jpg}
 	\caption{Visualization of the Ontology graph}
 	\label{fig:vocabulary}
 \end{figure}
 
-To populate the database with instances, the JSON files were read and transformed into RDF triples using a python script. A sample instance is shown in Figure \ref{fig:instance}
+To populate the database with instances, the JSON files were read and transformed into RDF triples using a python script. A sample instance is shown in Figure \ref{fig:instance}. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/vocab-graph.jpg}
-	\caption{Visualization of the Ontology graph}
+	\includegraphics[width=1\textwidth]{img/knowledge-graph-example.png}
+	\caption{Sample instance for a Venue "Galerie Sous-Terre" with specific property Location}
 	\label{fig:instance}
 \end{figure}
 
-The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server
+The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server and contains around 17 000 triples. 
 
-We created three named graphs: \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/theaters}{Theaters}, \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/museums}{Museums} and \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/parking-slots}{Parking slots}.
+%We created three named graphs: \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/theaters}{Theaters}, \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/museums}{Museums} and \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/parking-slots}{Parking slots}.
 
 
 \section{Semantic considerations}
 % In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
-Event is linked to a venue. Venue and parking slots are linked to locations
-John knows the venue
-Peter knows the event
+In our use cases, the main goal if for a user to find a parking slots based on the event they want to attend. To do so, we use the common property location.However, the location of an event is not explicit, so we need to infer it.
+
+Hereby we only consider the subgraph containing Events, Venues and Locations to illustrate how entailment enriches our knowledge. 
 
 
 \subsection{RDF and RDFS entailment}
 % Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
+We asserted that Events take place in a Venue, and we also asserted that Venues have a Location. Thus it follows that Events happen in a Location.
+
+The logical entailment rules are shown in the next argument:
+
+\begin{center}
+	\begin{tabular}{c@{\,}l@{}} 
+  	& \textit{:Event 		:venue 				?$o_1$} \\
+  	& \textit{?$o_1$ 		rdfs:type 			:Venue} \\   
+  	& \textit{:Venue 		:location 			?$o_2$} \\ 
+  	& \textit{?$o_2$ 		rdfs:type 			:Location} \\ 
+  	& \textit{:Location		rdfs:subClassOf 	dbo:Location} \\
+  	  	\arrayrulecolor{blue} \cline{2-2}
+  	$\therefore$         
+  	& \textit{:Event 		:location 				?$o_2$} \\
+  	\end{tabular}
+\end{center}
 
 % Extend G with a few RDFS triples T={t1,...,tn} and provide a small graph G'' so that G u T |= G'' but not G u T |= G'.
 
 \subsection{SPARQL}
 % Give a SPARQL query that provides different answers on the basis of interpreting the knowledge graph with an RDF entailment regime as opposed to an RDFS regime, and explain why you get different answers.
+The RDF schema would not be sufficient for our application to provide any results when a user knows the Event name but not the Venue. 
 
-\begin{lstlisting}[captionpos=b, caption=SPARQL query, label=lst:sparql,
+RDFS provides us with a way to link Events and Locations. Thus, we can query Parking Slots that are related to that specific Location. We do this by retrieving all Parking Slots Locations and doing a geometrical comparison to the required Event Location. The query is shown in the Appendices. 
+
+% What is the relation between this fact in terms of model checking and reasoning?
+
+% Investigate and discuss whether there are interesting cases of entailment in your own data.
+
+\section{Discussion}
+% Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
+% Present a screenshot of a mock-up or working (preferred!) version of your system an describe what it does.
+% Argue why the preceding sections show that your solution (partially) solves the problem you introduced in the introduction.
+In this work we successfully transformed public data from the Amsterdam Municipality into and RDF schema. Furthermore, we created a model that enables us to integrate two different datasets: Theater and Museum and Galleries events, and parking Slots. Thanks to the power of RDFS we entail implicit knowledge about database, which allows us to query it and obtain useful information for the use cases explained in Section 2. 
+
+Our solution is capable of retrieving Parking Slots nearby a location. It saves time to the user since he does not need to know the location of the Venue and can go directly from knowing the event name to a convenient spot to park his car. 
+
+The web application may be improved by provided extended support. New queries may be added. %TODO finish this
+
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\newpage
+\appendix
+\section{Prefixes used}
+
+$rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns>$ \\
+$owl: <http://www.w3.org/2002/07/owl>$ \\
+$xsd: <http://www.w3.org/2001/XMLSchema>$ \\
+$rdfs: <http://www.w3.org/2000/01/rdf-schema>$ \\
+$: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>$ \\
+$data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>$ \\
+$geo: <http://www.w3.org/2003/01/geo/wgs84\_pos>$ \\
+$math: <http://www.w3.org/2005/xpath-functions/math>$ \\
+$dbo: <http://dbpedia.org/ontology/>$
+
+\section{SQL Queries}
+
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting parking spots close to Podium Mozaiek (sorted by distance), label=lst:sparql,
 basicstyle=\ttfamily,frame=bt]
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
-prefix data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
-prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
-prefix math: <http://www.w3.org/2005/xpath-functions/math#>
-prefix dbo: <http://dbpedia.org/ontology/>
 
 select distinct ?venue ?slot ?slat ?slong ?elat ?elong ?dist
 where {
@@ -260,23 +303,11 @@ bind(xsd:double(?elat) * math:pi() / xsd:double(180) as ?la2) .
 bind(xsd:double(?elong) * math:pi() / xsd:double(180) as ?lo2) .
 bind(?lo2 - ?lo1 as ?l) .
 bind(math:acos(math:sin(?la2)*math:sin(?la1) 
-+ math:cos(?la1)*math:cos(?la1)*math:cos(?l)) * xsd:double(6371000) as ?dist) .
++ math:cos(?la1)*math:cos(?la1)*math:cos(?l)) 
+* xsd:double(6371000) as ?dist) .
 }
 order by ?dist
 
 \end{lstlisting}
-
-
-% What is the relation between this fact in terms of model checking and reasoning?
-
-% Investigate and discuss whether there are interesting cases of entailment in your own data.
-
-\section{Discussion}
-% Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
-% Present a screenshot of a mock-up or working (preferred!) version of your system an describe what it does.
-% Argue why the preceding sections show that your solution (partially) solves the problem you introduced in the introduction.
-
-\bibliographystyle{plain}
-\bibliography{bibliography}
 
 \end{document}
