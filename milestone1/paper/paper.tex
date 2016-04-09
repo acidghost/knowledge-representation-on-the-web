@@ -22,6 +22,7 @@
 \usepackage{listings}
 \usepackage{multicol}
 \usepackage{hyperref}
+\usepackage{caption, subcaption}
 \lstset{language=SQL,morekeywords={PREFIX,java,rdf,rdfs,url}}
 
 
@@ -252,6 +253,24 @@ RDFS provides us with a way to link Events and Locations. Thus, we can query Par
 
 % Investigate and discuss whether there are interesting cases of entailment in your own data.
 
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{.4\textwidth}
+		\includegraphics[width=\textwidth]{img/app-venues.png}
+		\caption{Venues shown by the Web application.}
+		\label{fig:app-venues}
+	\end{subfigure}
+	\qquad
+	\begin{subfigure}[b]{.4\textwidth}
+		\includegraphics[width=\textwidth]{img/app-slots.png}
+		\caption{Parking slots associated with a venue.}
+		\label{fig:app-slots}
+	\end{subfigure}
+	\caption{Screenshots from the Web application.}
+	\label{fig:app}
+\end{figure}
+
 \section{Discussion}
 % Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
 % Present a screenshot of a mock-up or working (preferred!) version of your system an describe what it does.
@@ -280,7 +299,7 @@ $geo: <http://www.w3.org/2003/01/geo/wgs84\_pos>$ \\
 $math: <http://www.w3.org/2005/xpath-functions/math>$ \\
 $dbo: <http://dbpedia.org/ontology/>$
 
-\section{SQL Queries}
+\section{SPARQL Queries}
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for getting parking spots close to Podium Mozaiek (sorted by distance), label=lst:sparql,
 basicstyle=\ttfamily,frame=bt]
