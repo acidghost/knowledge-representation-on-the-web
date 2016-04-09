@@ -58,28 +58,26 @@
 
 
 \begin{abstract}
-	%TODO update before submitting
 	This project realizes the integration of three different datasets related to the city of Amsterdam. It aims to provide support for handicap people who attend events in crowded or unknown neighborhoods.
-	We create an RDF database, using the OWL ontology, from public JSON files in order to model the data integration. We query such database in order to meet the needs of the proposed potential users. Finally, a simple web application was created to serve as front end for the functionality of the project. 
+	We create an RDF model, using the OWL ontology, in order to model the data integration, and generate a database from public JSON files. We query such database in order to meet the needs of the proposed potential users. Finally, a simple web application was created to serve as front end for the functionality of the project. 
 % should contain at least 70 and at most 150 words. It should be written using the \emph{abstract} environment.
 \end{abstract}
 
 
 \section{Introduction}
 % Introduce the sections that follow. What is the core contribution of this paper, and why is that interesting? It is useful to start with a real-life problem, and then explain how your system/dataset (will) solve(s) that problem by means of KR technology. Why is this novel? Has this (or something similar) been done before?
-%TODO read WHOLE section again and make it pretty
-Amsterdam is a busy city that offers a variety of events and a common problem when attending such events is that Parking Spots are often scarce. Specifically, for handicap people this is an issue that should not be overlooked since they require more time to commute. Hence, having knowledge about close parking slots is specially useful to them. 
+Amsterdam is a busy city that offers a variety of events and a common problem when attending such events is that parking spots are often scarce. Specifically, for handicap people this is an issue that should not be overlooked since they require more time to travel to and from events venues. Hence, having knowledge about close parking slots is specially useful to them. 
 
-However, acquiring this information is not straightforward. The location of venues is not associated with Parking Spot locations, and users usually have to find them themselves by means of maps or driving around. Solving this problem would bring benefits to attendees. %TODO is this novel?
+However, acquiring this information is not straightforward. To the best of our knowledge, currently the location of venues is not associated with parking spot locations. Users usually have to find them themselves by means of maps, which may be confusing, or driving around, which is time consuming. Solving this problem would bring benefits to attendees.
 
-In this project we create a web application that serves as a unique point for finding locations of venues and parking slots related to an event. We decided to work with Museum Galleries and Theaters to keep the scope of the project manageable. To do so we convert existing datasets to RDF format and query them to get the desired results.
+In this project we create a web application that serves as a unique point for finding locations of venues and parking slots related to an event. We decided to work with Museum Galleries and Theaters to keep the scope of the project manageable, but the knowledge model can be applied to other types of venues as well. To do the integration we convert existing datasets to RDF format and query them to get the desired results.
 
-In the following section we delve deeper into cases where our proposed solution could be applied. Next, we describe the datasets and continue to explain the data management process to abstract the knowledge from those datasets. Then, we explain the semantics in our dataset and provide examples of the queries we used to build the application. We finalize with a demo of the application and a discussion of the work done.  
+In the following section we delve deeper into cases where our proposed solution could be applied. Next, we describe the datasets and continue to explain the data management process to abstract knowledge from those datasets. Later on we explain the semantics in our dataset and provide examples of the queries we used to build the application. We finalize with screen shots of the working application and a discussion of the work done.  
 
 \section{Scenario / Use Case}
 % you could describe the use-case you have in mind that makes use of your chosen data about some matter concerning Amsterdam. Describe the overall idea, but also some concrete usage scenarios (e.g. as part of an actual system). Maybe interaction flow-diagrams etc could be useful, or what is called "personas" https://en.wikipedia.org/wiki/Persona_%28user_experience%29.
 
-As stated in the introduction, the integration of venues and parking slot locations may bring benefits to attendees. Our application provides with a convenient and time-saving option for attendees to find parking slots. Furthermore, by using our application it is guaranteed that the best parking slot will be suggested, and enough options will be provided in case best matches are not available for parking at the moment of consultation.
+As stated in the introduction, the integration of venues and parking slot locations may bring benefits to event attendees. Our application provides with a convenient and time-saving option for attendees to find parking slots. Furthermore, by using our application it is guaranteed that the best parking slot will be suggested, and enough options will be provided in case best matches are not available for parking at the moment of consultation.
 
 Hereby we provide three concrete use-cases, by describing three different personas, where our application's benefits are to be maximized. A general use case diagram is shown in Figure \ref{fig:use-case}. 
 
@@ -88,21 +86,21 @@ Hereby we provide three concrete use-cases, by describing three different person
 	\item John is in a wheelchair and wants to go to an exhibition in Van Gogh Museum Friday night. John likes to plan things in advance and would like to know where the parking slots closest to the theater are. \\
 	The day before the show, John uses our application to find such parking slots and heads to the show confidently. 
 	% Quick search once in the theater (on the fly)
-	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show at the Comedy Cafe. He is quite late and is rushing to find the closest parking slots. He quickly browses our application and finds an area with several parking slots. He drives in that direction hoping to find an available slot. 
+	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show at the Comedy Cafe. He is quite late and he is rushing to find the closest parking slots. He quickly browses our application and finds an area with several parking slots. He drives in that direction hoping to find an available slot. 
 	% Event manager
 	\item Mary is an event organizer who wants to host an exhibition in a museum next month. She is looking for an accessible venue so she would like to see the distribution of parking slots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
 \end{enumerate}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.7\textwidth]{img/use-case-diagram.png}
-	\caption{Use case diagram showing how potential users can use the application created in this project.}
+	\includegraphics[width=.75\textwidth]{img/use-case-diagram.png}
+	\caption{Use case diagram showing potential uses of the application created in this project.}
 	\label{fig:use-case}
 \end{figure}
 
 \section{Data sources}
 % which datasets have you used and converted? Provide the core properties of those datasets. Also describe other datasets that you might want to integrate, and even data that still needs to be found, or even created.
-In order to meet the needs in the above use cases we decided to integrate the Gemeente's open data about theaters, museums and galleries events along with the handicap's parking slots data. Those datasets are available in CSV or JSON formats. We chose to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
+In order to meet the needs in the above use cases we decided to integrate public data published by the Municipality of Amsterdam. The chosen datasets relate to theaters, museums and galleries events along with the handicap's parking slots data. Those datasets are available in CSV or JSON formats. We made decision to convert from the JSON format because it is a more powerful representation than CSV and because JSON and RDF formats can be easily mapped one to another.
 
 \subsection{Theaters, Museums and Galleries Dataset}
 The Theaters and the Museums and Galleries datasets contain information about events happening in these types of venues, as well as the details of the location of the venues. The datasets are comparable since the both share the following main features:
@@ -190,9 +188,7 @@ The Handicap's Parking Slots dataset, as its name states, contains information a
 
 \section{Building Knowledge Graphs}
 % Give details about the data curation and conversion process: which (parts of the) data have you converted, why and how. Which tools did you use? If you wrote your own code, provide a pointer to it. You might wish to add subsections discussing conceptual and technical problems in this process.
-In order to model the data properly we created a vocabulary which describes the classes and properties of the application ontology. We combined self defined ontologies with external ontologies such as dbpedia and geolocation. A diagram showing for the modeled vocabulary is shown in Figure \ref{fig:vocabulary}. 
-
-We created four classes: Event, Venue, Parking Slot and Location, of which the first three were defined by us and the last one was defined as a subclass of dbepedia's Location class. The Theaters and Museums and Galleries datasets were turned into Events linked to Venues, and Venues linked Locations, while the Parking Slots dataset turned into Parking Slots linked to Locations. As shown, the common factor integrating the data is the Location class. 
+In order to model the data properly we created a vocabulary which describes the classes and properties of the application ontology. We combined self defined ontologies with external ontologies such as \texttt{dbepedia} \footnote{The \texttt{dbepedia} namespace is defined at \url{http://dbpedia.org/ontology/}} and \texttt{geo} \footnote{The \texttt{geo} namespace is defined at \url{http://www.w3.org/2003/01/geo/wgs84_pos}}. A diagram showing for the modeled vocabulary is shown in Figure \ref{fig:vocabulary}. 
 
 \begin{figure}[h]
 	\centering
@@ -200,6 +196,8 @@ We created four classes: Event, Venue, Parking Slot and Location, of which the f
 	\caption{Visualization of the Ontology graph}
 	\label{fig:vocabulary}
 \end{figure}
+
+We created four classes: Event, Venue, Parking Slot and Location, of which the first three were defined by us and the last one was defined as a subclass of \texttt{dbepedia}'s Location class. The Theaters and Museums and Galleries datasets were turned into Events linked to Venues, and Venues linked Locations, while the Parking Slots dataset turned into Parking Slots linked to Locations. As shown, the common factor integrating the data is the Location class. 
 
 To populate the database with instances, the JSON files were read and transformed into RDF triples using a python script. A sample instance is shown in Figure \ref{fig:instance}. 
 
@@ -210,47 +208,45 @@ To populate the database with instances, the JSON files were read and transforme
 	\label{fig:instance}
 \end{figure}
 
-The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server and contains around 17 000 triples. 
-
-%We created three named graphs: \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/theaters}{Theaters}, \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/museums}{Museums} and \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/parking-slots}{Parking slots}.
+The database is stored in \href{http://stardog.krw.d2s.labs.vu.nl/#/databases/group6}{this} Stardog server and contains around 17 000 triples and three named graphs: \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/theaters}{Theaters}, \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/museums}{Museums} and \href{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/parking-slots}{Parking slots}.
 
 
 \section{Semantic considerations}
 % In the 2nd and 3rd lectures we introduced formal Semantics for RDF, RDFS and SPARQL. Please use your own knowledge graph to give some (simple) examples for entailment. Choose a subgraph G (feel free to adapt it if needed) and explain what it stands for, and what the intended meaning is. Given the problem and use-case you have in mind, how do the examples of entailment contribute to a solution?
-In our use cases, the main goal if for a user to find a parking slots based on the event they want to attend. To do so, we use the common property location.However, the location of an event is not explicit, so we need to infer it.
+In our use cases, the main goal for a user to find a parking slots based on the event they want to attend. To do so, we use the common property location. However, the location of an event is not explicit, so we need to infer it.
 
-Hereby we only consider the subgraph containing Events, Venues and Locations to illustrate how entailment enriches our knowledge. 
+Hereby we only consider the subgraph $G$ containing Events, Venues and Locations to illustrate how the entailment of a graph $G'$ enriches our knowledge about the relations among the classes. 
 
 
 \subsection{RDF and RDFS entailment}
 % Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
-We asserted that Events take place in a Venue, and we also asserted that Venues have a Location. Thus it follows that Events happen in a Location.
-
+A complete picture of the RDFS semantics in our ontology is shown in Figure \ref{fig:rdfs-entailment}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{img/ontology-classes.png}
 	\caption{RDFS entailment for our ontology. The Protege convention is adopted
-	for symbols and colors: blue relations represent subclassing and yellow and
-	orange ones represent domain and range relations.}
+		for symbols and colors: blue relations represent subclassing and yellow and
+		orange ones represent domain and range relations.}
 	\label{fig:rdfs-entailment}
 \end{figure}
 
-The logical entailment rules are shown in the next argument while a more
-complete picture is shown in Figure \ref{rig:rdfs-entailment}:
+From this picture we see two main entailment consequences. Firstly, that Location is a subclass of owl:Thing. Secondly, and most interestingly, there is a relation between Event and Location. We describe the latter in the following argument:
 
 \begin{center}
 	\begin{tabular}{c@{\,}l@{}} 
-  	& \textit{:Event 		:venue 				?$o_1$} \\
-  	& \textit{?$o_1$ 		rdfs:type 			:Venue} \\   
-  	& \textit{:Venue 		:location 			?$o_2$} \\ 
-  	& \textit{?$o_2$ 		rdfs:type 			:Location} \\ 
-  	& \textit{:Location		rdfs:subClassOf 	dbo:Location} \\
-  	  	\arrayrulecolor{blue} \cline{2-2}
-  	$\therefore$         
-  	& \textit{:Event 		:location 				?$o_2$} \\
-  	\end{tabular}
+		& \textit{:Event 		:venue 				?$o_1$} \\
+		& \textit{?$o_1$ 		rdfs:type 			:Venue} \\   
+		& \textit{:Venue 		:location 			?$o_2$} \\ 
+		& \textit{?$o_2$ 		rdfs:type 			:Location} \\ 
+		& \textit{:Location		rdfs:subClassOf 	dbo:Location} \\
+		\arrayrulecolor{blue} \cline{2-2}
+		$\therefore$         
+		& \textit{:Event 		:location 				?$o_2$} \\
+	\end{tabular}
 \end{center}
+
+In simple words, the above states that since we asserted that Events take place in a Venue, and we also asserted that Venues have a Location, thus it follows that Events happen in a Location. It is simple for us to see that the last statement is true and valuable in terms of building our application.
 
 % Extend G with a few RDFS triples T={t1,...,tn} and provide a small graph G'' so that G u T |= G'' but not G u T |= G'.
 
@@ -264,6 +260,13 @@ RDFS provides us with a way to link Events and Locations. Thus, we can query Par
 
 % Investigate and discuss whether there are interesting cases of entailment in your own data.
 
+\section{Discussion}
+% Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
+% Present a screenshot of a mock-up or working (preferred!) version of your system an describe what it does.
+% Argue why the preceding sections show that your solution (partially) solves the problem you introduced in the introduction.
+In this work we successfully transformed public data from the Amsterdam Municipality into and RDF schema. Furthermore, we created a model that enables us to integrate two different datasets: Theater and Museum and Galleries events, and parking Slots. Thanks to the power of RDFS we entail implicit knowledge about database, which allows us to query it and obtain useful information for the use cases explained in Section 2. 
+
+Our solution is capable of retrieving Parking Slots nearby a Venue. It saves time to the user since he/she does not need to know the location of the Venue and can go directly from knowing the event name to a convenient spot to park his/her car. 
 
 \begin{figure}
 	\centering
@@ -282,51 +285,37 @@ RDFS provides us with a way to link Events and Locations. Thus, we can query Par
 	\label{fig:app}
 \end{figure}
 
-\section{Discussion}
-% Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
-% Present a screenshot of a mock-up or working (preferred!) version of your system an describe what it does.
-% Argue why the preceding sections show that your solution (partially) solves the problem you introduced in the introduction.
-In this work we successfully transformed public data from the Amsterdam Municipality into and RDF schema. Furthermore, we created a model that enables us to integrate two different datasets: Theater and Museum and Galleries events, and parking Slots. Thanks to the power of RDFS we entail implicit knowledge about database, which allows us to query it and obtain useful information for the use cases explained in Section 2. 
+Screen shots of the working application are shown in Figure \ref{fig:app}. First the user is presented with the list of venues (Figure \ref{fig:app-venues}). By clicking on a row of the table the user is presented with the contents of Figure \ref{fig:app-slots}. This page shows a list of 20 parking slots sorted by distance from the queried venue.
 
-Our solution is capable of retrieving Parking Slots nearby a location. It saves time to the user since he does not need to know the location of the Venue and can go directly from knowing the event name to a convenient spot to park his car. 
-
-The Web application may be improved by provided extended support. Screenshots of
-the application are shown in Figure \ref{fig:app}. First the user is presented with
-the list of venues (Figure \ref{fig:app-venues}). By clicking on a row of the table
-the user is presented with the contents of Figure \ref{fig:app-slots}. This page
-shows a list of 20 parking slots sorted by distance from the queried venue.
-
-We developed the queries based on geographical distance (using decimal latitude
-and longitude) using a mathematical formula. This may result in numerical errors
-and therefore wrong results. An immediate improvement of the system would be to
+As a final thought for future work, we recognize the Web application may be improved to provide extended support. Other types of venues could be included, which can be done by transforming additional datasets, and more interesting queries could be done. For example, we developed the queries based on geographical distance (using decimal latitude and longitude) using a mathematical formula. This may result in numerical errors and therefore wrong results. An immediate improvement of the system would be to
 use Stardog's support for geospatial queries. Then querying for geospatial
 relations like \texttt{geof:relate}, \texttt{geof:distance},
 \texttt{geof:within}, \texttt{geof:nearby} and
-\texttt{geof:area}\footnote{The \texttt{geof} namespace defines geospatial
+\texttt{geof:area} \footnote{The \texttt{geof} namespace defines geospatial
 functions at the URL \url{http://www.opengis.net/def/function/geosparql/}}.
-
-
-\bibliographystyle{plain}
-\bibliography{bibliography}
 
 \newpage
 \appendix
-\section{Prefixes used}
+\section{Prefixes and namespaces}
+\begin{lstlisting}[captionpos=b, caption=Prefixes for the namespaces used in this project, label=lst:sparql,
+basicstyle=\ttfamily\small,frame=bt]
 
-$rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns>$ \\
-$owl: <http://www.w3.org/2002/07/owl>$ \\
-$xsd: <http://www.w3.org/2001/XMLSchema>$ \\
-$rdfs: <http://www.w3.org/2000/01/rdf-schema>$ \\
-$: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>$ \\
-$data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>$ \\
-$geo: <http://www.w3.org/2003/01/geo/wgs84\_pos>$ \\
-$math: <http://www.w3.org/2005/xpath-functions/math>$ \\
-$dbo: <http://dbpedia.org/ontology/>$
+rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+owl: <http://www.w3.org/2002/07/owl#>
+xsd: <http://www.w3.org/2001/XMLSchema#>
+rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
+data: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
+geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+math: <http://www.w3.org/2005/xpath-functions/math#>
+dbo: <http://dbpedia.org/ontology/>
+\end{lstlisting}
 
 \section{SPARQL Queries}
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for getting parking spots close to Podium Mozaiek (sorted by distance), label=lst:sparql,
-basicstyle=\ttfamily,frame=bt]
+basicstyle=\ttfamily\small,frame=bt]
 
 select distinct ?venue ?slot ?slat ?slong ?elat ?elong ?dist
 where {
