@@ -290,7 +290,20 @@ In this work we successfully transformed public data from the Amsterdam Municipa
 
 Our solution is capable of retrieving Parking Slots nearby a location. It saves time to the user since he does not need to know the location of the Venue and can go directly from knowing the event name to a convenient spot to park his car. 
 
-The web application may be improved by provided extended support. New queries may be added. %TODO finish this
+The Web application may be improved by provided extended support. Screenshots of
+the application are shown in Figure \ref{fig:app}. First the user is presented with
+the list of venues (Figure \ref{fig:app-venues}). By clicking on a row of the table
+the user is presented with the contents of Figure \ref{fig:app-slots}. This page
+shows a list of 20 parking slots sorted by distance from the queried venue.
+
+We developed the queries based on geographical distance (using decimal latitude
+and longitude) using a mathematical formula. This may result in numerical errors
+and therefore wrong results. An immediate improvement of the system would be to
+use Stardog's support for geospatial queries. Then querying for geospatial
+relations like \texttt{geof:relate}, \texttt{geof:distance},
+\texttt{geof:within}, \texttt{geof:nearby} and
+\texttt{geof:area}\footnote{The \texttt{geof} namespace defines geospatial
+functions at the URL \url{http://www.opengis.net/def/function/geosparql/}}.
 
 
 \bibliographystyle{plain}
