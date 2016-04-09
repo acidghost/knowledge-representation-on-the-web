@@ -226,7 +226,18 @@ Hereby we only consider the subgraph containing Events, Venues and Locations to 
 % Give a small graph G' which is entailed by your subgraph G. Feel free to use the same G' that you want to use in your SPARQL query later. Explain why G' is entailed (this is really simple).
 We asserted that Events take place in a Venue, and we also asserted that Venues have a Location. Thus it follows that Events happen in a Location.
 
-The logical entailment rules are shown in the next argument:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/ontology-classes.png}
+	\caption{RDFS entailment for our ontology. The Protege convention is adopted
+	for symbols and colors: blue relations represent subclassing and yellow and
+	orange ones represent domain and range relations.}
+	\label{fig:rdfs-entailment}
+\end{figure}
+
+The logical entailment rules are shown in the next argument while a more
+complete picture is shown in Figure \ref{rig:rdfs-entailment}:
 
 \begin{center}
 	\begin{tabular}{c@{\,}l@{}} 
