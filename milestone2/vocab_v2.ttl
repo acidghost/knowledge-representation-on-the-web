@@ -74,54 +74,54 @@ xsd:date a rdfs:Datatype .
 # #################################################################
 # 
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#atLocation
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/atLocation
 
-:atLocation a owl:ObjectProperty ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/atLocation> a owl:ObjectProperty ;
 	rdfs:subPropertyOf dbo:location ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
 	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> ;
 	rdfs:comment "The location of a venue"@en ;
 	rdfs:label "venue location"^^xsd:string .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#exhibitionVenue
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/exhibitionVenue
 
-:exhibitionVenue a owl:ObjectProperty ;
-	rdfs:subPropertyOf :hasVenue ;
-	rdfs:domain :Exhibition ;
-	rdfs:range :Museum ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/exhibitionVenue> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
+	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> ;
+	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> ;
 	rdfs:comment "Venue for an exhibition"@en ;
 	rdfs:label "exhibition venue"@en .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#hasEvents
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasEvents
 
-:hasEvents a owl:ObjectProperty ;
-	owl:inverseOf :hasVenue ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasEvents> a owl:ObjectProperty ;
+	owl:inverseOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
 	rdfs:comment "Events at this venue"@en ;
 	rdfs:label "venue events"@en .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#hasVenue
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue
 
-:hasVenue a owl:ObjectProperty ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> a owl:ObjectProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
 	rdfs:comment "Venue for an Event"@en ;
 	rdfs:label "event venue"@en .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#inBorough
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/inBorough
 
-:inBorough a owl:ObjectProperty ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/inBorough> a owl:ObjectProperty ;
 	owl:equivalentProperty dbo:borough ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> ;
-	rdfs:range :Borough ;
+	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Borough> ;
 	rdfs:comment "The borough of this location"@en ;
 	rdfs:label "borough"@en .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#playVenue
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/playVenue
 
-:playVenue a owl:ObjectProperty ;
-	rdfs:subPropertyOf :hasVenue ;
-	rdfs:domain :Play ;
-	rdfs:range :Theatre ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/playVenue> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
+	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play> ;
+	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> ;
 	rdfs:comment "Venue for a play"@en ;
 	rdfs:label "play venue"@en .
 # 
@@ -249,269 +249,273 @@ dbo:postalCode a owl:DatatypeProperty .
 # #################################################################
 # 
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#Borough
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Borough
 
-:Borough a owl:Class ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Borough> a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:comment "The borough of a location"@en ;
 	rdfs:label "Borough"@en .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#Exhibition
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event
 
-:Exhibition a owl:Class ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> a owl:Class ;
 	owl:equivalentClass _:genid1 .
 
-_:genid1 owl:intersectionOf _:genid4 .
-
-_:genid4 a rdf:List ;
-	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
-	rdf:rest _:genid2 .
-
-_:genid2 a rdf:List ;
-	rdf:first _:genid3 .
-
-_:genid3 a owl:Restriction ;
-	owl:onProperty :hasVenue ;
-	owl:someValuesFrom :Museum .
-
-_:genid2 rdf:rest rdf:nil .
-
-_:genid1 a owl:Class .
-
-:Exhibition rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> .
-# 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#LargeSlot
-
-:LargeSlot a owl:Class ;
-	owl:equivalentClass _:genid5 .
-
-_:genid5 owl:intersectionOf _:genid11 .
-
-_:genid11 a rdf:List ;
-	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
-	rdf:rest _:genid6 .
-
-_:genid6 a rdf:List ;
-	rdf:first _:genid7 .
-
-_:genid7 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
-	owl:someValuesFrom _:genid8 .
-
-_:genid8 a rdfs:Datatype ;
-	owl:onDatatype xsd:unsignedInt ;
-	owl:withRestrictions _:genid9 .
-
-_:genid9 a rdf:List ;
-	rdf:first _:genid10 .
-
-_:genid10 xsd:minInclusive "5"^^xsd:unsignedInt .
-
-_:genid9 rdf:rest rdf:nil .
-
-_:genid6 rdf:rest rdf:nil .
-
-_:genid5 a owl:Class .
-
-:LargeSlot rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
-# 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#MediumSlot
-
-:MediumSlot a owl:Class ;
-	owl:equivalentClass _:genid12 .
-
-_:genid12 owl:intersectionOf _:genid20 .
-
-_:genid20 a rdf:List ;
-	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
-	rdf:rest _:genid13 .
-
-_:genid13 a rdf:List ;
-	rdf:first _:genid14 .
-
-_:genid14 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
-	owl:someValuesFrom _:genid15 .
-
-_:genid15 a rdfs:Datatype ;
-	owl:onDatatype xsd:unsignedInt ;
-	owl:withRestrictions _:genid18 .
+_:genid1 owl:intersectionOf _:genid18 .
 
 _:genid18 a rdf:List ;
 	rdf:first _:genid19 .
 
-_:genid19 xsd:minInclusive "3"^^xsd:unsignedInt .
+_:genid19 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
 
 _:genid18 rdf:rest _:genid16 .
 
 _:genid16 a rdf:List ;
 	rdf:first _:genid17 .
 
-_:genid17 xsd:maxExclusive "5"^^xsd:unsignedInt .
+_:genid17 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/calendar_summary> ;
+	owl:someValuesFrom xsd:string .
 
-_:genid16 rdf:rest rdf:nil .
+_:genid16 rdf:rest _:genid14 .
 
-_:genid13 rdf:rest rdf:nil .
+_:genid14 a rdf:List ;
+	rdf:first _:genid15 .
 
-_:genid12 a owl:Class .
+_:genid15 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date> ;
+	owl:someValuesFrom xsd:date .
 
-:MediumSlot rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
+_:genid14 rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description> ;
+	owl:someValuesFrom xsd:string .
+
+_:genid12 rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media> ;
+	owl:someValuesFrom xsd:anyURI .
+
+_:genid10 rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description> ;
+	owl:someValuesFrom xsd:string .
+
+_:genid8 rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date> ;
+	owl:someValuesFrom xsd:date .
+
+_:genid6 rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date> ;
+	owl:someValuesFrom xsd:date .
+
+_:genid4 rdf:rest _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media> ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:anyURI .
+
+_:genid2 rdf:rest rdf:nil .
+
+_:genid1 a owl:Class .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> rdfs:subClassOf owl:Thing ;
+	rdfs:label "Event"^^xsd:string .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#Museum
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition
 
-:Museum a owl:Class ;
-	owl:equivalentClass _:genid21 .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> a owl:Class ;
+	owl:equivalentClass _:genid20 .
 
-_:genid21 owl:intersectionOf _:genid24 .
+_:genid20 owl:intersectionOf _:genid23 .
 
-_:genid24 a rdf:List ;
-	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
-	rdf:rest _:genid22 .
-
-_:genid22 a rdf:List ;
-	rdf:first _:genid23 .
-
-_:genid23 a owl:Restriction ;
-	owl:onProperty :hasEvents ;
-	owl:someValuesFrom :Museum .
-
-_:genid22 rdf:rest rdf:nil .
-
-_:genid21 a owl:Class .
-
-:Museum rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
-# 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#Play
-
-:Play a owl:Class ;
-	owl:equivalentClass _:genid25 .
-
-_:genid25 owl:intersectionOf _:genid28 .
-
-_:genid28 a rdf:List ;
+_:genid23 a rdf:List ;
 	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
-	rdf:rest _:genid26 .
+	rdf:rest _:genid21 .
 
-_:genid26 a rdf:List ;
-	rdf:first _:genid27 .
+_:genid21 a rdf:List ;
+	rdf:first _:genid22 .
 
-_:genid27 a owl:Restriction ;
-	owl:onProperty :hasVenue ;
-	owl:someValuesFrom :Theatre .
+_:genid22 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
+	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> .
 
-_:genid26 rdf:rest rdf:nil .
+_:genid21 rdf:rest rdf:nil .
 
-_:genid25 a owl:Class .
+_:genid20 a owl:Class .
 
-:Play rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#SmallSlot
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot
 
-:SmallSlot a owl:Class ;
-	owl:equivalentClass _:genid29 .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot> a owl:Class ;
+	owl:equivalentClass _:genid24 .
 
-_:genid29 owl:intersectionOf _:genid37 .
-
-_:genid37 a rdf:List ;
-	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
-	rdf:rest _:genid30 .
+_:genid24 owl:intersectionOf _:genid30 .
 
 _:genid30 a rdf:List ;
-	rdf:first _:genid31 .
+	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+	rdf:rest _:genid25 .
 
-_:genid31 a owl:Restriction ;
+_:genid25 a rdf:List ;
+	rdf:first _:genid26 .
+
+_:genid26 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
-	owl:someValuesFrom _:genid32 .
+	owl:someValuesFrom _:genid27 .
 
-_:genid32 a rdfs:Datatype ;
+_:genid27 a rdfs:Datatype ;
 	owl:onDatatype xsd:unsignedInt ;
-	owl:withRestrictions _:genid35 .
+	owl:withRestrictions _:genid28 .
 
-_:genid35 a rdf:List ;
-	rdf:first _:genid36 .
+_:genid28 a rdf:List ;
+	rdf:first _:genid29 .
 
-_:genid36 xsd:minInclusive "1"^^xsd:unsignedInt .
+_:genid29 xsd:minInclusive "5"^^xsd:unsignedInt .
 
-_:genid35 rdf:rest _:genid33 .
+_:genid28 rdf:rest rdf:nil .
 
-_:genid33 a rdf:List ;
-	rdf:first _:genid34 .
+_:genid25 rdf:rest rdf:nil .
 
-_:genid34 xsd:maxExclusive "3"^^xsd:unsignedInt .
+_:genid24 a owl:Class .
 
-_:genid33 rdf:rest rdf:nil .
-
-_:genid30 rdf:rest rdf:nil .
-
-_:genid29 a owl:Class .
-
-:SmallSlot rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#Theatre
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location
 
-:Theatre a owl:Class ;
-	owl:equivalentClass _:genid38 .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> a owl:Class ;
+	owl:equivalentClass _:genid31 .
 
-_:genid38 owl:intersectionOf _:genid41 .
+_:genid31 owl:intersectionOf _:genid34 .
+
+_:genid34 a rdf:List ;
+	rdf:first dbo:Location ;
+	rdf:rest _:genid32 .
+
+_:genid32 a rdf:List ;
+	rdf:first _:genid33 .
+
+_:genid33 a owl:Restriction ;
+	owl:onProperty dbo:borough ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Borough> .
+
+_:genid32 rdf:rest rdf:nil .
+
+_:genid31 a owl:Class .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> rdfs:subClassOf dbo:Location ;
+	rdfs:label "Location"^^xsd:string .
+# 
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot> a owl:Class ;
+	owl:equivalentClass _:genid35 .
+
+_:genid35 owl:intersectionOf _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+	rdf:rest _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first _:genid37 .
+
+_:genid37 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
+	owl:someValuesFrom _:genid38 .
+
+_:genid38 a rdfs:Datatype ;
+	owl:onDatatype xsd:unsignedInt ;
+	owl:withRestrictions _:genid41 .
 
 _:genid41 a rdf:List ;
-	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
-	rdf:rest _:genid39 .
+	rdf:first _:genid42 .
+
+_:genid42 xsd:minInclusive "3"^^xsd:unsignedInt .
+
+_:genid41 rdf:rest _:genid39 .
 
 _:genid39 a rdf:List ;
 	rdf:first _:genid40 .
 
-_:genid40 a owl:Restriction ;
-	owl:onProperty :hasEvents ;
-	owl:someValuesFrom :Theatre .
+_:genid40 xsd:maxExclusive "5"^^xsd:unsignedInt .
 
 _:genid39 rdf:rest rdf:nil .
 
-_:genid38 a owl:Class .
+_:genid36 rdf:rest rdf:nil .
 
-:Theatre rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
+_:genid35 a owl:Class .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> a owl:Class ;
-	owl:equivalentClass _:genid42 .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> a owl:Class ;
+	owl:equivalentClass _:genid44 .
 
-_:genid42 owl:intersectionOf _:genid59 .
+_:genid44 owl:intersectionOf _:genid47 .
 
-_:genid59 a rdf:List ;
-	rdf:first _:genid60 .
+_:genid47 a rdf:List ;
+	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
+	rdf:rest _:genid45 .
 
-_:genid60 a owl:Restriction ;
-	owl:onProperty :hasVenue ;
-	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
+_:genid45 a rdf:List ;
+	rdf:first _:genid46 .
 
-_:genid59 rdf:rest _:genid57 .
+_:genid46 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasEvents> ;
+	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> .
 
-_:genid57 a rdf:List ;
-	rdf:first _:genid58 .
+_:genid45 rdf:rest rdf:nil .
 
-_:genid58 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/calendar_summary> ;
-	owl:someValuesFrom xsd:string .
+_:genid44 a owl:Class .
 
-_:genid57 rdf:rest _:genid55 .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
+# 
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot
 
-_:genid55 a rdf:List ;
-	rdf:first _:genid56 .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> a owl:Class ;
+	owl:equivalentClass _:genid48 .
 
-_:genid56 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date> ;
-	owl:someValuesFrom xsd:date .
-
-_:genid55 rdf:rest _:genid53 .
+_:genid48 owl:intersectionOf _:genid53 .
 
 _:genid53 a rdf:List ;
 	rdf:first _:genid54 .
 
 _:genid54 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description> ;
-	owl:someValuesFrom xsd:string .
+	owl:onProperty dbo:location ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
 
 _:genid53 rdf:rest _:genid51 .
 
@@ -519,8 +523,9 @@ _:genid51 a rdf:List ;
 	rdf:first _:genid52 .
 
 _:genid52 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media> ;
-	owl:someValuesFrom xsd:anyURI .
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info> ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:string .
 
 _:genid51 rdf:rest _:genid49 .
 
@@ -528,111 +533,106 @@ _:genid49 a rdf:List ;
 	rdf:first _:genid50 .
 
 _:genid50 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description> ;
-	owl:someValuesFrom xsd:string .
-
-_:genid49 rdf:rest _:genid47 .
-
-_:genid47 a rdf:List ;
-	rdf:first _:genid48 .
-
-_:genid48 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date> ;
-	owl:someValuesFrom xsd:date .
-
-_:genid47 rdf:rest _:genid45 .
-
-_:genid45 a rdf:List ;
-	rdf:first _:genid46 .
-
-_:genid46 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date> ;
-	owl:someValuesFrom xsd:date .
-
-_:genid45 rdf:rest _:genid43 .
-
-_:genid43 a rdf:List ;
-	rdf:first _:genid44 .
-
-_:genid44 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media> ;
-	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onDataRange xsd:anyURI .
-
-_:genid43 rdf:rest rdf:nil .
-
-_:genid42 a owl:Class .
-
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> rdfs:subClassOf owl:Thing ;
-	rdfs:label "Event"^^xsd:string .
-# 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location
-
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> a owl:Class ;
-	owl:equivalentClass _:genid61 .
-
-_:genid61 owl:intersectionOf _:genid64 .
-
-_:genid64 a rdf:List ;
-	rdf:first dbo:Location ;
-	rdf:rest _:genid62 .
-
-_:genid62 a rdf:List ;
-	rdf:first _:genid63 .
-
-_:genid63 a owl:Restriction ;
-	owl:onProperty dbo:borough ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass :Borough .
-
-_:genid62 rdf:rest rdf:nil .
-
-_:genid61 a owl:Class .
-
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> rdfs:subClassOf dbo:Location ;
-	rdfs:label "Location"^^xsd:string .
-# 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot
-
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> a owl:Class ;
-	owl:equivalentClass _:genid65 .
-
-_:genid65 owl:intersectionOf _:genid70 .
-
-_:genid70 a rdf:List ;
-	rdf:first _:genid71 .
-
-_:genid71 a owl:Restriction ;
-	owl:onProperty dbo:location ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
-
-_:genid70 rdf:rest _:genid68 .
-
-_:genid68 a rdf:List ;
-	rdf:first _:genid69 .
-
-_:genid69 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info> ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onDataRange xsd:string .
-
-_:genid68 rdf:rest _:genid66 .
-
-_:genid66 a rdf:List ;
-	rdf:first _:genid67 .
-
-_:genid67 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:unsignedInt .
 
-_:genid66 rdf:rest rdf:nil .
+_:genid49 rdf:rest rdf:nil .
 
-_:genid65 a owl:Class .
+_:genid48 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> rdfs:subClassOf owl:Thing ;
 	rdfs:label "Parking Slot"^^xsd:string .
+# 
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play> a owl:Class ;
+	owl:equivalentClass _:genid55 .
+
+_:genid55 owl:intersectionOf _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+	rdf:rest _:genid56 .
+
+_:genid56 a rdf:List ;
+	rdf:first _:genid57 .
+
+_:genid57 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
+	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
+
+_:genid56 rdf:rest rdf:nil .
+
+_:genid55 a owl:Class .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> .
+# 
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot> a owl:Class ;
+	owl:equivalentClass _:genid59 .
+
+_:genid59 owl:intersectionOf _:genid67 .
+
+_:genid67 a rdf:List ;
+	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+	rdf:rest _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first _:genid61 .
+
+_:genid61 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
+	owl:someValuesFrom _:genid62 .
+
+_:genid62 a rdfs:Datatype ;
+	owl:onDatatype xsd:unsignedInt ;
+	owl:withRestrictions _:genid65 .
+
+_:genid65 a rdf:List ;
+	rdf:first _:genid66 .
+
+_:genid66 xsd:minInclusive "1"^^xsd:unsignedInt .
+
+_:genid65 rdf:rest _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first _:genid64 .
+
+_:genid64 xsd:maxExclusive "3"^^xsd:unsignedInt .
+
+_:genid63 rdf:rest rdf:nil .
+
+_:genid60 rdf:rest rdf:nil .
+
+_:genid59 a owl:Class .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
+# 
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> a owl:Class ;
+	owl:equivalentClass _:genid68 .
+
+_:genid68 owl:intersectionOf _:genid71 .
+
+_:genid71 a rdf:List ;
+	rdf:first <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
+	rdf:rest _:genid69 .
+
+_:genid69 a rdf:List ;
+	rdf:first _:genid70 .
+
+_:genid70 a owl:Restriction ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasEvents> ;
+	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
+
+_:genid69 rdf:rest rdf:nil .
+
+_:genid68 a owl:Class .
+
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue
 
@@ -640,7 +640,7 @@ _:genid65 a owl:Class .
 	owl:equivalentClass _:genid72 .
 
 _:genid72 a owl:Restriction ;
-	owl:onProperty :atLocation ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/atLocation> ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
 
@@ -719,13 +719,13 @@ dbo:Place a owl:Class .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestExhibit
 
-:TestExhibit a owl:NamedIndividual , :Exhibition ;
-	:exhibitionVenue :TestVenueExhibit .
+:TestExhibit a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> ;
+	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/exhibitionVenue> :TestVenueExhibit .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestPlay
 
 :TestPlay a owl:NamedIndividual ;
-	:hasVenue :TestVenuePlay .
+	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> :TestVenuePlay .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestVenueExhibit
 
@@ -733,7 +733,7 @@ dbo:Place a owl:Class .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestVenuePlay
 
-:TestVenuePlay a owl:NamedIndividual , :Theatre .
+:TestVenuePlay a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
 # 
 # 
 # 
