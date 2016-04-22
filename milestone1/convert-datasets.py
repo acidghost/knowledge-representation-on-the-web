@@ -22,6 +22,9 @@ DBR = Namespace(dbr)
 
 repo_url = "http://stardog.krw.d2s.labs.vu.nl/group6"
 
+SOURCE_DATA_DIR = '../source_datasets/'
+OUTPUT_DIR = 'data/'
+
 
 def convert_dataset(path, dataset, graph_uri):
     f = open(path, 'r')
@@ -33,7 +36,7 @@ def convert_dataset(path, dataset, graph_uri):
     for event_data in json_data:
         event = URIRef(to_iri(resource + event_data['title'].strip()))
         title = Literal(event_data['title'].strip(), datatype=XSD['string'])
-        
+
         dates = event_data['dates']
         if dates != []:
             single_dates = [Literal(datetime.strptime(d, '%d-%m-%Y').date())
@@ -73,10 +76,10 @@ def convert_dataset(path, dataset, graph_uri):
                 detail['short_description'] = Literal(details_dict[lang]['shortdescription'].strip(), lang=lang)
             details.append(detail)
 
-        
+
         graph.add((event, RDF.type, VOCAB['Event']))
         graph.add((event, RDFS.label, title))
-        
+
         if dates != []:
             for single_date in single_dates:
                 graph.add((event, VOCAB['single_date'],  single_date))
@@ -84,7 +87,7 @@ def convert_dataset(path, dataset, graph_uri):
                 graph.add((event, VOCAB['start_date'], start_date))
             if end_date:
                 graph.add((event, VOCAB['end_date'], end_date))
-        
+
         if location_dict['name'] != '':
             graph.add((event, VOCAB['venue'], place))
             dataset.add((place, RDF.type, VOCAB['Venue']))
@@ -127,27 +130,27 @@ def convert_parking_dataset(path, dataset, graph_uri):
 
     for data in json_data['gehandicaptenparkeerplaatsen']:
         slot_data = data['node']
-        
+
         data_address = slot_data['Adres'].strip()
         if data_address == '':
             continue
         slot = URIRef(to_iri(resource + data_address))
-        
+
         slot_loc = URIRef(to_iri(resource + 'Amsterdam/' + data_address))
         slot_loc_address = Literal(data_address)
-        
+
         data_quantity = slot_data['Aantal'].strip()
         slot_quantity = Literal(int(data_quantity)) if data_quantity != '' else None
-        
+
         data_info = slot_data['Locatie-info']
         slot_info = Literal(data_info) if data_info != '' else None
         slot_loc_borough = Literal(slot_data['Stadsdeel'].strip())
-        
+
         slot_coordinates = json.loads(slot_data['locatie'].strip())
         slot_loc_lat = Literal(float(slot_coordinates['coordinates'][1]))
         slot_loc_long = Literal(float(slot_coordinates['coordinates'][0]))
 
-        
+
         graph.add((slot, RDF.type, VOCAB['ParkingSlot']))
         graph.add((slot, RDFS.label, slot_loc_address))
         if slot_quantity:
@@ -189,7 +192,7 @@ def drop_stardog():
 
 def upload_to_stardog(data):
     transaction_begin_url = repo_url + "/transaction/begin"
-    
+
     # Start the transaction, and get a transaction_id
     response = requests.post(transaction_begin_url, headers={'Accept': 'text/plain'})
     transaction_id = response.content
@@ -224,16 +227,16 @@ dataset.bind('dbo', DBO)
 dataset.bind('dbr', DBR)
 
 dataset, t_graph = convert_dataset(
-    'data/Theater.json', dataset, URIRef(graph_uri_base + 'theaters'))
-serialize_upload('data/theaters.trig', dataset)
+    SOURCE_DATA_DIR + 'Theater.json', dataset, URIRef(graph_uri_base + 'theaters'))
+serialize_upload(OUTPUT_DIR + 'theaters.trig', dataset)
 dataset.remove_graph(t_graph)
 
 dataset, mg_graph = convert_dataset(
-    'data/MuseaGalleries.json', dataset, URIRef(graph_uri_base + 'museums'))
-serialize_upload('data/museums.trig', dataset)
+    SOURCE_DATA_DIR + 'MuseaGalleries.json', dataset, URIRef(graph_uri_base + 'museums'))
+serialize_upload(OUTPUT_DIR + 'museums.trig', dataset)
 dataset.remove_graph(mg_graph)
 
 dataset, park_graph = convert_parking_dataset(
-    'data/gehandicaptenparkeerplaatsen.json', dataset, URIRef(graph_uri_base + 'parking-slots'))
-serialize_upload('data/parking_slots.trig', dataset)
+    SOURCE_DATA_DIR + 'gehandicaptenparkeerplaatsen.json', dataset, URIRef(graph_uri_base + 'parking-slots'))
+serialize_upload(OUTPUT_DIR + 'parking_slots.trig', dataset)
 
