@@ -2,7 +2,7 @@
 
 import json
 from datetime import datetime
-from rdflib import Dataset, URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD
+from rdflib import Dataset, Graph, URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD
 from iribaker import to_iri
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -235,15 +235,50 @@ dataset.default_context.parse(VOCAB_FILE, format='turtle')
 
 dataset, t_graph = convert_dataset(
     SOURCE_DATA_DIR + 'Theater.json', dataset, URIRef(graph_uri_base + 'theaters'), museums=False)
-serialize_upload(OUTPUT_DIR + 'theaters.trig', dataset)
-dataset.remove_graph(t_graph)
+serialize_upload(OUTPUT_DIR + 'theaters.trig', t_graph)
+# dataset.remove_graph(t_graph)
 
 dataset, mg_graph = convert_dataset(
     SOURCE_DATA_DIR + 'MuseaGalleries.json', dataset, URIRef(graph_uri_base + 'museums'), museums=True)
-serialize_upload(OUTPUT_DIR + 'museums.trig', dataset)
-dataset.remove_graph(mg_graph)
+serialize_upload(OUTPUT_DIR + 'museums.trig', mg_graph)
+# dataset.remove_graph(mg_graph)
 
 dataset, park_graph = convert_parking_dataset(
     SOURCE_DATA_DIR + 'gehandicaptenparkeerplaatsen.json', dataset, URIRef(graph_uri_base + 'parking-slots'))
-serialize_upload(OUTPUT_DIR + 'parking_slots.trig', dataset)
+serialize_upload(OUTPUT_DIR + 'parking_slots.trig', park_graph)
+# dataset.remove_graph(park_graph)
+
+
+# Generate VoID metadata
+from rdflib.void import generateVoID
+from rdflib.namespace import VOID
+dcterms_uri = 'http://purl.org/dc/terms/'
+DCTERMS = Namespace(dcterms_uri)
+
+# Theaters
+void_dataset_t = URIRef(graph_uri_base + 'theaters/void')
+void_g_t, _ = generateVoID(t_graph, dataset=void_dataset_t)
+serialize_upload(OUTPUT_DIR + 'void_theaters.trig', void_g_t)
+
+# Museums
+void_dataset_m = URIRef(graph_uri_base + 'museums/void')
+void_g_mg, _ = generateVoID(mg_graph, dataset=void_dataset_m)
+serialize_upload(OUTPUT_DIR + 'void_museums.trig', void_g_mg)
+
+# Parking slots
+void_dataset_ps = URIRef(graph_uri_base + 'parking-slots/void')
+void_g_ps, _ = generateVoID(mg_graph, dataset=void_dataset_ps)
+serialize_upload(OUTPUT_DIR + 'void_parking_slots.trig', void_g_ps)
+
+# Generate linked dataset
+void_linked_ds = URIRef(graph_uri_base + 'void')
+void_linked_g = Graph()
+void_linked_g.add((void_linked_ds, RDF.type, VOID.Linkset))
+void_linked_g.add((void_linked_ds, VOID.target, void_dataset_t))
+void_linked_g.add((void_linked_ds, VOID.target, void_dataset_m))
+void_linked_g.add((void_linked_ds, VOID.target, void_dataset_ps))
+void_linked_g.add((void_linked_ds, DCTERMS['subject'], DBR['Museums']))
+void_linked_g.add((void_linked_ds, DCTERMS['subject'], DBR['Theaters']))
+void_linked_g.add((void_linked_ds, DCTERMS['subject'], DBR['Parking_space']))
+serialize_upload(OUTPUT_DIR + 'void_linked.trig', void_linked_g)
 
