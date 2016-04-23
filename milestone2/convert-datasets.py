@@ -96,7 +96,7 @@ def convert_dataset(path, dataset, graph_uri, museums=True):
                 graph.add((event, VOCAB['playVenue'], place))
             dataset.add((place, RDF.type, VOCAB['Venue']))
             dataset.add((place, RDFS.label, place_name))
-            dataset.add((place, DBO['location'], location))
+            dataset.add((place, VOCAB['venueLocation'], location))
             dataset.add((location, RDF.type, VOCAB['Location']))
             dataset.add((location, RDFS.label, location_address))
             dataset.add((location, DBO['address'], location_address))
@@ -161,7 +161,7 @@ def convert_parking_dataset(path, dataset, graph_uri):
             graph.add((slot, VOCAB['quantity'], slot_quantity))
         if slot_info:
             graph.add((slot, VOCAB['info'], slot_info))
-        graph.add((slot, DBO['location'], slot_loc))
+        graph.add((slot, VOCAB['slotLocation'], slot_loc))
 
         dataset.add((slot_loc, RDF.type, VOCAB['Location']))
         dataset.add((slot_loc, RDFS.label, slot_loc_address))
