@@ -78,19 +78,19 @@ In order to better illustrate the motivation for this project we look back to th
 \subsection{Previous use cases}
 \begin{enumerate}
 	% Planning in advance
-	\item John is in a wheelchair and wants to go to an exhibition in Van Gogh Museum Friday night. John likes to plan things in advance and would like to know where the parking slots closest to the theater are. \\
-	The day before the show, John uses our application to find such parking slots and heads to the show confidently. 
+	\item John is in a wheelchair and wants to go to an exhibition in Van Gogh Museum Friday night. The day before the show, John uses our application to find the parking slots closest to the museum and heads to the show confidently. 
 	% Quick search once in the theater (on the fly)
-	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show at the Comedy Cafe. He is quite late and he is rushing to find the closest parking slots. He quickly browses our application and finds an area with several parking slots. He drives in that direction hoping to find an available slot. 
+	\item Peter broke his leg last month and his friends, as an attempt to cheer him up, invited him to come to a comedy show at the Comedy Cafe. He is quite late and quickly browses our application and finds an area with several parking slots. He drives in that direction hoping to find an available slot. 
 	% Event manager
 	\item Mary is an event organizer who wants to host an exhibition in a museum next month. She is looking for an accessible venue so she would like to see the distribution of parking slots around the main galleries in Amsterdam. She has a list of five places in mind and uses our application to explore and choose the best venue.
 \end{enumerate}
 
-\textbf{Why the previous schema falls short?}
-John and Peter have to go through a long list of events till they find the exhibition or show they are attending. A new ontology that subdivides events into types helps him navigate the data more easily. 
+\subsubsection{Reflection on previous knowledge graph} 
+In the previous Milestone we showed that our application successfully integrates the Events and Handicap Parking Slots datasets, thus allowing users to look for parking slots close to venues in a time-saving way. However, some of the needs expressed in the previous use cases can be better met. For example, currently John and Peter would have to browse through a long list of events till they find the exhibition or show they are attending. A better ontology that subdivides events into types could help them navigate the data more easily. 
+
+Furthermore, another notable shortcoming is that parking slots are only sorted in terms of distance to venues, ignoring other relevant facts like its size. For example, Peter might want to head to a close, yet large parking slot in order to increase its chances to find an available spot. Similarly, Mary might want to have information about the capacity of the parking slots depending on the size of the event she is planning.
 
 \subsection{New use cases}
-
 \begin{enumerate}
 	% Search by interest
 	\item Toribio is only interested in theatre plays. He is in a wheelchair and needs accessible parking spots to go to Theatres when he selects a play to watch. 
@@ -99,11 +99,12 @@ John and Peter have to go through a long list of events till they find the exhib
 \end{enumerate}
 
 \subsection{Requirements}
+Given the above, we abstract the presented needs into a high level set of requirements. To keep the project within a manageable scope, we limit the requirements to three items, summarized in the following list.
 
 \begin{enumerate}
 	\item Search by interest
-	\item Detailed location information
 	\item Detailed information about Parking Slots (size)
+	\item Detailed location information
 \end{enumerate}
 
 
@@ -182,12 +183,9 @@ and (quantity exactly 1 xsd:unsignedInt)
 	\item Detailed information about Parking Slots: Size is explicit
 \end{enumerate}
 
-- Our ontology organizes the events and venues into subtypes. This brings clarity for users who have special interest.
-
-- Our ontology has organized knowledge about addresses. It treats cities and boroughs as entities. Thus, a borough is related to a set of events, a set of venues, and a set of parking spots.
-
 \subsection{Evaluate according to five stars}
-- Use of other ontologies
+- Usage of other ontologies like dbo and geo
+- Metadata ?
 
 \section{Discussion}
 \textit{Here you summarize the preceding sections, describe the lessons learnt and discuss future work.}
