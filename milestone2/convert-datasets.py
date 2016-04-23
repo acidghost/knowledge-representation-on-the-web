@@ -144,7 +144,7 @@ def convert_parking_dataset(path, dataset, graph_uri):
         slot_loc_address = Literal(data_address)
 
         data_quantity = slot_data['Aantal'].strip()
-        slot_quantity = Literal(int(data_quantity)) if data_quantity != '' else None
+        slot_quantity = Literal(int(data_quantity), datatype=XSD['unsignedInt']) if data_quantity != '' else None
 
         data_info = slot_data['Locatie-info']
         slot_info = Literal(data_info) if data_info != '' else None
