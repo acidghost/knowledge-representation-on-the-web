@@ -20,6 +20,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{listings}
+\lstset{language=SQL,morekeywords={and, some, exactly}}
 
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
@@ -60,22 +61,20 @@ contain at least 70 and at most 150 words. It should be written using the
 \end{abstract}
 
 
-\section{Section 1 - Introduction}
-\textit{Introduce the sections that follow. What is the core contribution of this paper, and why is that interesting? It is useful to start with a use case (practical/theoretical), and then explain how your ontology (will) solve(s) that problem by means of KR technology. Why is this novel? Has this (or something similar) been done before?}
+\section{Introduction}
+Amsterdam, a busy and tourist city as it is, offers a variety of events throughout the year. As such, a relevant topic related to the previous is the accessibility the city provides for handicap people to attend such events. In particular, this project focuses on providing these users with a way to find Parking Slots when attending events in different venues in Amsterdam.
 
-- Information about handicap parking spots in Amsterdam is not well organized. Datasets exists and are available to the public but they are not well structures in a human readable manner. 
+Though information about handicap parking slots in Amsterdam is public through the Municipality, the datasets are not structured in a human readable manner. Moreover, the link to venues and events is not well organized and has not been addressed in a user-friendly manner. To the extent of our knowledge, the application that gets closest to this description is the official website for Accessibility in Amsterdam, which still fails to provide with an easily searchable tool for finding handicap parking slots given an Event and/or Venue.
+%TODO link to download datasets and to website.
 
-- We focus on a particular usage of such parking spots, those linked to events happening in the city of Amsterdam. 
+This paper is an extension of the previous paper on Milestone 1, where we set up the project to solve the aforementioned problem, linking datasets from events at Theatres, and Museums and Galleries, to the Handicap Parking Slots dataset. In this paper the overall goal is to improve on the knowledge graph created for the application by creating an ontology that is formal yet intuitive for its potential users.
 
-- Our ontology organizes the events and venues into subtypes. This brings clarity for users who have special interest. (E.g. Toribio is only interested in theater plays. He is in a wheelchair and needs accessible parking spots to go to Theaters when he selects a play to watch).
-
-- Our ontology has organized knowledge about addresses. It treats Streets and Postal codes as entities. Thus, a postal code is related to a set of events, a set of venues, and a set of parking spots. (E.g. Chachita has appointments once every week at the Femme Amsterdam Hospital. She would like to look for events nearby to attend after her sessions.)
-(NOTE: important entailment here!!!! if we know a venue is in a postal code, all events related to the venue must be related to the same postal code.)
-
-%TODO: is this novel? Website for accesible amsterdam does not have anything similar. 
+In the following section we further motivate the paper by providing concrete use cases that lead to a list of higher level requirements to be fulfilled by our project. Later, we describe an inspiration paper that guided us through the design of our ontology. We continue to describe our ontology, highlighting the major improvements from the knowledge graph in Milestone 1, followed up by evaluating the proposed ontology. Finally, some discussion provides with insights regarding the main contributions and future improvements on this project.
 
 \section{Section 2 - Use Case and Requirements}
-\textit{Describe the use-case you have in mind that motivates the need for the ontology. This could be the original use case from milestone 1, but then you should explain why the schema you defined previously falls short. What requirements should the ontology meet? What is its intended scope.}
+%\textit{Describe the use-case you have in mind that motivates the need for the ontology. This could be the original use case from milestone 1, but then you should explain why the schema you defined previously falls short. What requirements should the ontology meet? What is its intended scope.}
+In order to better illustrate the motivation for this project we look back to the use cases from Milestone 1 to evaluate how well the current knowledge graph meets their needs. Next, we ambitiously create a couple more use cases to extend the potential uses of the application. We finalize by providing with a list of three specific requirements an ontology must meet to satisfy the users needs.
+
 \subsection{Previous use cases}
 \begin{enumerate}
 	% Planning in advance
@@ -88,24 +87,32 @@ contain at least 70 and at most 150 words. It should be written using the
 \end{enumerate}
 
 \textbf{Why the previous schema falls short?}
+John and Peter have to go through a long list of events till they find the exhibition or show they are attending. A new ontology that subdivides events into types helps him navigate the data more easily. 
 
-- John and Peter have to go through a long list of events till they find the exhibition or show they are attending. A new ontology that subdivides events into types helps him navigate the data more easily. 
-
-New use cases explained in the introduction. 
-
-\subsection{Requiremnts}
+\subsection{New use cases}
 
 \begin{enumerate}
-	\item Search subset of events
+	% Search by interest
+	\item Toribio is only interested in theatre plays. He is in a wheelchair and needs accessible parking spots to go to Theatres when he selects a play to watch. 
+	% Search by area
+	\item Chachita has appointments once every week at the Femme Amsterdam Hospital. She would like to look for events nearby to attend after her sessions. 
+\end{enumerate}
+
+\subsection{Requirements}
+
+\begin{enumerate}
+	\item Search by interest
 	\item Detailed location information
-	\item Detailed information about Parking Slots
+	\item Detailed information about Parking Slots (size)
 \end{enumerate}
 
 
 \section{Section 3 - Related Work}
 \textit{What other ontologies did you find that cover a similar domain. To what extent can they be reused. Have others (e.g. other students) developed similar datasets/ontologies that feed/meet your requirements, where do they fall short? Papers to look for are published at eg. ISWC, ESWC, EKAW and FOIS, or the Journal of Web Semantics, and the Semantic Web Journal.}
 
- - Ontology for smart cities: \cite{komninos2015smart}
+- Ontology for smart cities: \cite{komninos2015smart}. Heavily inspired by this paper for ontology design. 
+
+- Our ontology fits in the broader schema of theirs. Specific for Handicap Parking Slots, Venues and Events. 
 
 
 \section{Section 4 - Methodology}
@@ -139,7 +146,7 @@ New use cases explained in the introduction.
 
 - First two distinctions come from the datasets themselves. The third one we created based on size. Parking Slot has datatype property quantity, which serves a a classifier
 
-\begin{lstlisting}[captionpos=b, caption=Definition of Large Slot a subclass of Parking Slot, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+\begin{lstlisting}[captionpos=b, caption=Definition of Large Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
 (dbo:location exactly 1 Location)
 and (info exactly 1 xsd:string)
 and (quantity exactly 1 xsd:unsignedInt)
@@ -159,13 +166,32 @@ and (quantity exactly 1 xsd:unsignedInt)
 
 
 \section{Section 6 - The Dataset}
-Describe how you recasted the dataset(s) of the previous assignment to the new ontology (perhaps you found other datasets that you want to add). What did it take to do this? What metadata have you published alongside the dataset, and how did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5 star model for Linked Data.
+\textit{Describe how you recasted the dataset(s) of the previous assignment to the new ontology (perhaps you found other datasets that you want to add). What did it take to do this? What metadata have you published alongside the dataset, and how did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5 star model for Linked Data.}
+
 
 \section{Section 7 - Evaluation}
-Evaluate the ontology and dataset with respect to each other (does the ontology really sanction only the intended inference) and with respect to the requirements and use case (extend your application?!). You may want to analyze the ontology using some quality criteria from the literature.
+\textit{Evaluate the ontology and dataset with respect to each other (does the ontology really sanction only the intended inference) and with respect to the requirements and use case (extend your application?!). You may want to analyze the ontology using some quality criteria from the literature.}
+
+\subsection{Comparison with the dataset}
+%TODO insert queries
+
+\subsection{Comparison with requirements}
+\begin{enumerate}
+	\item Search by interests: Initial division of events and Venues by personal interest.
+	\item Detailed location information: Ability to search for Venues and Parking Slots in same Borough is simple.
+	\item Detailed information about Parking Slots: Size is explicit
+\end{enumerate}
+
+- Our ontology organizes the events and venues into subtypes. This brings clarity for users who have special interest.
+
+- Our ontology has organized knowledge about addresses. It treats cities and boroughs as entities. Thus, a borough is related to a set of events, a set of venues, and a set of parking spots.
+
+\subsection{Evaluate according to five stars}
+- Use of other ontologies
 
 \section{Discussion}
-Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
+\textit{Here you summarize the preceding sections, describe the lessons learnt and discuss future work.}
+
 
 
 \bibliographystyle{plain}
