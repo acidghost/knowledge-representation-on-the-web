@@ -127,7 +127,9 @@ xsd:date a rdfs:Datatype .
 # 
 # http://dbpedia.org/ontology/borough
 
-dbo:borough a owl:ObjectProperty .
+dbo:borough a owl:ObjectProperty ;
+	rdfs:domain dbo:Location ;
+	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Borough> .
 # 
 # http://dbpedia.org/ontology/city
 
@@ -373,7 +375,8 @@ _:genid21 rdf:rest rdf:nil .
 
 _:genid20 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+	rdfs:label "Exhibition"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot
 
@@ -408,7 +411,8 @@ _:genid25 rdf:rest rdf:nil .
 
 _:genid24 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+	rdfs:label "Large Slot"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location
 
@@ -476,7 +480,8 @@ _:genid36 rdf:rest rdf:nil .
 
 _:genid35 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+	rdfs:label "Medium Slot"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum
 
@@ -500,7 +505,8 @@ _:genid45 rdf:rest rdf:nil .
 
 _:genid44 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
+	rdfs:label "Museum"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot
 
@@ -566,7 +572,8 @@ _:genid56 rdf:rest rdf:nil .
 
 _:genid55 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+	rdfs:label "Play"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot
 
@@ -608,7 +615,8 @@ _:genid60 rdf:rest rdf:nil .
 
 _:genid59 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+	rdfs:label "Small Slot"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre
 
@@ -632,7 +640,8 @@ _:genid69 rdf:rest rdf:nil .
 
 _:genid68 a owl:Class .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
+	rdfs:label "Theatre"^^xsd:string .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue
 

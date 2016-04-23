@@ -19,6 +19,7 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{listings}
 
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
@@ -29,7 +30,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Data- and Ontology Paper: Quality Ontology for Parking Spots around Venues in Amsterdam}
+\title{Data- and Ontology Paper: Quality Ontology for Handicap Parking Spots around Venues in Amsterdam}
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Data- and Ontology Paper}
@@ -92,6 +93,15 @@ contain at least 70 and at most 150 words. It should be written using the
 
 New use cases explained in the introduction. 
 
+\subsection{Requiremnts}
+
+\begin{enumerate}
+	\item Search subset of events
+	\item Detailed location information
+	\item Detailed information about Parking Slots
+\end{enumerate}
+
+
 \section{Section 3 - Related Work}
 \textit{What other ontologies did you find that cover a similar domain. To what extent can they be reused. Have others (e.g. other students) developed similar datasets/ontologies that feed/meet your requirements, where do they fall short? Papers to look for are published at eg. ISWC, ESWC, EKAW and FOIS, or the Journal of Web Semantics, and the Semantic Web Journal.}
 
@@ -99,10 +109,54 @@ New use cases explained in the introduction.
 
 
 \section{Section 4 - Methodology}
-Describe the methodology you followed for constructing the ontology. How did you guarantee that the ontology meets the needs and requirements of the use case? Have you used any existing design patterns, partial ontologies, competency questions etc.
+\textit{Describe the methodology you followed for constructing the ontology. How did you guarantee that the ontology meets the needs and requirements of the use case? Have you used any existing design patterns, partial ontologies, competency questions etc.}
+
+- Use of Protégé
+
+- Iterative process.
+
+- Subclasses, cardinality, object Properties
+
+- Extensive use of powerful ontologies like dbo. Use of equivalence between dbo:Place and dbo:Location
 
 \section{Section 5 - The Ontology}
-Systematically describe the ontology and highlight the (interesting) design choices you had to make. Were there things you wanted to represent but couldn't given the limitations on the KR language?\footnote{If you do not encounter any limitations, you should be more ambitious about the model!} How did you work around these limitations? (integrity constraints, additional rules?) Describe how the ontology meets the 5 star model for Linked Vocabulary Use.
+\textit{Systematically describe the ontology and highlight the (interesting) design choices you had to make. Were there things you wanted to represent but couldn't given the limitations on the KR language?\footnote{If you do not encounter any limitations, you should be more ambitious about the model!} How did you work around these limitations? (integrity constraints, additional rules?) Describe how the ontology meets the 5 star model for Linked Vocabulary Use.}
+
+%TODO insert image
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{img/ontology.png}
+	\caption{Visualization of the Ontology graph}
+	\label{fig:ontology}
+\end{figure}
+
+\subsection{Entities}
+- Now we have subclasses for each of the main type of classes we had before
+
+- Events: into Plays and Exhibitions
+- Venues into Theatres and Museums
+- Parking Slot into Small Medium and Large
+
+- First two distinctions come from the datasets themselves. The third one we created based on size. Parking Slot has datatype property quantity, which serves a a classifier
+
+\begin{lstlisting}[captionpos=b, caption=Definition of Large Slot a subclass of Parking Slot, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+(dbo:location exactly 1 Location)
+and (info exactly 1 xsd:string)
+and (quantity exactly 1 xsd:unsignedInt)
+\end{lstlisting}
+
+- Our Location class extends dbo:Location class in the use of Borough
+
+\subsection{Properties}
+
+- Restrictions on datatype properties. Cardinalities are explicit, so that they reflect that an Event has only one Venue, for example
+
+- Introduce 'Event venue' which has subproperties 'Exhibition Venue' and 'Play Venue' depending on their range. Also introduce its inverse 'Venue Events'
+
+- We create a subproperty of dbo:location to be 'venue location'. We restrict dbo:location to have domain Parking Slots while 'venue location' has domain Venues. Both have Location as range.
+
+- Properties for Borough, City and Country
+
 
 \section{Section 6 - The Dataset}
 Describe how you recasted the dataset(s) of the previous assignment to the new ontology (perhaps you found other datasets that you want to add). What did it take to do this? What metadata have you published alongside the dataset, and how did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5 star model for Linked Data.
