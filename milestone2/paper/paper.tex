@@ -57,9 +57,16 @@
 
 
 \begin{abstract}
-The abstract should summarize the contents of the paper and should
-contain at least 70 and at most 150 words. It should be written using the
-\emph{abstract} environment.
+% The abstract should summarize the contents of the paper and should
+% contain at least 70 and at most 150 words. It should be written using the
+% \emph{abstract} environment.
+We introduce a Linked Dataset integrating three different datasets related to
+the city of Amsterdam. We present the details of the dataset and the ontology
+that we introduce to cover all the important concepts of those data. Also we
+provide a thoughtful analysis of the methodology that we applied and the
+evaluation techniques that have been embraced. We enhanced our previous dataset
+with a richer ontology and we show how we published our results following the
+5-star model for Linked Data.
 \end{abstract}
 
 
@@ -125,7 +132,6 @@ Given the requirements from Section \ref{requirements}, and with the objective m
 
 Furthermore, we elaborate on the expressiveness of the ontology and exploit the power of the Web Ontology Language (OWL) to represent more complex aspects such as cardinalities and equivalences among existing and newly created Subclasses and Object Properties.
 
-<<<<<<< HEAD
 As stated in the previous Milestone, we incorporate other ontologies like \texttt{dbepedia} \footnote{The \texttt{dbepedia} namespace is defined at \url{http://dbpedia.org/ontology/}} for location management, and \texttt{geo} \footnote{The \texttt{geo} namespace is defined at \url{http://www.w3.org/2003/01/geo/wgs84_pos}} for latitude and longitude management. This time, we exploit the usage of dbepedia and make use of the equivalence between dbo:Place and dbo:Location. Further explanation of the benefits of this are explained in the following section.
 
 \section{The Ontology}
@@ -212,7 +218,7 @@ dbo:Location
 and (dbo:borough exactly 1 Borough)
 \end{lstlisting}
 
-\section{Section 6 - The Dataset}
+\section{The Dataset}
 % Describe how you recasted the dataset(s) of the previous assignment to the new
 % ontology (perhaps you found other datasets that you want to add). What did it
 % take to do this? What metadata have you published alongside the dataset, and how
@@ -273,8 +279,10 @@ specification, we point to \texttt{dbr:Museums} and \texttt{dbr:Parking\_space}.
 \end{description}
 
 
-\section{Section 7 - Evaluation}
-For evaluating our ontology we got inspired by the work of Hlomani and Stacey \cite{hlomani2014approaches} on ontology evaluation and decided to evaluate our ontology using three major criterion:
+\section{Evaluation}
+For evaluating our ontology we got inspired by the work of Hlomani and Stacey
+\cite{hlomani2014approaches} on ontology evaluation and decided to evaluate our
+ontology using three major criteria:
 \begin{enumerate}
 	\item \textbf{Task-based Evaluation}. First of all we perform a task-based evaluation that typically evaluates how effective our ontology is in the context of an application.
 	\item \textbf{User-based Evaluation}. We perform a user-based evaluation that evaluates the ontology through user's experiences. Contrary to task-based evaluation, we are not accessing semantic validity and consistency of our ontology but we focus on the subjective information of it.
@@ -292,15 +300,33 @@ For evaluating our ontology we got inspired by the work of Hlomani and Stacey \c
 \end{enumerate}
 
 \subsection{User-based Evaluation}
-For our user-based evaluation we simply examined our dataset as a \textit{third user}. The source and the meta data that have been added with the void ontology provide with important information, no only on each of the three datasets separately but on the dataset as a whole. \textit{Labels}, \textit{descriptions} and important \textit{metrics}, such as the total number of triples that exist in each dataset are only some of the meta-data information that have been added. However the risk with the specific way of evaluation, is that it is difficult to establish objective standards as it depends on the different type of users involved.
+For our user-based evaluation we simply examined our dataset as a \textit{third
+user}. The source and the meta data that have been added with the void ontology
+provide with important information, not only on each of the three datasets
+separately but on the dataset as a whole. \textit{Labels}, \textit{descriptions}
+and important \textit{metrics}, such as the total number of triples that exist
+in each dataset are only some of the meta-data information that have been added.
+However the risk with the specific way of evaluation, is that it is difficult to
+establish objective standards as it depends on the different type of users
+involved.
 
 \subsection{Data-driven evaluation}
-So far our ontology combines knowledge from three different datasets in order to provide a useful service to the potential users of our application. Compared to other ontologies in the specific domain of finding parking slots it is clear that our ontology is quite innovative, since we focus specifically on people with a certain handicap. 
+So far our ontology combines knowledge from three different datasets in order to
+provide a useful service to the potential users of our application. Compared to
+other ontologies in the specific domain of finding parking slots it is clear
+that our ontology is quite innovative, since we focus specifically on people
+with handicap. 
 
-With the addition of Borough as a key feature of Location, the data can be combined in a more efficient way, increasing the total efficiency of our web application even further.Besides efficiency, we wanted to check how well our ontology \textit{fits the domain knowledge} \cite{brewster2004data}. 
+With the addition of Borough as a key feature of Location, the data can be
+combined in a more efficient way, increasing the total efficiency of our web
+application even further.Besides efficiency, we wanted to check how well our
+ontology \textit{fits the domain knowledge} \cite{brewster2004data}. 
 
-This was done by comparing ontology concepts derived from the three separate datasets that we used in milestone 1, with the latest version of our dataset. 
-So far our ontology fits the domain knowledge of the three datasets, perfectly, however we realistically acknowledge the fact that there is certainly room for further improvement in the general domain of Events and Parking Slots.
+This was done by comparing ontology concepts derived from the three separate
+datasets that we used in milestone 1, with the latest version of our dataset.
+So far our ontology fits the domain knowledge of the three datasets, perfectly,
+however we realistically acknowledge the fact that there is certainly room for
+further improvement in the general domain of Events and Parking Slots.
 
 
 \section{Discussion}
