@@ -251,7 +251,7 @@ URL \url{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/
 
 \subsection{5-star Open Data}
 We say that the published database is conform with standards proposed by the
-5-star model for Linked Data. Here we defend our statement by taking each of the
+5-star model for Linked Data \cite{janowicz2014five}. Here we defend our statement by taking each of the
 five steps into consideration.
 
 \begin{description}
@@ -274,12 +274,14 @@ specification, we point to \texttt{dbr:Museums} and \texttt{dbr:Parking\_space}.
 
 
 \section{Section 7 - Evaluation}
-\textit{Evaluate the ontology and dataset with respect to each other (does the ontology really sanction only the intended inference) and with respect to the requirements and use case (extend your application?!). You may want to analyze the ontology using some quality criteria from the literature.}
+For evaluating our ontology we got inspired by the work of Hlomani and Stacey \cite{hlomani2014approaches} on ontology evaluation and decided to evaluate our ontology using three major criterion:
+\begin{enumerate}
+	\item \textbf{Task-based Evaluation}. First of all we perform a task-based evaluation that typically evaluates how effective our ontology is in the context of an application.
+	\item \textbf{User-based Evaluation}. We perform a user-based evaluation that evaluates the ontology through user's experiences. Contrary to task-based evaluation, we are not accessing semantic validity and consistency of our ontology but we focus on the subjective information of it.
+	\item \textbf{Data-driven evaluation}. In the last part of this section we focus on evaluating our ontology by comparing it, with existing data about the domain it models.
+\end{enumerate} 
 
-\subsection{Comparison with the dataset}
-%TODO insert queries
-
-\subsection{Comparison with requirements}
+\subsection{Task-based Evaluation}
 \begin{enumerate}
 	\item \textbf{Search by interest}.
 	With the extension of our ontology we succeed in extending our application. We have enabled the search by interests, as we initially divide Events and Venues with regard to personal interest. This way the users can narrow down their search avoiding nonessential information.
@@ -289,9 +291,17 @@ specification, we point to \texttt{dbr:Museums} and \texttt{dbr:Parking\_space}.
 	\item \textbf{Capacity of Parking Slots}. We also provide with explicit information about each Parking Slot that is close to the interests of the user. Users now have prior knowledge regarding the capacity of the parking spot they need.
 \end{enumerate}
 
-\subsection{Evaluate according to five stars}
-- Usage of other ontologies like dbo and geo
-- Metadata ?
+\subsection{User-based Evaluation}
+For our user-based evaluation we simply examined our dataset as a \textit{third user}. The source and the meta data that have been added with the void ontology provide with important information, no only on each of the three datasets separately but on the dataset as a whole. \textit{Labels}, \textit{descriptions} and important \textit{metrics}, such as the total number of triples that exist in each dataset are only some of the meta-data information that have been added. However the risk with the specific way of evaluation, is that it is difficult to establish objective standards as it depends on the different type of users involved.
+
+\subsection{Data-driven evaluation}
+So far our ontology combines knowledge from three different datasets in order to provide a useful service to the potential users of our application. Compared to other ontologies in the specific domain of finding parking slots it is clear that our ontology is quite innovative, since we focus specifically on people with a certain handicap. 
+
+With the addition of Borough as a key feature of Location, the data can be combined in a more efficient way, increasing the total efficiency of our web application even further.Besides efficiency, we wanted to check how well our ontology \textit{fits the domain knowledge} \cite{brewster2004data}. 
+
+This was done by comparing ontology concepts derived from the three separate datasets that we used in milestone 1, with the latest version of our dataset. 
+So far our ontology fits the domain knowledge of the three datasets, perfectly, however we realistically acknowledge the fact that there is certainly room for further improvement in the general domain of Events and Parking Slots.
+
 
 \section{Discussion}
 \textit{Here you summarize the preceding sections, describe the lessons learnt and discuss future work.}
