@@ -21,6 +21,8 @@
 \usepackage{amssymb}
 \usepackage{listings}
 \lstset{language=SQL,morekeywords={and, some, exactly}}
+\usepackage{caption}
+\usepackage{subcaption}
 
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
@@ -116,33 +118,43 @@ While doing research to meet the previous requirements, we ran across a variety 
 We want to accentuate the importance of coordination among well-formed ontologies and so we designed our ontology with the thought in mind to fit the broader schema laid down by Komninos el al. Ours is a specific and relatively small ontology that focuses on Handicap Parking Slots, Venues and Events. Yet, its full of potential can be achieved when assembled together with ontologies regarding other aspects of a city. 
 
 
-\section{Section 4 - Methodology}
+\section{Methodology}
 %\textit{Describe the methodology you followed for constructing the ontology. How did you guarantee that the ontology meets the needs and requirements of the use case? Have you used any existing design patterns, partial ontologies, competency questions etc.}
 
-Given the requirements from Section \ref{requirements}, and with the objective mentioned above, we design the ontology through an iterative process, revising at each step that the users needs were met while keeping the potential for communication with other ontologies open. We use Protege 5.0 as a tool for creating the ontology as well as for testing the inferences among the stated facts. 
+Given the requirements from Section \ref{requirements}, and with the objective mentioned above, we design the ontology through an iterative process, revising at each step that the users needs were met while keeping the potential for linking to other ontologies open. We use Protege 5.0 as a tool for creating the ontology as well as for testing the inferences among the stated facts. 
 
 Furthermore, we elaborate on the expressiveness of the ontology and exploit the power of the Web Ontology Language (OWL) to represent more complex aspects such as cardinalities and equivalences among existing and newly created Subclasses and Object Properties.
 
+As stated in the previous Milestone, we incorporate other ontologies like \texttt{dbepedia} \footnote{The \texttt{dbepedia} namespace is defined at \url{http://dbpedia.org/ontology/}} for location management, and \texttt{geo} \footnote{The \texttt{geo} namespace is defined at \url{http://www.w3.org/2003/01/geo/wgs84_pos}} for latitude and longitude management. This time, we exploit the usage of dbepedia and make use of the equivalence between dbo:Place and dbo:Location. Further explanation of the benefits of this are explained in the following section.
 
-- Extensive use of powerful ontologies like dbo. Use of equivalence between dbo:Place and dbo:Location
+\section{The Ontology}
+%\textit{Systematically describe the ontology and highlight the (interesting) design choices you had to make. Were there things you wanted to represent but couldn't given the limitations on the KR language?\footnote{If you do not encounter any limitations, you should be more ambitious about the model!} How did you work around these limitations? (integrity constraints, additional rules?) Describe how the ontology meets the 5 star model for Linked Vocabulary Use.}
+A comparison between the old knowledge graph and the newly created ontology is graphically depicted in Figure \ref{fig:ontology}. 
 
-\section{Section 5 - The Ontology}
-\textit{Systematically describe the ontology and highlight the (interesting) design choices you had to make. Were there things you wanted to represent but couldn't given the limitations on the KR language?\footnote{If you do not encounter any limitations, you should be more ambitious about the model!} How did you work around these limitations? (integrity constraints, additional rules?) Describe how the ontology meets the 5 star model for Linked Vocabulary Use.}
-
-%TODO insert image
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.7\textwidth]{img/ontology.png}
-	\caption{Visualization of the Ontology graph}
+\begin{figure}[h] \centering
+	\begin{subfigure}{.5\textwidth} \centering
+		\includegraphics[width=.9\textwidth]{img/old_ontology.jpg}
+		\label{fig:old_ontology}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth} \centering
+		\includegraphics[width=.9\textwidth]{img/ontology.png}
+		\label{fig:new_ontology}
+	\end{subfigure}
+	\caption{Difference between original ontology (left) and updated ontology (right).}
 	\label{fig:ontology}
 \end{figure}
 
-\subsection{Entities}
-- Now we have subclasses for each of the main type of classes we had before
+Given the degree of variation between both ontologies, we divide the updates on Entities and Properties and give a more detailed explanation in the following subsections.
 
-- Events: into Plays and Exhibitions
-- Venues into Theatres and Museums
-- Parking Slot into Small Medium and Large
+\subsection{Entities}
+The main difference with the previous version of the ontology is that each of the three main classes are now subdivided into more specific subclasses. For example:
+
+\begin{itemize}
+	\item \textbf{Events}: Divided into Plays and Exhibitions
+	\item \textbf{Venues}: Divided into Theatres and Museums
+	\item \textbf{Parking Slots}: Divided into Small, Medium and Large Slots
+\end{itemize}
+
 
 - First two distinctions come from the datasets themselves. The third one we created based on size. Parking Slot has datatype property quantity, which serves a a classifier
 
