@@ -23,7 +23,7 @@
 \lstset{language=SQL,morekeywords={and, some, exactly}}
 \usepackage{caption}
 \usepackage{subcaption}
-
+\captionsetup{compatibility=false}
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
@@ -167,24 +167,50 @@ The divisions for the first two come straight from the datasets themselves. On t
 
 The third one, however, is a distinction we propose in order to better describe the Parking Slots. Previously, a Parking Slot's capacity was only described by its Datatype Property \textit{Quantity}. Now, we take this property and process it to classify Parking Slots into three types: Small (consisting on 1 or 2 individual slots), Medium (consisting of 3 or 4 individual slots) and Large (consisting of 5 or more individual slots). This classification is achieved through an equivalence fact as exemplified by the next listing. \\
 
-\begin{lstlisting}[captionpos=b, caption=Definition of Large Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
-(dbo:location exactly 1 Location)
-and (info exactly 1 xsd:string)
-and (quantity exactly 1 xsd:unsignedInt)
+\begin{lstlisting}[captionpos=b, caption=Definition of Large Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt,showstringspaces=false]
+'Parking Slot' 
+and (quantity some xsd:unsignedInt[>= "5"^^xsd:unsignedInt])
 \end{lstlisting}
 
-- Our Location class extends dbo:Location class in the use of Borough
+
+\begin{lstlisting}[captionpos=b, caption=Definition of Medium Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt,showstringspaces=false]
+'Parking Slot' 
+and (quantity some xsd:unsignedInt[>= "3"^^xsd:unsignedInt,
+ < "5"^^xsd:unsignedInt])
+\end{lstlisting}
+
+\begin{lstlisting}[captionpos=b, caption=Definition of Small Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt,showstringspaces=false]
+'Parking Slot' 
+ and (quantity some xsd:unsignedInt[>="1"^^xsd:unsignedInt ,
+  < "3"^^xsd:unsignedInt])
+\end{lstlisting}
+
+The last extension of the entities regards the creation of a class for \textit{Borough} with the purpose to link it to our Location entity. As explained before, we use the dbepedia for the management of location. However, dbo:Location does not include Boroughs, a crucial part of the description of a  location in Amsterdam. Thus, we create a subclass called Location, which is equivalent to a dbo:Location with a Borough, to represent the specific case of locations in Amsterdam.
 
 \subsection{Properties}
 
-- Restrictions on datatype properties. Cardinalities are explicit, so that they reflect that an Event has only one Venue, for example
+The first extension in the Properties regards restrictions on datatype properties. We have included cardinalities with respect to the real world. An example can be seen at the Event entity where we state that in order for an Event to be an Event, it also needs to have at least one Venue where it will take place.
 
-- Introduce 'Event venue' which has subproperties 'Exhibition Venue' and 'Play Venue' depending on their range. Also introduce its inverse 'Venue Events'
+Furthermore, we introduced the 'Event venue' property which has sub-properties 'Exhibition Venue' and 'Play Venue' according to their range. If event is an Exhibition then it uses the 'Exhibition Venue' property. We have also introduced the 'Venue Events' property as the inverse property of 'Event venue'. 
 
-- We create a subproperty of dbo:location to be 'venue location'. We restrict dbo:location to have domain Parking Slots while 'venue location' has domain Venues. Both have Location as range.
+Moreover we included in our dbo:location property two sub-properties named 'slot location' and 'venue location'. We use these properties to restrict our dbo:location to have domain Parking Slot when we use the 'slot location' property and Venue when we use the 'venue location'. Both of them have Location as range.
 
-- Properties for Borough, City and Country
+The last extension of our properties section refers to the addition of the properties \textit{Borough} , \textit{City} and \textit{Country}. The reason behind this is that we want to have restrictions. In order to ensure that a dbo:location has exactly one country we use the equivalent rule : 
+\\
 
+\begin{lstlisting}[captionpos=b, title=Class equivalent to dbo:Location with the use of our subproperties, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
+(city exactly 1 dbo:City) 
+and (country exactly 1 dbo:Country) 
+and (address exactly 1 xsd:string)
+\end{lstlisting}
+
+
+Similarly for our \textit{Location} the equivalent rule is: 
+
+\begin{lstlisting}[captionpos=b, title=Class equivalent to Location with the use of our subproperty orough, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
+dbo:Location 
+and (dbo:borough exactly 1 Borough)
+\end{lstlisting}
 
 \section{Section 6 - The Dataset}
 % Describe how you recasted the dataset(s) of the previous assignment to the new
@@ -255,9 +281,12 @@ specification, we point to \texttt{dbr:Museums} and \texttt{dbr:Parking\_space}.
 
 \subsection{Comparison with requirements}
 \begin{enumerate}
-	\item Search by interests: Initial division of events and Venues by personal interest.
-	\item Detailed location information: Ability to search for Venues and Parking Slots in same Borough is simple.
-	\item Detailed information about Parking Slots: Size is explicit
+	\item \textbf{Search by interest}.
+	With the extension of our ontology we succeed in extending our application. We have enabled the search by interests, as we initially divide Events and Venues with regard to personal interest. This way the users can narrow down their search avoiding nonessential information.
+	
+	\item \textbf{Search by Borough}. Another main aspect that adds to the improvement of our ontology are the detailed location information that the users have. Now the users have the ability to search for Venues and Parking Slots in same Borough in a simple way.
+	
+	\item \textbf{Capacity of Parking Slots}. We also provide with explicit information about each Parking Slot that is close to the interests of the user. Users now have prior knowledge regarding the capacity of the parking spot they need.
 \end{enumerate}
 
 \subsection{Evaluate according to five stars}
