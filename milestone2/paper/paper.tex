@@ -125,43 +125,33 @@ Given the requirements from Section \ref{requirements}, and with the objective m
 
 Furthermore, we elaborate on the expressiveness of the ontology and exploit the power of the Web Ontology Language (OWL) to represent more complex aspects such as cardinalities and equivalences among existing and newly created Subclasses and Object Properties.
 
-<<<<<<< HEAD
-As stated in the previous Milestone, we incorporate other ontologies like \texttt{dbepedia} \footnote{The \texttt{dbepedia} namespace is defined at \url{http://dbpedia.org/ontology/}} for location management, and \texttt{geo} \footnote{The \texttt{geo} namespace is defined at \url{http://www.w3.org/2003/01/geo/wgs84_pos}} for latitude and longitude management. This time, we exploit the usage of dbepedia and make use of the equivalence between dbo:Place and dbo:Location. Further explanation of the benefits of this are explained in the following section.
+As stated in the previous Milestone, we incorporate other ontologies like \texttt{DBpedia} \footnote{The \texttt{DBpedia} namespace is defined at \url{http://dbpedia.org/ontology/}} for location management, and \texttt{geo} \footnote{The \texttt{geo} namespace is defined at \url{http://www.w3.org/2003/01/geo/wgs84_pos}} for latitude and longitude management. This time, we exploit the usage of DBpedia and make use of the equivalence between dbo:Place and dbo:Location. Further explanation of the benefits of this are explained in the following section.
 
 \section{The Ontology}
 %\textit{Systematically describe the ontology and highlight the (interesting) design choices you had to make. Were there things you wanted to represent but couldn't given the limitations on the KR language?\footnote{If you do not encounter any limitations, you should be more ambitious about the model!} How did you work around these limitations? (integrity constraints, additional rules?) Describe how the ontology meets the 5 star model for Linked Vocabulary Use.}
-A comparison between the old knowledge graph and the newly created ontology is graphically depicted in Figure \ref{fig:ontology}. 
+A comparison between the old knowledge graph (Figure \ref{fig:old_ontology}) and the newly created ontology (Figure \ref{fig:ontology-classes}) is graphically depicted below. 
 
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\textwidth]{img/old_ontology.jpg}
+	\caption{Knowledge graph from Milestone 1.}
+	\label{fig:old_ontology}
+\end{figure}
 \begin{figure}[h] \centering
-	\begin{subfigure}{.5\textwidth} \centering
-		\includegraphics[width=.9\textwidth]{img/old_ontology.jpg}
-		\label{fig:old_ontology}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth} \centering
-		\includegraphics[width=.9\textwidth]{img/ontology.png}
-		\label{fig:new_ontology}
-	\end{subfigure}
-	\caption{Difference between original ontology (left) and updated ontology (right).}
-	\label{fig:ontology}
+	\includegraphics[width=.7\textwidth]{img/ontology-classes.png}
+	\caption{Class hierarchy for the current version of the Find A Slot ontology.}
+	\label{fig:ontology-classes}
 \end{figure}
 
 Given the degree of variation between both ontologies, we divide the updates on Entities and Properties and give a more detailed explanation in the following subsections.
 
 \subsection{Entities}
-The main difference with the previous version of the ontology is that each of the three main classes are now subdivided into more specific subclasses. For example:
+The main difference with the previous version of the ontology is that each of the three main classes is now subdivided into more specific subclasses. For example:
 \begin{itemize}
 	\item \textbf{Events}: Divided into Plays and Exhibitions
 	\item \textbf{Venues}: Divided into Theatres and Museums
 	\item \textbf{Parking Slots}: Divided into Small, Medium and Large Slots
 \end{itemize}
-A visualization of the current class hierarchy is given in Figure
-\ref{fig:ontology-classes}.
-
-\begin{figure}[h] \centering
-	\includegraphics[width=.9\textwidth]{img/ontology-classes.png}
-	\caption{Class hierarchy for the current version of the Find A Slot ontology.}
-	\label{fig:ontology-classes}
-\end{figure}
 
 The divisions for the first two come straight from the datasets themselves. On the one hand, when an event comes from the Theatres dataset, we assume it is of type Play and it happens in a Venue of type Theatre. On the other hand, when the event comes from the Museums and Galleries dataset, we assume it is of type Exhibition and it happens in a Venue of type Museum.
 
@@ -171,7 +161,6 @@ The third one, however, is a distinction we propose in order to better describe 
 'Parking Slot' 
 and (quantity some xsd:unsignedInt[>= "5"^^xsd:unsignedInt])
 \end{lstlisting}
-
 
 \begin{lstlisting}[captionpos=b, caption=Definition of Medium Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt,showstringspaces=false]
 'Parking Slot' 
@@ -185,18 +174,17 @@ and (quantity some xsd:unsignedInt[>= "3"^^xsd:unsignedInt,
   < "3"^^xsd:unsignedInt])
 \end{lstlisting}
 
-The last extension of the entities regards the creation of a class for \textit{Borough} with the purpose to link it to our Location entity. As explained before, we use the dbepedia for the management of location. However, dbo:Location does not include Boroughs, a crucial part of the description of a  location in Amsterdam. Thus, we create a subclass called Location, which is equivalent to a dbo:Location with a Borough, to represent the specific case of locations in Amsterdam.
+The last extension of the entities regards the creation of a class for \textit{Borough} with the purpose of linking it to our Location entity. As explained before, we use the DBpedia ontology for the management of locations. However, dbo:Location does not include Boroughs, a crucial part of the description of a  location in Amsterdam. Thus, we create a subclass called Location, which is equivalent to a dbo:Location with a Borough, to represent the specific case of locations in Amsterdam.
 
 \subsection{Properties}
 
-The first extension in the Properties regards restrictions on datatype properties. We have included cardinalities with respect to the real world. An example can be seen at the Event entity where we state that in order for an Event to be an Event, it also needs to have at least one Venue where it will take place.
+The first extension in the Properties regards restrictions on datatype properties. We have included cardinalities with respect to the real world. An example can be seen at the Event entity where we state that an Event must have at least one Venue where it will take place.
 
 Furthermore, we introduced the 'Event venue' property which has sub-properties 'Exhibition Venue' and 'Play Venue' according to their range. If event is an Exhibition then it uses the 'Exhibition Venue' property. We have also introduced the 'Venue Events' property as the inverse property of 'Event venue'. 
 
 Moreover we included in our dbo:location property two sub-properties named 'slot location' and 'venue location'. We use these properties to restrict our dbo:location to have domain Parking Slot when we use the 'slot location' property and Venue when we use the 'venue location'. Both of them have Location as range.
 
-The last extension of our properties section refers to the addition of the properties \textit{Borough} , \textit{City} and \textit{Country}. The reason behind this is that we want to have restrictions. In order to ensure that a dbo:location has exactly one country we use the equivalent rule : 
-\\
+The last extension of our properties section refers to the addition of the properties \textit{Borough} , \textit{City} and \textit{Country}. The reason behind this is that we want to have restrictions. In order to ensure that a dbo:location has exactly one country we use the equivalent rule: \\
 
 \begin{lstlisting}[captionpos=b, title=Class equivalent to dbo:Location with the use of our subproperties, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
 (city exactly 1 dbo:City) 
@@ -204,39 +192,25 @@ and (country exactly 1 dbo:Country)
 and (address exactly 1 xsd:string)
 \end{lstlisting}
 
-
 Similarly for our \textit{Location} the equivalent rule is: 
 
-\begin{lstlisting}[captionpos=b, title=Class equivalent to Location with the use of our subproperty orough, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
+\begin{lstlisting}[captionpos=b, title=Class equivalent to Location with the use of our subproperty borough, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
 dbo:Location 
 and (dbo:borough exactly 1 Borough)
 \end{lstlisting}
 
-\section{Section 6 - The Dataset}
+\section{The Dataset}
 % Describe how you recasted the dataset(s) of the previous assignment to the new
 % ontology (perhaps you found other datasets that you want to add). What did it
 % take to do this? What metadata have you published alongside the dataset, and how
 % did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5
 % star model for Linked Data.
-The three datasets have been converted to a linked data format using the second
-version of the ontology in a straightforward way. We create
-resources for the newly introduced \texttt{Borough} class. Cities have been
-recasted to point to DBpedia resources (as for countries).
-Entities of class \texttt{Museum} or \texttt{Theater} are created based on their
-original dataset of provenience. An \texttt{Event} is linked to a
-\texttt{Venue} via a newly created object property and this allows the reasoning
-engine to infer if an \texttt{Event} is a \texttt{Play} or an \texttt{Exhibition}.
+Once again, the three datasets have been converted to a linked data format, now using the second version of the ontology in a straightforward way. We create resources for the newly introduced \texttt{Borough} class. Cities and countries have been recasted to point to DBpedia resources. Entities of class \texttt{Museum} or \texttt{Theatre} are created based on their original dataset of provenance. An \texttt{Event} is linked to a \texttt{Venue} via a newly created object property and this allows the reasoning engine to infer if an \texttt{Event} is a \texttt{Play} or an \texttt{Exhibition} based on its Venue type.
 
-Given the quantity of slots available for a \texttt{ParkingSlot}, thanks to the
-new ontology, the dataset distinguishes parking slots based their availability
-into \texttt{SmallSlot}, \texttt{MediumSlot} and \texttt{LargeSlot}. This
-provides a richer classification of parking slots than based on the quantity
-property directly. This is something that we get through inference, so it has
-not been directly coded into the conversion script.
+Given the quantity of slots available for a \texttt{ParkingSlot}, thanks to the new ontology, the dataset distinguishes parking slots based their availability into \texttt{SmallSlot}, \texttt{MediumSlot} and \texttt{LargeSlot}. This provides a richer classification of parking slots than based on the quantity
+property directly. It is remarkable that we get this through inference since it has not been directly coded into the conversion script.
 
-Each of the three datasets has been published with its companion VoID dataset,
-describing the contents of the dataset it refers to. Most of the metrics and
-metadata have been generated using \textbf{rdflib}'s \texttt{generateVoID}
+Each of the three datasets has been published with its companion VoID dataset, describing the contents of the dataset it refers to. Most of the metrics and metadata have been generated using \textbf{rdflib}'s \texttt{generateVoID}
 method applied on the three graphs.
 Moreover we publish a VoID Linkedset that links together the three datasets as a
 new one. Alongside this we provide some additional metadata from the
@@ -305,7 +279,7 @@ So far our ontology fits the domain knowledge of the three datasets, perfectly, 
 
 \section{Discussion}
 \textit{Here you summarize the preceding sections, describe the lessons learnt and discuss future work.}
-
+Ontology may be too specific regarding domains and ranges of Object Properties. For example, if a :Location is not related to a Borough, then we will not recognize it as a :Location entity. 
 
 
 \bibliographystyle{plain}
