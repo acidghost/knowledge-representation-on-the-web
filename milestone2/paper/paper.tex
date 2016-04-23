@@ -71,7 +71,7 @@ This paper is an extension of the previous paper on Milestone 1, where we set up
 
 In the following section we further motivate the paper by providing concrete use cases that lead to a list of higher level requirements to be fulfilled by our project. Later, we describe an inspiration paper that guided us through the design of our ontology. We continue to describe our ontology, highlighting the major improvements from the knowledge graph in Milestone 1, followed up by evaluating the proposed ontology. Finally, some discussion provides with insights regarding the main contributions and future improvements on this project.
 
-\section{Section 2 - Use Case and Requirements}
+\section{Use Case and Requirements}
 %\textit{Describe the use-case you have in mind that motivates the need for the ontology. This could be the original use case from milestone 1, but then you should explain why the schema you defined previously falls short. What requirements should the ontology meet? What is its intended scope.}
 In order to better illustrate the motivation for this project we look back to the use cases from Milestone 1 to evaluate how well the current knowledge graph meets their needs. Next, we ambitiously create a couple more use cases to extend the potential uses of the application. We finalize by providing with a list of three specific requirements an ontology must meet to satisfy the users needs.
 
@@ -93,37 +93,36 @@ Furthermore, another notable shortcoming is that parking slots are only sorted i
 \subsection{New use cases}
 \begin{enumerate}
 	% Search by interest
-	\item Toribio is only interested in theatre plays. He is in a wheelchair and needs accessible parking spots to go to Theatres when he selects a play to watch. 
+	\item Toby is a Theatre fan and he is interested in watching as many plays as possible. He is in a wheelchair and needs accessible parking spots to go to Theatres when he selects a play to watch. 
 	% Search by area
-	\item Chachita has appointments once every week at the Femme Amsterdam Hospital. She would like to look for events nearby to attend after her sessions. 
+	\item Chelsea has appointments once every week at the Femme Amsterdam Hospital. She would like to look for events nearby to attend after her sessions. 
 \end{enumerate}
 
 \subsection{Requirements}
-Given the above, we abstract the presented needs into a high level set of requirements. To keep the project within a manageable scope, we limit the requirements to three items, summarized in the following list.
+\label{requirements}
+Given the above, we abstract the users needs into a high level set of requirements. To keep the project within a manageable scope, we limit the requirements to three items, summarized in the following list.
 
 \begin{enumerate}
-	\item Search by interest
-	\item Detailed information about Parking Slots (size)
-	\item Detailed location information
+	\item A user should be able to look for specific types of events or specific venues according to his/her interests.
+	\item Information about the size of the parking slots should be readily available through search. 
+	\item Events, Venues and/or Parking Slots within a certain area should be related to each other and they can be easily grouped. 
 \end{enumerate}
 
 
-\section{Section 3 - Related Work}
-\textit{What other ontologies did you find that cover a similar domain. To what extent can they be reused. Have others (e.g. other students) developed similar datasets/ontologies that feed/meet your requirements, where do they fall short? Papers to look for are published at eg. ISWC, ESWC, EKAW and FOIS, or the Journal of Web Semantics, and the Semantic Web Journal.}
+\section{Related Work}
+%\textit{What other ontologies did you find that cover a similar domain. To what extent can they be reused. Have others (e.g. other students) developed similar datasets/ontologies that feed/meet your requirements, where do they fall short? Papers to look for are published at eg. ISWC, ESWC, EKAW and FOIS, or the Journal of Web Semantics, and the Semantic Web Journal.}
+While doing research to meet the previous requirements, we ran across a variety of ontologies that aim to cover similar domains as ours. Within the domain of information related to cities, we found the work by Komninos et al.\cite{komninos2015smart} to be particularly inspirational for designing this paper's ontology. With its project, the authors bring awareness to the fact that, regardless of the effort by developers to create applications for smart cities, the impact of those is still low. They attribute the problem to the lack of coordinated effort to create a standardized high quality ontology, and propose to unify the existent ontologies into the Smart City Ontology (SCO).   %Following a structure thinking, SCO consists of 10 superclasses which reflect the three main aspects of a smart city. 
 
-- Ontology for smart cities: \cite{komninos2015smart}. Heavily inspired by this paper for ontology design. 
-
-- Our ontology fits in the broader schema of theirs. Specific for Handicap Parking Slots, Venues and Events. 
+We want to accentuate the importance of coordination among well-formed ontologies and so we designed our ontology with the thought in mind to fit the broader schema laid down by Komninos el al. Ours is a specific and relatively small ontology that focuses on Handicap Parking Slots, Venues and Events. Yet, its full of potential can be achieved when assembled together with ontologies regarding other aspects of a city. 
 
 
 \section{Section 4 - Methodology}
-\textit{Describe the methodology you followed for constructing the ontology. How did you guarantee that the ontology meets the needs and requirements of the use case? Have you used any existing design patterns, partial ontologies, competency questions etc.}
+%\textit{Describe the methodology you followed for constructing the ontology. How did you guarantee that the ontology meets the needs and requirements of the use case? Have you used any existing design patterns, partial ontologies, competency questions etc.}
 
-- Use of Protégé
+Given the requirements from Section \ref{requirements}, and with the objective mentioned above, we design the ontology through an iterative process, revising at each step that the users needs were met while keeping the potential for communication with other ontologies open. We use Protege 5.0 as a tool for creating the ontology as well as for testing the inferences among the stated facts. 
 
-- Iterative process.
+Furthermore, we elaborate on the expressiveness of the ontology and exploit the power of the Web Ontology Language (OWL) to represent more complex aspects such as cardinalities and equivalences among existing and newly created Subclasses and Object Properties.
 
-- Subclasses, cardinality, object Properties
 
 - Extensive use of powerful ontologies like dbo. Use of equivalence between dbo:Place and dbo:Location
 
