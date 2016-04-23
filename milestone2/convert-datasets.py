@@ -54,7 +54,7 @@ def convert_dataset(path, dataset, graph_uri, museums=True):
             place_name = Literal(location_d_name, datatype=XSD['string'])
             location_city_str = location_dict['city'].strip().capitalize()
             location = URIRef(to_iri(resource + location_city_str + '/' + location_dict['adress'].strip()))
-            location_city = Literal(location_city_str)
+            location_city = URIRef(to_iri(dbr + location_city_str))
             location_address = Literal(location_dict['adress'].strip())
             location_zip = Literal(location_dict['zipcode'].strip())
             location_lat = Literal(float(location_dict['latitude'].replace(',', '.')))
@@ -148,7 +148,7 @@ def convert_parking_dataset(path, dataset, graph_uri):
 
         data_info = slot_data['Locatie-info']
         slot_info = Literal(data_info) if data_info != '' else None
-        slot_loc_borough = Literal(slot_data['Stadsdeel'].strip())
+        slot_loc_borough = URIRef(to_iri(resource + 'Amsterdam/' + slot_data['Stadsdeel'].strip()))
 
         slot_coordinates = json.loads(slot_data['locatie'].strip())
         slot_loc_lat = Literal(float(slot_coordinates['coordinates'][1]))
@@ -168,6 +168,7 @@ def convert_parking_dataset(path, dataset, graph_uri):
         dataset.add((slot_loc, DBO['address'], slot_loc_address))
         dataset.add((slot_loc, DBO['city'], city))
         dataset.add((slot_loc, DBO['country'], country))
+        dataset.add((slot_loc_borough, RDF.type, VOCAB['Borough']))
         dataset.add((slot_loc, VOCAB['borough'], slot_loc_borough))
         dataset.add((slot_loc, GEO['lat'], slot_loc_lat))
         dataset.add((slot_loc, GEO['long'], slot_loc_long))

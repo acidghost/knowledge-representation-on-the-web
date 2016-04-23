@@ -176,7 +176,7 @@ dbo:location a owl:ObjectProperty ;
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
 	rdfs:range xsd:string ;
-	rdfs:label "info"^^xsd:string .
+	rdfs:label "info"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description
 
@@ -204,7 +204,7 @@ dbo:location a owl:ObjectProperty ;
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
 	rdfs:range xsd:unsignedInt ;
-	rdfs:label "quantity"^^xsd:string .
+	rdfs:label "quantity"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description
 
@@ -280,7 +280,7 @@ _:genid16 a rdf:List ;
 
 _:genid17 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/calendar_summary> ;
-	owl:someValuesFrom xsd:string .
+	owl:allValuesFrom xsd:string .
 
 _:genid16 rdf:rest _:genid14 .
 
@@ -289,7 +289,7 @@ _:genid14 a rdf:List ;
 
 _:genid15 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date> ;
-	owl:someValuesFrom xsd:date .
+	owl:allValuesFrom xsd:date .
 
 _:genid14 rdf:rest _:genid12 .
 
@@ -298,7 +298,7 @@ _:genid12 a rdf:List ;
 
 _:genid13 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description> ;
-	owl:someValuesFrom xsd:string .
+	owl:allValuesFrom xsd:string .
 
 _:genid12 rdf:rest _:genid10 .
 
@@ -307,7 +307,7 @@ _:genid10 a rdf:List ;
 
 _:genid11 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media> ;
-	owl:someValuesFrom xsd:anyURI .
+	owl:allValuesFrom xsd:anyURI .
 
 _:genid10 rdf:rest _:genid8 .
 
@@ -316,7 +316,7 @@ _:genid8 a rdf:List ;
 
 _:genid9 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description> ;
-	owl:someValuesFrom xsd:string .
+	owl:allValuesFrom xsd:string .
 
 _:genid8 rdf:rest _:genid6 .
 
@@ -325,7 +325,7 @@ _:genid6 a rdf:List ;
 
 _:genid7 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date> ;
-	owl:someValuesFrom xsd:date .
+	owl:allValuesFrom xsd:date .
 
 _:genid6 rdf:rest _:genid4 .
 
@@ -334,7 +334,7 @@ _:genid4 a rdf:List ;
 
 _:genid5 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date> ;
-	owl:someValuesFrom xsd:date .
+	owl:allValuesFrom xsd:date .
 
 _:genid4 rdf:rest _:genid2 .
 
@@ -369,7 +369,8 @@ _:genid21 a rdf:List ;
 
 _:genid22 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
-	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> .
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> .
 
 _:genid21 rdf:rest rdf:nil .
 
@@ -499,7 +500,8 @@ _:genid45 a rdf:List ;
 
 _:genid46 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasEvents> ;
-	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> .
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> .
 
 _:genid45 rdf:rest rdf:nil .
 
@@ -529,9 +531,9 @@ _:genid51 a rdf:List ;
 	rdf:first _:genid52 .
 
 _:genid52 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info> ;
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onDataRange xsd:string .
+	owl:onDataRange xsd:unsignedInt .
 
 _:genid51 rdf:rest _:genid49 .
 
@@ -539,9 +541,9 @@ _:genid49 a rdf:List ;
 	rdf:first _:genid50 .
 
 _:genid50 a owl:Restriction ;
-	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onDataRange xsd:unsignedInt .
+	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info> ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:string .
 
 _:genid49 rdf:rest rdf:nil .
 
@@ -566,7 +568,8 @@ _:genid56 a rdf:List ;
 
 _:genid57 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> ;
-	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
 
 _:genid56 rdf:rest rdf:nil .
 
@@ -634,7 +637,8 @@ _:genid69 a rdf:List ;
 
 _:genid70 a owl:Restriction ;
 	owl:onProperty <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasEvents> ;
-	owl:someValuesFrom <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
 
 _:genid69 rdf:rest rdf:nil .
 
