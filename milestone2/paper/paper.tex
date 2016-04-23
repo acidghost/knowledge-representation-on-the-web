@@ -57,11 +57,8 @@
 
 
 \begin{abstract}
-The abstract should summarize the contents of the paper and should
-contain at least 70 and at most 150 words. It should be written using the
-\emph{abstract} environment.
+We introduce a Linked Dataset integrating three different datasets related to the city of Amsterdam. We present the details of the dataset and the ontology that we introduce to cover all the important concepts of those data. Also we provide a thoughtful analysis of the methodology that we applied and the evaluation techniques that have been embraced. We enhanced our previous dataset with a richer ontology and we show how we published our results following the 5-star model for Linked Data.
 \end{abstract}
-
 
 \section{Introduction}
 Amsterdam, a busy and tourist city as it is, offers a variety of events throughout the year. As such, a relevant topic related to the previous is the accessibility the city provides for handicap people to attend such events. In particular, this project focuses on providing these users with a way to find Parking Slots when attending events in different venues in Amsterdam.
@@ -117,7 +114,6 @@ While doing research to meet the previous requirements, we ran across a variety 
 
 We want to accentuate the importance of coordination among well-formed ontologies and so we designed our ontology with the thought in mind to fit the broader schema laid down by Komninos el al. Ours is a specific and relatively small ontology that focuses on Handicap Parking Slots, Venues and Events. Yet, its full of potential can be achieved when assembled together with ontologies regarding other aspects of a city. 
 
-
 \section{Methodology}
 %\textit{Describe the methodology you followed for constructing the ontology. How did you guarantee that the ontology meets the needs and requirements of the use case? Have you used any existing design patterns, partial ontologies, competency questions etc.}
 
@@ -130,7 +126,6 @@ As stated in the previous Milestone, we incorporate other ontologies like \textt
 \section{The Ontology}
 %\textit{Systematically describe the ontology and highlight the (interesting) design choices you had to make. Were there things you wanted to represent but couldn't given the limitations on the KR language?\footnote{If you do not encounter any limitations, you should be more ambitious about the model!} How did you work around these limitations? (integrity constraints, additional rules?) Describe how the ontology meets the 5 star model for Linked Vocabulary Use.}
 A comparison between the old knowledge graph (Figure \ref{fig:old_ontology}) and the newly created ontology (Figure \ref{fig:ontology-classes}) is graphically depicted below. 
-
 
 \begin{figure}[h]\centering
 	\includegraphics[width=.7\textwidth]{img/old_ontology.jpg}
@@ -200,86 +195,59 @@ and (dbo:borough exactly 1 Borough)
 \end{lstlisting}
 
 \section{The Dataset}
-% Describe how you recasted the dataset(s) of the previous assignment to the new
-% ontology (perhaps you found other datasets that you want to add). What did it
-% take to do this? What metadata have you published alongside the dataset, and how
-% did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5
-% star model for Linked Data.
+% Describe how you recasted the dataset(s) of the previous assignment to the new ontology (perhaps you found other datasets that you want to add). What did it take to do this? What metadata have you published alongside the dataset, and how did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5 star model for Linked Data.
 Once again, the three datasets have been converted to a linked data format, now using the second version of the ontology in a straightforward way. We create resources for the newly introduced \texttt{Borough} class. Cities and countries have been recasted to point to DBpedia resources. Entities of class \texttt{Museum} or \texttt{Theatre} are created based on their original dataset of provenance. An \texttt{Event} is linked to a \texttt{Venue} via a newly created object property and this allows the reasoning engine to infer if an \texttt{Event} is a \texttt{Play} or an \texttt{Exhibition} based on its Venue type.
 
 Given the quantity of slots available for a \texttt{ParkingSlot}, thanks to the new ontology, the dataset distinguishes parking slots based their availability into \texttt{SmallSlot}, \texttt{MediumSlot} and \texttt{LargeSlot}. This provides a richer classification of parking slots than based on the quantity
 property directly. It is remarkable that we get this through inference since it has not been directly coded into the conversion script.
 
-Each of the three datasets has been published with its companion VoID dataset, describing the contents of the dataset it refers to. Most of the metrics and metadata have been generated using \textbf{rdflib}'s \texttt{generateVoID}
-method applied on the three graphs.
-Moreover we publish a VoID Linkedset that links together the three datasets as a
-new one. Alongside this we provide some additional metadata from the
-\texttt{void:}\footnote{\url{http://rdfs.org/ns/void#}} ontology, such as
-\texttt{target}, \texttt{sparqlEndpoint} and
-\texttt{exampleResource} and from the
-\texttt{dcterms:}\footnote{\url{http://purl.org/dc/terms/}} ontology, such as
-\texttt{subject}, \texttt{title} and
-\texttt{description}. Those additional metadata have been added manually
-to the VoID dataset. The \texttt{void:Linkset} can be retrieved at the following
-URL \url{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/void}.
+Each of the three datasets has been published with its companion VoID dataset, describing the contents of the dataset it refers to. Most of the metrics and metadata have been generated using \textbf{rdflib}'s \texttt{generateVoID} method applied on the three graphs. Moreover we publish a VoID Linkedset that links together the three datasets as a new one. Alongside, we provide some additional metadata from the \texttt{void:}\footnote{\url{http://rdfs.org/ns/void#}} ontology -such as \texttt{target}, \texttt{sparqlEndpoint} and \texttt{exampleResource}- and from the \texttt{dcterms:}\footnote{\url{http://purl.org/dc/terms/}} ontology -such as \texttt{subject}, \texttt{title} and \texttt{description}. Those additional metadata have been added manually to the VoID dataset. The \texttt{void:Linkset} can be retrieved at the following URL \url{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/void}.
 
 \subsection{5-star Open Data}
-We say that the published database is conform with standards proposed by the
-5-star model for Linked Data \cite{janowicz2014five}. Here we defend our statement by taking each of the
-five steps into consideration.
+We say that the published database meets the standards proposed by the 5-star model for Linked Data \cite{janowicz2014five}. Here we defend our statement by taking each of the five steps into consideration.
 
 \begin{description}
-\item[Available on the Web] We published our data under an open license,
-namely the CC0 1.0 Universal (this is declared in the VoID metadata).
-\item[Available as structured data] The dataset is available in RDF
-format which is structured.
-\item[Available as non-proprietary format] Again, our dataset is specified
-in a W3C language so it is not in a proprietary format but in an
-open and standardized format.
-\item[Use URIs to denote things] We use URIs to denote everything that is
-not an RDF Literal. Events, Venues, Locations and starting from this version of
-the ontology we include countries, cities and boroughs as resources defined by
-URIs.
-\item[Link to other data] We provide external pointers to resources from
-DBpedia such as for cities (e.g. \texttt{dbr:Amsterdam}), countries (e.g.
-\texttt{dbr:Netherlands}) or as \texttt{dcterms:subject}, in the VoID
+\item[Available on the Web] We published our data under an open license, namely the CC0 1.0 Universal (this is declared in the VoID metadata).
+\item[Available as structured data] The dataset is available in RDF format which is structured.
+\item[Available as non-proprietary format] Our dataset is specified in a W3C language so it is not in a proprietary format but in an open and standardized format.
+\item[Use URIs to denote things] We use URIs to denote everything that is not an RDF Literal. Events, Venues, Locations and, starting from this version of the ontology, we include countries, cities and boroughs as resources defined by URIs.
+\item[Link to other data] We provide external pointers to resources from DBpedia such as for cities (e.g. \texttt{dbr:Amsterdam}), countries (e.g. \texttt{dbr:Netherlands}) or as \texttt{dcterms:subject}, in the VoID
 specification, we point to \texttt{dbr:Museums} and \texttt{dbr:Parking\_space}.
 \end{description}
 
 
-\section{Section 7 - Evaluation}
+\section{Evaluation}
 For evaluating our ontology we got inspired by the work of Hlomani and Stacey \cite{hlomani2014approaches} on ontology evaluation and decided to evaluate our ontology using three major criterion:
 \begin{enumerate}
-	\item \textbf{Task-based Evaluation}. First of all we perform a task-based evaluation that typically evaluates how effective our ontology is in the context of an application.
+	\item \textbf{Task-based Evaluation}. First of all we perform a task-based evaluation that typically evaluates how effective our ontology is in the context of an application, using the list of Requirements from Section \ref{requirements} to do so. 
 	\item \textbf{User-based Evaluation}. We perform a user-based evaluation that evaluates the ontology through user's experiences. Contrary to task-based evaluation, we are not accessing semantic validity and consistency of our ontology but we focus on the subjective information of it.
-	\item \textbf{Data-driven evaluation}. In the last part of this section we focus on evaluating our ontology by comparing it, with existing data about the domain it models.
+	\item \textbf{Data-driven evaluation}. In the last part of this section we focus on evaluating our ontology by comparing it with existing data about the domain it models.
 \end{enumerate} 
 
-\subsection{Task-based Evaluation}
+\subsection{Task-based Evaluation}                                                                                                                                                                    
 \begin{enumerate}
-	\item \textbf{Search by interest}.
-	With the extension of our ontology we succeed in extending our application. We have enabled the search by interests, as we initially divide Events and Venues with regard to personal interest. This way the users can narrow down their search avoiding nonessential information.
+	\item \textbf{Search by interest:} With the extension of our ontology we succeed in extending our application. We have enabled the search by interests, as we initially divide Events and Venues with regard to personal interest. This way the users can narrow down their search avoiding non-essential information.
 	
-	\item \textbf{Search by Borough}. Another main aspect that adds to the improvement of our ontology are the detailed location information that the users have. Now the users have the ability to search for Venues and Parking Slots in same Borough in a simple way.
+	\item \textbf{Search by area:} Another main aspect that adds to the improvement of our ontology is the detailed location information that users have access to. Now, users have the ability to search for Venues and Parking Slots in same Borough in a simple way.
 	
-	\item \textbf{Capacity of Parking Slots}. We also provide with explicit information about each Parking Slot that is close to the interests of the user. Users now have prior knowledge regarding the capacity of the parking spot they need.
+	\item \textbf{Capacity of Parking Slots:} We also provide with explicit information about each Parking Slot that is close to the interests of the user. Users now have prior knowledge regarding the capacity of the parking spot they need, increasing their chances of finding an available slot.
 \end{enumerate}
 
 \subsection{User-based Evaluation}
-For our user-based evaluation we simply examined our dataset as a \textit{third user}. The source and the meta data that have been added with the void ontology provide with important information, no only on each of the three datasets separately but on the dataset as a whole. \textit{Labels}, \textit{descriptions} and important \textit{metrics}, such as the total number of triples that exist in each dataset are only some of the meta-data information that have been added. However the risk with the specific way of evaluation, is that it is difficult to establish objective standards as it depends on the different type of users involved.
+For our user-based evaluation we simply examined our dataset as a \textit{third party user}. The source and the metadata that have been added with the void ontology provide with important information, not only on each of the three datasets separately but on the integrated dataset as a whole. \textit{Labels}, \textit{descriptions} and important \textit{metrics}, such as the total number of triples that exist in each dataset are only some of the metadata information that have been added. This way, a third party user is able to get information about our ontology directly, without having to query it himself, thus making our ontology an easy one to use by fellow ontology designers and developers.
 
 \subsection{Data-driven evaluation}
 So far our ontology combines knowledge from three different datasets in order to provide a useful service to the potential users of our application. Compared to other ontologies in the specific domain of finding parking slots it is clear that our ontology is quite innovative, since we focus specifically on people with a certain handicap. 
 
-With the addition of Borough as a key feature of Location, the data can be combined in a more efficient way, increasing the total efficiency of our web application even further.Besides efficiency, we wanted to check how well our ontology \textit{fits the domain knowledge} \cite{brewster2004data}. 
+With the addition of Borough as a key feature of Location, the data can be combined in a more efficient way, increasing the total efficiency of our web application even further. Besides efficiency, we wanted to check how well our ontology \textit{fits the domain knowledge} \cite{brewster2004data}. 
 
-This was done by comparing ontology concepts derived from the three separate datasets that we used in milestone 1, with the latest version of our dataset. 
-So far our ontology fits the domain knowledge of the three datasets, perfectly, however we realistically acknowledge the fact that there is certainly room for further improvement in the general domain of Events and Parking Slots.
-
+This was done by comparing ontology concepts derived from the three separate datasets that we used in Milestone 1, with the latest version of our dataset. So far our ontology perfectly fits the domain knowledge of Handicap Parking Spots in Amsterdam, given by the three chosen datasets; however we acknowledge that there is certainly room for further improvement in the general domain of Events and Parking Slots.
 
 \section{Discussion}
-\textit{Here you summarize the preceding sections, describe the lessons learnt and discuss future work.}
-Ontology may be too specific regarding domains and ranges of Object Properties. For example, if a :Location is not related to a Borough, then we will not recognize it as a :Location entity. 
+%\textit{Here you summarize the preceding sections, describe the lessons learnt and discuss future work.}
+In this paper we provided a detailed description of the improved ontology that we have published about three datasets related to the city of Amsterdam. Moreover we show the methodology that we adopted and how this led our ontology to be classified as fully conform with the 5-star model for Linked Data.
+
+Being conform to this model for Open Data means that publishers will ultimately have a dataset that is easily \textit{surfable} and \textit{connected} to other Web resources, generating more incoming traffic towards the dataset and increasing the value of the contained data. The 5-star model is a way to introduce sources of \textit{trust} in both the data and publishers' spaces. In particular we have found the set of propositions offered by the VoID framework to be very useful and powerful. Furthermore, we got experience on how easy it is to define \textit{discoverable} ontologies using Web standards.
 
 
 \bibliographystyle{plain}
