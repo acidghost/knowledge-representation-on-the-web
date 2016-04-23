@@ -125,6 +125,7 @@ Given the requirements from Section \ref{requirements}, and with the objective m
 
 Furthermore, we elaborate on the expressiveness of the ontology and exploit the power of the Web Ontology Language (OWL) to represent more complex aspects such as cardinalities and equivalences among existing and newly created Subclasses and Object Properties.
 
+<<<<<<< HEAD
 As stated in the previous Milestone, we incorporate other ontologies like \texttt{dbepedia} \footnote{The \texttt{dbepedia} namespace is defined at \url{http://dbpedia.org/ontology/}} for location management, and \texttt{geo} \footnote{The \texttt{geo} namespace is defined at \url{http://www.w3.org/2003/01/geo/wgs84_pos}} for latitude and longitude management. This time, we exploit the usage of dbepedia and make use of the equivalence between dbo:Place and dbo:Location. Further explanation of the benefits of this are explained in the following section.
 
 \section{The Ontology}
@@ -179,7 +180,64 @@ and (quantity exactly 1 xsd:unsignedInt)
 
 
 \section{Section 6 - The Dataset}
-\textit{Describe how you recasted the dataset(s) of the previous assignment to the new ontology (perhaps you found other datasets that you want to add). What did it take to do this? What metadata have you published alongside the dataset, and how did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5 star model for Linked Data.}
+% Describe how you recasted the dataset(s) of the previous assignment to the new
+% ontology (perhaps you found other datasets that you want to add). What did it
+% take to do this? What metadata have you published alongside the dataset, and how
+% did you generate it? (Provenance, VOID, etc.) Describe how your data meeds the 5
+% star model for Linked Data.
+The three datasets have been converted to a linked data format using the second
+version of the ontology in a straightforward way. We create
+resources for the newly introduced \texttt{Borough} class. Cities have been
+recasted to point to DBpedia resources (as for countries).
+Entities of class \texttt{Museum} or \texttt{Theater} are created based on their
+original dataset of provenience. An \texttt{Event} is linked to a
+\texttt{Venue} via a newly created object property and this allows the reasoning
+engine to infer if an \texttt{Event} is a \texttt{Play} or an \texttt{Exhibition}.
+
+Given the quantity of slots available for a \texttt{ParkingSlot}, thanks to the
+new ontology, the dataset distinguishes parking slots based their availability
+into \texttt{SmallSlot}, \texttt{MediumSlot} and \texttt{LargeSlot}. This
+provides a richer classification of parking slots than based on the quantity
+property directly. This is something that we get through inference, so it has
+not been directly coded into the conversion script.
+
+Each of the three datasets has been published with its companion VoID dataset,
+describing the contents of the dataset it refers to. Most of the metrics and
+metadata have been generated using \textbf{rdflib}'s \texttt{generateVoID}
+method applied on the three graphs.
+Moreover we publish a VoID Linkedset that links together the three datasets as a
+new one. Alongside this we provide some additional metadata from the
+\texttt{void:}\footnote{\url{http://rdfs.org/ns/void#}} ontology, such as
+\texttt{target}, \texttt{sparqlEndpoint} and
+\texttt{exampleResource} and from the
+\texttt{dcterms:}\footnote{\url{http://purl.org/dc/terms/}} ontology, such as
+\texttt{subject}, \texttt{title} and
+\texttt{description}. Those additional metadata have been added manually
+to the VoID dataset. The \texttt{void:Linkset} can be retrieved at the following
+URL \url{http://data.krw.d2s.labs.vu.nl/doc/group6/findaslot/resource/findaslot/void}.
+
+\subsection{5-star Open Data}
+We say that the published database is conform with standards proposed by the
+5-star model for Linked Data. Here we defend our statement by taking each of the
+five steps into consideration.
+
+\begin{description}
+\item[Available on the Web] We published our data under an open license,
+namely the CC0 1.0 Universal (this is declared in the VoID metadata).
+\item[Available as structured data] The dataset is available in RDF
+format which is structured.
+\item[Available as non-proprietary format] Again, our dataset is specified
+in a W3C language so it is not in a proprietary format but in an
+open and standardized format.
+\item[Use URIs to denote things] We use URIs to denote everything that is
+not an RDF Literal. Events, Venues, Locations and starting from this version of
+the ontology we include countries, cities and boroughs as resources defined by
+URIs.
+\item[Link to other data] We provide external pointers to resources from
+DBpedia such as for cities (e.g. \texttt{dbr:Amsterdam}), countries (e.g.
+\texttt{dbr:Netherlands}) or as \texttt{dcterms:subject}, in the VoID
+specification, we point to \texttt{dbr:Museums} and \texttt{dbr:Parking\_space}.
+\end{description}
 
 
 \section{Section 7 - Evaluation}
