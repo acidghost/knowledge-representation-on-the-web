@@ -155,8 +155,9 @@ The main difference with the previous version of the ontology is that each of th
 	\item \textbf{Parking Slots}: Divided into Small, Medium and Large Slots
 \end{itemize}
 
+The divisions for the first two come straight from the datasets themselves. On the one hand, when an event comes from the Theatres dataset, we assume it is of type Play and it happens in a Venue of type Theatre. On the other hand, when the event comes from the Museums and Galleries dataset, we assume it is of type Exhibition and it happens in a Venue of type Museum.
 
-- First two distinctions come from the datasets themselves. The third one we created based on size. Parking Slot has datatype property quantity, which serves a a classifier
+The third one, however, is a distinction we propose in order to better describe the Parking Slots. Previously, a Parking Slot's capacity was only described by its Datatype Property \textit{Quantity}. Now, we take this property and process it to classify Parking Slots into three types: Small (consisting on 1 or 2 individual slots), Medium (consisting of 3 or 4 individual slots) and Large (consisting of 5 or more individual slots). This classification is achieved through an equivalence fact as exemplified by the next listing. \\
 
 \begin{lstlisting}[captionpos=b, caption=Definition of Large Slot a subclass of Parking Slot, label=lst:owl, basicstyle=\ttfamily\small,frame=bt]
 (dbo:location exactly 1 Location)
