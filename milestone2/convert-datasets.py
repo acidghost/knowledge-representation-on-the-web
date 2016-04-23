@@ -249,7 +249,7 @@ serialize_upload(OUTPUT_DIR + 'parking_slots.trig', park_graph)
 # dataset.remove_graph(park_graph)
 
 
-# Generate VoID metadata
+### Generate VoID metadata
 from rdflib.void import generateVoID
 from rdflib.namespace import VOID
 dcterms_uri = 'http://purl.org/dc/terms/'
@@ -277,8 +277,13 @@ void_linked_g.add((void_linked_ds, RDF.type, VOID.Linkset))
 void_linked_g.add((void_linked_ds, VOID.target, void_dataset_t))
 void_linked_g.add((void_linked_ds, VOID.target, void_dataset_m))
 void_linked_g.add((void_linked_ds, VOID.target, void_dataset_ps))
+void_linked_g.add((void_linked_ds, VOID.sparqlEndpoint, URIRef(repo_url + '/query')))
 void_linked_g.add((void_linked_ds, DCTERMS['subject'], DBR['Museums']))
 void_linked_g.add((void_linked_ds, DCTERMS['subject'], DBR['Theaters']))
 void_linked_g.add((void_linked_ds, DCTERMS['subject'], DBR['Parking_space']))
+void_linked_g.add((void_linked_ds, DCTERMS['title'], Literal('Find A Slot')))
+void_linked_g.add((void_linked_ds, DCTERMS['description'],
+    Literal('A linked dataset of events, venues, museums and handicap\'s parking slots', lang='en')))
+void_linked_g.add((void_linked_ds, VOID.exampleResource, VOCAB['ParkingSlot']))
 serialize_upload(OUTPUT_DIR + 'void_linked.trig', void_linked_g)
 
