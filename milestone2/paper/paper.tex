@@ -149,12 +149,19 @@ Given the degree of variation between both ontologies, we divide the updates on 
 
 \subsection{Entities}
 The main difference with the previous version of the ontology is that each of the three main classes are now subdivided into more specific subclasses. For example:
-
 \begin{itemize}
 	\item \textbf{Events}: Divided into Plays and Exhibitions
 	\item \textbf{Venues}: Divided into Theatres and Museums
 	\item \textbf{Parking Slots}: Divided into Small, Medium and Large Slots
 \end{itemize}
+A visualization of the current class hierarchy is given in Figure
+\ref{fig:ontology-classes}.
+
+\begin{figure}[h] \centering
+	\includegraphics[width=.9\textwidth]{img/ontology-classes.png}
+	\caption{Class hierarchy for the current version of the Find A Slot ontology.}
+	\label{fig:ontology-classes}
+\end{figure}
 
 The divisions for the first two come straight from the datasets themselves. On the one hand, when an event comes from the Theatres dataset, we assume it is of type Play and it happens in a Venue of type Theatre. On the other hand, when the event comes from the Museums and Galleries dataset, we assume it is of type Exhibition and it happens in a Venue of type Museum.
 
