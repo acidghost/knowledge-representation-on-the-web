@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%% file moduleX_template.tex %%%%%%%%%%%%%%%%%
+%
+%
+% This is a template for creating your papers for the course KRW
+% It is based on the standard Latex template for Springer publications
+% but contains a suggestion for the structure and some content of the
+% paper.
+%
+% Please adapt this document wherever needed.
+%
+% For more information about the required Latex Style check the document
+% typeinst.pdf in the StyleFiles directory.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{StyleFiles/llncs}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Ontology Matching Paper}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Ontology Matching Paper}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Names}
+%
+\authorrunning{Put your names here}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{\url{first@email.nl} \and \url{second@email.nl}}
+
+\maketitle
+
+
+\begin{abstract}
+The abstract should summarize the contents of the paper and should
+contain at least 70 and at most 150 words. It should be written using the
+\emph{abstract} environment.
+\end{abstract}
+
+
+\section{Introduction}
+%Introduce the sections that follow. What is the problem this paper addresses? What is the core contribution of this paper, and why is that interesting? What method did you develop and implement? What is the research question or hypothesis this paper answers? How did you answer this question or validate your approach (empirically, analytically). You might want to give a brief (qualitative) sketch of the results. 
+
+\section{Related Work}
+%Give here an overview over related matching methods and how they related to your own solution. Cite papers that might have inspired your approach. Sometimes it makes sense to have this section immediately after the introduction.
+
+\section{Methods, Algorithms and Implementation}
+% Introduce your method, i.e. the overall approach taken and the general idea, the algorithms in general, maybe in pseudo-code and give a quick overview over the technical implementations (not too much details).
+
+% Maybe you want to separate this part into subsections for your two systems
+\subsection{Ontology Matching}
+\subsection{Data Linkage}
+
+\section{Validation and Experiments}
+% In a scientific paper you want to show that your choice of method and algorithms was the right choice. So, this could be a place where you make claims or ask concrete and explicit research questions (e.g. with respect to runtime and/or precision/recall.
+
+\section{Results and Discussion}
+% Give here details about the most important results of your experiments. Use tables and figures, but focus on the interesting and important results. Make sure you describe in the text what the reviewers should see, explain what the reader sees in the tables and point to the interesting findings. Be explicit about your research question and hypothesis, and discuss they might be true, or false. 
+
+
+\section{Conclusion}
+%Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
+
+\bibliographystyle{plain}
+\bibliography{mybib}
+
+\end{document}
