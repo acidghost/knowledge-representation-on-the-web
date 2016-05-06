@@ -1,0 +1,3 @@
+[submodule "milestone3/LOD-Laundromat-Link"]
+	path = milestone3/LOD-Laundromat-Link
+	url = git@github.com:KRontheWeb/LOD-Laundromat-Link.git
