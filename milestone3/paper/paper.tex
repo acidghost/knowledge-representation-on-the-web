@@ -14,7 +14,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\documentclass[runningheads,a4paper]{StyleFiles/llncs}
+\documentclass[runningheads,a4paper]{../../StyleFiles/llncs}
 
 \usepackage{url}
 \usepackage{graphicx}
@@ -40,14 +40,14 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Names}
+\author{Alivanistos, Dimitris. \\ Baez, Selene. \\ Jemmett, Andrea.}
 %
-\authorrunning{Put your names here}
+\authorrunning{Alivanistos, Dimitris. \\ Baez, Selene. \\ Jemmett, Andrea.}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{\url{first@email.nl} \and \url{second@email.nl}}
+\institute{\url{d.alivanistos@student.vu.nl} \and \url{s.baezsantamaria@student.vu.nl} \and \url{a.jemmett@student.vu.nl}}
 
 \maketitle
 
@@ -61,17 +61,39 @@ contain at least 70 and at most 150 words. It should be written using the
 
 \section{Introduction}
 %Introduce the sections that follow. What is the problem this paper addresses? What is the core contribution of this paper, and why is that interesting? What method did you develop and implement? What is the research question or hypothesis this paper answers? How did you answer this question or validate your approach (empirically, analytically). You might want to give a brief (qualitative) sketch of the results. 
-- ontology matching is important because equivalence allows collaboration
+In this paper we continue the work related for creating an application for finding Handicap Parking Spots close to Event Venues in Amsterdam. In the previous paper, we improved on the ontology to comply with the Five Star model and linked it to other existing ontologies. In this paper, we continue the work by matching and aligning the ontology to other subject-related ontologies. 
+
+In general, the problem of matching ontologies has been studied before by Semantic Web researchers. As Shvaiko et al. state, the problem of heterogeneity is still a challenge to be solved since ambiguity in meanings and interpretations prevent from finding equivalences in same domain ontologies \cite{shvaiko2013ontology}. Ontology matching and alignment allow to merge, translate, and extend ontologies, finding correspondences both in entities and instances.
+
+With that in mind, in this paper we select relevant vocabularies from the pool of Amsterdam related ontologies in our class. After some comparison we selected groups 10, 13 and 15. Group 10 presents a vocabulary for cultural activities, Group 13 presents an ontology about safety for tourists using statistical area information; finally, Group 15 present an ontology for general activity finding.
+
+In the following sections we revise existing tools for matching and aligning ontologies. We proceed to use some tools for matching and aligning our ontology to the aforementioned vocabularies. 
+
+
+- We use SILK, which provides visual tools for matching and alignment. 
+- Research question: Investigate the state-of-the-art tools, use them to match ontologies related to recreation in Amsterdam, and evaluate its performance.
+
+Try several matching algorithms, with different transformations and comparators. 
 
 \section{Related Work}
 %Give here an overview over related matching methods and how they related to your own solution. Cite papers that might have inspired your approach. Sometimes it makes sense to have this section immediately after the introduction.
+- Tried several tools from \cite{ai3:::adaptiveinformation_2014} and \cite{euzenat2007ontology}
+
+\begin{enumerate}
+	\item OLA : Out of date \cite{euzenat2004ontology}
+	\item S-Match: Cannot read RDF files
+	\item MapONTO: Old version of Protege
+	\item AML
+\end{enumerate}
+
 - Tools are out of date
 - http://www.iro.umontreal.ca/~owlola/index.html 
 
 - WordNet:Similarity http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi
 
 \section{Methods, Algorithms and Implementation}
-% Introduce your method, i.e. the overall approach taken and the general idea, the algorithms in general, maybe in pseudo-code and give a quick overview over the technical implementations (not too much details).
+% Introduce your method, i.e. the overall approach taken and the general idea, the\bibliography{paper}
+ algorithms in general, maybe in pseudo-code and give a quick overview over the technical implementations (not too much details).
 
 % Maybe you want to separate this part into subsections for your two systems
 \subsection{Ontology Matching}
