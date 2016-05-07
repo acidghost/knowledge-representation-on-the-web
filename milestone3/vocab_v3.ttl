@@ -1,4 +1,4 @@
-@prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#> .
+@prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,8 +7,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab> a owl:Ontology ;
-	owl:versionInfo "Second version"^^xsd:string .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/> a owl:Ontology ;
+	owl:versionInfo "Third version"@en .
 # 
 # 
 # #################################################################
@@ -44,13 +44,13 @@ dbo:postalCode a owl:AnnotationProperty ;
 
 geo:lat a owl:AnnotationProperty ;
 	rdfs:label "latitude"^^xsd:string ;
-	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+	rdfs:domain :Location .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#long
 
 geo:long a owl:AnnotationProperty ;
 	rdfs:label "longitude"^^xsd:string ;
-	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
+	rdfs:domain :Location .
 # 
 # 
 # 
@@ -131,7 +131,7 @@ xsd:date a rdfs:Datatype .
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
 	rdfs:range <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> ;
 	rdfs:comment "The location of a venue"@en ;
-	rdfs:label "venue location"^^xsd:string .
+	rdfs:label "venue location"@en .
 # 
 # http://dbpedia.org/ontology/borough
 
@@ -169,14 +169,14 @@ dbo:location a owl:ObjectProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range rdfs:Literal , xsd:string ;
 	rdfs:comment "Dates in plain text"@en ;
-	rdfs:label "calendar_summary"^^xsd:string .
+	rdfs:label "calendar_summary"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range xsd:date ;
-	rdfs:label "end_date"^^xsd:string .
+	rdfs:label "end_date"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/info
 
@@ -190,21 +190,21 @@ dbo:location a owl:ObjectProperty ;
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range rdfs:Literal , xsd:string ;
-	rdfs:label "long_description"^^xsd:string .
+	rdfs:label "long_description"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range xsd:anyURI ;
-	rdfs:label "main_media"^^xsd:string .
+	rdfs:label "main_media"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range xsd:anyURI ;
-	rdfs:label "media"^^xsd:string .
+	rdfs:label "media"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity
 
@@ -218,28 +218,28 @@ dbo:location a owl:ObjectProperty ;
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range rdfs:Literal , xsd:string ;
-	rdfs:label "short_description"^^xsd:string .
+	rdfs:label "short_description"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range xsd:date ;
-	rdfs:label "date"^^xsd:string .
+	rdfs:label "date"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range xsd:date ;
-	rdfs:label "start_date"^^xsd:string .
+	rdfs:label "start_date"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/url
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/url> a owl:DatatypeProperty ;
 	rdfs:domain <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
 	rdfs:range xsd:anyURI ;
-	rdfs:label "url"^^xsd:string .
+	rdfs:label "url"@en .
 # 
 # http://dbpedia.org/ontology/address
 
@@ -358,7 +358,7 @@ _:genid2 rdf:rest rdf:nil .
 _:genid1 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> rdfs:subClassOf owl:Thing ;
-	rdfs:label "Event"^^xsd:string .
+	rdfs:label "Event"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition
 
@@ -384,7 +384,7 @@ _:genid21 rdf:rest rdf:nil .
 _:genid20 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
-	rdfs:label "Exhibition"^^xsd:string .
+	rdfs:label "Exhibition"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot
 
@@ -420,7 +420,7 @@ _:genid25 rdf:rest rdf:nil .
 _:genid24 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
-	rdfs:label "Large Slot"^^xsd:string .
+	rdfs:label "Large Slot"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location
 
@@ -446,7 +446,7 @@ _:genid32 rdf:rest rdf:nil .
 _:genid31 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> rdfs:subClassOf dbo:Location ;
-	rdfs:label "Location"^^xsd:string .
+	rdfs:label "Location"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot
 
@@ -489,7 +489,7 @@ _:genid36 rdf:rest rdf:nil .
 _:genid35 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/MediumSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
-	rdfs:label "Medium Slot"^^xsd:string .
+	rdfs:label "Medium Slot"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum
 
@@ -515,7 +515,7 @@ _:genid45 rdf:rest rdf:nil .
 _:genid44 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Museum> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
-	rdfs:label "Museum"^^xsd:string .
+	rdfs:label "Museum"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot
 
@@ -555,7 +555,7 @@ _:genid49 rdf:rest rdf:nil .
 _:genid48 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> rdfs:subClassOf owl:Thing ;
-	rdfs:label "Parking Slot"^^xsd:string .
+	rdfs:label "Parking Slot"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play
 
@@ -581,7 +581,7 @@ _:genid56 rdf:rest rdf:nil .
 _:genid55 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Play> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
-	rdfs:label "Play"^^xsd:string .
+	rdfs:label "Play"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot
 
@@ -624,7 +624,7 @@ _:genid60 rdf:rest rdf:nil .
 _:genid59 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSlot> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
-	rdfs:label "Small Slot"^^xsd:string .
+	rdfs:label "Small Slot"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre
 
@@ -650,7 +650,7 @@ _:genid69 rdf:rest rdf:nil .
 _:genid68 a owl:Class .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> rdfs:subClassOf <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> ;
-	rdfs:label "Theatre"^^xsd:string .
+	rdfs:label "Theatre"@en .
 # 
 # http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue
 
@@ -663,7 +663,7 @@ _:genid72 a owl:Restriction ;
 	owl:onClass <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Location> .
 
 <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Venue> rdfs:subClassOf owl:Thing ;
-	rdfs:label "Venue"^^xsd:string .
+	rdfs:label "Venue"@en .
 # 
 # http://dbpedia.org/ontology/City
 
@@ -725,33 +725,33 @@ dbo:Place a owl:Class .
 # #################################################################
 # 
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#LargeSpotTest
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSpotTest
 
-:LargeSpotTest a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/LargeSpotTest> a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
 	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> "10"^^xsd:integer .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#SmallSpotTest
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSpotTest
 
-:SmallSpotTest a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/SmallSpotTest> a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/ParkingSlot> ;
 	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/quantity> "2"^^xsd:unsignedInt .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestExhibit
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestExhibit
 
-:TestExhibit a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> ;
-	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/exhibitionVenue> :TestVenueExhibit .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestExhibit> a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Exhibition> ;
+	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/exhibitionVenue> <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestVenueExhibit> .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestPlay
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestPlay
 
-:TestPlay a owl:NamedIndividual ;
-	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> :TestVenuePlay .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestPlay> a owl:NamedIndividual ;
+	<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/hasVenue> <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestVenuePlay> .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestVenueExhibit
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestVenueExhibit
 
-:TestVenueExhibit a owl:NamedIndividual .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestVenueExhibit> a owl:NamedIndividual .
 # 
-# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#TestVenuePlay
+# http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestVenuePlay
 
-:TestVenuePlay a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
+<http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/TestVenuePlay> a owl:NamedIndividual , <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Theatre> .
 # 
 # 
 # 
