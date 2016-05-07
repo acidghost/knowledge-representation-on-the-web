@@ -63,33 +63,26 @@ contain at least 70 and at most 150 words. It should be written using the
 %Introduce the sections that follow. What is the problem this paper addresses? What is the core contribution of this paper, and why is that interesting? What method did you develop and implement? What is the research question or hypothesis this paper answers? How did you answer this question or validate your approach (empirically, analytically). You might want to give a brief (qualitative) sketch of the results. 
 In this paper we continue the work related for creating an application for finding Handicap Parking Spots close to Event Venues in Amsterdam. In the previous paper, we improved on the ontology to comply with the Five Star model and linked it to other existing ontologies. In this paper, we continue the work by matching and aligning the ontology to other subject-related ontologies. 
 
-In general, the problem of matching ontologies has been studied before by Semantic Web researchers. As Shvaiko et al. state, the problem of heterogeneity is still a challenge to be solved since ambiguity in meanings and interpretations prevent from finding equivalences in same domain ontologies \cite{shvaiko2013ontology}. Ontology matching and alignment allow to merge, translate, and extend ontologies, finding correspondences both in entities and instances.
+In general, the problem of matching ontologies has been studied before by Semantic Web researchers. As Shvaiko et al. state, the problem of heterogeneity is still a challenge to be solved since ambiguity in meanings and interpretations prevent us from finding equivalences in same domain ontologies \cite{shvaiko2013ontology}. Ontology matching and alignment allow to merge, translate, and extend ontologies, finding correspondences both in entities, properties and instances. The Ontology Alignment Evaluation Initiative is an annual international competition that serves as an evaluation for state of the art alignment tools. 
 
-With that in mind, in this paper we select relevant vocabularies from the pool of Amsterdam related ontologies in our class. After some comparison we selected groups 10, 13 and 15. Group 10 presents a vocabulary for cultural activities, Group 13 presents an ontology about safety for tourists using statistical area information; finally, Group 15 present an ontology for general activity finding.
+With that in mind, in this paper we select relevant vocabularies from the pool of Amsterdam related ontologies in our class. After some comparison we selected Group 10 -an ontology for cultural activities-, Group 13 -an ontology about safety for tourists using statistical area information-, and Group 15 -an ontology for general activity finding.
 
-In the following sections we revise existing tools for matching and aligning ontologies. We proceed to use some tools for matching and aligning our ontology to the aforementioned vocabularies. 
-
-
-- We use SILK, which provides visual tools for matching and alignment. 
-- Research question: Investigate the state-of-the-art tools, use them to match ontologies related to recreation in Amsterdam, and evaluate its performance.
-
-Try several matching algorithms, with different transformations and comparators. 
+In the following sections we first revise existing tools for matching and aligning ontologies. Then we select and apply tools for matching and aligning our ontologies to the aforementioned ones, experimenting with different comparators. We continue to evaluate such algorithms and discuss the results. Finally, we conclude by summarizing the findings of the alignment to different ontologies.
 
 \section{Related Work}
 %Give here an overview over related matching methods and how they related to your own solution. Cite papers that might have inspired your approach. Sometimes it makes sense to have this section immediately after the introduction.
-- Tried several tools from \cite{ai3:::adaptiveinformation_2014} and \cite{euzenat2007ontology}
+In order to match our ontology to others, we did research about state of the art matching and alignment tools. \cite{adaptiveInformation_2014} is a comprehensive list of the top 50 tools, separating active from inactive tools. Additionally, we looked at some of the tools revised by Euzenat et Al \cite{euzenat2007ontology}. Furthermore, we looked at the participants from the most recent OAEI.
+
+In the following we list the most relevant tools.
 
 \begin{enumerate}
-	\item OLA : Out of date \cite{euzenat2004ontology}
+	\item \textbf{OLA \cite{euzenat2004ontology}:} Developed in 2004, the OWL Lite Alignment (OLA) is a tool for automatic matching of ontologies that implements the OLA algorithm designed in collaboration by the DIRO, University of Montréal and INRIA Rhône Alpes. It participated in OEIA 2005 \cite{euzenat2005ola} and 2007 \cite{djoufak2007ola} and increased its own results from 0.80 to 0.89 in Precision, and 0.74 to 0.87 in Recall. At the time, it was one of the pioneers of ontology matching, yet no it is nowadays outdated.
+
 	\item S-Match: Cannot read RDF files
 	\item MapONTO: Old version of Protege
+	\item WordNet:Similarity: http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi
 	\item AML
 \end{enumerate}
-
-- Tools are out of date
-- http://www.iro.umontreal.ca/~owlola/index.html 
-
-- WordNet:Similarity http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi
 
 \section{Methods, Algorithms and Implementation}
 % Introduce your method, i.e. the overall approach taken and the general idea, the\bibliography{paper}
@@ -97,6 +90,25 @@ Try several matching algorithms, with different transformations and comparators.
 
 % Maybe you want to separate this part into subsections for your two systems
 \subsection{Ontology Matching}
+- Decided to use one of the best candidates in the OAEI of 2014, AML (AgreementMakerLight) the best system (as measured in terms of F-measure) for lightweight ontologies. The reasons behind this choice was that AML exceeded our expectations with regard to run time results, comprehensive user interface and integrated evaluation mechanism. The procedure can be fully or semi automatic, with the user being presented to a fully customizable matching. We can choose between different metrics with respect to structure,content etc 
+-examples with pictures, String Matcher, Word matcher, Property matcher, Cardinality matcher and background knowledge matcher.
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.75\textwidth]{img/match_city.png}
+	\caption{Visual representation of a single correct match in AML.}
+	\label{fig:single_match}
+\end{figure}
+\begin{figure}[h] \centering
+	\includegraphics[width=.75\textwidth]{img/match_combo.png}
+	\caption{Visual representation of multiple correct matches in AML.}
+	\label{fig:multiple_match}
+\end{figure}
+\begin{figure}[h] \centering
+	\includegraphics[width=.75\textwidth]{img/conflict_exhibition_exposition.png}
+	\caption{Visual representation of an incorrect match in AML.}
+	\label{fig:incorrect_match}
+\end{figure}
+
 \subsection{Data Linkage}
 
 \section{Validation and Experiments}
