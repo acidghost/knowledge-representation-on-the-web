@@ -77,11 +77,11 @@ In the following we list the most relevant tools.
 
 \begin{enumerate}
 	\item \textbf{OLA \cite{euzenat2004ontology}:} Developed in 2004, the OWL Lite Alignment (OLA) is a tool for automatic matching of ontologies that implements the OLA algorithm designed in collaboration by the DIRO, University of Montréal and INRIA Rhône Alpes. It participated in OEIA 2005 \cite{euzenat2005ola} and 2007 \cite{djoufak2007ola} and increased its own results from 0.80 to 0.89 in Precision, and 0.74 to 0.87 in Recall. At the time, it was one of the pioneers of ontology matching, yet no it is nowadays outdated.
-
-	\item S-Match: Cannot read RDF files
-	\item MapONTO: Old version of Protege
-	\item WordNet:Similarity: http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi
-	\item AML
+	\item \textbf{S-Match \cite{giunchiglia2004s}:} S-Match is a semantic matching tool that is suitable for many applications. However, it is not specific for ontology matching and it has not participated in the latest OAEI.
+	\item \textbf{MapONTO \cite{an2004refining}:} MapOnto, just as S-Match, is a general purpose semantic matcher. It is an Initiative from the University of Toronto and it is implemented as a plug-in for Protege. At first sight, this option seemed promising, however the latest release is compatible with obsolete versions of Protege. 
+	%\item \textbf{WordNet:Similarity \cite{pedersen2004wordnet}:} Semantic 
+	\item \textbf{AML \cite{faria2013agreementmakerlight}:} The Agreement
+	Maker Light (AML) is the improved version of the original Agreement Maker. It is a simple, user-friendly application for matching ontologies which also provides visualization and evaluation of the alignment. Further details will be discussed in Section \ref{Ontology_Matching}.
 \end{enumerate}
 
 \section{Methods, Algorithms and Implementation}
@@ -90,6 +90,7 @@ In the following we list the most relevant tools.
 
 % Maybe you want to separate this part into subsections for your two systems
 \subsection{Ontology Matching}
+\label{Ontology_Matching}
 - Decided to use one of the best candidates in the OAEI of 2014, AML (AgreementMakerLight) the best system (as measured in terms of F-measure) for lightweight ontologies. The reasons behind this choice was that AML exceeded our expectations with regard to run time results, comprehensive user interface and integrated evaluation mechanism. The procedure can be fully or semi automatic, with the user being presented to a fully customizable matching. We can choose between different metrics with respect to structure,content etc 
 -examples with pictures, String Matcher, Word matcher, Property matcher, Cardinality matcher and background knowledge matcher.
 
@@ -114,12 +115,43 @@ In the following we list the most relevant tools.
 \section{Validation and Experiments}
 % In a scientific paper you want to show that your choice of method and algorithms was the right choice. So, this could be a place where you make claims or ask concrete and explicit research questions (e.g. with respect to runtime and/or precision/recall.
 
+\subsection{Group 10: Cultural Ontology}
+We match to the main entities of Events and Venues.
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.75\textwidth]{img/match_g10.png}
+	\caption{Matching to group 10}
+	\label{fig:match_g10}
+\end{figure}
+
+\subsection{Group 13: Tourist safety Ontology}
+
+
+\subsection{Group 15: Activity finding Ontology}
+Six correct matchings versus six incorrect matchings
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.75\textwidth]{img/match_g15.png}
+	\caption{Matching to group 15}
+	\label{fig:match_g15}
+\end{figure}
+
+
+
 \section{Results and Discussion}
 % Give here details about the most important results of your experiments. Use tables and figures, but focus on the interesting and important results. Make sure you describe in the text what the reviewers should see, explain what the reader sees in the tables and point to the interesting findings. Be explicit about your research question and hypothesis, and discuss they might be true, or false. 
+- Led to ? 98\%  name comparison 99\% class comparison 100\%
 
+- Intuitively, our ontology should have had more matches with group 10, since they model the exact same datasets as we do. However, they model the details of events as Entities, while we do it as Properties. To the best of our knowledge, AML cannot match entities to properties. This discovery raises more serious questions since the limitations of matching are evident when design decisions like the ones in this case rigidly prevent matches.
+
+- Matches to ill formed ontologies are hard to predict. For example, Group 15 has two Venues entities which are matched to our single Venue entity in a cyclic way.
 
 \section{Conclusion}
 %Here you summarize the preceding sections, describe the lessons learnt and discuss future work.
+- 
+- Note: the field is messy and outdated tools are often referred.
+
+
 
 \bibliographystyle{plain}
 \bibliography{mybib}
