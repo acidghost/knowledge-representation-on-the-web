@@ -139,13 +139,23 @@ its weight when computing an aggregation for it or whether it is required that a
 value exists for that block\footnote{We say block because Silk uses a visual
 editor with block-shaped functionalities.}.
 
+In the following sections we show how we implemented a Data Linking system to
+link our dataset with three other datasets created by peers following our same
+class\footnote{Knowledge Representation on the Web at VU Amsterdam, 2015/2016}.
+Moreover we tried to look-up the Linked Open Data cloud searching for similar
+datasets that we could link to ours. We used
+LOTUS\footnote{\url{http://lotus.lodlaundromat.org/}}, a tool from the LOD
+Laundromat suite\footnote{\url{http://lodlaundromat.org/}}\cite{beek2014lod}
+that allows to search the LOD cloud for statements based on some query
+parameters. Unfortunately we were not able to find interesting datasets there.
+
 \subsubsection{Linking the Cultural Dataset}
 This dataset has a domain in part similar to our so the linking procedure
 is trivial and reduces to a check on the \texttt{rdfs:label} and some other
 property. An example Silk linkage rule is shown in Figure \ref{fig:link_event_g10}
 that matches events; in this case the match is checked against
-\texttt{rdfs:label} and \texttt{dc:title}.
-%TODO link other entities
+\texttt{rdfs:label} and \texttt{dc:title}. With this rule we are able to create
+15 links over 239 source and 479 target event entities.
 
 \begin{figure}[h]
 	\centering
@@ -160,11 +170,14 @@ ours for what concerns events and locations / venues. Indeed the overlap between
 events in this dataset and ours is big and we are able to match a big proportion
 of entities by using a linkage rule similar to that shown in Figure
 \ref{fig:link_event_g10} but using \texttt{rdfs:label} for both data sources.
+Using this linkage rule we are able to link 45 events and locations between the
+two datasets.
 
 \subsubsection{Linking the Activity Finding Dataset}
 For events the linkage rule is less trivial and immediate than that for the
 Cultural Dataset and involves the use of more properties and an aggregator as
-shown in Figure \ref{fig:link_event_g15}.
+shown in Figure \ref{fig:link_event_g15}. With this linkage rule we are able to
+link 84 activities / events.
 
 \begin{figure}[h]
 	\centering
@@ -176,7 +189,6 @@ shown in Figure \ref{fig:link_event_g15}.
 		\texttt{/g6v:hasVenue/dbo:location/dbo:address}.}
 	\label{fig:link_event_g15}
 \end{figure}
-
 
 \section{Validation and Experiments}
 % In a scientific paper you want to show that your choice of method and algorithms was the right choice. So, this could be a place where you make claims or ask concrete and explicit research questions (e.g. with respect to runtime and/or precision/recall.
