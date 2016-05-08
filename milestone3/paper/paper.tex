@@ -111,6 +111,69 @@ In the following we list the most relevant tools.
 \end{figure}
 
 \subsection{Data Linkage}
+In this section the developed Data Linkage system is presented.
+It interlinks our dataset with two other datasets from groups 13 and 15. We
+decided to implement the linking workflow and procedures using the
+\textit{Silk framework}\footnote{\url{http://silkframework.org/}} which captions
+itself as ``The Linked Data Integration Framework''. Silk is an open source
+project for integrating heterogeneous data sources and among its use cases is
+generating links between Linked Data sources, which is exactly within our needs.
+Moreover Silk provides the user with a nice and friendly Web-based GUI and a visual
+editor for linkage rules.
+
+To link two Linked Datasets using Silk first we need to define their sources,
+e.g. using a SPARQL endpoint or uploading an RDF dump. Then it is possible to
+create linkage rules by applying four different kind of operations:
+\begin{enumerate}
+	\item path-like queries to retrieve values;
+	\item transformations over those values (e.g. to-lowercase, tokenization);
+	\item comparators over values (e.g. Levenshtein distance, Jaccard
+		coefficient, equality);
+	\item aggregators over comparators output (e.g. average, minimum, maximum).
+\end{enumerate}
+It is also possible to specify a threshold for the comparator's output score,
+its weight when computing an aggregation for it or whether it is required that a
+value exists for that block\footnote{We say block because Silk uses a visual
+editor with block-shaped functionalities.}.
+
+\subsubsection{Linking the Cultural Dataset}
+This dataset has a domain in part similar to our so the linking procedure
+is trivial and reduces to a check on the \texttt{rdfs:label} and some other
+property. An example Silk linkage rule is shown in Figure \ref{fig:link_event_g10}
+that matches events; in this case the match is checked against
+\texttt{rdfs:label} and \texttt{dc:title}.
+%TODO link other entities
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/link_event_g10.png}
+	\caption{Silk linkage rules for events in group 10's dataset.}
+	\label{fig:link_event_g10}
+\end{figure}
+
+\subsubsection{Linking the Tourist Safety Dataset}
+In spite being about a different domain, this dataset can still be linked with
+ours for what concerns events and locations / venues. Indeed the overlap between
+events in this dataset and ours is big and we are able to match a big proportion
+of entities by using a linkage rule similar to that shown in Figure
+\ref{fig:link_event_g10} but using \texttt{rdfs:label} for both data sources.
+
+\subsubsection{Linking the Activity Finding Dataset}
+For events the linkage rule is less trivial and immediate than that for the
+Cultural Dataset and involves the use of more properties and an aggregator as
+shown in Figure \ref{fig:link_event_g15}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/link_event_g15.png}
+	\caption{Silk linkage rule for events in the Activity Finding Dataset.
+		\texttt{sourcePath2} contains
+		\texttt{/schema:location/schema:streetAddress} while
+		\texttt{targetPath2} contains
+		\texttt{/g6v:hasVenue/dbo:location/dbo:address}.}
+	\label{fig:link_event_g15}
+\end{figure}
+
 
 \section{Validation and Experiments}
 % In a scientific paper you want to show that your choice of method and algorithms was the right choice. So, this could be a place where you make claims or ask concrete and explicit research questions (e.g. with respect to runtime and/or precision/recall.
