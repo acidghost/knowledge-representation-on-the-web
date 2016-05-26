@@ -1,0 +1,145 @@
+@prefix ns1: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:Nfd386e8ab46641f4bcea6ee89bf6e3ec {
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void> a ns1:Dataset ;
+        ns1:classPartition <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_class0> ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 3741 ;
+        ns1:distinctSubjects 330 ;
+        ns1:properties 12 ;
+        ns1:propertyPartition <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property0>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property1>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property10>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property11>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property2>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property3>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property4>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property5>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property6>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property7>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property8>,
+            <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property9> ;
+        ns1:triples 6122 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_class0> a ns1:Dataset ;
+        ns1:class <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/Event> ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 3741 ;
+        ns1:distinctSubjects 330 ;
+        ns1:entities 330 ;
+        ns1:properties 12 ;
+        ns1:triples 6122 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property0> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 1 ;
+        ns1:distinctSubjects 330 ;
+        ns1:entities 330 ;
+        ns1:properties 1 ;
+        ns1:property rdf:type ;
+        ns1:triples 330 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property1> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 271 ;
+        ns1:distinctSubjects 319 ;
+        ns1:entities 319 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/single_date> ;
+        ns1:triples 1604 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property10> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 1920 ;
+        ns1:distinctSubjects 330 ;
+        ns1:entities 330 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/calendar_summary> ;
+        ns1:triples 2118 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property11> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 348 ;
+        ns1:distinctSubjects 330 ;
+        ns1:entities 330 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/main_media> ;
+        ns1:triples 354 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property2> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 9 ;
+        ns1:distinctSubjects 10 ;
+        ns1:entities 10 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/start_date> ;
+        ns1:triples 10 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property3> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 8 ;
+        ns1:distinctSubjects 10 ;
+        ns1:entities 10 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/end_date> ;
+        ns1:triples 10 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property4> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 145 ;
+        ns1:distinctSubjects 320 ;
+        ns1:entities 320 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/url> ;
+        ns1:triples 351 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property5> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 330 ;
+        ns1:distinctSubjects 330 ;
+        ns1:entities 330 ;
+        ns1:properties 1 ;
+        ns1:property rdfs:label ;
+        ns1:triples 330 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property6> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 389 ;
+        ns1:distinctSubjects 330 ;
+        ns1:entities 330 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/short_description> ;
+        ns1:triples 393 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property7> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 133 ;
+        ns1:distinctSubjects 136 ;
+        ns1:entities 136 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/long_description> ;
+        ns1:triples 160 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property8> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 77 ;
+        ns1:distinctSubjects 322 ;
+        ns1:entities 322 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/playVenue> ;
+        ns1:triples 339 .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/theaters/void_property9> a ns1:Dataset ;
+        ns1:classes 1 ;
+        ns1:distinctObjects 121 ;
+        ns1:distinctSubjects 76 ;
+        ns1:entities 76 ;
+        ns1:properties 1 ;
+        ns1:property <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/media> ;
+        ns1:triples 123 .
+}
+

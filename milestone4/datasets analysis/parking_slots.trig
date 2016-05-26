@@ -1,0 +1,2956 @@
+@prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix fasdat: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/> .
+@prefix fasont: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns1: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/findaslot/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:parking-slots {
+    fasdat:A.J._Ernststraat a fasont:ParkingSlot ;
+        rdfs:label "A.J. Ernststraat" ;
+        fasont:info "Bij groot Gelderlandplein 1 voor de taxistandplaats" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/A.J._Ernststraat> .
+
+    fasdat:A.J._Ernststraat_112-120 a fasont:ParkingSlot ;
+        rdfs:label "A.J. Ernststraat 112-120" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/A.J._Ernststraat_112-120> .
+
+    fasdat:A.J._Ernststraat_887 a fasont:ParkingSlot ;
+        rdfs:label "A.J. Ernststraat 887" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/A.J._Ernststraat_887> .
+
+    fasdat:ALBATROSPAD_31 a fasont:ParkingSlot ;
+        rdfs:label "ALBATROSPAD 31" ;
+        fasont:info "WIJKCENTRUM" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ALBATROSPAD_31> .
+
+    fasdat:ALDEBARANPLEIN_4 a fasont:ParkingSlot ;
+        rdfs:label "ALDEBARANPLEIN 4" ;
+        fasont:info "WIJKPOST" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ALDEBARANPLEIN_4> .
+
+    fasdat:ALKMAARSTRAAT_183 a fasont:ParkingSlot ;
+        rdfs:label "ALKMAARSTRAAT 183" ;
+        fasont:info "BUURTCENRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ALKMAARSTRAAT_183> .
+
+    fasdat:AMERBOS_442 a fasont:ParkingSlot ;
+        rdfs:label "AMERBOS 442" ;
+        fasont:info "SENIORENWONINGEN" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/AMERBOS_442> .
+
+    fasdat:AMERBOS_526 a fasont:ParkingSlot ;
+        rdfs:label "AMERBOS 526" ;
+        fasont:info "BEJAARDENHUIS" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/AMERBOS_526> .
+
+    fasdat:ANKERPLAATS_35 a fasont:ParkingSlot ;
+        rdfs:label "ANKERPLAATS 35" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ANKERPLAATS_35> .
+
+    fasdat:ANKERPLAATS_4 a fasont:ParkingSlot ;
+        rdfs:label "ANKERPLAATS 4" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ANKERPLAATS_4> .
+
+    fasdat:AUGUST_ALLEBEPLEIN_32 a fasont:ParkingSlot ;
+        rdfs:label "AUGUST ALLEBEPLEIN 32" ;
+        fasont:info "tegen over de Lidl" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/AUGUST_ALLEBEPLEIN_32> .
+
+    fasdat:Aalbersestraat_248 a fasont:ParkingSlot ;
+        rdfs:label "Aalbersestraat 248" ;
+        fasont:info "ter hoogte van Stichting de Brug" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Aalbersestraat_248> .
+
+    fasdat:Abe_Lenstralaan_10 a fasont:ParkingSlot ;
+        rdfs:label "Abe Lenstralaan 10" ;
+        fasont:info "ter hoogte van Koninklijke Nederlandse Handboogschutterij Concordia " ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Abe_Lenstralaan_10> .
+
+    fasdat:Abe_Lenstralaan_6 a fasont:ParkingSlot ;
+        rdfs:label "Abe Lenstralaan 6" ;
+        fasont:info "ter hoogte van voetbalvereniging AGB" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Abe_Lenstralaan_6> .
+
+    fasdat:Admiraal_Helfrichstraat_1 a fasont:ParkingSlot ;
+        rdfs:label "Admiraal Helfrichstraat 1" ;
+        fasont:info "1-3" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Admiraal_Helfrichstraat_1> .
+
+    fasdat:Admiraal_Helfrichstraat_3 a fasont:ParkingSlot ;
+        rdfs:label "Admiraal Helfrichstraat 3" ;
+        fasont:info "1-3" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Admiraal_Helfrichstraat_3> .
+
+    fasdat:Admiraal_Helfrichstraat_315 a fasont:ParkingSlot ;
+        rdfs:label "Admiraal Helfrichstraat 315" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Admiraal_Helfrichstraat_315> .
+
+    fasdat:Admiraal_Helfrichstraat_6b a fasont:ParkingSlot ;
+        rdfs:label "Admiraal Helfrichstraat 6b" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Admiraal_Helfrichstraat_6b> .
+
+    fasdat:Admiraal_de_Ruyterweg_56_-_64 a fasont:ParkingSlot ;
+        rdfs:label "Admiraal de Ruyterweg 56 - 64" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Admiraal_de_Ruyterweg_56_-_64> .
+
+    fasdat:Akersingel_132-153 a fasont:ParkingSlot ;
+        rdfs:label "Akersingel 132-153" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Akersingel_132-153> .
+
+    fasdat:Alfred_Doblinstraat__56 a fasont:ParkingSlot ;
+        rdfs:label "Alfred Doblinstraat  56" ;
+        fasont:info "Ter hoogte van Alfred Doblinstraat 56" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Alfred_Doblinstraat__56> .
+
+    fasdat:Allendelaan__Pres._3 a fasont:ParkingSlot ;
+        rdfs:label "Allendelaan  Pres. 3" ;
+        fasont:info "op het parkeerterrein Sloterparkbad" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Allendelaan__Pres._3> .
+
+    fasdat:Allendelaan__Pres._401 a fasont:ParkingSlot ;
+        rdfs:label "Allendelaan  Pres. 401" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Allendelaan__Pres._401> .
+
+    fasdat:Allendelaan__Pres._571-733 a fasont:ParkingSlot ;
+        rdfs:label "Allendelaan  Pres. 571-733" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Allendelaan__Pres._571-733> .
+
+    fasdat:Amsteldijk a fasont:ParkingSlot ;
+        rdfs:label "Amsteldijk" ;
+        fasont:info "Bij in gang Zorgvliet" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Amsteldijk> .
+
+    fasdat:Amstelveenseweg_1_-_39 a fasont:ParkingSlot ;
+        rdfs:label "Amstelveenseweg 1 - 39" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Amstelveenseweg_1_-_39> .
+
+    fasdat:Amstelveenseweg_601 a fasont:ParkingSlot ;
+        rdfs:label "Amstelveenseweg 601" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Amstelveenseweg_601> .
+
+    fasdat:Anna_van_den_Vondelstraat_2_-_30 a fasont:ParkingSlot ;
+        rdfs:label "Anna van den Vondelstraat 2 - 30" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Anna_van_den_Vondelstraat_2_-_30> .
+
+    fasdat:Anton_Waldorpstraat_72 a fasont:ParkingSlot ;
+        rdfs:label "Anton Waldorpstraat 72" ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Anton_Waldorpstraat_72> .
+
+    fasdat:Assendelftstraat_48_-_74 a fasont:ParkingSlot ;
+        rdfs:label "Assendelftstraat 48 - 74" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Assendelftstraat_48_-_74> .
+
+    fasdat:Assumburg_2 a fasont:ParkingSlot ;
+        rdfs:label "Assumburg 2" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Assumburg_2> .
+
+    fasdat:Azartplein_zijweg_45-47 a fasont:ParkingSlot ;
+        rdfs:label "Azartplein zijweg 45-47" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Azartplein_zijweg_45-47> .
+
+    fasdat:B._Diazstraat_17-41 a fasont:ParkingSlot ;
+        rdfs:label "B. Diazstraat 17-41" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/B._Diazstraat_17-41> .
+
+    fasdat:BARON_DE_COUBERTINLAAN_4 a fasont:ParkingSlot ;
+        rdfs:label "BARON DE COUBERTINLAAN 4" ;
+        fasont:info "SPORTVELD" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BARON_DE_COUBERTINLAAN_4> .
+
+    fasdat:BEVERWIJKSTRAAT_40 a fasont:ParkingSlot ;
+        rdfs:label "BEVERWIJKSTRAAT 40" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BEVERWIJKSTRAAT_40> .
+
+    fasdat:BOTTERSTRAAT_185 a fasont:ParkingSlot ;
+        rdfs:label "BOTTERSTRAAT 185" ;
+        fasont:info "WIJKPOST" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BOTTERSTRAAT_185> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_112 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 112" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_112> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_123 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 123" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "12"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_123> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_161 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 161" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_161> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_187 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 187" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "7"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_187> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_2000 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 2000" ;
+        fasont:info "STADSDEELHUIS" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_2000> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_306 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 306" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_306> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_320 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 320" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "5"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_320> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_434 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 434" ;
+        fasont:info "WINKELCENTRUM ACHTER 434 " ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_434> .
+
+    fasdat:BUIKSLOTERMEERPLEIN_52 a fasont:ParkingSlot ;
+        rdfs:label "BUIKSLOTERMEERPLEIN 52" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/BUIKSLOTERMEERPLEIN_52> .
+
+    fasdat:Baarsjesweg_224_-_239 a fasont:ParkingSlot ;
+        rdfs:label "Baarsjesweg 224 - 239" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Baarsjesweg_224_-_239> .
+
+    fasdat:Baarsstraat_15 a fasont:ParkingSlot ;
+        rdfs:label "Baarsstraat 15" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Baarsstraat_15> .
+
+    fasdat:Barbara_Strozzilaan_201-229 a fasont:ParkingSlot ;
+        rdfs:label "Barbara Strozzilaan 201-229" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Barbara_Strozzilaan_201-229> .
+
+    fasdat:Barentszstraat_2_-_28 a fasont:ParkingSlot ;
+        rdfs:label "Barentszstraat 2 - 28" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Barentszstraat_2_-_28> .
+
+    fasdat:Bazelhof_de_17 a fasont:ParkingSlot ;
+        rdfs:label "Bazelhof de 17" ;
+        fasont:info "afgekruisd" ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bazelhof_de_17> .
+
+    fasdat:Bijlmerdreef a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerdreef" ;
+        fasont:info "Bijlmerdreef" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerdreef> .
+
+    fasdat:Bijlmerdreef_101 a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerdreef 101" ;
+        fasont:info "Bijlmerdreef 101" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerdreef_101> .
+
+    fasdat:Bijlmerdreef__1001_a-_c a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerdreef  1001 a- c" ;
+        fasont:info "Voor perceel Bijlmerdreef 1001 A-C" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerdreef__1001_a-_c> .
+
+    fasdat:Bijlmerdreef__1137-a a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerdreef  1137-a" ;
+        fasont:info "Ter hoogte van Bijlmerdreef 1137-A" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerdreef__1137-a> .
+
+    fasdat:Bijlmerdreef__657-659 a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerdreef  657-659" ;
+        fasont:info "Ter hoogte van Bijlmerdreef 659" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerdreef__657-659> .
+
+    fasdat:Bijlmerdreef__659 a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerdreef  659" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerdreef__659> .
+
+    fasdat:Bijlmerpark__76 a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerpark  76" ;
+        fasont:info "Voor ingang Bijlmersportcentrum" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerpark__76> .
+
+    fasdat:Bijlmerplein___76 a fasont:ParkingSlot ;
+        rdfs:label "Bijlmerplein   76" ;
+        fasont:info "Bijlmerplein 76" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bijlmerplein___76> .
+
+    fasdat:Bilderdijkkade_47 a fasont:ParkingSlot ;
+        rdfs:label "Bilderdijkkade 47" ;
+        fasont:info "t.o. 27 - 67" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bilderdijkkade_47> .
+
+    fasdat:Bilderdijkkade_69_-_103 a fasont:ParkingSlot ;
+        rdfs:label "Bilderdijkkade 69 - 103" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bilderdijkkade_69_-_103> .
+
+    fasdat:Bilderdijkstraat_108_-_166 a fasont:ParkingSlot ;
+        rdfs:label "Bilderdijkstraat 108 - 166" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bilderdijkstraat_108_-_166> .
+
+    fasdat:Boelelaan_1112 a fasont:ParkingSlot ;
+        rdfs:label "Boelelaan 1112" ;
+        fasont:info "Bij ingang poli" ;
+        fasont:quantity "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Boelelaan_1112> .
+
+    fasdat:Boelelaan_1117 a fasont:ParkingSlot ;
+        rdfs:label "Boelelaan 1117" ;
+        fasont:info "Bij ingang Ziekenhuis" ;
+        fasont:quantity "7"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Boelelaan_1117> .
+
+    fasdat:Boelelaan_1118 a fasont:ParkingSlot ;
+        rdfs:label "Boelelaan 1118" ;
+        fasont:info "Parkeergarage onder de poli " ;
+        fasont:quantity "25"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Boelelaan_1118> .
+
+    fasdat:Bolestein_45 a fasont:ParkingSlot ;
+        rdfs:label "Bolestein 45" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bolestein_45> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Bonpad,_Herman_4> a fasont:ParkingSlot ;
+        rdfs:label "Bonpad, Herman 4" ;
+        fasont:info "ter hoogte van DEVO '58" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bonpad,_Herman_4> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Bonpad,_Herman_7> a fasont:ParkingSlot ;
+        rdfs:label "Bonpad, Herman 7" ;
+        fasont:info "ter hoogte van rksv DCG" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bonpad,_Herman_7> .
+
+    fasdat:Borelstraat_H._8 a fasont:ParkingSlot ;
+        rdfs:label "Borelstraat H. 8" ;
+        fasont:info "afgekruisd" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Borelstraat_H._8> .
+
+    fasdat:Borgerstraat_45_-_65 a fasont:ParkingSlot ;
+        rdfs:label "Borgerstraat 45 - 65" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Borgerstraat_45_-_65> .
+
+    fasdat:Borgerstraat_86_-_102 a fasont:ParkingSlot ;
+        rdfs:label "Borgerstraat 86 - 102" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Borgerstraat_86_-_102> .
+
+    fasdat:Borneostraat_64 a fasont:ParkingSlot ;
+        rdfs:label "Borneostraat 64" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Borneostraat_64> .
+
+    fasdat:Borneostraat_66 a fasont:ParkingSlot ;
+        rdfs:label "Borneostraat 66" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Borneostraat_66> .
+
+    fasdat:Bos_en_Lommerweg_215_-_347 a fasont:ParkingSlot ;
+        rdfs:label "Bos en Lommerweg 215 - 347" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Bos_en_Lommerweg_215_-_347> .
+
+    fasdat:Brahmstraat_24 a fasont:ParkingSlot ;
+        rdfs:label "Brahmstraat 24" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Brahmstraat_24> .
+
+    fasdat:Brederodestraat_102_-_124 a fasont:ParkingSlot ;
+        rdfs:label "Brederodestraat 102 - 124" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Brederodestraat_102_-_124> .
+
+    fasdat:Buitenveldertselaan_40 a fasont:ParkingSlot ;
+        rdfs:label "Buitenveldertselaan 40" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Buitenveldertselaan_40> .
+
+    fasdat:Buitenveldertselaan_42 a fasont:ParkingSlot ;
+        rdfs:label "Buitenveldertselaan 42" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Buitenveldertselaan_42> .
+
+    fasdat:Buitenveldertselaan_82 a fasont:ParkingSlot ;
+        rdfs:label "Buitenveldertselaan 82" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Buitenveldertselaan_82> .
+
+    fasdat:Burgerweeshuispad_56 a fasont:ParkingSlot ;
+        rdfs:label "Burgerweeshuispad 56" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Burgerweeshuispad_56> .
+
+    fasdat:CHRISTOFFEL_PLANTIJNGR_1 a fasont:ParkingSlot ;
+        rdfs:label "CHRISTOFFEL PLANTIJNGR 1" ;
+        fasont:info "bij Watersportcentrum" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/CHRISTOFFEL_PLANTIJNGR_1> .
+
+    fasdat:COMENIUSSTRAAT_12 a fasont:ParkingSlot ;
+        rdfs:label "COMENIUSSTRAAT 12" ;
+        fasont:info "ter hoogte van Leger des Heils Middelveld" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/COMENIUSSTRAAT_12> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Calandlaan,_Pieter_7> a fasont:ParkingSlot ;
+        rdfs:label "Calandlaan, Pieter 7" ;
+        fasont:info "ter hoogte van loket zorg en samenleving" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Calandlaan,_Pieter_7> .
+
+    fasdat:Camperstraat_38 a fasont:ParkingSlot ;
+        rdfs:label "Camperstraat 38" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Camperstraat_38> .
+
+    fasdat:Carolina_MacGillavrylaan_1980 a fasont:ParkingSlot ;
+        rdfs:label "Carolina MacGillavrylaan 1980" ;
+        fasont:info "tov 1980" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Carolina_MacGillavrylaan_1980> .
+
+    fasdat:Carolina_MacGillavrylaan_904 a fasont:ParkingSlot ;
+        rdfs:label "Carolina MacGillavrylaan 904" ;
+        fasont:info "eigen terrein/wegsleepregeling" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Carolina_MacGillavrylaan_904> .
+
+    fasdat:Ceintuurbaan_83 a fasont:ParkingSlot ;
+        rdfs:label "Ceintuurbaan 83" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ceintuurbaan_83> .
+
+    fasdat:Churchilllaan_67 a fasont:ParkingSlot ;
+        rdfs:label "Churchilllaan 67" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Churchilllaan_67> .
+
+    fasdat:Cilliersstraat_5 a fasont:ParkingSlot ;
+        rdfs:label "Cilliersstraat 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Cilliersstraat_5> .
+
+    fasdat:Concertgebouwplein__2-10 a fasont:ParkingSlot ;
+        rdfs:label "Concertgebouwplein  2-10" ;
+        fasont:quantity "7"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Concertgebouwplein__2-10> .
+
+    fasdat:Copernicusstraat_10 a fasont:ParkingSlot ;
+        rdfs:label "Copernicusstraat 10" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Copernicusstraat_10> .
+
+    fasdat:Couperusstraat_L._133 a fasont:ParkingSlot ;
+        rdfs:label "Couperusstraat L. 133" ;
+        fasont:info "ter hoogte van 'De Ontmoeting'" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Couperusstraat_L._133> .
+
+    fasdat:Cruquiusweg_9 a fasont:ParkingSlot ;
+        rdfs:label "Cruquiusweg 9" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Cruquiusweg_9> .
+
+    fasdat:DELFLANDLAAN_1 a fasont:ParkingSlot ;
+        rdfs:label "DELFLANDLAAN 1" ;
+        fasont:info "ter hoogte van het UWV-kantoor" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/DELFLANDLAAN_1> .
+
+    fasdat:DERKINDERENSTRAAT_56 a fasont:ParkingSlot ;
+        rdfs:label "DERKINDERENSTRAAT 56" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/DERKINDERENSTRAAT_56> .
+
+    fasdat:DERKINDERENSTRAAT_86 a fasont:ParkingSlot ;
+        rdfs:label "DERKINDERENSTRAAT 86" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/DERKINDERENSTRAAT_86> .
+
+    fasdat:DISTELPLEIN_16 a fasont:ParkingSlot ;
+        rdfs:label "DISTELPLEIN 16" ;
+        fasont:info "TANDHEELKUNDIGCENTRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/DISTELPLEIN_16> .
+
+    fasdat:Daalwijk a fasont:ParkingSlot ;
+        rdfs:label "Daalwijk" ;
+        fasont:info "Parkeerplatform Daalwijkdreef" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Daalwijk> .
+
+    fasdat:Daguerrestraat_2-26 a fasont:ParkingSlot ;
+        rdfs:label "Daguerrestraat 2-26" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Daguerrestraat_2-26> .
+
+    fasdat:Daniël_Goedkoopstraat_7 a fasont:ParkingSlot ;
+        rdfs:label "Daniël Goedkoopstraat 7" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Daniël_Goedkoopstraat_7> .
+
+    fasdat:Daniël_Goedkoopstraat_9 a fasont:ParkingSlot ;
+        rdfs:label "Daniël Goedkoopstraat 9" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Daniël_Goedkoopstraat_9> .
+
+    fasdat:De_Boelelaan a fasont:ParkingSlot ;
+        rdfs:label "De Boelelaan" ;
+        fasont:info "Bij ingang AFC" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/De_Boelelaan> .
+
+    fasdat:De_Klencke_111 a fasont:ParkingSlot ;
+        rdfs:label "De Klencke 111" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/De_Klencke_111> .
+
+    fasdat:De_Mirandalaan_13 a fasont:ParkingSlot ;
+        rdfs:label "De Mirandalaan 13" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/De_Mirandalaan_13> .
+
+    fasdat:De_Mirandalaan_6 a fasont:ParkingSlot ;
+        rdfs:label "De Mirandalaan 6" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/De_Mirandalaan_6> .
+
+    fasdat:Dennenrode a fasont:ParkingSlot ;
+        rdfs:label "Dennenrode" ;
+        fasont:info "Parkeerplatform Dennenrode" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Dennenrode> .
+
+    fasdat:Derde_Helmersstraat_32_-_66 a fasont:ParkingSlot ;
+        rdfs:label "Derde Helmersstraat 32 - 66" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Derde_Helmersstraat_32_-_66> .
+
+    fasdat:Develstein_129 a fasont:ParkingSlot ;
+        rdfs:label "Develstein 129" ;
+        fasont:info "Develstein, huisarts op 129 en fysiotherapie op 6." ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Develstein_129> .
+
+    fasdat:Develstein_6 a fasont:ParkingSlot ;
+        rdfs:label "Develstein 6" ;
+        fasont:info "Develstein, huisarts op 129 en fysiotherapie op 6." ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Develstein_6> .
+
+    fasdat:Deysselstraat_L._van_16 a fasont:ParkingSlot ;
+        rdfs:label "Deysselstraat L. van 16" ;
+        fasont:info "ter hoogte van Politiebureau" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Deysselstraat_L._van_16> .
+
+    fasdat:Deysselstraat_L._van_5 a fasont:ParkingSlot ;
+        rdfs:label "Deysselstraat L. van 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Deysselstraat_L._van_5> .
+
+    fasdat:Diepenbrockstraat_46 a fasont:ParkingSlot ;
+        rdfs:label "Diepenbrockstraat 46" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Diepenbrockstraat_46> .
+
+    fasdat:Dijkgraafplein_195 a fasont:ParkingSlot ;
+        rdfs:label "Dijkgraafplein 195" ;
+        fasont:info "ter hoogte van Supercoop" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Dijkgraafplein_195> .
+
+    fasdat:Dijkgraafplein_30 a fasont:ParkingSlot ;
+        rdfs:label "Dijkgraafplein 30" ;
+        fasont:info "ter hoogte van winkels" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Dijkgraafplein_30> .
+
+    fasdat:Dijkzicht a fasont:ParkingSlot ;
+        rdfs:label "Dijkzicht" ;
+        fasont:info "Volkstuinenpark Dijkzicht." ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Dijkzicht> .
+
+    fasdat:Dr._Jan_van_Breemenstraat_323_-_329 a fasont:ParkingSlot ;
+        rdfs:label "Dr. Jan van Breemenstraat 323 - 329" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Dr._Jan_van_Breemenstraat_323_-_329> .
+
+    fasdat:Driemondweg a fasont:ParkingSlot ;
+        rdfs:label "Driemondweg" ;
+        fasont:info "Parkeerterrein aan de surfoever" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Driemondweg> .
+
+    fasdat:Duivenvoordestraat_van_11 a fasont:ParkingSlot ;
+        rdfs:label "Duivenvoordestraat van 11" ;
+        fasont:info "ter hoogte van Bibliotheek" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Duivenvoordestraat_van_11> .
+
+    fasdat:Echtenstein a fasont:ParkingSlot ;
+        rdfs:label "Echtenstein" ;
+        fasont:info "Echtenstein" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Echtenstein> .
+
+    fasdat:Ecuplein a fasont:ParkingSlot ;
+        rdfs:label "Ecuplein" ;
+        fasont:info "ter hoogte van blokker" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ecuplein> .
+
+    fasdat:Eeftink a fasont:ParkingSlot ;
+        rdfs:label "Eeftink" ;
+        fasont:info "Parkeerplatform Eeftink, 1x, t/o perceel Gooioord" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eeftink> .
+
+    fasdat:Eerste_Helmersstraat_5_-_27 a fasont:ParkingSlot ;
+        rdfs:label "Eerste Helmersstraat 5 - 27" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eerste_Helmersstraat_5_-_27> .
+
+    fasdat:Eerste_Oosterparkstraat a fasont:ParkingSlot ;
+        rdfs:label "Eerste Oosterparkstraat" ;
+        fasont:info "tpv openbare bibliotheek" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eerste_Oosterparkstraat> .
+
+    fasdat:Eerste_Oosterparkstraat_82 a fasont:ParkingSlot ;
+        rdfs:label "Eerste Oosterparkstraat 82" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eerste_Oosterparkstraat_82> .
+
+    fasdat:Eerste_Van_Swindenstraat_373 a fasont:ParkingSlot ;
+        rdfs:label "Eerste Van Swindenstraat 373" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eerste_Van_Swindenstraat_373> .
+
+    fasdat:Eerste_Van_Swindenstraat_60 a fasont:ParkingSlot ;
+        rdfs:label "Eerste Van Swindenstraat 60" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eerste_Van_Swindenstraat_60> .
+
+    fasdat:Egeldonk a fasont:ParkingSlot ;
+        rdfs:label "Egeldonk" ;
+        fasont:info "Egeldonk" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Egeldonk> .
+
+    fasdat:Egelenburg_75 a fasont:ParkingSlot ;
+        rdfs:label "Egelenburg 75" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Egelenburg_75> .
+
+    fasdat:Egidiusstraat_33 a fasont:ParkingSlot ;
+        rdfs:label "Egidiusstraat 33" ;
+        fasont:info "t.o. 11-53" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Egidiusstraat_33> .
+
+    fasdat:Ekingenstraat_15 a fasont:ParkingSlot ;
+        rdfs:label "Ekingenstraat 15" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ekingenstraat_15> .
+
+    fasdat:Ekingenstraat_21 a fasont:ParkingSlot ;
+        rdfs:label "Ekingenstraat 21" ;
+        fasont:info "ter hoogte van apotheek" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ekingenstraat_21> .
+
+    fasdat:Ekingenstraat_45 a fasont:ParkingSlot ;
+        rdfs:label "Ekingenstraat 45" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ekingenstraat_45> .
+
+    fasdat:Elektronstraat_12 a fasont:ParkingSlot ;
+        rdfs:label "Elektronstraat 12" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Elektronstraat_12> .
+
+    fasdat:Emmaplein_5 a fasont:ParkingSlot ;
+        rdfs:label "Emmaplein 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Emmaplein_5> .
+
+    fasdat:Emmastraat_5 a fasont:ParkingSlot ;
+        rdfs:label "Emmastraat 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Emmastraat_5> .
+
+    fasdat:Europaboulevard a fasont:ParkingSlot ;
+        rdfs:label "Europaboulevard" ;
+        fasont:info "ter hoogte van hoofd ingang Amstelpark" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Europaboulevard> .
+
+    fasdat:Eva_Besnyöstraat_31 a fasont:ParkingSlot ;
+        rdfs:label "Eva Besnyöstraat 31" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Eva_Besnyöstraat_31> .
+
+    fasdat:FOKKEZEIL_141 a fasont:ParkingSlot ;
+        rdfs:label "FOKKEZEIL 141" ;
+        fasont:info "GEZONDHEIDSCENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/FOKKEZEIL_141> .
+
+    fasdat:Ferdinand_Bolstraat_321 a fasont:ParkingSlot ;
+        rdfs:label "Ferdinand Bolstraat 321" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ferdinand_Bolstraat_321> .
+
+    fasdat:Ferrarisstraat_1 a fasont:ParkingSlot ;
+        rdfs:label "Ferrarisstraat 1" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ferrarisstraat_1> .
+
+    fasdat:Flierbosdreef_101 a fasont:ParkingSlot ;
+        rdfs:label "Flierbosdreef 101" ;
+        fasont:info "Bijlmerdreef 101, 10x" ;
+        fasont:quantity "10"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Flierbosdreef_101> .
+
+    fasdat:Florijn a fasont:ParkingSlot ;
+        rdfs:label "Florijn" ;
+        fasont:info "Tafelbergweg/Meibergdreef op de Foodstrip" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Florijn> .
+
+    fasdat:Fred._Roeskestraat_103 a fasont:ParkingSlot ;
+        rdfs:label "Fred. Roeskestraat 103" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Fred._Roeskestraat_103> .
+
+    fasdat:Frederik_Hendrikstraat_59_-_107 a fasont:ParkingSlot ;
+        rdfs:label "Frederik Hendrikstraat 59 - 107" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Frederik_Hendrikstraat_59_-_107> .
+
+    fasdat:Frederiksstraat_2_-_142 a fasont:ParkingSlot ;
+        rdfs:label "Frederiksstraat 2 - 142" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Frederiksstraat_2_-_142> .
+
+    fasdat:Gaasperpark a fasont:ParkingSlot ;
+        rdfs:label "Gaasperpark" ;
+        fasont:info "Parkeerterrein Gaasperpark t.h.v. de Valburgdreef" ;
+        fasont:quantity "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gaasperpark> .
+
+    fasdat:Gaaspstraat_43 a fasont:ParkingSlot ;
+        rdfs:label "Gaaspstraat 43" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gaaspstraat_43> .
+
+    fasdat:Ganzenhoefpad a fasont:ParkingSlot ;
+        rdfs:label "Ganzenhoefpad" ;
+        fasont:info "Ganzenhoefpad" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ganzenhoefpad> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Geffenstraat,_Martini._V._39> a fasont:ParkingSlot ;
+        rdfs:label "Geffenstraat, Martini. V. 39" ;
+        fasont:info "ter hoogte van Dirk van den Broek" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Geffenstraat,_Martini._V._39> .
+
+    fasdat:Geldershoofd a fasont:ParkingSlot ;
+        rdfs:label "Geldershoofd" ;
+        fasont:info "Kraaiennest" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Geldershoofd> .
+
+    fasdat:Geleenstraat_61 a fasont:ParkingSlot ;
+        rdfs:label "Geleenstraat 61" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Geleenstraat_61> .
+
+    fasdat:Gerard_Schaepstraat_2_-_14 a fasont:ParkingSlot ;
+        rdfs:label "Gerard Schaepstraat 2 - 14" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gerard_Schaepstraat_2_-_14> .
+
+    fasdat:Gijsbrecht_van_Aemstelstraat_28 a fasont:ParkingSlot ;
+        rdfs:label "Gijsbrecht van Aemstelstraat 28" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gijsbrecht_van_Aemstelstraat_28> .
+
+    fasdat:Gustav_Mahlerlaan a fasont:ParkingSlot ;
+        rdfs:label "Gustav Mahlerlaan" ;
+        fasont:info "bij ingang sportpark Buitenveldert" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gustav_Mahlerlaan> .
+
+    fasdat:Gustav_Mahlerlaan_30 a fasont:ParkingSlot ;
+        rdfs:label "Gustav Mahlerlaan 30" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gustav_Mahlerlaan_30> .
+
+    fasdat:Gustav_Mahlerlaan_3000 a fasont:ParkingSlot ;
+        rdfs:label "Gustav Mahlerlaan 3000" ;
+        fasont:info "Parkeergarage onder de ACTA" ;
+        fasont:quantity "10"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gustav_Mahlerlaan_3000> .
+
+    fasdat:Gustav_Mahlerlaan_3004 a fasont:ParkingSlot ;
+        rdfs:label "Gustav Mahlerlaan 3004" ;
+        fasont:info "voor ACTA" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Gustav_Mahlerlaan_3004> .
+
+    fasdat:HAGELAND_101 a fasont:ParkingSlot ;
+        rdfs:label "HAGELAND 101" ;
+        fasont:info "ter hoogte van bloemenzaak" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/HAGELAND_101> .
+
+    fasdat:HAGELAND_77 a fasont:ParkingSlot ;
+        rdfs:label "HAGELAND 77" ;
+        fasont:info "ter hoogte van Blokker" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/HAGELAND_77> .
+
+    fasdat:HECHTELSTRAAT_35 a fasont:ParkingSlot ;
+        rdfs:label "HECHTELSTRAAT 35" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/HECHTELSTRAAT_35> .
+
+    fasdat:HEMSTERHUISSTRAAT_72 a fasont:ParkingSlot ;
+        rdfs:label "HEMSTERHUISSTRAAT 72" ;
+        fasont:info "ter hoogte van Oecumenische scholengroep" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/HEMSTERHUISSTRAAT_72> .
+
+    fasdat:HEVERLEESTRAAT a fasont:ParkingSlot ;
+        rdfs:label "HEVERLEESTRAAT" ;
+        fasont:info "ter hoogte van de Mijlpaal" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/HEVERLEESTRAAT> .
+
+    fasdat:Haardstee_15 a fasont:ParkingSlot ;
+        rdfs:label "Haardstee 15" ;
+        fasont:info "Haardstee, links van de entree vd parkeergarage " ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Haardstee_15> .
+
+    fasdat:Haardstee__186 a fasont:ParkingSlot ;
+        rdfs:label "Haardstee  186" ;
+        fasont:info "Haardstee" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Haardstee__186> .
+
+    fasdat:Haarlemmerweg_592 a fasont:ParkingSlot ;
+        rdfs:label "Haarlemmerweg 592" ;
+        fasont:info "t.o. 575 - 609" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Haarlemmerweg_592> .
+
+    fasdat:Halmaheirastraat_5 a fasont:ParkingSlot ;
+        rdfs:label "Halmaheirastraat 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Halmaheirastraat_5> .
+
+    fasdat:Haparandadam_45 a fasont:ParkingSlot ;
+        rdfs:label "Haparandadam 45" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Haparandadam_45> .
+
+    fasdat:Heathrowstraat_5 a fasont:ParkingSlot ;
+        rdfs:label "Heathrowstraat 5" ;
+        fasont:info "op eigen terrein" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Heathrowstraat_5> .
+
+    fasdat:Heesterveld_274-279 a fasont:ParkingSlot ;
+        rdfs:label "Heesterveld 274-279" ;
+        fasont:info "Heesterveld " ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Heesterveld_274-279> .
+
+    fasdat:Helmholtzstraat a fasont:ParkingSlot ;
+        rdfs:label "Helmholtzstraat" ;
+        fasont:info "tpv etos" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Helmholtzstraat> .
+
+    fasdat:Hemonylaan_1 a fasont:ParkingSlot ;
+        rdfs:label "Hemonylaan 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hemonylaan_1> .
+
+    fasdat:Herman_Gorterstraat_35 a fasont:ParkingSlot ;
+        rdfs:label "Herman Gorterstraat 35" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Herman_Gorterstraat_35> .
+
+    fasdat:Hoekenes_17 a fasont:ParkingSlot ;
+        rdfs:label "Hoekenes 17" ;
+        fasont:info "ter hoogte van de kapper" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hoekenes_17> .
+
+    fasdat:Hoekenes_49 a fasont:ParkingSlot ;
+        rdfs:label "Hoekenes 49" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hoekenes_49> .
+
+    fasdat:Hoekenes_7 a fasont:ParkingSlot ;
+        rdfs:label "Hoekenes 7" ;
+        fasont:info "ter hoogte van de groentezaak" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hoekenes_7> .
+
+    fasdat:Hoge_Dijk a fasont:ParkingSlot ;
+        rdfs:label "Hoge Dijk" ;
+        fasont:info "Parkeerterrein Hoge Dijk t.h.v. de abcouderstr.weg" ;
+        fasont:quantity "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hoge_Dijk> .
+
+    fasdat:Hogguerstraat_Burg_441 a fasont:ParkingSlot ;
+        rdfs:label "Hogguerstraat Burg 441" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hogguerstraat_Burg_441> .
+
+    fasdat:Hogguerstraat_Burg_49 a fasont:ParkingSlot ;
+        rdfs:label "Hogguerstraat Burg 49" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hogguerstraat_Burg_49> .
+
+    fasdat:Hogguerstraat_Burg_837 a fasont:ParkingSlot ;
+        rdfs:label "Hogguerstraat Burg 837" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hogguerstraat_Burg_837> .
+
+    fasdat:Holendrechtplein a fasont:ParkingSlot ;
+        rdfs:label "Holendrechtplein" ;
+        fasont:info "Holendrecht, 1 parkeerplaats voor AH" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Holendrechtplein> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Hollanderlaan,_Han_4> a fasont:ParkingSlot ;
+        rdfs:label "Hollanderlaan, Han 4" ;
+        fasont:info "ter hoogte van Paardensportvereniging Vredeshoeve" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hollanderlaan,_Han_4> .
+
+    fasdat:Hoofdweg_495_-_959 a fasont:ParkingSlot ;
+        rdfs:label "Hoofdweg 495 - 959" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Hoofdweg_495_-_959> .
+
+    fasdat:Houtmankade_34 a fasont:ParkingSlot ;
+        rdfs:label "Houtmankade 34" ;
+        fasont:info "t.o. 34" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Houtmankade_34> .
+
+    fasdat:IJburglaan_1483 a fasont:ParkingSlot ;
+        rdfs:label "IJburglaan 1483" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/IJburglaan_1483> .
+
+    fasdat:IJburglaan_263 a fasont:ParkingSlot ;
+        rdfs:label "IJburglaan 263" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/IJburglaan_263> .
+
+    fasdat:Ijsbaanpad_10b a fasont:ParkingSlot ;
+        rdfs:label "Ijsbaanpad 10b" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ijsbaanpad_10b> .
+
+    fasdat:Ijselstraat_60 a fasont:ParkingSlot ;
+        rdfs:label "Ijselstraat 60" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ijselstraat_60> .
+
+    fasdat:Ingenhouszhof_47 a fasont:ParkingSlot ;
+        rdfs:label "Ingenhouszhof 47" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ingenhouszhof_47> .
+
+    fasdat:J.M.Coenenstraat_4 a fasont:ParkingSlot ;
+        rdfs:label "J.M.Coenenstraat 4" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/J.M.Coenenstraat_4> .
+
+    fasdat:JACQUES_VELTMANSTRAAT_1 a fasont:ParkingSlot ;
+        rdfs:label "JACQUES VELTMANSTRAAT 1" ;
+        fasont:info "ter hoogte van stadsdeelkantoor Pieter Calandlaan" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JACQUES_VELTMANSTRAAT_1> .
+
+    fasdat:JACQUES_VELTMANSTRAAT_427 a fasont:ParkingSlot ;
+        rdfs:label "JACQUES VELTMANSTRAAT 427" ;
+        fasont:info "ter hoogte van activiteitencentrum Het Anker" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JACQUES_VELTMANSTRAAT_427> .
+
+    fasdat:JAN_EVERTSENSTRAAT_777 a fasont:ParkingSlot ;
+        rdfs:label "JAN EVERTSENSTRAAT 777" ;
+        fasont:info "ter hoogte van Vliegbasis de Huyghens" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JAN_EVERTSENSTRAAT_777> .
+
+    fasdat:JAN_TOOROPSTRAAT_140 a fasont:ParkingSlot ;
+        rdfs:label "JAN TOOROPSTRAAT 140" ;
+        fasont:info "ter hoogte van ATAL Medisch Diagnostisch Centrum" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JAN_TOOROPSTRAAT_140> .
+
+    fasdat:JAN_TOOROPSTRAAT_39 a fasont:ParkingSlot ;
+        rdfs:label "JAN TOOROPSTRAAT 39" ;
+        fasont:info "ter hoogte van August Allebeplein" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JAN_TOOROPSTRAAT_39> .
+
+    fasdat:JAN_TOOROPSTRAAT_6 a fasont:ParkingSlot ;
+        rdfs:label "JAN TOOROPSTRAAT 6" ;
+        fasont:info "ter hoogte van de Eesterenzaal" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JAN_TOOROPSTRAAT_6> .
+
+    fasdat:JOHANNA_REYNVAANSTRAAT_25 a fasont:ParkingSlot ;
+        rdfs:label "JOHANNA REYNVAANSTRAAT 25" ;
+        fasont:info "ter hoogte van Theeuwes orthopedische schoentechniek" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JOHANNA_REYNVAANSTRAAT_25> .
+
+    fasdat:JOHANNA_REYNVAANSTRAAT_29 a fasont:ParkingSlot ;
+        rdfs:label "JOHANNA REYNVAANSTRAAT 29" ;
+        fasont:info "ter hoogte van fysiotherapie" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JOHANNA_REYNVAANSTRAAT_29> .
+
+    fasdat:JOHAN_HUIZINGALAAN_189 a fasont:ParkingSlot ;
+        rdfs:label "JOHAN HUIZINGALAAN 189" ;
+        fasont:info "ter hoogte van Bart Smit" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JOHAN_HUIZINGALAAN_189> .
+
+    fasdat:JOHAN_HUIZINGALAAN_757 a fasont:ParkingSlot ;
+        rdfs:label "JOHAN HUIZINGALAAN 757" ;
+        fasont:info "ter hoogte van politiebureau" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/JOHAN_HUIZINGALAAN_757> .
+
+    fasdat:Jacob_van_Lennepkade_548_-_550 a fasont:ParkingSlot ;
+        rdfs:label "Jacob van Lennepkade 548 - 550" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jacob_van_Lennepkade_548_-_550> .
+
+    fasdat:Jacob_van_Lennepstraat_2_-_22 a fasont:ParkingSlot ;
+        rdfs:label "Jacob van Lennepstraat 2 - 22" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jacob_van_Lennepstraat_2_-_22> .
+
+    fasdat:James_Wattstraat_100 a fasont:ParkingSlot ;
+        rdfs:label "James Wattstraat 100" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/James_Wattstraat_100> .
+
+    fasdat:James_Wattstraat_57 a fasont:ParkingSlot ;
+        rdfs:label "James Wattstraat 57" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/James_Wattstraat_57> .
+
+    fasdat:James_Wattstraat_84 a fasont:ParkingSlot ;
+        rdfs:label "James Wattstraat 84" ;
+        fasont:info "Bij de Eenhoorn (nr 84)" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/James_Wattstraat_84> .
+
+    fasdat:Jan_Evertsenstraat_89-121 a fasont:ParkingSlot ;
+        rdfs:label "Jan Evertsenstraat 89-121" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_Evertsenstraat_89-121> .
+
+    fasdat:Jan_Luijkenstraat_2 a fasont:ParkingSlot ;
+        rdfs:label "Jan Luijkenstraat 2" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_Luijkenstraat_2> .
+
+    fasdat:Jan_Pieter_Heijestraat_62_-_74 a fasont:ParkingSlot ;
+        rdfs:label "Jan Pieter Heijestraat 62 - 74" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_Pieter_Heijestraat_62_-_74> .
+
+    fasdat:Jan_van_Galenstraat_56-106 a fasont:ParkingSlot ;
+        rdfs:label "Jan van Galenstraat 56-106" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_van_Galenstraat_56-106> .
+
+    fasdat:Jan_van_Galenstraat_74-110 a fasont:ParkingSlot ;
+        rdfs:label "Jan van Galenstraat 74-110" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_van_Galenstraat_74-110> .
+
+    fasdat:Jan_van_Galenstraat_87-103 a fasont:ParkingSlot ;
+        rdfs:label "Jan van Galenstraat 87-103" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_van_Galenstraat_87-103> .
+
+    fasdat:Jan_van_Goyenkade_1 a fasont:ParkingSlot ;
+        rdfs:label "Jan van Goyenkade 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jan_van_Goyenkade_1> .
+
+    fasdat:Javaplantsoen_22 a fasont:ParkingSlot ;
+        rdfs:label "Javaplantsoen 22" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Javaplantsoen_22> .
+
+    fasdat:Jephtastraat_40 a fasont:ParkingSlot ;
+        rdfs:label "Jephtastraat 40" ;
+        fasont:info "t.o. 28-50" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Jephtastraat_40> .
+
+    fasdat:Joan_Muyskenweg a fasont:ParkingSlot ;
+        rdfs:label "Joan Muyskenweg" ;
+        fasont:info "bij hotel" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Joan_Muyskenweg> .
+
+    fasdat:Johannes_Vermeerstraat_31 a fasont:ParkingSlot ;
+        rdfs:label "Johannes Vermeerstraat 31" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Johannes_Vermeerstraat_31> .
+
+    fasdat:Joris_van_Andringastraat_1-33 a fasont:ParkingSlot ;
+        rdfs:label "Joris van Andringastraat 1-33" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Joris_van_Andringastraat_1-33> .
+
+    fasdat:Juliana_van_Stolbergstraat_12-30 a fasont:ParkingSlot ;
+        rdfs:label "Juliana van Stolbergstraat 12-30" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Juliana_van_Stolbergstraat_12-30> .
+
+    fasdat:KADOELENPAD_21 a fasont:ParkingSlot ;
+        rdfs:label "KADOELENPAD 21" ;
+        fasont:info "VOLKSTUIN, SPORTVELD" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KADOELENPAD_21> .
+
+    fasdat:KATRIJPSTRAAT_305 a fasont:ParkingSlot ;
+        rdfs:label "KATRIJPSTRAAT 305" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KATRIJPSTRAAT_305> .
+
+    fasdat:KATRIJPSTRAAT_87_B a fasont:ParkingSlot ;
+        rdfs:label "KATRIJPSTRAAT 87 B" ;
+        fasont:info "WIJKPOST" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KATRIJPSTRAAT_87_B> .
+
+    fasdat:KEMPENLAAN_105 a fasont:ParkingSlot ;
+        rdfs:label "KEMPENLAAN 105" ;
+        fasont:info "ter hoogte van Apotheek" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KEMPENLAAN_105> .
+
+    fasdat:KEMPENLAAN_113 a fasont:ParkingSlot ;
+        rdfs:label "KEMPENLAAN 113" ;
+        fasont:info "ter hoogte van dierenspeciaalzaak de Kroontjes" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KEMPENLAAN_113> .
+
+    fasdat:KNSM-laan_25 a fasont:ParkingSlot ;
+        rdfs:label "KNSM-laan 25" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KNSM-laan_25> .
+
+    fasdat:KONINGIN_WILHELMINAPLEIN_29 a fasont:ParkingSlot ;
+        rdfs:label "KONINGIN WILHELMINAPLEIN 29" ;
+        fasont:info "ter hoogte van World Fashion Centre" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/KONINGIN_WILHELMINAPLEIN_29> .
+
+    fasdat:Kabelweg_40 a fasont:ParkingSlot ;
+        rdfs:label "Kabelweg 40" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kabelweg_40> .
+
+    fasdat:Kamerlingh_Onneslaan_34 a fasont:ParkingSlot ;
+        rdfs:label "Kamerlingh Onneslaan 34" ;
+        fasont:info "Tov 34" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kamerlingh_Onneslaan_34> .
+
+    fasdat:Kastelenstraat_106 a fasont:ParkingSlot ;
+        rdfs:label "Kastelenstraat 106" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kastelenstraat_106> .
+
+    fasdat:Kempering a fasont:ParkingSlot ;
+        rdfs:label "Kempering" ;
+        fasont:info "Kempering" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kempering> .
+
+    fasdat:Kempisstraat_T.A._85 a fasont:ParkingSlot ;
+        rdfs:label "Kempisstraat T.A. 85" ;
+        fasont:info "ter hoogte van Orthopedie " ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kempisstraat_T.A._85> .
+
+    fasdat:Kingsfordweg_1 a fasont:ParkingSlot ;
+        rdfs:label "Kingsfordweg 1" ;
+        fasont:info "belastingkantoor" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kingsfordweg_1> .
+
+    fasdat:Kinkerstraat_109_-_161 a fasont:ParkingSlot ;
+        rdfs:label "Kinkerstraat 109 - 161" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kinkerstraat_109_-_161> .
+
+    fasdat:Kinkerstraat_1_-_29 a fasont:ParkingSlot ;
+        rdfs:label "Kinkerstraat 1 - 29" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kinkerstraat_1_-_29> .
+
+    fasdat:Kinkerstraat_32_-_42 a fasont:ParkingSlot ;
+        rdfs:label "Kinkerstraat 32 - 42" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kinkerstraat_32_-_42> .
+
+    fasdat:Kleiburg_Parkeergarage a fasont:ParkingSlot ;
+        rdfs:label "Kleiburg Parkeergarage" ;
+        fasont:info "Kleiburg Parkeergarage" ;
+        fasont:quantity "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kleiburg_Parkeergarage> .
+
+    fasdat:Kneppelhoutstraat_114_-_116 a fasont:ParkingSlot ;
+        rdfs:label "Kneppelhoutstraat 114 - 116" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kneppelhoutstraat_114_-_116> .
+
+    fasdat:Kokplantsoen_A.E._1 a fasont:ParkingSlot ;
+        rdfs:label "Kokplantsoen A.E. 1" ;
+        fasont:info "ter hoogte van ingang" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kokplantsoen_A.E._1> .
+
+    fasdat:Koornhorst a fasont:ParkingSlot ;
+        rdfs:label "Koornhorst" ;
+        fasont:info "Koornhorst, links, 1e plaats parkeerhaven." ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Koornhorst> .
+
+    fasdat:Korverweg_B._de_18 a fasont:ParkingSlot ;
+        rdfs:label "Korverweg B. de 18" ;
+        fasont:info "ter hoogte van Amsterdamse Atlethiek Rugby Ckub" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Korverweg_B._de_18> .
+
+    fasdat:Korverweg_B._de_20 a fasont:ParkingSlot ;
+        rdfs:label "Korverweg B. de 20" ;
+        fasont:info "ter hoogte van Amsterdamse Sevens Rugby Tornament" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Korverweg_B._de_20> .
+
+    fasdat:Korverweg_B._de_4 a fasont:ParkingSlot ;
+        rdfs:label "Korverweg B. de 4" ;
+        fasont:quantity "5"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Korverweg_B._de_4> .
+
+    fasdat:Kraaiennest a fasont:ParkingSlot ;
+        rdfs:label "Kraaiennest" ;
+        fasont:info "Kraaiennest" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kraaiennest> .
+
+    fasdat:Kraanstraat_W._2 a fasont:ParkingSlot ;
+        rdfs:label "Kraanstraat W. 2" ;
+        fasont:info "ter hoogte van winkelcentrum" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kraanstraat_W._2> .
+
+    fasdat:Kraanstraat_W._30 a fasont:ParkingSlot ;
+        rdfs:label "Kraanstraat W. 30" ;
+        fasont:info "ter hoogte van winkelcentrum" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kraanstraat_W._30> .
+
+    fasdat:Kramatweg_28 a fasont:ParkingSlot ;
+        rdfs:label "Kramatweg 28" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kramatweg_28> .
+
+    fasdat:Kramatweg_29 a fasont:ParkingSlot ;
+        rdfs:label "Kramatweg 29" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kramatweg_29> .
+
+    fasdat:Krugerplein_5 a fasont:ParkingSlot ;
+        rdfs:label "Krugerplein 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Krugerplein_5> .
+
+    fasdat:Kruitberg a fasont:ParkingSlot ;
+        rdfs:label "Kruitberg" ;
+        fasont:info "Parkeerplatform, in de hoeken." ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kruitberg> .
+
+    fasdat:Kuinderstraat_1 a fasont:ParkingSlot ;
+        rdfs:label "Kuinderstraat 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kuinderstraat_1> .
+
+    fasdat:Kwakersstraat_14 a fasont:ParkingSlot ;
+        rdfs:label "Kwakersstraat 14" ;
+        fasont:info "t.o. 2 - 24" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Kwakersstraat_14> .
+
+    fasdat:LEEUWARDERWEG_24 a fasont:ParkingSlot ;
+        rdfs:label "LEEUWARDERWEG 24" ;
+        fasont:info "APOTHEEK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/LEEUWARDERWEG_24> .
+
+    fasdat:LOENERMARK_160 a fasont:ParkingSlot ;
+        rdfs:label "LOENERMARK 160" ;
+        fasont:info "GEZONDHEIDSCENTRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/LOENERMARK_160> .
+
+    fasdat:Lairessestraat_143 a fasont:ParkingSlot ;
+        rdfs:label "Lairessestraat 143" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lairessestraat_143> .
+
+    fasdat:Landbouwstraat_36 a fasont:ParkingSlot ;
+        rdfs:label "Landbouwstraat 36" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Landbouwstraat_36> .
+
+    fasdat:Landbouwstraat_57 a fasont:ParkingSlot ;
+        rdfs:label "Landbouwstraat 57" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Landbouwstraat_57> .
+
+    fasdat:Lekstraat_13-15 a fasont:ParkingSlot ;
+        rdfs:label "Lekstraat 13-15" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lekstraat_13-15> .
+
+    fasdat:Lekstraat_61 a fasont:ParkingSlot ;
+        rdfs:label "Lekstraat 61" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lekstraat_61> .
+
+    fasdat:Liendenhof__100 a fasont:ParkingSlot ;
+        rdfs:label "Liendenhof  100" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Liendenhof__100> .
+
+    fasdat:Lies_Bakhuyzenlaan_17 a fasont:ParkingSlot ;
+        rdfs:label "Lies Bakhuyzenlaan 17" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lies_Bakhuyzenlaan_17> .
+
+    fasdat:Linnaeusparkweg a fasont:ParkingSlot ;
+        rdfs:label "Linnaeusparkweg" ;
+        fasont:info "tpv ah" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Linnaeusparkweg> .
+
+    fasdat:Lizzy_Ansinghstraat_80 a fasont:ParkingSlot ;
+        rdfs:label "Lizzy Ansinghstraat 80" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lizzy_Ansinghstraat_80> .
+
+    fasdat:Loderstraat_B._25 a fasont:ParkingSlot ;
+        rdfs:label "Loderstraat B. 25" ;
+        fasont:info "ter hoogte van MKD administraties" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Loderstraat_B._25> .
+
+    fasdat:Loderstraat_B._41 a fasont:ParkingSlot ;
+        rdfs:label "Loderstraat B. 41" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Loderstraat_B._41> .
+
+    fasdat:Lombokstraat_35 a fasont:ParkingSlot ;
+        rdfs:label "Lombokstraat 35" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lombokstraat_35> .
+
+    fasdat:Loowaard_24 a fasont:ParkingSlot ;
+        rdfs:label "Loowaard 24" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Loowaard_24> .
+
+    fasdat:Louterstraat__J._de_- a fasont:ParkingSlot ;
+        rdfs:label "Louterstraat  J. de -" ;
+        fasont:info "ter hoogte van nieuwbouw" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Louterstraat__J._de_-> .
+
+    fasdat:Louterstraat__J._de_21 a fasont:ParkingSlot ;
+        rdfs:label "Louterstraat  J. de 21" ;
+        fasont:info "ter hoogte van school de Meerkoet" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Louterstraat__J._de_21> .
+
+    fasdat:Lumièrestraat_6 a fasont:ParkingSlot ;
+        rdfs:label "Lumièrestraat 6" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lumièrestraat_6> .
+
+    fasdat:Lutmastraat_1 a fasont:ParkingSlot ;
+        rdfs:label "Lutmastraat 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Lutmastraat_1> .
+
+    fasdat:MARIUS_BAUERSTRAAT_1 a fasont:ParkingSlot ;
+        rdfs:label "MARIUS BAUERSTRAAT 1" ;
+        fasont:info "ter hoogte van nummer 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MARIUS_BAUERSTRAAT_1> .
+
+    fasdat:MEEUWENLAAN_76 a fasont:ParkingSlot ;
+        rdfs:label "MEEUWENLAAN 76" ;
+        fasont:info "SUPERMARKT" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MEEUWENLAAN_76> .
+
+    fasdat:MEIDOORNWEG_17 a fasont:ParkingSlot ;
+        rdfs:label "MEIDOORNWEG 17" ;
+        fasont:info "SCHOOL" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MEIDOORNWEG_17> .
+
+    fasdat:METEORENWEG_266 a fasont:ParkingSlot ;
+        rdfs:label "METEORENWEG 266" ;
+        fasont:info "STADSDEELPOST" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/METEORENWEG_266> .
+
+    fasdat:METEORENWEG_272 a fasont:ParkingSlot ;
+        rdfs:label "METEORENWEG 272" ;
+        fasont:info "SPORTVELD" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/METEORENWEG_272> .
+
+    fasdat:MOLENWIJK_21 a fasont:ParkingSlot ;
+        rdfs:label "MOLENWIJK 21" ;
+        fasont:info "BIBLIOTHEEK/ GEZONDHEIDSCENTRUM/ APOTHEEK" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOLENWIJK_21> .
+
+    fasdat:MOLENWIJK_25 a fasont:ParkingSlot ;
+        rdfs:label "MOLENWIJK 25" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOLENWIJK_25> .
+
+    fasdat:MOLENWIJK_7 a fasont:ParkingSlot ;
+        rdfs:label "MOLENWIJK 7" ;
+        fasont:info "BUURTCENRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOLENWIJK_7> .
+
+    fasdat:MOSVELD_13 a fasont:ParkingSlot ;
+        rdfs:label "MOSVELD 13" ;
+        fasont:info "MARKT" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOSVELD_13> .
+
+    fasdat:MOSVELD_15 a fasont:ParkingSlot ;
+        rdfs:label "MOSVELD 15" ;
+        fasont:info "MARKT" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOSVELD_15> .
+
+    fasdat:MOSVELD_27 a fasont:ParkingSlot ;
+        rdfs:label "MOSVELD 27" ;
+        fasont:info "MARKT" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOSVELD_27> .
+
+    fasdat:MOSVELD_29 a fasont:ParkingSlot ;
+        rdfs:label "MOSVELD 29" ;
+        fasont:info "MARKT" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOSVELD_29> .
+
+    fasdat:MOSVELD_51 a fasont:ParkingSlot ;
+        rdfs:label "MOSVELD 51" ;
+        fasont:info "MARKT" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOSVELD_51> .
+
+    fasdat:MOTORWAL_300 a fasont:ParkingSlot ;
+        rdfs:label "MOTORWAL 300" ;
+        fasont:info "BUURTCENRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/MOTORWAL_300> .
+
+    fasdat:Madurastraat_126 a fasont:ParkingSlot ;
+        rdfs:label "Madurastraat 126" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Madurastraat_126> .
+
+    fasdat:Marktplein_6_-_8 a fasont:ParkingSlot ;
+        rdfs:label "Marktplein 6 - 8" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Marktplein_6_-_8> .
+
+    fasdat:Mathijs_Vermeulenpad a fasont:ParkingSlot ;
+        rdfs:label "Mathijs Vermeulenpad" ;
+        fasont:info "ts Eduard v. Beinumstraat en het Zuidplein" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Mathijs_Vermeulenpad> .
+
+    fasdat:Mauritskade_21 a fasont:ParkingSlot ;
+        rdfs:label "Mauritskade 21" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Mauritskade_21> .
+
+    fasdat:Meer_En_Vaart_140 a fasont:ParkingSlot ;
+        rdfs:label "Meer En Vaart 140" ;
+        fasont:info "ter hoogte van Halfords" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meer_En_Vaart_140> .
+
+    fasdat:Meer_En_Vaart_284 a fasont:ParkingSlot ;
+        rdfs:label "Meer En Vaart 284" ;
+        fasont:info "ter hoogte van het politiebureau" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meer_En_Vaart_284> .
+
+    fasdat:Meer_En_Vaart_290 a fasont:ParkingSlot ;
+        rdfs:label "Meer En Vaart 290" ;
+        fasont:info "ter hoogte van De Talentenschool" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meer_En_Vaart_290> .
+
+    fasdat:Meer_En_Vaart_300 a fasont:ParkingSlot ;
+        rdfs:label "Meer En Vaart 300" ;
+        fasont:info "ter hoogte van meer en Vaart theater" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meer_En_Vaart_300> .
+
+    fasdat:Meernhof__175 a fasont:ParkingSlot ;
+        rdfs:label "Meernhof  175" ;
+        fasont:info "Meernhof voor perceel 173 - 181" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meernhof__175> .
+
+    fasdat:Meernhof___73 a fasont:ParkingSlot ;
+        rdfs:label "Meernhof   73" ;
+        fasont:info "Meernhof voor perceel 66/73" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meernhof___73> .
+
+    fasdat:Meernhof___93 a fasont:ParkingSlot ;
+        rdfs:label "Meernhof   93" ;
+        fasont:info "Meernhof voor perceel 91 - 98" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meernhof___93> .
+
+    fasdat:Meibergdreef a fasont:ParkingSlot ;
+        rdfs:label "Meibergdreef" ;
+        fasont:info "AMC Ziekenhuis" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meibergdreef> .
+
+    fasdat:Meineszlaan_Burg._V._52 a fasont:ParkingSlot ;
+        rdfs:label "Meineszlaan Burg. V. 52" ;
+        fasont:info "ter hoogte van winkels" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meineszlaan_Burg._V._52> .
+
+    fasdat:Meineszlaan_Burg._V._64 a fasont:ParkingSlot ;
+        rdfs:label "Meineszlaan Burg. V. 64" ;
+        fasont:info "ter hoogte van Leger des Heils De Kandelaar" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meineszlaan_Burg._V._64> .
+
+    fasdat:Meineszlaan_Burg._V._66 a fasont:ParkingSlot ;
+        rdfs:label "Meineszlaan Burg. V. 66" ;
+        fasont:info "ter hoogte van tandartsenpraktijk" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Meineszlaan_Burg._V._66> .
+
+    fasdat:Mercatorplein_1_-_137 a fasont:ParkingSlot ;
+        rdfs:label "Mercatorplein 1 - 137" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Mercatorplein_1_-_137> .
+
+    fasdat:Middenweg_31 a fasont:ParkingSlot ;
+        rdfs:label "Middenweg 31" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Middenweg_31> .
+
+    fasdat:Middenweg_52 a fasont:ParkingSlot ;
+        rdfs:label "Middenweg 52" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Middenweg_52> .
+
+    fasdat:Millingenhof__158 a fasont:ParkingSlot ;
+        rdfs:label "Millingenhof  158" ;
+        fasont:info "Millingenhof, medisch centrum." ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Millingenhof__158> .
+
+    fasdat:Millingenhof__217 a fasont:ParkingSlot ;
+        rdfs:label "Millingenhof  217" ;
+        fasont:info "Millingenhof 217" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Millingenhof__217> .
+
+    fasdat:Millingenhof__303-310 a fasont:ParkingSlot ;
+        rdfs:label "Millingenhof  303-310" ;
+        fasont:info "Millingenhof voor perceel 310/303" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Millingenhof__303-310> .
+
+    fasdat:Molukkenstraat_53 a fasont:ParkingSlot ;
+        rdfs:label "Molukkenstraat 53" ;
+        fasont:info "tov 53" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Molukkenstraat_53> .
+
+    fasdat:Montfoorthof__118 a fasont:ParkingSlot ;
+        rdfs:label "Montfoorthof  118" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Montfoorthof__118> .
+
+    fasdat:Montfoorthof__140 a fasont:ParkingSlot ;
+        rdfs:label "Montfoorthof  140" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Montfoorthof__140> .
+
+    fasdat:Montfoorthof___46 a fasont:ParkingSlot ;
+        rdfs:label "Montfoorthof   46" ;
+        fasont:info "MONTFOORTHOF 46" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Montfoorthof___46> .
+
+    fasdat:Montfoorthof___50 a fasont:ParkingSlot ;
+        rdfs:label "Montfoorthof   50" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Montfoorthof___50> .
+
+    fasdat:NACHTWACHTLAAN_35 a fasont:ParkingSlot ;
+        rdfs:label "NACHTWACHTLAAN 35" ;
+        fasont:info "ter hoogte van 7e Openbare Montessoribasisschool" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/NACHTWACHTLAAN_35> .
+
+    fasdat:NACHTWACHTLAAN_432 a fasont:ParkingSlot ;
+        rdfs:label "NACHTWACHTLAAN 432" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/NACHTWACHTLAAN_432> .
+
+    fasdat:NAGELJONGENSTRAAT_150 a fasont:ParkingSlot ;
+        rdfs:label "NAGELJONGENSTRAAT 150" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/NAGELJONGENSTRAAT_150> .
+
+    fasdat:Nassaukade_340 a fasont:ParkingSlot ;
+        rdfs:label "Nassaukade 340" ;
+        fasont:info "t.o. 332 - 350" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nassaukade_340> .
+
+    fasdat:Nassaukade_51_-_60 a fasont:ParkingSlot ;
+        rdfs:label "Nassaukade 51 - 60" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nassaukade_51_-_60> .
+
+    fasdat:Nicolaas_Beetsstraat_47_-_59 a fasont:ParkingSlot ;
+        rdfs:label "Nicolaas Beetsstraat 47 - 59" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nicolaas_Beetsstraat_47_-_59> .
+
+    fasdat:Nierkerkestraat_25 a fasont:ParkingSlot ;
+        rdfs:label "Nierkerkestraat 25" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nierkerkestraat_25> .
+
+    fasdat:Nieuwersluishof_250-257 a fasont:ParkingSlot ;
+        rdfs:label "Nieuwersluishof 250-257" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nieuwersluishof_250-257> .
+
+    fasdat:Nieuwersluishof__242-249 a fasont:ParkingSlot ;
+        rdfs:label "Nieuwersluishof  242-249" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nieuwersluishof__242-249> .
+
+    fasdat:Nieuwlandhof__100 a fasont:ParkingSlot ;
+        rdfs:label "Nieuwlandhof  100" ;
+        fasont:info "Nieuwlandhof 99" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nieuwlandhof__100> .
+
+    fasdat:Nieuwlandhof__215 a fasont:ParkingSlot ;
+        rdfs:label "Nieuwlandhof  215" ;
+        fasont:info "Nieuwlandhof 215" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nieuwlandhof__215> .
+
+    fasdat:Niftrikhof a fasont:ParkingSlot ;
+        rdfs:label "Niftrikhof" ;
+        fasont:info "Niftrikhof voor De Drecht, plaats nr. 01" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Niftrikhof> .
+
+    fasdat:Niftrikhof_14 a fasont:ParkingSlot ;
+        rdfs:label "Niftrikhof 14" ;
+        fasont:info "Niftrikhof voor De Drecht, plaats nr. 14" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Niftrikhof_14> .
+
+    fasdat:Niftrikhof_16 a fasont:ParkingSlot ;
+        rdfs:label "Niftrikhof 16" ;
+        fasont:info "Niftrikhof voor De Drecht, plaats nr. 16" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Niftrikhof_16> .
+
+    fasdat:Niftrikhof_17 a fasont:ParkingSlot ;
+        rdfs:label "Niftrikhof 17" ;
+        fasont:info "Niftrikhof voor De Drecht, plaats nr. 17" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Niftrikhof_17> .
+
+    fasdat:Nobelweg_2 a fasont:ParkingSlot ;
+        rdfs:label "Nobelweg 2" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nobelweg_2> .
+
+    fasdat:Nolenstraat_158 a fasont:ParkingSlot ;
+        rdfs:label "Nolenstraat 158" ;
+        fasont:info "ter hoogte van Albert Hein" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Nolenstraat_158> .
+
+    fasdat:Noord_Hollandstraat_61_a a fasont:ParkingSlot ;
+        rdfs:label "Noord Hollandstraat 61 a" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Noord_Hollandstraat_61_a> .
+
+    fasdat:OOSTZANERDIJK_151 a fasont:ParkingSlot ;
+        rdfs:label "OOSTZANERDIJK 151" ;
+        fasont:info "SPORTVELD" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/OOSTZANERDIJK_151> .
+
+    fasdat:OUDE_HAAGSEWEG a fasont:ParkingSlot ;
+        rdfs:label "OUDE HAAGSEWEG" ;
+        fasont:info "ter hoogte van De Overlanden" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/OUDE_HAAGSEWEG> .
+
+    fasdat:OVERSCHIESTRAAT_59 a fasont:ParkingSlot ;
+        rdfs:label "OVERSCHIESTRAAT 59" ;
+        fasont:info "ter hoogte van MEE Amstel en Zaan" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/OVERSCHIESTRAAT_59> .
+
+    fasdat:Obiplein_2 a fasont:ParkingSlot ;
+        rdfs:label "Obiplein 2" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Obiplein_2> .
+
+    fasdat:Ochtenhof___51 a fasont:ParkingSlot ;
+        rdfs:label "Ochtenhof   51" ;
+        fasont:info "Voor perceel 51- 56" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ochtenhof___51> .
+
+    fasdat:Ochtenhof___66 a fasont:ParkingSlot ;
+        rdfs:label "Ochtenhof   66" ;
+        fasont:info "Ochtenhof voor 66" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ochtenhof___66> .
+
+    fasdat:Ochtenhof___76 a fasont:ParkingSlot ;
+        rdfs:label "Ochtenhof   76" ;
+        fasont:info "Voor perceel 76- 81" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ochtenhof___76> .
+
+    fasdat:Ochtenhof____1 a fasont:ParkingSlot ;
+        rdfs:label "Ochtenhof    1" ;
+        fasont:info "Voor perceel 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ochtenhof____1> .
+
+    fasdat:Oldenaller_1 a fasont:ParkingSlot ;
+        rdfs:label "Oldenaller 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Oldenaller_1> .
+
+    fasdat:Olympiaplein_74_a a fasont:ParkingSlot ;
+        rdfs:label "Olympiaplein 74 a" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Olympiaplein_74_a> .
+
+    fasdat:Ommerenhof___73 a fasont:ParkingSlot ;
+        rdfs:label "Ommerenhof   73" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ommerenhof___73> .
+
+    fasdat:Ophemerthof____8 a fasont:ParkingSlot ;
+        rdfs:label "Ophemerthof    8" ;
+        fasont:info "Voor perceel 1 - 8" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ophemerthof____8> .
+
+    fasdat:Opheusdenhof_14 a fasont:ParkingSlot ;
+        rdfs:label "Opheusdenhof 14" ;
+        fasont:info "Parkeerterrein voor Opheusdenhof 14" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Opheusdenhof_14> .
+
+    fasdat:Opheusdenhof__87 a fasont:ParkingSlot ;
+        rdfs:label "Opheusdenhof  87" ;
+        fasont:info "T.h.v perceel Ochtendhof 8" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Opheusdenhof__87> .
+
+    fasdat:Orteliuskade_76 a fasont:ParkingSlot ;
+        rdfs:label "Orteliuskade 76" ;
+        fasont:info "t.o. 76 - 117" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Orteliuskade_76> .
+
+    fasdat:Osdorperweg_28 a fasont:ParkingSlot ;
+        rdfs:label "Osdorperweg 28" ;
+        fasont:info "ter hoogte van kerk" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Osdorperweg_28> .
+
+    fasdat:Osdorpplein_1000 a fasont:ParkingSlot ;
+        rdfs:label "Osdorpplein 1000" ;
+        fasont:info "ter hoogte van stadsdeelkantoor" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Osdorpplein_1000> .
+
+    fasdat:Osdorpplein_510 a fasont:ParkingSlot ;
+        rdfs:label "Osdorpplein 510" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Osdorpplein_510> .
+
+    fasdat:Osdorpplein_555 a fasont:ParkingSlot ;
+        rdfs:label "Osdorpplein 555" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Osdorpplein_555> .
+
+    fasdat:Osdorpplein_884 a fasont:ParkingSlot ;
+        rdfs:label "Osdorpplein 884" ;
+        fasont:info "ter hoogte van ANWB-winkel" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Osdorpplein_884> .
+
+    fasdat:Ouderkerkerdijk_22 a fasont:ParkingSlot ;
+        rdfs:label "Ouderkerkerdijk 22" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ouderkerkerdijk_22> .
+
+    fasdat:Overtoom_255_-_301 a fasont:ParkingSlot ;
+        rdfs:label "Overtoom 255 - 301" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Overtoom_255_-_301> .
+
+    fasdat:Overtoom_2_-_80 a fasont:ParkingSlot ;
+        rdfs:label "Overtoom 2 - 80" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Overtoom_2_-_80> .
+
+    fasdat:Overtoom_343_-_373 a fasont:ParkingSlot ;
+        rdfs:label "Overtoom 343 - 373" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Overtoom_343_-_373> .
+
+    fasdat:PALTROK_1 a fasont:ParkingSlot ;
+        rdfs:label "PALTROK 1" ;
+        fasont:info "FLAT MOLENWIJK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/PALTROK_1> .
+
+    fasdat:PAPAVERWEG_33 a fasont:ParkingSlot ;
+        rdfs:label "PAPAVERWEG 33" ;
+        fasont:info "STADSDEELPOST" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/PAPAVERWEG_33> .
+
+    fasdat:PERENPAD_3 a fasont:ParkingSlot ;
+        rdfs:label "PERENPAD 3" ;
+        fasont:info "SPORTVELD" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/PERENPAD_3> .
+
+    fasdat:PETMOLEN_1 a fasont:ParkingSlot ;
+        rdfs:label "PETMOLEN 1" ;
+        fasont:info "FLAT MOLENWIJK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/PETMOLEN_1> .
+
+    fasdat:POELDIJKSTRAAT_8 a fasont:ParkingSlot ;
+        rdfs:label "POELDIJKSTRAAT 8" ;
+        fasont:info "ter hoogte van Sint Jan de Doperkerk" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/POELDIJKSTRAAT_8> .
+
+    fasdat:POSTJESWEG_179 a fasont:ParkingSlot ;
+        rdfs:label "POSTJESWEG 179" ;
+        fasont:info "ter hoogte van Moskee" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/POSTJESWEG_179> .
+
+    fasdat:PURMERWEG_46 a fasont:ParkingSlot ;
+        rdfs:label "PURMERWEG 46" ;
+        fasont:info "GEZONDHEIDSCENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/PURMERWEG_46> .
+
+    fasdat:Paulus_Potterstraat_7 a fasont:ParkingSlot ;
+        rdfs:label "Paulus Potterstraat 7" ;
+        fasont:info "(4 p.p. vanaf Willem Sandbergplein)" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Paulus_Potterstraat_7> .
+
+    fasdat:Perronstraat_Du_8 a fasont:ParkingSlot ;
+        rdfs:label "Perronstraat Du 8" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Perronstraat_Du_8> .
+
+    fasdat:Piarcoplein a fasont:ParkingSlot ;
+        rdfs:label "Piarcoplein" ;
+        fasont:info "fysiotherapeut",
+            "station Sloterdijk" ;
+        fasont:quantity "1"^^xsd:unsignedInt,
+            "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Piarcoplein> .
+
+    fasdat:Piet_Heinkade a fasont:ParkingSlot ;
+        rdfs:label "Piet Heinkade" ;
+        fasont:info "Tpv. Stationsingang" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Piet_Heinkade> .
+
+    fasdat:Pijnackerstraat_26 a fasont:ParkingSlot ;
+        rdfs:label "Pijnackerstraat 26" ;
+        fasont:info "zijde Vredeskerk" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Pijnackerstraat_26> .
+
+    fasdat:Plein_40-45_1 a fasont:ParkingSlot ;
+        rdfs:label "Plein 40-45 1" ;
+        fasont:info "ter hoogte van de markt" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Plein_40-45_1> .
+
+    fasdat:Plesmanlaan_130 a fasont:ParkingSlot ;
+        rdfs:label "Plesmanlaan 130" ;
+        fasont:info "ter hoogte van Slotenmaker" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Plesmanlaan_130> .
+
+    fasdat:Polanenstraat_166_-_250 a fasont:ParkingSlot ;
+        rdfs:label "Polanenstraat 166 - 250" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Polanenstraat_166_-_250> .
+
+    fasdat:Polanenstraat_4_-_78 a fasont:ParkingSlot ;
+        rdfs:label "Polanenstraat 4 - 78" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Polanenstraat_4_-_78> .
+
+    fasdat:Polderweg_2 a fasont:ParkingSlot ;
+        rdfs:label "Polderweg 2" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Polderweg_2> .
+
+    fasdat:Postbus__1169 a fasont:ParkingSlot ;
+        rdfs:label "Postbus  1169" ;
+        fasont:info "Tegenover perceel Bijlmerdreef 1169" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Postbus__1169> .
+
+    fasdat:Postjeskade a fasont:ParkingSlot ;
+        rdfs:label "Postjeskade" ;
+        fasont:info "kade" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Postjeskade> .
+
+    fasdat:Postjesweg_7-59 a fasont:ParkingSlot ;
+        rdfs:label "Postjesweg 7-59" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Postjesweg_7-59> .
+
+    fasdat:Quellijnstraat_68 a fasont:ParkingSlot ;
+        rdfs:label "Quellijnstraat 68" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Quellijnstraat_68> .
+
+    fasdat:Quellijnstraat_85-87 a fasont:ParkingSlot ;
+        rdfs:label "Quellijnstraat 85-87" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Quellijnstraat_85-87> .
+
+    fasdat:REINIER_ENGELMANSTRAAT_1 a fasont:ParkingSlot ;
+        rdfs:label "REINIER ENGELMANSTRAAT 1" ;
+        fasont:info "ter hoogte van postkantoor" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/REINIER_ENGELMANSTRAAT_1> .
+
+    fasdat:RIEKERWEG a fasont:ParkingSlot ;
+        rdfs:label "RIEKERWEG" ;
+        fasont:info "op parkeerterrein" ;
+        fasont:quantity "8"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/RIEKERWEG> .
+
+    fasdat:RIJSWIJKSTRAAT_161 a fasont:ParkingSlot ;
+        rdfs:label "RIJSWIJKSTRAAT 161" ;
+        fasont:info "ter hoogte van Delflandplein" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/RIJSWIJKSTRAAT_161> .
+
+    fasdat:RIJSWIJKSTRAAT_185 a fasont:ParkingSlot ;
+        rdfs:label "RIJSWIJKSTRAAT 185" ;
+        fasont:info "ter hoogte van kledingwinkel Entree" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/RIJSWIJKSTRAAT_185> .
+
+    fasdat:RODE_KRUISSTRAAT_79 a fasont:ParkingSlot ;
+        rdfs:label "RODE KRUISSTRAAT 79" ;
+        fasont:info "POLITIEBUREAU" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/RODE_KRUISSTRAAT_79> .
+
+    fasdat:Radioweg a fasont:ParkingSlot ;
+        rdfs:label "Radioweg" ;
+        fasont:info "tpv ijshal" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Radioweg> .
+
+    fasdat:Ravensteinstraat_7 a fasont:ParkingSlot ;
+        rdfs:label "Ravensteinstraat 7" ;
+        fasont:info "Ravensteinstraat achter hoofdingang plaats nr. 7" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ravensteinstraat_7> .
+
+    fasdat:Ravenswaaipad_107 a fasont:ParkingSlot ;
+        rdfs:label "Ravenswaaipad 107" ;
+        fasont:info "Reigersbos en het Ravenswaaipad (losplatvorm)" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ravenswaaipad_107> .
+
+    fasdat:Ravenswaaipad__110 a fasont:ParkingSlot ;
+        rdfs:label "Ravenswaaipad  110" ;
+        fasont:info "Lus Soesterberghof." ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ravenswaaipad__110> .
+
+    fasdat:Ravenszwaaipad_5 a fasont:ParkingSlot ;
+        rdfs:label "Ravenszwaaipad 5" ;
+        fasont:info "Hoek parkeerterrein bij Parkhof" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ravenszwaaipad_5> .
+
+    fasdat:Reewijkplein a fasont:ParkingSlot ;
+        rdfs:label "Reewijkplein" ;
+        fasont:info "Reewijkplein, 2x, t/o toegangsweg Reigersbos 10/28" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Reewijkplein> .
+
+    fasdat:Reewijkplein_10-28 a fasont:ParkingSlot ;
+        rdfs:label "Reewijkplein 10-28" ;
+        fasont:info "Reewijkplein t/h toegangsweg Reigersbos " ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Reewijkplein_10-28> .
+
+    fasdat:Reigersbos_72 a fasont:ParkingSlot ;
+        rdfs:label "Reigersbos 72" ;
+        fasont:info "Remmerdenplein t.h.v. perceel 72" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Reigersbos_72> .
+
+    fasdat:Reigersbos__101 a fasont:ParkingSlot ;
+        rdfs:label "Reigersbos  101" ;
+        fasont:info "Reigersbos" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Reigersbos__101> .
+
+    fasdat:Reimerswaalstraat_5 a fasont:ParkingSlot ;
+        rdfs:label "Reimerswaalstraat 5" ;
+        fasont:info "ter hoogte van hotel" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Reimerswaalstraat_5> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Reitsmakade,_A.C.J._40> a fasont:ParkingSlot ;
+        rdfs:label "Reitsmakade, A.C.J. 40" ;
+        fasont:info "ter hoogte van apotheek" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Reitsmakade,_A.C.J._40> .
+
+    fasdat:Remmerdenplein_72 a fasont:ParkingSlot ;
+        rdfs:label "Remmerdenplein 72" ;
+        fasont:info "Remmerdenplein t.h.v. perceel 72, Noordoostzijde" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Remmerdenplein_72> .
+
+    fasdat:Renooiplein a fasont:ParkingSlot ;
+        rdfs:label "Renooiplein" ;
+        fasont:info "Renooiplein" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Renooiplein> .
+
+    fasdat:Renswoudestraat__3 a fasont:ParkingSlot ;
+        rdfs:label "Renswoudestraat  3" ;
+        fasont:info "Renswoudestraat 3" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Renswoudestraat__3> .
+
+    fasdat:Rijnstraat_137 a fasont:ParkingSlot ;
+        rdfs:label "Rijnstraat 137" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Rijnstraat_137> .
+
+    fasdat:Rijnstraat_27 a fasont:ParkingSlot ;
+        rdfs:label "Rijnstraat 27" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Rijnstraat_27> .
+
+    fasdat:Rijnstraat_42 a fasont:ParkingSlot ;
+        rdfs:label "Rijnstraat 42" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Rijnstraat_42> .
+
+    fasdat:Ringdijk_1a a fasont:ParkingSlot ;
+        rdfs:label "Ringdijk 1a" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ringdijk_1a> .
+
+    fasdat:Ringweg_Oost a fasont:ParkingSlot ;
+        rdfs:label "Ringweg Oost" ;
+        fasont:info "Tpv Lantaarnpaal" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ringweg_Oost> .
+
+    fasdat:Robert_Kochplantsoen_19 a fasont:ParkingSlot ;
+        rdfs:label "Robert Kochplantsoen 19" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Robert_Kochplantsoen_19> .
+
+    fasdat:Robert_Kochplantsoen_48 a fasont:ParkingSlot ;
+        rdfs:label "Robert Kochplantsoen 48" ;
+        fasont:quantity "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Robert_Kochplantsoen_48> .
+
+    fasdat:Robert_Scottstraat_2_-_34 a fasont:ParkingSlot ;
+        rdfs:label "Robert Scottstraat 2 - 34" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Robert_Scottstraat_2_-_34> .
+
+    fasdat:Roomtuintjes_81 a fasont:ParkingSlot ;
+        rdfs:label "Roomtuintjes 81" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Roomtuintjes_81> .
+
+    fasdat:Rooswijck_178 a fasont:ParkingSlot ;
+        rdfs:label "Rooswijck 178" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Rooswijck_178> .
+
+    fasdat:Ruyschstraat_66 a fasont:ParkingSlot ;
+        rdfs:label "Ruyschstraat 66" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ruyschstraat_66> .
+
+    fasdat:Ruysdaelstraat_49 a fasont:ParkingSlot ;
+        rdfs:label "Ruysdaelstraat 49" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ruysdaelstraat_49> .
+
+    fasdat:SAVELSBOS_2 a fasont:ParkingSlot ;
+        rdfs:label "SAVELSBOS 2" ;
+        fasont:info "KERK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SAVELSBOS_2> .
+
+    fasdat:SCHELVISCH_HOOFD_92 a fasont:ParkingSlot ;
+        rdfs:label "SCHELVISCH HOOFD 92" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SCHELVISCH_HOOFD_92> .
+
+    fasdat:SCHIPMOLEN_1 a fasont:ParkingSlot ;
+        rdfs:label "SCHIPMOLEN 1" ;
+        fasont:info "FLAT MOLENWIJK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SCHIPMOLEN_1> .
+
+    fasdat:SCHOENERSTRAAT_11 a fasont:ParkingSlot ;
+        rdfs:label "SCHOENERSTRAAT 11" ;
+        fasont:info "BEJAARDENHUIS" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SCHOENERSTRAAT_11> .
+
+    fasdat:SLOTERWEG a fasont:ParkingSlot ;
+        rdfs:label "SLOTERWEG" ;
+        fasont:info "ter hoogte van Sportpark Sloten" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SLOTERWEG> .
+
+    fasdat:SNEEUWBALWEG_5 a fasont:ParkingSlot ;
+        rdfs:label "SNEEUWBALWEG 5" ;
+        fasont:info "ZWEMBAD" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SNEEUWBALWEG_5> .
+
+    fasdat:SPINNEKOP_1 a fasont:ParkingSlot ;
+        rdfs:label "SPINNEKOP 1" ;
+        fasont:info "FLAT MOLENWIJK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SPINNEKOP_1> .
+
+    fasdat:SPORTPARK_DE_WEEREN_5 a fasont:ParkingSlot ;
+        rdfs:label "SPORTPARK DE WEEREN 5" ;
+        fasont:info "SPORTCOMPLEX   " ;
+        fasont:quantity "23"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/SPORTPARK_DE_WEEREN_5> .
+
+    fasdat:STAALMEESTERSLAAN_1-91 a fasont:ParkingSlot ;
+        rdfs:label "STAALMEESTERSLAAN 1-91" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/STAALMEESTERSLAAN_1-91> .
+
+    fasdat:STAALMEESTERSLAAN_201-291 a fasont:ParkingSlot ;
+        rdfs:label "STAALMEESTERSLAAN 201-291" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/STAALMEESTERSLAAN_201-291> .
+
+    fasdat:STANDERDMOLEN_1 a fasont:ParkingSlot ;
+        rdfs:label "STANDERDMOLEN 1" ;
+        fasont:info "FLAT MOLENWIJK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/STANDERDMOLEN_1> .
+
+    fasdat:STELLINGWEG_19 a fasont:ParkingSlot ;
+        rdfs:label "STELLINGWEG 19" ;
+        fasont:info "BEJAARDENHUIS" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/STELLINGWEG_19> .
+
+    fasdat:Schonerwoerdstraat a fasont:ParkingSlot ;
+        rdfs:label "Schonerwoerdstraat" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Schonerwoerdstraat> .
+
+    fasdat:Schonerwoerdstraat__7 a fasont:ParkingSlot ;
+        rdfs:label "Schonerwoerdstraat  7" ;
+        fasont:info "Parkeerterrein Schonerwoerdstraat." ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Schonerwoerdstraat__7> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Schreursweg_T.> a fasont:ParkingSlot ;
+        rdfs:label "Schreursweg T." ;
+        fasont:info "ter hoogte van sportvelden De Eendracht" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Schreursweg_T.> .
+
+    fasdat:Seineweg_1 a fasont:ParkingSlot ;
+        rdfs:label "Seineweg 1" ;
+        fasont:info "ter hoogte van Afvalpunt Seineweg" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Seineweg_1> .
+
+    fasdat:Sloterdijkerweg_A a fasont:ParkingSlot ;
+        rdfs:label "Sloterdijkerweg A" ;
+        fasont:info "t.o. volkstuinen" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Sloterdijkerweg_A> .
+
+    fasdat:Sloterdijkerweg_B a fasont:ParkingSlot ;
+        rdfs:label "Sloterdijkerweg B" ;
+        fasont:info "t.h. volkstuinen" ;
+        fasont:quantity "7"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Sloterdijkerweg_B> .
+
+    fasdat:Slotermeerlaan a fasont:ParkingSlot ;
+        rdfs:label "Slotermeerlaan" ;
+        fasont:info "ter hoogte van stadsdeelkantoor" ;
+        fasont:quantity "3"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Slotermeerlaan> .
+
+    fasdat:Slotermeerlaan_111 a fasont:ParkingSlot ;
+        rdfs:label "Slotermeerlaan 111" ;
+        fasont:info "ter hoogte van restaurant Meram" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Slotermeerlaan_111> .
+
+    fasdat:Slotermeerlaan_119 a fasont:ParkingSlot ;
+        rdfs:label "Slotermeerlaan 119" ;
+        fasont:info "ter hoogte van Jos Kop meubelen" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Slotermeerlaan_119> .
+
+    fasdat:Soendastraat_106 a fasont:ParkingSlot ;
+        rdfs:label "Soendastraat 106" ;
+        fasont:info "thv 106" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Soendastraat_106> .
+
+    fasdat:Soerabajastraat a fasont:ParkingSlot ;
+        rdfs:label "Soerabajastraat" ;
+        fasont:info "tpv Lidl" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Soerabajastraat> .
+
+    fasdat:Soestdijkstraat a fasont:ParkingSlot ;
+        rdfs:label "Soestdijkstraat" ;
+        fasont:info "Soestdijkstraat naast ingang 5 - 255, plaats 5" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Soestdijkstraat> .
+
+    fasdat:Soestdijkstraat____4 a fasont:ParkingSlot ;
+        rdfs:label "Soestdijkstraat    4" ;
+        fasont:info "Soestdijkstraat 4, links van de ingang." ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Soestdijkstraat____4> .
+
+    fasdat:Soesterberghof a fasont:ParkingSlot ;
+        rdfs:label "Soesterberghof" ;
+        fasont:info "lus Soesterberghof" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Soesterberghof> .
+
+    fasdat:Spaarndammerdijk_657-_667 a fasont:ParkingSlot ;
+        rdfs:label "Spaarndammerdijk 657- 667" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Spaarndammerdijk_657-_667> .
+
+    fasdat:Spaarndammerstraat_410_-_498 a fasont:ParkingSlot ;
+        rdfs:label "Spaarndammerstraat 410 - 498" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Spaarndammerstraat_410_-_498> .
+
+    fasdat:Spaarndammerstraat_53_-_117 a fasont:ParkingSlot ;
+        rdfs:label "Spaarndammerstraat 53 - 117" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Spaarndammerstraat_53_-_117> .
+
+    fasdat:Spaarndammerstraat_644_-_784 a fasont:ParkingSlot ;
+        rdfs:label "Spaarndammerstraat 644 - 784" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Spaarndammerstraat_644_-_784> .
+
+    fasdat:Stadhouderskade_85 a fasont:ParkingSlot ;
+        rdfs:label "Stadhouderskade 85" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Stadhouderskade_85> .
+
+    fasdat:Stadionweg_1 a fasont:ParkingSlot ;
+        rdfs:label "Stadionweg 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Stadionweg_1> .
+
+    fasdat:Stadionweg_274 a fasont:ParkingSlot ;
+        rdfs:label "Stadionweg 274" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Stadionweg_274> .
+
+    fasdat:Strammerlandweg a fasont:ParkingSlot ;
+        rdfs:label "Strammerlandweg" ;
+        fasont:info "Op het parkeerterrein naast de toegang" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Strammerlandweg> .
+
+    fasdat:Suchtelen_V.D._Haarestraat_18 a fasont:ParkingSlot ;
+        rdfs:label "Suchtelen V.D. Haarestraat 18" ;
+        fasont:info "ter hoogte van WMO-loket" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Suchtelen_V.D._Haarestraat_18> .
+
+    fasdat:Sumatrastraat_158 a fasont:ParkingSlot ;
+        rdfs:label "Sumatrastraat 158" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Sumatrastraat_158> .
+
+    fasdat:Sumatrastraat_23 a fasont:ParkingSlot ;
+        rdfs:label "Sumatrastraat 23" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Sumatrastraat_23> .
+
+    fasdat:Surinameplein_118 a fasont:ParkingSlot ;
+        rdfs:label "Surinameplein 118" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Surinameplein_118> .
+
+    fasdat:Surinameplein_122_-_124 a fasont:ParkingSlot ;
+        rdfs:label "Surinameplein 122 - 124" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Surinameplein_122_-_124> .
+
+    fasdat:TORENMOLEN_1 a fasont:ParkingSlot ;
+        rdfs:label "TORENMOLEN 1" ;
+        fasont:info "FLAT MOLENWIJK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/TORENMOLEN_1> .
+
+    fasdat:Teleportboulevard_120 a fasont:ParkingSlot ;
+        rdfs:label "Teleportboulevard 120" ;
+        fasont:info "bedrijfsverzamelgebouw" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Teleportboulevard_120> .
+
+    fasdat:Ter_Kleef_6 a fasont:ParkingSlot ;
+        rdfs:label "Ter Kleef 6" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ter_Kleef_6> .
+
+    fasdat:Ter_Kleef_7 a fasont:ParkingSlot ;
+        rdfs:label "Ter Kleef 7" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Ter_Kleef_7> .
+
+    fasdat:Timorstraat_18 a fasont:ParkingSlot ;
+        rdfs:label "Timorstraat 18" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Timorstraat_18> .
+
+    fasdat:Toldwarsstraat_22 a fasont:ParkingSlot ;
+        rdfs:label "Toldwarsstraat 22" ;
+        fasont:info "tegenover onevenzijde" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Toldwarsstraat_22> .
+
+    fasdat:Tolsendestraat_2 a fasont:ParkingSlot ;
+        rdfs:label "Tolsendestraat 2" ;
+        fasont:info "ter hoogte van seniorencomplex" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tolsendestraat_2> .
+
+    fasdat:Tolstraat_160 a fasont:ParkingSlot ;
+        rdfs:label "Tolstraat 160" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tolstraat_160> .
+
+    fasdat:Transformatorweg_36 a fasont:ParkingSlot ;
+        rdfs:label "Transformatorweg 36" ;
+        fasont:info "IBIS" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Transformatorweg_36> .
+
+    fasdat:Transvaalstraat_140 a fasont:ParkingSlot ;
+        rdfs:label "Transvaalstraat 140" ;
+        fasont:info "140: 1 langs" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Transvaalstraat_140> .
+
+    fasdat:Transvaalstraat_3 a fasont:ParkingSlot ;
+        rdfs:label "Transvaalstraat 3" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Transvaalstraat_3> .
+
+    fasdat:Trompenburgstraat_30 a fasont:ParkingSlot ;
+        rdfs:label "Trompenburgstraat 30" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Trompenburgstraat_30> .
+
+    fasdat:Tugelaweg_79 a fasont:ParkingSlot ;
+        rdfs:label "Tugelaweg 79" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tugelaweg_79> .
+
+    fasdat:Tussen_Meer_12 a fasont:ParkingSlot ;
+        rdfs:label "Tussen Meer 12" ;
+        fasont:info "ter hoogte van Televersum" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tussen_Meer_12> .
+
+    fasdat:Tussen_Meer_58 a fasont:ParkingSlot ;
+        rdfs:label "Tussen Meer 58" ;
+        fasont:info "ter hoogte van Specsavers" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tussen_Meer_58> .
+
+    fasdat:Tussen_Meer_75 a fasont:ParkingSlot ;
+        rdfs:label "Tussen Meer 75" ;
+        fasont:info "ter hoogte van bakkerij Henrikse" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tussen_Meer_75> .
+
+    fasdat:Tweede_Constantijn_Huijgensstraat_37_-_41 a fasont:ParkingSlot ;
+        rdfs:label "Tweede Constantijn Huijgensstraat 37 - 41" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tweede_Constantijn_Huijgensstraat_37_-_41> .
+
+    fasdat:Tweede_Helmersstraat_101_-_123 a fasont:ParkingSlot ;
+        rdfs:label "Tweede Helmersstraat 101 - 123" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tweede_Helmersstraat_101_-_123> .
+
+    fasdat:Tweede_Oosterparkstraat_274 a fasont:ParkingSlot ;
+        rdfs:label "Tweede Oosterparkstraat 274" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tweede_Oosterparkstraat_274> .
+
+    fasdat:Tweede_van_de_Helststraat__2 a fasont:ParkingSlot ;
+        rdfs:label "Tweede van de Helststraat  2" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tweede_van_de_Helststraat__2> .
+
+    fasdat:Tweede_van_de_Helststraat__2a a fasont:ParkingSlot ;
+        rdfs:label "Tweede van de Helststraat  2a" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tweede_van_de_Helststraat__2a> .
+
+    fasdat:Tweede_van_de_Helststraat__66 a fasont:ParkingSlot ;
+        rdfs:label "Tweede van de Helststraat  66" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Tweede_van_de_Helststraat__66> .
+
+    fasdat:VAN_DER_PEKSTRAAT_60 a fasont:ParkingSlot ;
+        rdfs:label "VAN DER PEKSTRAAT 60" ;
+        fasont:info "APOTHEEK" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VAN_DER_PEKSTRAAT_60> .
+
+    fasdat:VAN_MOURIK_BROEKMANSTR_7 a fasont:ParkingSlot ;
+        rdfs:label "VAN MOURIK BROEKMANSTR 7" ;
+        fasont:info "ter hoogte van Slotervaart Apotheek" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VAN_MOURIK_BROEKMANSTR_7> .
+
+    fasdat:VAN_OLLEFENSTRAAT_108 a fasont:ParkingSlot ;
+        rdfs:label "VAN OLLEFENSTRAAT 108" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VAN_OLLEFENSTRAAT_108> .
+
+    fasdat:VAN_OLLEFENSTRAAT_112 a fasont:ParkingSlot ;
+        rdfs:label "VAN OLLEFENSTRAAT 112" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VAN_OLLEFENSTRAAT_112> .
+
+    fasdat:VLAARDINGENLAAN_1 a fasont:ParkingSlot ;
+        rdfs:label "VLAARDINGENLAAN 1" ;
+        fasont:info "ter hoogte van MEE Amstel en Zaan " ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VLAARDINGENLAAN_1> .
+
+    fasdat:VOLENDAMMERWEG_310 a fasont:ParkingSlot ;
+        rdfs:label "VOLENDAMMERWEG 310" ;
+        fasont:info "STADSDEELPOST, SPORTVELD" ;
+        fasont:quantity "6"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VOLENDAMMERWEG_310> .
+
+    fasdat:VOLENDAMMERWEG_51_B a fasont:ParkingSlot ;
+        rdfs:label "VOLENDAMMERWEG 51 B" ;
+        fasont:info "WIJKPOST" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VOLENDAMMERWEG_51_B> .
+
+    fasdat:VOORBURGSTRAAT_254 a fasont:ParkingSlot ;
+        rdfs:label "VOORBURGSTRAAT 254" ;
+        fasont:info "ter hoogte van Albert Heijn" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/VOORBURGSTRAAT_254> .
+
+    fasdat:Valeriusplein_11 a fasont:ParkingSlot ;
+        rdfs:label "Valeriusplein 11" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Valeriusplein_11> .
+
+    <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Van_'t_Hofflaan_1> a fasont:ParkingSlot ;
+        rdfs:label "Van 't Hofflaan 1" ;
+        fasont:quantity "4"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_'t_Hofflaan_1> .
+
+    fasdat:Van_Beuningenstraat_56 a fasont:ParkingSlot ;
+        rdfs:label "Van Beuningenstraat 56" ;
+        fasont:info "t.o. 36 - 78" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Beuningenstraat_56> .
+
+    fasdat:Van_Diemenstraat_206_-_420 a fasont:ParkingSlot ;
+        rdfs:label "Van Diemenstraat 206 - 420" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Diemenstraat_206_-_420> .
+
+    fasdat:Van_Kijkduinstraat_107-_143 a fasont:ParkingSlot ;
+        rdfs:label "Van Kijkduinstraat 107- 143" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Kijkduinstraat_107-_143> .
+
+    fasdat:Van_Leijenberghlaan_10 a fasont:ParkingSlot ;
+        rdfs:label "Van Leijenberghlaan 10" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Leijenberghlaan_10> .
+
+    fasdat:Van_Leijenberghlaan_178 a fasont:ParkingSlot ;
+        rdfs:label "Van Leijenberghlaan 178" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Leijenberghlaan_178> .
+
+    fasdat:Van_Limburg_Stirumstraat_119_-237 a fasont:ParkingSlot ;
+        rdfs:label "Van Limburg Stirumstraat 119 -237" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Limburg_Stirumstraat_119_-237> .
+
+    fasdat:Van_Limburg_Stirumstraat_67_-_105 a fasont:ParkingSlot ;
+        rdfs:label "Van Limburg Stirumstraat 67 - 105" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Limburg_Stirumstraat_67_-_105> .
+
+    fasdat:Van_Nijenrodeweg_1043 a fasont:ParkingSlot ;
+        rdfs:label "Van Nijenrodeweg 1043" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Nijenrodeweg_1043> .
+
+    fasdat:Van_Oldenbarneveldtstraat_87_-_105 a fasont:ParkingSlot ;
+        rdfs:label "Van Oldenbarneveldtstraat 87 - 105" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Oldenbarneveldtstraat_87_-_105> .
+
+    fasdat:Van_Reigersbergenstraat_24_-_78 a fasont:ParkingSlot ;
+        rdfs:label "Van Reigersbergenstraat 24 - 78" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Reigersbergenstraat_24_-_78> .
+
+    fasdat:Van_Reigersbergenstraat_55_-_65 a fasont:ParkingSlot ;
+        rdfs:label "Van Reigersbergenstraat 55 - 65" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Reigersbergenstraat_55_-_65> .
+
+    fasdat:Van_Reigersbergenstraat_7 a fasont:ParkingSlot ;
+        rdfs:label "Van Reigersbergenstraat 7" ;
+        fasont:info "t.o. 1 - 15" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Reigersbergenstraat_7> .
+
+    fasdat:Van_Reigersbergenstraat_869 a fasont:ParkingSlot ;
+        rdfs:label "Van Reigersbergenstraat 869" ;
+        fasont:info "t.o. 829 - 909" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Van_Reigersbergenstraat_869> .
+
+    fasdat:Veeteeltstraat_27 a fasont:ParkingSlot ;
+        rdfs:label "Veeteeltstraat 27" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Veeteeltstraat_27> .
+
+    fasdat:Verbindingsweg a fasont:ParkingSlot ;
+        rdfs:label "Verbindingsweg" ;
+        fasont:info "Parkeerterrein Ons Lustoord" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Verbindingsweg> .
+
+    fasdat:Verbindingsweg__1 a fasont:ParkingSlot ;
+        rdfs:label "Verbindingsweg  1" ;
+        fasont:info "Verbindingsweg" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Verbindingsweg__1> .
+
+    fasdat:Victorieplein_14 a fasont:ParkingSlot ;
+        rdfs:label "Victorieplein 14" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Victorieplein_14> .
+
+    fasdat:Victorieplein_20 a fasont:ParkingSlot ;
+        rdfs:label "Victorieplein 20" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Victorieplein_20> .
+
+    fasdat:Vier_Heemskinderenstraat_35_-_56 a fasont:ParkingSlot ;
+        rdfs:label "Vier Heemskinderenstraat 35 - 56" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Vier_Heemskinderenstraat_35_-_56> .
+
+    fasdat:Von_Zesenstraat_300 a fasont:ParkingSlot ;
+        rdfs:label "Von Zesenstraat 300" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Von_Zesenstraat_300> .
+
+    fasdat:Von_Zesenstraat_62 a fasont:ParkingSlot ;
+        rdfs:label "Von Zesenstraat 62" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Von_Zesenstraat_62> .
+
+    fasdat:Vondelstraat_15_-_39 a fasont:ParkingSlot ;
+        rdfs:label "Vondelstraat 15 - 39" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Vondelstraat_15_-_39> .
+
+    fasdat:Vondelstraat_71 a fasont:ParkingSlot ;
+        rdfs:label "Vondelstraat 71" ;
+        fasont:info "t.o. 69 - 75" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Vondelstraat_71> .
+
+    fasdat:Vriesseveem a fasont:ParkingSlot ;
+        rdfs:label "Vriesseveem" ;
+        fasont:info "Links naast ingang parkeergarage" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Vriesseveem> .
+
+    fasdat:Vrolikstraat_551 a fasont:ParkingSlot ;
+        rdfs:label "Vrolikstraat 551" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Vrolikstraat_551> .
+
+    fasdat:WATERLANDPLEIN_81 a fasont:ParkingSlot ;
+        rdfs:label "WATERLANDPLEIN 81" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/WATERLANDPLEIN_81> .
+
+    fasdat:WERENGOUW_204 a fasont:ParkingSlot ;
+        rdfs:label "WERENGOUW 204" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/WERENGOUW_204> .
+
+    fasdat:WERENGOUW_87B a fasont:ParkingSlot ;
+        rdfs:label "WERENGOUW 87B" ;
+        fasont:info "INFORMATIECENTRUM" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/WERENGOUW_87B> .
+
+    fasdat:WILLEM_FROGERPLEIN a fasont:ParkingSlot ;
+        rdfs:label "WILLEM FROGERPLEIN" ;
+        fasont:info "ter hoogte van Station Lelylaan" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/WILLEM_FROGERPLEIN> .
+
+    fasdat:WILLY_SLUITERSTRAAT_1-19 a fasont:ParkingSlot ;
+        rdfs:label "WILLY SLUITERSTRAAT 1-19" ;
+        fasont:info "ter hoogte van kerk" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/WILLY_SLUITERSTRAAT_1-19> .
+
+    fasdat:WINGERDWEG_39 a fasont:ParkingSlot ;
+        rdfs:label "WINGERDWEG 39" ;
+        fasont:info "GEZONDHEIDSCENTRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/WINGERDWEG_39> .
+
+    fasdat:Wakkerstraat_2 a fasont:ParkingSlot ;
+        rdfs:label "Wakkerstraat 2" ;
+        fasont:info "bestemd voor schoenmakerij" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wakkerstraat_2> .
+
+    fasdat:Wakkerstraat_30 a fasont:ParkingSlot ;
+        rdfs:label "Wakkerstraat 30" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wakkerstraat_30> .
+
+    fasdat:Wakkerstraat_32 a fasont:ParkingSlot ;
+        rdfs:label "Wakkerstraat 32" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wakkerstraat_32> .
+
+    fasdat:Westbroekplein_30 a fasont:ParkingSlot ;
+        rdfs:label "Westbroekplein 30" ;
+        fasont:info "Westbroekplein t.h.v. perceel 30" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Westbroekplein_30> .
+
+    fasdat:Wibautstraat_174 a fasont:ParkingSlot ;
+        rdfs:label "Wibautstraat 174" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wibautstraat_174> .
+
+    fasdat:Wielingenstraat_28 a fasont:ParkingSlot ;
+        rdfs:label "Wielingenstraat 28" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wielingenstraat_28> .
+
+    fasdat:Wijttenbachstraat_36 a fasont:ParkingSlot ;
+        rdfs:label "Wijttenbachstraat 36" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wijttenbachstraat_36> .
+
+    fasdat:Willem_Fenengastraat_35 a fasont:ParkingSlot ;
+        rdfs:label "Willem Fenengastraat 35" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Willem_Fenengastraat_35> .
+
+    fasdat:Willem_van_Weldammelaan_199 a fasont:ParkingSlot ;
+        rdfs:label "Willem van Weldammelaan 199" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Willem_van_Weldammelaan_199> .
+
+    fasdat:Willem_van_Weldammelaan_205-207 a fasont:ParkingSlot ;
+        rdfs:label "Willem van Weldammelaan 205-207" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Willem_van_Weldammelaan_205-207> .
+
+    fasdat:Willem_van_Weldammelaan_304 a fasont:ParkingSlot ;
+        rdfs:label "Willem van Weldammelaan 304" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Willem_van_Weldammelaan_304> .
+
+    fasdat:Willinklaan_5 a fasont:ParkingSlot ;
+        rdfs:label "Willinklaan 5" ;
+        fasont:info "ter hoogte van AAC" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Willinklaan_5> .
+
+    fasdat:Wisseloordplein___50 a fasont:ParkingSlot ;
+        rdfs:label "Wisseloordplein   50" ;
+        fasont:info "Wisseloordplein 50" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Wisseloordplein___50> .
+
+    fasdat:Withoedenveem_14 a fasont:ParkingSlot ;
+        rdfs:label "Withoedenveem 14" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Withoedenveem_14> .
+
+    fasdat:Withoedenveem_204 a fasont:ParkingSlot ;
+        rdfs:label "Withoedenveem 204" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Withoedenveem_204> .
+
+    fasdat:ZONNEPLEIN_27 a fasont:ParkingSlot ;
+        rdfs:label "ZONNEPLEIN 27" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ZONNEPLEIN_27> .
+
+    fasdat:ZONNEPLEIN_28 a fasont:ParkingSlot ;
+        rdfs:label "ZONNEPLEIN 28" ;
+        fasont:info "WINKELCENTRUM" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/ZONNEPLEIN_28> .
+
+    fasdat:Zaanstraat_209_-_305 a fasont:ParkingSlot ;
+        rdfs:label "Zaanstraat 209 - 305" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Zaanstraat_209_-_305> .
+
+    fasdat:Zacharias_Jansestraat_1 a fasont:ParkingSlot ;
+        rdfs:label "Zacharias Jansestraat 1" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Zacharias_Jansestraat_1> .
+
+    fasdat:Zacharias_Jansestraat_2 a fasont:ParkingSlot ;
+        rdfs:label "Zacharias Jansestraat 2" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Zacharias_Jansestraat_2> .
+
+    fasdat:Zeeburgerdijk_117 a fasont:ParkingSlot ;
+        rdfs:label "Zeeburgerdijk 117" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Zeeburgerdijk_117> .
+
+    fasdat:Zeelandstraat_11 a fasont:ParkingSlot ;
+        rdfs:label "Zeelandstraat 11" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Zeelandstraat_11> .
+
+    fasdat:Zijlplein_L.B._8 a fasont:ParkingSlot ;
+        rdfs:label "Zijlplein L.B. 8" ;
+        fasont:info "ter hoogte van Albert Heijn" ;
+        fasont:quantity "2"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/Zijlplein_L.B._8> .
+
+    fasdat:chassestraat_113 a fasont:ParkingSlot ;
+        rdfs:label "chassestraat 113" ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/chassestraat_113> .
+
+    fasdat:humberweg a fasont:ParkingSlot ;
+        rdfs:label "humberweg" ;
+        fasont:info "partycentrum" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/humberweg> .
+
+    fasdat:s-Gravesandeplein_17 a fasont:ParkingSlot ;
+        rdfs:label "s-Gravesandeplein 17" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/s-Gravesandeplein_17> .
+
+    fasdat:s-Gravesandeplein_23 a fasont:ParkingSlot ;
+        rdfs:label "s-Gravesandeplein 23" ;
+        fasont:quantity "1"^^xsd:unsignedInt ;
+        fasont:slotLocation <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/Amsterdam/s-Gravesandeplein_23> .
+}
+
