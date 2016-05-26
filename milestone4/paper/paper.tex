@@ -31,7 +31,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Data- and Systems Paper : Finding events}
+\title{Data- and Systems Paper : Finding Amsterdam}
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Data- and Systems Paper}
@@ -62,72 +62,86 @@ contain at least 70 and at most 150 words. It should be written using the
 
 
 \section{Introduction}
-- Motivation: 
-- Objective: Find events and their location
-- compare reasoning is small designed dataset versus a large complex dataset. 
+In the journey of having a Semantic Web where everything is linked, open and reusable, dealing with volume is necessary. Finding specific information, and reasoning in large heterogeneous datasets will become everyday routine, thus efficient mechanisms are required to achieve these goals. 
+
+In fact, http://iswc2016.semanticweb.org/pages/calls/research-track.html
+
+In this paper we address the previous challenge with approximation techniques as a tool for efficient reasoning over a large dataset. To link this to our previous work, we select the specific domain of Amsterdam, and aim to retrieve all the Amsterdam-related information from the provided \texttt{dataset} in Stardog.  
+
+The goal of this assignment is to compare two approximation techniques. On the one hand, we randomly choose a subset of nodes, and retrieve all information related to Amsterdam. On the other hand, we do a smarter selection of nodes and repeat the process. We hypothesize the "smart selection" approach will have higher accuracy than the "random" approach on approximating the original set. Yet, smart selection requires statistical analysis and reasoning over the set, which brings in time and memory costs. Therefore, we will weight in the pros and cons of each approach.
 
 \section{Related Work}
-- explain what Laundromat is
+- the problem of volume in the semantic web \\
+- approximation techniques
 
-\section{Datasets}
-We performed an exploratory analysis on the datasets we will be using. Hereby we describe the characteristics of both datasets. 
+\section{Data Analytics}
+The \texttt{dataset} was provided on Stardog. It was created by filtering datasets on \textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}}
 
-\subsection{Find a Slot dataset}
-- 1874 instances of owl:Thing
-- 479 instances of Event
-- 681 instances of Location
+Cleaning of data, removing \#
 
-\begin{lstlisting}[captionpos=b, caption=SPARQL query for counting resources per class, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+To obtain frequency statistics we use the following query:
 
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting Event witSh Location, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
 SELECT ?class (COUNT(?resource) as ?count) WHERE {
 ?resource a ?class . 
 } GROUP BY ?class ORDER BY DESC(?count)
-
 \end{lstlisting}
 
-Graph visualization using networkx and python plotting libraries. 
+138568 owl:Thing and 36273 owl:class
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/findaslot_network_graph.png}
-	\caption{Silk linkage rules for events in group 10's dataset.}
-	\label{fig:link_event_g10}
+	\includegraphics[width=1\textwidth]{img/dataset_frequency.png}
+	\caption{Plot of frequencies for classes in \texttt{dataset}. \textit{owl:Thing} is excluded.}
+	\label{fig:frequency}
 \end{figure}
 
-\subsection{LOD dataset}
-- 25 Events with Location
+\section{Reasoning system}
+The Stardog only interface handles the limits 
+Python code for querying and using Stardog as endpoint. 
+Query the dataset to calculate the in degree and out degree.
 
-\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting Event with Location, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
-
-prefix event: <http://purl.org/NET/c4dm/event.owl#>
-
-SELECT ?s ?p ?l
-WHERE {
-?s a event:Event .
-{ 
-bind(<http://vivoweb.org/ontology/core#hasGeographicLocation> as ?p) .
-?s ?p ?lEn
-}
-UNION
-{ 
-bind(event:place as ?p) .
-?s ?p ?lEn
-}
-?lEn rdfs:label ?l .
-}
-
+In degree takes 55 seconds, out degree takes 46 seconds.
+ 
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating in degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+SELECT
+DISTINCT ?entity
+(COUNT(distinct ?pin) as ?indegree)
+WHERE { 
+?entity a owl:Thing .
+?something ?pin ?entity .}
+GROUP by ?entity
+ORDER by desc(?indegree)
 \end{lstlisting}
 
-\section{Sub-graph extraction}
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+SELECT
+DISTINCT ?entity
+(COUNT(distinct ?pout) as ?outdegree)
+WHERE { 
+?entity a owl:Thing .
+?entity ?pout ?somethingelse .
+}
+GROUP by ?entity
+ORDER by desc(?outdegree)
+\end{lstlisting}
+
+\subsection{Sub-graph extraction}
 Event related graph
 
 \subsection{Sub-graph analysis}
 - new statistics
 
-\section{Event finding}
+\section{Experimental set up}
+
+\subsection{Event finding}
 - Query both datasets and report on instances gotten
 
+\section{Results and Discussion}
+
 \section{Conclusion}
+Through empirical methods, we compared the performance of two subsets of the main \texttt{dataset}. 
+
 Weight the differences between designing an ontology or cleaning existing ontologies.
 
 \bibliographystyle{plain}

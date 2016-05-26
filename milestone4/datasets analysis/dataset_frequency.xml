@@ -1,0 +1,3760 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='class'/>
+		<variable name='count'/>
+	</head>
+	<results>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>138568</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#Thing</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>38165</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://openprovenance.org/model/opmo#WasControlledBy</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>36273</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#Class</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>30554</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#Restriction</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>27041</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#DateTimeValue</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>24804</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#DateTimeInterval</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>23561</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Role</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>23373</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#TeacherRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>20946</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Relationship</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>20938</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Authorship</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19753</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Grant</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19582</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Flag1Value1Thing</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19415</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#PrincipalInvestigatorRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19216</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#DependentResource</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19216</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#DependentResource</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18969</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/PublicationProcess</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18969</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://openprovenance.org/model/opmo#WasGeneratedBy</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18034</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#List</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>17986</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#description</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>17716</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#Axiom</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>16787</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://openprovenance.org/model/opmo#Used</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14937</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://xmlns.com/foaf/0.1/Agent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14649</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://xmlns.com/foaf/0.1/Person</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>13164</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/NET/c4dm/event.owl#Event</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>13098</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Course</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11535</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/Guide</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8289</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/Image</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7082</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Position</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6515</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#InformationResource</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5698</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#FacultyPosition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5515</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://metadata.net/mpeg7/mpeg7.owl#TextAnnotation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5388</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://metadata.net/mpeg7/mpeg7.owl#Title</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5074</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Document</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4141</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/harvester/excludeEntity</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3959</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivo.iu.edu/ontology/iuvivo#IndianaUniversityEntity</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3796</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#EducationalTraining</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3773</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Address</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3754</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://openprovenance.org/model/opmo#OTime</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3163</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#FacultyMember</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2639</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Article</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2536</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/AcademicArticle</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2352</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#ObjectProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2319</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://openprovenance.org/model/opmo#Account</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2318</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/ContentProvider</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2145</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#CoPrincipalInvestigatorRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2098</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/ExternalResource</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1790</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#URLLink</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1432</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Collection</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1431</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Periodical</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1402</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://xmlns.com/foaf/0.1/Organization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1400</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Journal</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1254</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://metadata.net/mpeg7/mpeg7.owl#Creator</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1189</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Book</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1019</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#DatatypeProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>827</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://metadata.net/mpeg7/mpeg7.owl#Time</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>777</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Proceedings</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>753</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#NonFacultyAcademicPosition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>692</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#NamedIndividual</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>686</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#FundingOrganization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>679</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#GeographicLocation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>679</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Location</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>662</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/01/geo/wgs84_pos#Point</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>652</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#NonFacultyAcademic</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>598</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#FacultyAdministrativePosition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>538</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#AtomList</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>488</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/public#FileByteStream</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>481</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/public#File</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>448</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/Video</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>406</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Link</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>364</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#AnnotationProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>358</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#AbstractInformation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>332</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#area</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>320</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Review</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>317</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#GeographicRegion</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>303</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#ClassAtom</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>290</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#GeopoliticalEntity</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>240</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#territory</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>215</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#AcademicDegree</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>212</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Country</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>210</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>209</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#self_governing</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>181</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Department</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>163</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#FunctionalProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>158</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>140</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#AcademicDepartment</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>113</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#PartOfSpeech</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>112</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#Imp</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>111</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#University</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>109</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Center</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>103</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#AwardReceipt</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>97</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#TransitiveProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>95</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/prov-o/Activity</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>93</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#LibrarianPosition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>93</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0000011</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>91</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#Ontology</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>89</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Librarian</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>87</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#SymmetricProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>87</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Laboratory</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>82</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Flag1Value0Thing</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>74</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#LeaderRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>69</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#group</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>62</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#AllDisjointClasses</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>60</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Namespace</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>58</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ResearcherRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>57</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/prov-o/Entity</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>54</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/BFO_0000019</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>50</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#StateOrProvince</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>48</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ConferencePaper</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>48</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c485</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>47</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2000/01/rdf-schema#Class</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>46</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2000/01/rdf-schema#Datatype</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>45</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Conference</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>45</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Program</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>43</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Winery</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>42</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Tab</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>40</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#InvestigatorRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>39</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Agreement</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>39</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#AutoLinkableTab</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>38</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2004/02/skos/core#Concept</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>36</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#PostdocPosition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>36</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://mged.sourceforge.net/ontologies/MGEDOntology.owl#FactorValue</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>36</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/pso/PublicationStatus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>36</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Region</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>33</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/pro/PublishingRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>32</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#TermType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>32</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Case</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>31</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://xmlns.com/foaf/0.1/Document</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>31</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>31</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#Variable</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>31</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Newsletter</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>30</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#IndividualPropertyAtom</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>30</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.kanzaki.com/ns/music#Key</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>30</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Division</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>29</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#economic_region</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>29</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#NonAcademicPosition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>28</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/OrganizationalRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>27</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#geographical_region</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>27</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#TransnationalRegion</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>27</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#non_self_governing</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>27</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Institute</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>26</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#PronounPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>25</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Library</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>25</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#School</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>25</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#AsymmetricProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>24</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#MemberRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>24</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0000761</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>23</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Preferencia-de-usuario</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>22</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#TabIndividualRelation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>21</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Interes-turistico</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>20</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/DiseaseState</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#NonAcademic</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#PresenterRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0100026</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/OrganismPart</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>19</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/ExperimentalContribution</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#InverseFunctionalProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#College</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Presentation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/IAO_0000027</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/obo/owl/CHEBI#CHEBI_23367</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/obo/owl/NCBITaxon#NCBITaxon:10116</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/factor/DISEASESTATE</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/factor/TREATMENT</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0000727</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/DISEASESTATE</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0400147</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/unknown</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3886</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3887</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3888</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-AFFY-6</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/IAO_0000101</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0000290</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>18</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/BFO_0000040</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>16</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Collection</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>16</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>16</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WineGrape</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>15</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Association</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>15</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/InvestigationRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#AllDifferent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#DeprecatedProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PrimaryTabContent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#ParticlePOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>14</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#SymbolPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>13</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://xmlns.com/foaf/0.1/Group</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>13</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#IrreflexiveProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>12</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#PrivateCompany</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>12</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0000311</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>12</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Company</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>12</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Visita-turistica</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>12</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/FinancialRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/fabio/DigitalStorageMedium</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Equipment</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#USPostalAddress</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#User</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://ont.cbnl.org/metamodel/def/Collection</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#DeterminerPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#NumeralPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Register</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#TermElement</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>11</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0140</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/mo/ReleaseType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#ChangeFrequency</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#CaseStudy</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#GraduateStudent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Student</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#NewsRelease</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>10</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/DataRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/net/ns/ex#Example</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#special_group</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/DocumentStatus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Patent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#InvitedTalk</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.vivoweb.org/ontology/v0.9/vivo-on-vivo/Listserv</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#AdjectivePOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Number</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c1985</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>9</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#DietType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ServiceProviderRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0000272</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ClassGroup</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PrimaryTab</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#BearerType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/prov-o/Plan</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Estilo-artistico</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/AuthorshipRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/IntellectualContribution</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#ReflexiveProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#DataRange</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Maturity</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#IssueStatus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Building</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Facility</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Continent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ManuallyLinkableTab</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#VerbPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#NormativeAuthorization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#VerbFormMood</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c1099</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Dia-de-la-semana</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>7</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://rhizomik.net/ontologies/copyrightonto.owl#Aim</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/vocommons/voaf#Vocabulary</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://xmlns.com/foaf/0.1/Image</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#ConfidentialityLevel</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#CreativeCommonsRequirement</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#PublicationStatus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Service</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Process</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#EditorialArticle</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#GovernmentAgency</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Hospital</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Publisher</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Team</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#AbbreviatedForm</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#DataBearerService</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/no_implantation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/sham_implantation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/term/implanted_tumor</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3885</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3883</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3884</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#MealCourseType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Nutrient</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/ProjectRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/AuthorshipContribution</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/OrganizationalContribution</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://openprovenance.org/model/opmo#Role</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#OntologyProperty</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#PriorityValue</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/DocumentPart</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/BookSection</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Chapter</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#AcademicTerm</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Committee</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://ont.cbnl.org/metamodel/def/Status</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#NounPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#AdpositionPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Aspect</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Gender</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Tense</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/pso/ArticleProcessingChargeStatus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Grupo-de-viaje</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#AllDisjointProperties</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Chardonnay</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>5</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Zinfandel</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/fabio/AnalogStorageMedium</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/prov#Role</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/Post</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#DeprecatedClass</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#ChangeType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#CreativeCommonsPermission</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#SchemaGraph</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Image</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#DateTimeValuePrecision</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#MixedTab</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#SecondaryTab</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#AdverbPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Definiteness</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0141</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#Network</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Calificacion</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Preferencia-de-ruta</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Viaje</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#CookingTaskType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.sensormeasurement.appspot.com/ont/transport/traffic#Vehicle</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/EducationalRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#CabernetSauvignon</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#SauvignonBlanc</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2003/11/swrl#BuiltinAtom</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/mo/ReleaseStatus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#GovernanceRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Icon</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#organization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#SubjectArea</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Thesis</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ClinicalOrganization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0000245</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Portal</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#OrganizerRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.rickmurphy.org/mincats.owl#Sign</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#FusedPrepositionPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#ArticlePOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#ConjunctionPOS</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Animacy</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Cliticness</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Degree</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Frequency</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#ModificationType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Mood</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Person</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#TemporalQualifier</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Voice</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#BearerAddressType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#ShortRangeConnectivityType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/P-MTAB-3889</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Accesibilidad-de-movilidad-reducida</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Horario-de-visita</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#CookingDifficultyCategory</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/spar/scoro/ContributionEffort</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WineColor</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WineFlavor</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WineSugar</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WineBody</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#PinotNoir</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Attribution</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#CreativeCommonsProhibition</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/CollectedDocument</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Workshop</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#AdvisingRelationship</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Campus</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Museum</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0000001</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2000/01/rdf-schema#Property</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.rickmurphy.org/mincats.owl#ValdationValues</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.rickmurphy.org/mincats.owl#GradationValues</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Dating</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Finiteness</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#Negative</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.lexinfo.net/ontology/2.0/lexinfo#ReferentType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#CellularConnectivityType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c40</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c123</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c2208</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c783</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c581</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.identity.org/ontologies/identity.owl#Mode</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Dia-de-visita-turistica</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Temporada</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Perfil-de-turista</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://idi.fundacionctic.org/cruzar/turismo#Ruta-turistica</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WhiteBurgundy</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#CheninBlanc</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Semillon</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Merlot</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#PetiteSyrah</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#SweetRiesling</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/net/opmv/ns#Agent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://labs.mondeca.com/vocab/voaf#Vocabulary</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2002/07/owl#allValuesFrom</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/dc/terms/Agent</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://securitytoolbox.appspot.com/stac#NetworkManagementSecurityMechanism</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/regorg#RegisteredOrganization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/org#FormalOrganization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/AditionalInformationRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/ContentCreatorRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/Organization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/PublisherRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://webenemasuno.linkeddata.es/ontology/OPMO/ReferenceRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/2006/vcard/ns#Address</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Governance</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Provenance</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#ProductLogo</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#LicenseModel</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Pedigree</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#OrganizationLogo</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#AttributionLogo</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://voag.linkedmodel.org/voag#Logo</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.linkedmodel.org/schema/vaem#CatalogEntry</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://aims.fao.org/aos/geopolitical.owl#other</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/EditedBook</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Issue</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Report</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Standard</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/ontology/bibo/Website</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ClinicalRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ConferencePoster</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Consortium</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#CoreLaboratory</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Foundation</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#OutreachProviderRole</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Project</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ResearchLaboratory</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#ResearchOrganization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/IAO_0000100</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/IAO_0000311</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0500000</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/OBI_0000066</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://vivoweb.org/ontology/core#Award</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://lodlaundromat.org/.well-known/genid/6ad8bf450d04a77db1b24fe3f314790d#666</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#LongRangeConnectivityType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#VoiceBearerService</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#TextBearerService</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#VideoBearerService</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c1125</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.loa-cnr.it/ontologies/DOLCE-Lite#social-object</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-region</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c1344</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#relevant-part</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c1326</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c1433</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c2131</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c612</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c245</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://onto.beef.org.pl/domain/c521</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.oclc.org/NET/mvco.owl#User</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0000269</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/prov-o/Organization</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0001741</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/ns/prov-o/Person</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.org/twc/arrayexpress/E-MTAB-104/studyDesign</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.ebi.ac.uk/efo/EFO_0002091</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://purl.obolibrary.org/obo/UO_0000280</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.identity.org/ontologies/identity.owl#Policy</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.samos.gr/ontologies/helpdeskOnto.owl#ItDepartment</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Supermarket</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://kmi.open.ac.uk/projects/smartproducts/ontologies/generic.owl#VolumeMeasurementUnit</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#WhiteWine</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#DessertWine</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Riesling</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Anjou</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Beaujolais</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#CabernetFranc</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#StEmilion</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Sauternes</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Meursault</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Pauillac</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Margaux</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Chianti</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Sancerre</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#CotesDOr</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#DryRiesling</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#IceWine</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Meritage</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#RedTableWine</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Muscadet</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Port</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='count'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='class'>
+				<uri>http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#VintageYear</uri>
+			</binding>
+		</result>
+	</results>
+</sparql>
