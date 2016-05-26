@@ -19,6 +19,8 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{listings}
+\lstset{language=SQL,morekeywords={PREFIX,java,rdf,rdfs,url}}
  
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
@@ -29,7 +31,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Data- and Systems Paper}
+\title{Data- and Systems Paper : Finding events}
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Data- and Systems Paper}
@@ -40,14 +42,14 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Names}
+\author{Alivanistos, Dimitris. \\ Baez, Selene. \\ Jemmett, Andrea. }
 %
-\authorrunning{Put your names here}
+\authorrunning{Alivanistos, Dimitris. \\ Baez, Selene. \\ Jemmett, Andrea.}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{\url{first@email.nl} \and \url{second@email.nl}}
+\institute{\url{d.alivanistos@student.vu.nl} \and \url{s.baezsantamaria@student.vu.nl} \and \url{a.jemmett@student.vu.nl}}
 
 \maketitle
 
@@ -60,18 +62,73 @@ contain at least 70 and at most 150 words. It should be written using the
 
 
 \section{Introduction}
+- Motivation: 
+- Objective: Find events and their location
+- compare reasoning is small designed dataset versus a large complex dataset. 
 
-\section{}
+\section{Related Work}
+- explain what Laundromat is
 
-\subsection{}
+\section{Datasets}
+We performed an exploratory analysis on the datasets we will be using. Hereby we describe the characteristics of both datasets. 
 
-\subsection{}
+\subsection{Find a Slot dataset}
+- 1874 instances of owl:Thing
+- 479 instances of Event
+- 681 instances of Location
 
-\section{}
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for counting resources per class, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
 
-\section{}
+SELECT ?class (COUNT(?resource) as ?count) WHERE {
+?resource a ?class . 
+} GROUP BY ?class ORDER BY DESC(?count)
 
+\end{lstlisting}
 
+Graph visualization using networkx and python plotting libraries. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/findaslot_network_graph.png}
+	\caption{Silk linkage rules for events in group 10's dataset.}
+	\label{fig:link_event_g10}
+\end{figure}
+
+\subsection{LOD dataset}
+- 25 Events with Location
+
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting Event with Location, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+
+prefix event: <http://purl.org/NET/c4dm/event.owl#>
+
+SELECT ?s ?p ?l
+WHERE {
+?s a event:Event .
+{ 
+bind(<http://vivoweb.org/ontology/core#hasGeographicLocation> as ?p) .
+?s ?p ?lEn
+}
+UNION
+{ 
+bind(event:place as ?p) .
+?s ?p ?lEn
+}
+?lEn rdfs:label ?l .
+}
+
+\end{lstlisting}
+
+\section{Sub-graph extraction}
+Event related graph
+
+\subsection{Sub-graph analysis}
+- new statistics
+
+\section{Event finding}
+- Query both datasets and report on instances gotten
+
+\section{Conclusion}
+Weight the differences between designing an ontology or cleaning existing ontologies.
 
 \bibliographystyle{plain}
 \bibliography{mybib}
