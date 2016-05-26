@@ -94,6 +94,34 @@ where {
 order by asc(?dist)
 '''
 
+Q5 = '''
+prefix : <http://data.krw.d2s.labs.vu.nl/group6/findaslot/vocab/>
+prefix res: <http://data.krw.d2s.labs.vu.nl/group6/findaslot/resource/>
+prefix geof: <http://www.opengis.net/def/function/geosparql/>
+prefix ogc: <http://www.opengis.net/ont/geosparql#>
+prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix unit: <http://qudt.org/vocab/unit#>
+
+select ?venue ?saddr ?dist
+where {
+  ?venue a :Venue ;
+        dbo:location ?vloc .
+
+  {
+    select ?saddr ?dist
+    where {
+      ?spot a :ParkingSlot ;
+			dbo:location ?sloc .
+      ?sloc dbo:address ?saddr.
+      bind(geof:distance(?vloc, ?sloc, unit:Meter) as ?dist) .
+    }
+    order by asc(?dist)
+    limit 1
+  }
+}
+'''
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -122,3 +150,8 @@ if __name__ == '__main__':
     print 'Executing Q4 on small dataset:', q4, '\n'
     q4_time = timed_query(q4, large=False, reasoning='true')
     print 'Q4 query executed in %i seconds' % q4_time
+
+    q5 = Q5 + 'limit ' + str(args.limit) if args.limit else Q5
+    print 'Executing Q5 on small dataset:', q5, '\n'
+    q5_time = timed_query(q5, large=False, reasoning='true')
+    print 'Q5 query executed in %i seconds' % q5_time
