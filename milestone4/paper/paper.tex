@@ -222,7 +222,7 @@ FILTER(?outdegree > 75) .
 }
 \end{lstlisting}
 
-Since the out-degree distribution has a heavy tail, we select $threshold = 10, 20, 40, 75$ as approximate quartiles. As you see here the number of triples grows linearly .
+Since the out-degree distribution has a heavy tail, we select $threshold = 10, 20, 40, 75$ as approximate quartiles. As you see in Table \ref{subgraph_table} the number of triples grows linearly .
 
 \begin{table}[h]
 	\begin{center}
@@ -235,7 +235,7 @@ Since the out-degree distribution has a heavy tail, we select $threshold = 10, 2
 			75 & 17,359 & 00:00:00.128 \\ \hline
 		\end{tabular}
 		\caption{Statistics for subgraph formation.}
-		\label{frequency_table}
+		\label{subgraph_table}
 	\end{center}
 \end{table}
 
@@ -264,11 +264,22 @@ UNION
 \end{lstlisting}
 
 \section{Results and Discussion}
-When ran against the whole \texttt{datset} we obtain 31 results. 
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{| l | c | c |}
+			\hline
+			\textbf{Subgraph} & \textbf{Results count} & \textbf{Time in microseconds} \\ \hline
+			out-10 & 1144 & -343883 \\ \hline
+			out-20 & 99 & 138225 \\ \hline
+			out-40 & 95 & 59086 \\ \hline
+			out-75 & 94 & 51484 microseconds \\ \hline
+		\end{tabular}
+		\caption{Statistics for subgraph formation.}
+		\label{subgraph_table}
+	\end{center}
+\end{table}
 
-- results when random 
 
-- results when "smart"
 
 \section{Conclusion}
 In this paper we used empirical and statistical methods in order to tackle the problem of volume while reasoning over large RDF triple-stores. We analyzed the reasons behind the necessity of dealing with this issue, as the Semantic Web grows with an exponential rate. Thus we analyzed the large dataset that was provided to us in order to find meaningful way of approximation. After analyzing the dataset we chose 3 criteria for approximation: Entity frequency, In-degree and Out-degree. Visualization of the results into graphs proved to be insightful and useful in deciding how to extract sub-sets. 
