@@ -31,7 +31,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Data- and Systems Paper : Finding Amsterdam}
+\title{Reasoning : A well known bottleneck and ways to tackle it}
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Data- and Systems Paper}
@@ -55,9 +55,7 @@
 
 
 \begin{abstract}
-The abstract should summarize the contents of the paper and should
-contain at least 70 and at most 150 words. It should be written using the
-\emph{abstract} environment.
+In this paper we aim to tackle the well-known problem of dealing with large volume in the Semantic Web. We do so by applying approximation techniques and query subgraphs of a large heterogeneous, decentralized dataset. We perform different analysis of the given dataset on order to have a better understanding of its content, as well as to gain some insight as to which entities might be more relevant when having a domain specific query. The formation of the subgraphs is done by selecting highly connected entities, which is defined and controlled by its out-degree measure. 
 \end{abstract}
 
 
@@ -266,24 +264,22 @@ UNION
 \section{Results and Discussion}
 \begin{table}[h]
 	\begin{center}
-		\begin{tabular}{| l | c | c |}
+		\begin{tabular}{| l | c | c | c |}
 			\hline
-			\textbf{Subgraph} & \textbf{Results count} & \textbf{Time in microseconds} \\ \hline
-			out-10 & 1144 & -343883 \\ \hline
-			out-20 & 99 & 138225 \\ \hline
-			out-40 & 95 & 59086 \\ \hline
-			out-75 & 94 & 51484 microseconds \\ \hline
+			\textbf{Subgraph} & \textbf{Results count} & \textbf{Time in microseconds} & \textbf{Time/Count ratio} \\ \hline
+			out-10 & 1144 & 343,883 & 2388,076388889 \\ \hline
+			out-20 & 99 & 138,225 & 1396,212121212 \\ \hline
+			out-40 & 95 & 59,086 & 621,957894737 \\ \hline
+			out-75 & 94 & 51,484 & 547,70212766 \\ \hline
 		\end{tabular}
 		\caption{Statistics for subgraph formation.}
 		\label{subgraph_table}
 	\end{center}
 \end{table}
 
-
-
 \section{Conclusion}
 In this paper we used empirical and statistical methods in order to tackle the problem of volume while reasoning over large RDF triple-stores. We analyzed the reasons behind the necessity of dealing with this issue, as the Semantic Web grows with an exponential rate. Thus we analyzed the large dataset that was provided to us in order to find meaningful way of approximation. After analyzing the dataset we chose 3 criteria for approximation: Entity frequency, In-degree and Out-degree. Visualization of the results into graphs proved to be insightful and useful in deciding how to extract sub-sets. 
-Furthermore we have conducted experiments and got promising results. After comparing our chosen methods, we came to the conclusion that splitting a large set of ontologies into smaller ones that are more meaningful to the domain of the task, is the proper way to tackle the problem. The inspiration derived from the methods used in the paper of blabla, who deal with volume with a Map-Reduce framework. Even though we did not implement a Map-Reduce framework for the experiments of this paper, the concept is similar. 
+Furthermore we have conducted experiments and got promising results. After comparing our chosen methods, we came to the conclusion that splitting a large set of ontologies into smaller ones that are more meaningful out-degree wise, is the proper way to tackle the problem. The inspiration derived from the methods used in the paper of blabla, who deal with volume with a Map-Reduce framework. Even though we did not implement a Map-Reduce framework for the experiments of this paper, the concept is similar. 
 We firmly believe that \texttt{divide and conquer}  can be proved to be the way to deal with the problem of Volume in reasoning and overcome what has been considered a bottleneck of the Semantic Web for years.
 
 \bibliographystyle{plain}
