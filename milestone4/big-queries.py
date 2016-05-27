@@ -30,7 +30,7 @@ def run_query(query, large=True, reasoning='true'):
 def timed_query(query, large=True, reasoning='false'):
     """Run a timed SPARQL query"""
     t1 = time.time()
-    run_query(IN_QUERY, large=large, reasoning=reasoning)
+    run_query(query, large=large, reasoning=reasoning)
     t2 = time.time()
     return t2 - t1
 
