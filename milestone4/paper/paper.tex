@@ -62,22 +62,46 @@ contain at least 70 and at most 150 words. It should be written using the
 
 
 \section{Introduction}
-In the journey of having a Semantic Web where everything is linked, open and reusable, dealing with volume is necessary. Finding specific information, and reasoning in large heterogeneous datasets will become everyday routine, thus efficient mechanisms are required to achieve these goals. 
+In the journey of having a Semantic Web where everything is linked, open and reusable, dealing with volume is necessary. The same way as in "Finding Wally", the tangled world of Linked Data makes it virtually impossible to find some specific information. The problem becomes even more complex when the information to be retrieved is not clear, in which case the task is comparable to fishing in the darkness.
 
-In fact, http://iswc2016.semanticweb.org/pages/calls/research-track.html
+Given the trends in the Semantic Web, it is undeniable that finding specific information, and reasoning in large heterogeneous datasets will become a need. Thus efficient mechanisms are required to achieve these goals. In fact, this year's \textit{International Semantic Web Conference} \footnote{\url{http://iswc2016.semanticweb.org/pages/calls/research-track.html}}, held in Kobe, Japan, recognizes it as one of the main topics of interest, phrasing it as "Architectures and algorithms for extreme volume, heterogeneity, dynamicity, and decentralization of Semantic Web data"
 
 In this paper we address the previous challenge with approximation techniques as a tool for efficient reasoning over a large dataset. To link this to our previous work, we select the specific domain of Amsterdam, and aim to retrieve all the Amsterdam-related information from the provided \texttt{dataset} in Stardog.  
 
 The goal of this assignment is to compare two approximation techniques. On the one hand, we randomly choose a subset of nodes, and retrieve all information related to Amsterdam. On the other hand, we do a smarter selection of nodes and repeat the process. We hypothesize the "smart selection" approach will have higher accuracy than the "random" approach on approximating the original set. Yet, smart selection requires statistical analysis and reasoning over the set, which brings in time and memory costs. Therefore, we will weight in the pros and cons of each approach.
 
 \section{Related Work}
-- the problem of volume in the semantic web \\
-- approximation techniques
+Regardless of its importance, very few research has been done to deal with volume on the Semantic Web. So far, the growth rate of the Web is winning the race against scientist trying to analyse it accurately within reasonable time. As mentioned by many researchers in the field of the Semantic Web, reasoning with large or complex terminology is one of the well-known bottlenecks in application of ontologies, because of the computational difficulty of the task.
+
+As early as 2007, Schlobach et al. proposed approximation techniques based on logical assumptions of monotonicity. These techniques aimed to reduce the volume of data in order to improve on the running time \cite{schlobach2007anytime}
+
+Another perspective was introduced by Mika and Tummarello \cite{mika2008web} who proposed to use Grid Computing to tackle the problem of volume. As stated in their paper, parallelism can be used in order to analyse, query and reason with large scale RDF Data. Specifically for complex reasoning tasks, the strategy described includes the use of several “reasoning servers” shared across MapReduce jobs, which then cache reasoning results in large main memories, in order to complete the task at hand.
+
+%TODO done?
+%Reasoning with large or complex terminology is computationally difficult and
+%is one of the known bottlenecks in application of ontologies on the Semantic
+%Web
+
+\section{The dataset}
+\textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}} is a tool for cleaning data that provides well-formed datasets of different domains and volumes. Searching the LOD for sets linked to the OWL ontology, we found a set of ontologies that are expressive and complex enough to pose a challenge in the context of this assignment. Merging of the previous produced the \texttt{dataset} that we work on in this milestone. This \texttt{datset} was provided to us via StarDog. 
+
+The reasons why this dataset is challenging are the following:
+
+\begin{enumerate}
+	\item \textbf{Volume}: The given dataset is about 200 times larger than the ontology we created for the previous milestones.
+	\item \textbf{Heterogeneity}: It is composed by several ontologies from different domains (foaf \footnote{Friend of a friend ontology \url{http://lov.okfn.org/dataset/lov/vocabs/foaf}}, wine, scientific-research, tourism).
+	\item \textbf{Decentralization}: There is no central ontology that acts as an intermediate node for other ontologies to connect.
+\end{enumerate}
+
+Due to the above attributes, unforeseen challenges need to be tackled. These were not present in the well-designed dataset that we created previously.
 
 \section{Data Analytics}
-The \texttt{dataset} was provided on Stardog. It was created by filtering datasets on \textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}}
+In order to get more detailed information regarding the \texttt{dataset} at hand, we performed an exploratory study of its most basic statistical characteristics. This is a X-step process that we describe now/here/something %TODO
 
-Cleaning of data, removing \#
+Step 1: Query for finding the different ontologies
+
+Step 2: Frequency of classes
+
 
 To obtain frequency statistics we use the following query:
 
@@ -96,13 +120,14 @@ SELECT ?class (COUNT(?resource) as ?count) WHERE {
 	\label{fig:frequency}
 \end{figure}
 
-\section{Reasoning system}
+Step 3: Degree
+
 The Stardog only interface handles the limits 
 Python code for querying and using Stardog as endpoint. 
 Query the dataset to calculate the in degree and out degree.
 
 In degree takes 55 seconds, out degree takes 46 seconds.
- 
+
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating in degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
 SELECT
 DISTINCT ?entity
@@ -126,18 +151,33 @@ GROUP by ?entity
 ORDER by desc(?outdegree)
 \end{lstlisting}
 
-\subsection{Sub-graph extraction}
-Event related graph
+\section{Reasoning system}
+Approximation by taking high quality entities. For the purpose of this paper we define the quality of an entity as its in and out degree measures. As such, when forming subgraphs based on the "smart selection" approach we take the entities in the top X\% entities.
 
-\subsection{Sub-graph analysis}
-- new statistics
+Stardog
 
 \section{Experimental set up}
+By now we have better understanding of what the \texttt{dataset} contains. We decide to investigate information related to Amsterdam via the following query:
 
-\subsection{Event finding}
-- Query both datasets and report on instances gotten
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+SELECT distinct ?s ?p ?a
+WHERE { 
+?a a owl:Thing ;
+rdfs:label ?la .
+?s ?p ?a .
+FILTER(contains(?la, 'msterdam'))
+} GROUP by ?a ?s ?p
+\end{lstlisting}
+
+%TODO revise
+$X$ has values of 1, 10 and 50
 
 \section{Results and Discussion}
+When ran against the whole \texttt{datset} we obtain 31 results. 
+
+- results when random 
+
+- results when "smart"
 
 \section{Conclusion}
 Through empirical methods, we compared the performance of two subsets of the main \texttt{dataset}. 
