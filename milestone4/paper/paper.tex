@@ -66,9 +66,9 @@ In the journey of having a Semantic Web where everything is linked, open and reu
 
 Given the trends in the Semantic Web, it is undeniable that finding specific information, and reasoning in large heterogeneous datasets will become a need. Thus efficient mechanisms are required to achieve these goals. In fact, this year's \textit{International Semantic Web Conference} \footnote{\url{http://iswc2016.semanticweb.org/pages/calls/research-track.html}}, held in Kobe, Japan, recognizes it as one of the main topics of interest, phrasing it as "Architectures and algorithms for extreme volume, heterogeneity, dynamicity, and decentralization of Semantic Web data"
 
-In this paper we address the previous challenge with approximation techniques as a tool for efficient reasoning over a large dataset. To link this to our previous work, we select the specific domain of Amsterdam, and aim to retrieve all the Amsterdam-related information from the provided \texttt{dataset} in Stardog.  
+In this paper we address the previous challenge with approximation techniques as a tool for efficient reasoning over a large dataset. To link this to our previous work, we select the specific domain of Geographical Locations, and aim to retrieve all the information related to The Netherlands from the provided \texttt{dataset} in Stardog.  
 
-The goal of this assignment is to compare two approximation techniques. On the one hand, we randomly choose a subset of nodes, and retrieve all information related to Amsterdam. On the other hand, we do a smarter selection of nodes and repeat the process. We hypothesize the "smart selection" approach will have higher accuracy than the "random" approach on approximating the original set. Yet, smart selection requires statistical analysis and reasoning over the set, which brings in time and memory costs. Therefore, we will weight in the pros and cons of each approach.
+The goal of this assignment is to perform approximation techniques by a smart selection of nodes that successfully retrieve all, or nearly all, information related to The Netherlands. 
 
 \section{Related Work}
 Regardless of its importance, very few research has been done to deal with volume on the Semantic Web. So far, the growth rate of the Web is winning the race against scientist trying to analyse it accurately within reasonable time. As mentioned by many researchers in the field of the Semantic Web, reasoning with large or complex terminology is one of the well-known bottlenecks in application of ontologies, because of the computational difficulty of the task.
@@ -77,10 +77,8 @@ As early as 2007, Schlobach et al. \cite{schlobach2007anytime} proposed approxim
 
 Another perspective was introduced by Mika and Tummarello \cite{mika2008web} who proposed to use Grid Computing to tackle the problem of volume. As stated in their paper, parallelism can be used in order to analyse, query and reason with large scale RDF Data. Specifically for complex reasoning tasks, the strategy described includes the use of several “reasoning servers” shared across MapReduce jobs, which then cache reasoning results in large main memories, in order to complete the task at hand.
 
-%TODO done?
-
 \section{The dataset}
-\textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}} is a tool for cleaning data that provides well-formed datasets of different domains and volumes. Searching the LOD for sets linked to the OWL ontology, one can find a set of ontologies that are expressive and complex enough to pose a challenge in the context of this assignment. Merging of some of the previous produced the \texttt{dataset} that we work on in this milestone. This \texttt{datset} was provided to us via the StarDog server. 
+\textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}} is a tool for cleaning data that provides well-formed datasets of different domains and volumes \cite{beek2014lod}. Searching the LOD for sets linked to the OWL ontology, one can find a set of ontologies that are expressive and complex enough to pose a challenge in the context of this assignment. Merging of some of the previous produced the \texttt{dataset} that we work on in this milestone. This \texttt{datset} was provided to us via the StarDog server. 
 
 At a first glance, the \texttt{dataset} is particularly challenging because of many varied reasons, mainly:
 
@@ -204,10 +202,42 @@ The results for in-degree range between [1, 13] while the ones for out-degree li
 \end{figure}
 
 \section{Reasoning system}
-Using the last information, we can now perform approximation techniques by taking high quality entities. For the purpose of this paper we define the quality of an entity as its out-degree, since we believe it reflects how well-connected an entity is. As such, when forming subgraphs we take only entities that satisfy a certain threshold $ out-degree > threshold$.
+Using the last information, we can now perform approximation techniques by taking high quality entities. For the purpose of this paper we define the quality of an entity as its out-degree, since we believe it reflects how well-connected an entity is. As such, when forming subgraphs we take only entities that satisfy a certain threshold $ out-degree > threshold$. The subgraphs are retrieved by the query described in the following Listing, and downloaded to reason in a local instance of Stardog.
 
-Since the out-degree distribution has a heavy tail, we select $threshold = 10, 20, 40, 75$ as approximate quartiles. We observe that the number of triples retrieved by the query is linear to the proposed quartiles.
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+CONSTRUCT {
+	?entity ?pout ?something
+} WHERE { 
+{
+	SELECT
+	DISTINCT ?entity
+	(count(distinct ?pout) as ?outdegree)
+	WHERE {
+		?entity ?pout ?something .
+	}
+	GROUP by ?entity
+}
+FILTER(?outdegree > 75) .
+?entity ?pout ?something
+}
+\end{lstlisting}
 
+Since the out-degree distribution has a heavy tail, we select $threshold = 10, 20, 40, 75$ as approximate quartiles. As you see here the number of triples grows linearly .
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{| l | c | c |}
+			\hline
+			\textbf{Threshold} & \textbf{n of triples} & \textbf{Time} \\ \hline
+			10 &  505,993 & 00:00:03.663 \\ \hline
+			20 & 34,785 & 00:00:00.294 \\ \hline
+			40 & 25,602 & 00:00:00.200 \\ \hline
+			75 & 17,359 & 00:00:00.128 \\ \hline
+		\end{tabular}
+		\caption{Statistics for subgraph formation.}
+		\label{frequency_table}
+	\end{center}
+\end{table}
 
 \section{Experimental set up}
 By now we have better understanding of what the \texttt{dataset} contains. We decide to investigate information related to The Netherlands via the following query:
@@ -241,9 +271,9 @@ When ran against the whole \texttt{datset} we obtain 31 results.
 - results when "smart"
 
 \section{Conclusion}
-Through empirical methods, we compared the performance of two subsets of the main \texttt{dataset}. 
-
-Weight the differences between designing an ontology or cleaning existing ontologies.
+In this paper we used empirical and statistical methods in order to tackle the problem of volume while reasoning over large RDF triple-stores. We analyzed the reasons behind the necessity of dealing with this issue, as the Semantic Web grows with an exponential rate. Thus we analyzed the large dataset that was provided to us in order to find meaningful way of approximation. After analyzing the dataset we chose 3 criteria for approximation: Entity frequency, In-degree and Out-degree. Visualization of the results into graphs proved to be insightful and useful in deciding how to extract sub-sets. 
+Furthermore we have conducted experiments and got promising results. After comparing our chosen methods, we came to the conclusion that splitting a large set of ontologies into smaller ones that are more meaningful to the domain of the task, is the proper way to tackle the problem. The inspiration derived from the methods used in the paper of blabla, who deal with volume with a Map-Reduce framework. Even though we did not implement a Map-Reduce framework for the experiments of this paper, the concept is similar. 
+We firmly believe that \texttt{divide and conquer}  can be proved to be the way to deal with the problem of Volume in reasoning and overcome what has been considered a bottleneck of the Semantic Web for years.
 
 \bibliographystyle{plain}
 \bibliography{mybib}
