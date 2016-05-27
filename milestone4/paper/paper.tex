@@ -93,10 +93,10 @@ At a first glance, the \texttt{dataset} is particularly challenging because of m
 Due to the above attributes, unforeseen challenges need to be tackled. These were not present in the well-designed dataset that we created previously, therefore the reasoning methods we used before are not sufficient and need to be extended.
 
 \section{Data Analytics}
-Before reasoning or extracting any valuable information about the \texttt{dataset}, we first need to delve deeper into it to understand its content. In order to get more details, we performed an exploratory study of its most basic statistical characteristics. We did this in a 3-step process the we describe in the following subsections.
+Before reasoning or extracting any valuable information about the \texttt{dataset}, we first need to delve deeper into it to understand its content. In order to get more details, we perform an exploratory study of its most basic statistical characteristics. We do this in a 3-step process that we describe in the following subsections.
 
 \subsection{Step 1: Query for finding the different ontologies}
-First we needed to characterize the content of the \texttt{dataset} by the domains it refers to. To do so we query the ontologies that are present 
+First we need to characterize the content of the \texttt{dataset} by the domains it refers to. To do so we query the \texttt{dataset}, using Stardog as endpoint, to get the ontologies that are present. The query is presented in Listing \ref{ontology_query}.
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for getting different Ontologies in the \texttt{dataset}, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
 SELECT DISTINCT ?entity ?elabel ?type ?tlabel 
@@ -107,77 +107,131 @@ WHERE {
 	OPTIONAL { ?type rdfs:label ?tlabel } 
 }
 \end{lstlisting}
+\label{ontology_query}
 
+We note that the \texttt{dataset} is composed of 103 ontologies with seemingly unrelated domains. Some examples are listed here:
+
+\begin{itemize}
+	\item \url{http://www.kanzaki.com/ns/music}: A music vocabulary
+	\item \url{http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine}: A wine ontology
+	\item \url{http://aims.fao.org/aos/geopolitical.owl}: A geopolitical ontology
+	\item \url{ http://rhizomik.net/ontologies/copyrightonto.owl}: A copyright ontology
+\end{itemize}
 
 \subsection{Step 2: Frequency of classes}
-To obtain frequency statistics we use the following query:
+Secondly, we would like to count the class occurrences in the \texttt{dataset}, similar to Schlobach et al \cite{schlobach2007anytime}. To do so, we obtain frequency statistics using the following query:
 
-\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting Event witSh Location, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
-SELECT ?class (COUNT(?resource) as ?count) WHERE {
-?resource a ?class . 
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting class frequencies, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+SELECT ?class (COUNT(?resource) as ?count) 
+WHERE {
+	?resource a ?class . 
 } GROUP BY ?class ORDER BY DESC(?count)
 \end{lstlisting}
 
-The most frequent is owl:Thing with 138568 occurrences. Interestingly the second most frequent is not the owl:Class, with 36273 occurrences, but a class related to provenance as opmo:WasControlledBy with 38165 occurrences. 
+The most frequent class is owl:Thing with 138,568 occurrences. Interestingly the second most frequent class is not the owl:Class, with 36,273 occurrences, but a class related to provenance as opmo:WasControlledBy with 38,165 occurrences. More details on the top 10 classes is given in Table \ref{frequency_table}. A visualization of the frequencies is shown in Figure \ref{fig:frequency}, excluding the first (owl:Thing) due to axis boundaries.
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{| l | c |}
+			\hline
+			\textbf{Class} & \textbf{Count} \\ \hline
+			owl:Thing &	138568 \\ \hline
+			http://openprovenance.org/model/opmo\#WasControlledBy & 38165 \\ \hline
+			owl:Class &	36273 \\ \hline
+			owl:Restriction	& 30554 \\ \hline
+			http://vivoweb.org/ontology/core\#DateTimeValue &	27041 \\ \hline
+			http://vivoweb.org/ontology/core\#DateTimeInterval &	24804 \\ \hline
+			http://vivoweb.org/ontology/core\#Role &	23561 \\ \hline
+			http://vivoweb.org/ontology/core\#TeacherRole &	23373 \\ \hline
+			http://vivoweb.org/ontology/core\#Relationship &	20946 \\ \hline
+			http://vivoweb.org/ontology/core\#Authorship &	20938 \\ \hline
+		\end{tabular}
+		\caption{Top 10 classes with respect to frequency in \texttt{dataset}.}
+		\label{frequency_table}
+	\end{center}
+\end{table}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/dataset_frequency.png}
+	\includegraphics[width=.7\textwidth]{img/dataset_frequency.png}
 	\caption{Plot of frequencies for classes in \texttt{dataset}. \textit{owl:Thing} is excluded.}
 	\label{fig:frequency}
 \end{figure}
 
-Step 3: Degree
+\subsection{Step 3: Degree}
+Finally, inspired by network analytics we decided to calculate the in-degree and out-degree of each entity. This time the queries could not be computed directly in the Stardog web application, since it automatically handles the limits of the queries and truncates the results. Therefore, we create our own Python script to submit queries to the Stardog endpoint and get full results. 
 
-The Stardog only interface handles the limits 
-Python code for querying and using Stardog as endpoint. 
-Query the dataset to calculate the in degree and out degree.
-
-In degree takes 55 seconds, out degree takes 46 seconds.
+The in-degree and out-degree queries are shown in the following two Listings:
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating in degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
-SELECT
-DISTINCT ?entity
-(COUNT(distinct ?pin) as ?indegree)
-WHERE { 
-?entity a owl:Thing .
-?something ?pin ?entity .}
+SELECT DISTINCT ?entity
+	(COUNT(distinct ?pin) as ?indegree)
+	WHERE { 
+		?entity a owl:Thing .
+		?something ?pin ?entity .
+	}
 GROUP by ?entity
 ORDER by desc(?indegree)
 \end{lstlisting}
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
-SELECT
-DISTINCT ?entity
-(COUNT(distinct ?pout) as ?outdegree)
-WHERE { 
-?entity a owl:Thing .
-?entity ?pout ?somethingelse .
-}
+SELECT DISTINCT ?entity
+	(COUNT(distinct ?pout) as ?outdegree)
+	WHERE { 
+		?entity a owl:Thing .
+		?entity ?pout ?somethingelse .
+	}
 GROUP by ?entity
 ORDER by desc(?outdegree)
 \end{lstlisting}
 
-\section{Reasoning system}
-Approximation by taking high quality entities. For the purpose of this paper we define the quality of an entity as its in and out degree measures. As such, when forming subgraphs based on the "smart selection" approach we take the entities in the top X\% entities.
+We observe an increase in the time complexity for these queries. The in-degree query takes 55 seconds, while out-degree query takes 46 seconds, compared to the queries in the previous two subsections that are performed almost instantaneously. 
 
-Stardog
+The results for in-degree range between [1, 13] while the ones for out-degree lie in the range of [1, 81]. Figures \ref{fig:indegree} and \ref{fig:outdegree} visualize the distributions.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{img/dataset_indegree.png}
+	\caption{Plot of in-degree for entities in \texttt{dataset}.}
+	\label{fig:indegree}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{img/dataset_outdegree.png}
+	\caption{Plot of out-degree for entities in \texttt{dataset}.}
+	\label{fig:outdegree}
+\end{figure}
+
+\section{Reasoning system}
+Using the last information, we can now perform approximation techniques by taking high quality entities. For the purpose of this paper we define the quality of an entity as its out-degree, since we believe it reflects how well-connected an entity is. As such, when forming subgraphs we take only entities that satisfy a certain threshold $ out-degree > threshold$.
+
+Since the out-degree distribution has a heavy tail, we select $threshold = 10, 20, 40, 75$ as approximate quartiles. We observe that the number of triples retrieved by the query is linear to the proposed quartiles.
+
 
 \section{Experimental set up}
-By now we have better understanding of what the \texttt{dataset} contains. We decide to investigate information related to Amsterdam via the following query:
+By now we have better understanding of what the \texttt{dataset} contains. We decide to investigate information related to The Netherlands via the following query:
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
-SELECT distinct ?s ?p ?a
-WHERE { 
-?a a owl:Thing ;
-rdfs:label ?la .
-?s ?p ?a .
-FILTER(contains(?la, 'msterdam'))
-} GROUP by ?a ?s ?p
+SELECT ?s ?p
+WHERE {
+bind(<http://aims.fao.org/aos/geopolitical.owl#Netherlands_the> 
+	as ?nl) .
+{ ?s ?p ?nl }
+UNION
+{ ?nl ?p ?s }
+UNION
+{
+?s ?p ?o .
+?o ?p1 ?nl
+}
+UNION
+{
+?nl ?p ?o .
+?o ?p1 ?s
+}
+}
 \end{lstlisting}
-
-%TODO revise
-$X$ has values of 1, 10 and 50
 
 \section{Results and Discussion}
 When ran against the whole \texttt{datset} we obtain 31 results. 
