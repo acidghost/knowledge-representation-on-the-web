@@ -73,36 +73,43 @@ The goal of this assignment is to compare two approximation techniques. On the o
 \section{Related Work}
 Regardless of its importance, very few research has been done to deal with volume on the Semantic Web. So far, the growth rate of the Web is winning the race against scientist trying to analyse it accurately within reasonable time. As mentioned by many researchers in the field of the Semantic Web, reasoning with large or complex terminology is one of the well-known bottlenecks in application of ontologies, because of the computational difficulty of the task.
 
-As early as 2007, Schlobach et al. proposed approximation techniques based on logical assumptions of monotonicity. These techniques aimed to reduce the volume of data in order to improve on the running time \cite{schlobach2007anytime}
+As early as 2007, Schlobach et al. \cite{schlobach2007anytime} proposed approximation techniques based on logical assumptions of monotonicity. These techniques aimed to reduce the volume of data in order to improve on the running time, without loosing any or most of the logic entailment. Similar to us, they compared the selection of random axioms to two more sophisticated methods of selection. However, their procedure is based on frequency, either taking the most or least occurring entities, while we propose a degree approach, taking the best well-connected entities.
 
 Another perspective was introduced by Mika and Tummarello \cite{mika2008web} who proposed to use Grid Computing to tackle the problem of volume. As stated in their paper, parallelism can be used in order to analyse, query and reason with large scale RDF Data. Specifically for complex reasoning tasks, the strategy described includes the use of several “reasoning servers” shared across MapReduce jobs, which then cache reasoning results in large main memories, in order to complete the task at hand.
 
 %TODO done?
-%Reasoning with large or complex terminology is computationally difficult and
-%is one of the known bottlenecks in application of ontologies on the Semantic
-%Web
 
 \section{The dataset}
-\textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}} is a tool for cleaning data that provides well-formed datasets of different domains and volumes. Searching the LOD for sets linked to the OWL ontology, we found a set of ontologies that are expressive and complex enough to pose a challenge in the context of this assignment. Merging of the previous produced the \texttt{dataset} that we work on in this milestone. This \texttt{datset} was provided to us via StarDog. 
+\textit{Laundromat}\footnote{\url{http://lodlaundromat.org/}} is a tool for cleaning data that provides well-formed datasets of different domains and volumes. Searching the LOD for sets linked to the OWL ontology, one can find a set of ontologies that are expressive and complex enough to pose a challenge in the context of this assignment. Merging of some of the previous produced the \texttt{dataset} that we work on in this milestone. This \texttt{datset} was provided to us via the StarDog server. 
 
-The reasons why this dataset is challenging are the following:
+At a first glance, the \texttt{dataset} is particularly challenging because of many varied reasons, mainly:
 
 \begin{enumerate}
 	\item \textbf{Volume}: The given dataset is about 200 times larger than the ontology we created for the previous milestones.
-	\item \textbf{Heterogeneity}: It is composed by several ontologies from different domains (foaf \footnote{Friend of a friend ontology \url{http://lov.okfn.org/dataset/lov/vocabs/foaf}}, wine, scientific-research, tourism).
+	\item \textbf{Heterogeneity}: It is composed by several ontologies from different domains (e.g the foaf \footnote{Friend of a friend ontology \url{http://lov.okfn.org/dataset/lov/vocabs/foaf}}, a wine ontology, a scientific-research ontology and a tourism ontology). Furthermore it comprises several different languages.
 	\item \textbf{Decentralization}: There is no central ontology that acts as an intermediate node for other ontologies to connect.
 \end{enumerate}
 
-Due to the above attributes, unforeseen challenges need to be tackled. These were not present in the well-designed dataset that we created previously.
+Due to the above attributes, unforeseen challenges need to be tackled. These were not present in the well-designed dataset that we created previously, therefore the reasoning methods we used before are not sufficient and need to be extended.
 
 \section{Data Analytics}
-In order to get more detailed information regarding the \texttt{dataset} at hand, we performed an exploratory study of its most basic statistical characteristics. This is a X-step process that we describe now/here/something %TODO
+Before reasoning or extracting any valuable information about the \texttt{dataset}, we first need to delve deeper into it to understand its content. In order to get more details, we performed an exploratory study of its most basic statistical characteristics. We did this in a 3-step process the we describe in the following subsections.
 
-Step 1: Query for finding the different ontologies
+\subsection{Step 1: Query for finding the different ontologies}
+First we needed to characterize the content of the \texttt{dataset} by the domains it refers to. To do so we query the ontologies that are present 
 
-Step 2: Frequency of classes
+\begin{lstlisting}[captionpos=b, caption=SPARQL query for getting different Ontologies in the \texttt{dataset}, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
+SELECT DISTINCT ?entity ?elabel ?type ?tlabel 
+WHERE { 
+	?entity a ?type .
+	?type rdfs:label 'Ontology' .
+	OPTIONAL { ?entity rdfs:label ?elabel } . 
+	OPTIONAL { ?type rdfs:label ?tlabel } 
+}
+\end{lstlisting}
 
 
+\subsection{Step 2: Frequency of classes}
 To obtain frequency statistics we use the following query:
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for getting Event witSh Location, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
@@ -111,7 +118,7 @@ SELECT ?class (COUNT(?resource) as ?count) WHERE {
 } GROUP BY ?class ORDER BY DESC(?count)
 \end{lstlisting}
 
-138568 owl:Thing and 36273 owl:class
+The most frequent is owl:Thing with 138568 occurrences. Interestingly the second most frequent is not the owl:Class, with 36273 occurrences, but a class related to provenance as opmo:WasControlledBy with 38165 occurrences. 
 
 \begin{figure}[h]
 	\centering
