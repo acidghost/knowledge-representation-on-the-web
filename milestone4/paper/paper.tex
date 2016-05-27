@@ -203,8 +203,7 @@ The results for in-degree range between [1, 13] while the ones for out-degree li
 Using the last information, we can now perform approximation techniques by taking high quality entities. For the purpose of this paper we define the quality of an entity as its out-degree, since we believe it reflects how well-connected an entity is. As such, when forming subgraphs we take only entities that satisfy a certain threshold $ out-degree > threshold$. The subgraphs are retrieved by the query described in the following Listing, and downloaded to reason in a local instance of Stardog.
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
-CONSTRUCT {
-	?entity ?pout ?something
+CONSTRUCT { ?entity ?pout ?something
 } WHERE { 
 {
 	SELECT
@@ -212,8 +211,7 @@ CONSTRUCT {
 	(count(distinct ?pout) as ?outdegree)
 	WHERE {
 		?entity ?pout ?something .
-	}
-	GROUP by ?entity
+	} 	GROUP by ?entity
 }
 FILTER(?outdegree > 75) .
 ?entity ?pout ?something
@@ -242,44 +240,46 @@ By now we have better understanding of what the \texttt{dataset} contains. We de
 
 \begin{lstlisting}[captionpos=b, caption=SPARQL query for calculating out degree of entities, label=lst:sparql, basicstyle=\ttfamily\small,frame=bt]
 SELECT ?s ?p
-WHERE {
-bind(<http://aims.fao.org/aos/geopolitical.owl#Netherlands_the> 
+WHERE { bind(<http://aims.fao.org/aos/geopolitical.owl#Netherlands_the> 
 	as ?nl) .
 { ?s ?p ?nl }
-UNION
-{ ?nl ?p ?s }
-UNION
-{
-?s ?p ?o .
-?o ?p1 ?nl
-}
-UNION
-{
-?nl ?p ?o .
-?o ?p1 ?s
-}
+UNION { ?nl ?p ?s }
+UNION { ?s ?p ?o .
+		?o ?p1 ?nl }
+UNION {	?nl ?p ?o .
+		?o ?p1 ?s }
 }
 \end{lstlisting}
 
 \section{Results and Discussion}
+We run the query against the four extracted subsets. Results are visible in Table~\ref{query_table}. 
+
 \begin{table}[h]
 	\begin{center}
 		\begin{tabular}{| l | c | c | c |}
 			\hline
 			\textbf{Subgraph} & \textbf{Results count} & \textbf{Time in microseconds} & \textbf{Time/Count ratio} \\ \hline
-			out-10 & 1144 & 343,883 & 2388,076388889 \\ \hline
-			out-20 & 99 & 138,225 & 1396,212121212 \\ \hline
-			out-40 & 95 & 59,086 & 621,957894737 \\ \hline
-			out-75 & 94 & 51,484 & 547,70212766 \\ \hline
+			out-10 & 1144 & 343883 & 2388,076388889 \\ \hline
+			out-20 & 99 & 138225 & 1396,212121212 \\ \hline
+			out-40 & 95 & 59086 & 621,957894737 \\ \hline
+			out-75 & 94 & 51484 & 547,70212766 \\ \hline
 		\end{tabular}
-		\caption{Statistics for subgraph formation.}
-		\label{subgraph_table}
+		\caption{Statistics for retrieving information about The Netherlands.}
+		\label{query_table}
 	\end{center}
 \end{table}
 
+It is possible to see how a bigger dataset requires
+increasingly more time to return information. At the same time the number
+of triples returned decreases meaningfully. From the ratio column we can see that
+this metric can be increased significantly by extracting a subset until we reach
+40 as out-degree, after which the time gain is not representative of the increase in the triple-set returned. Furthermore, we note that after the 10 out-degree, the number of triples returned is reduced by 90\%.
+
 \section{Conclusion}
 In this paper we used empirical and statistical methods in order to tackle the problem of volume while reasoning over large RDF triple-stores. We analyzed the reasons behind the necessity of dealing with this issue, as the Semantic Web grows with an exponential rate. Thus we analyzed the large dataset that was provided to us in order to find meaningful way of approximation. After analyzing the dataset we chose 3 criteria for approximation: Entity frequency, In-degree and Out-degree. Visualization of the results into graphs proved to be insightful and useful in deciding how to extract sub-sets. 
-Furthermore we have conducted experiments and got promising results. After comparing our chosen methods, we came to the conclusion that splitting a large set of ontologies into smaller ones that are more meaningful out-degree wise, is the proper way to tackle the problem. The inspiration derived from the methods used in the paper of blabla, who deal with volume with a Map-Reduce framework. Even though we did not implement a Map-Reduce framework for the experiments of this paper, the concept is similar. 
+
+Furthermore we have conducted experiments and got promising results. After comparing different thresholds, we come to the conclusion that splitting a large set of ontologies into smaller ones that are more meaningful out-degree wise is a valid way to tackle the problem. The inspiration derived from the methods used in the paper of Mika \cite{mika2008web}, who deal with volume with a Map-Reduce framework. Even though we did not implement a Map-Reduce framework for the experiments of this paper, the concept is similar. 
+
 We firmly believe that \texttt{divide and conquer}  can be proved to be the way to deal with the problem of Volume in reasoning and overcome what has been considered a bottleneck of the Semantic Web for years.
 
 \bibliographystyle{plain}
